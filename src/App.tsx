@@ -1,26 +1,128 @@
-import React from 'react';
-import logo from './logo.svg';
+import React, { Component } from 'react';
+import { BrowserRouter as Router, Switch, Route, Link } from "react-router-dom";
+import styled from 'styled-components'
+import { Layout, Menu, Row, Col } from 'antd';
 import './App.css';
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
-}
+import Banner from './images/banner.jpg'
+import Guide from './components/Guide'
+import Agent from './components/Agent';
+import Weapon from './components/Weapon';
+import Skin from './components/Skin';
+import Map from './components/Map';
+import Strat from './components/Strat';
+import Dic from './components/Dic';
+import Simulator from './components/Simulator';
+import Recruit from './components/Recruit';
+import Prosetting from './components/Prosetting';
+import Main from './components/Main';
 
-export default App;
+const { Header, Content, Footer } = Layout;
+
+const HeaderContainer = styled.div`
+    width: '100%';
+    background-color: gray;
+`;
+
+export default function App () {
+    return (
+        <Router>
+            <Layout className="layout">
+                <HeaderContainer>
+                    <Row justify="center" style={{height: 150, display: 'flex', alignItems: 'center', backgroundImage: `url(${Banner})`, backgroundSize: 'cover', backgroundPosition: 'center'}}>
+                        <div style={{position: 'absolute', backgroundColor: 'black', width: '100%', height: 150, opacity: 0.4}}></div>
+                        <Col xs={24} sm={22} md={20} lg={20} xl={16} >
+                            <Link to="/">
+                                <div style={{fontSize: '3em', color: 'white'}}>
+                                    Valang.gg 발랑지지
+                                </div>
+                            </Link>
+                        </Col>
+                    </Row>
+                </HeaderContainer>  
+                <Row justify="center" style={{height: 50, backgroundColor: '#2b2b2b'}}>
+                    {
+                        window.innerWidth < 576 ? 
+                        <div style={{display: 'flex', justifyContent: 'space-between', alignItems: 'center', height: '100%', fontSize: '1.2em', overflowX: 'scroll', overflowY: 'hidden', whiteSpace: 'nowrap'}}>
+                            <Link to="/guide" style={{marginLeft: 10, marginRight: 10}}>가이드</Link>
+                            <Link to="/agent" style={{marginLeft: 10, marginRight: 10}}>요원</Link>
+                            <Link to="/weapon" style={{marginLeft: 10, marginRight: 10}}>무기</Link>
+                            <Link to="/map" style={{marginLeft: 10, marginRight: 10}}>맵</Link>
+                            <Link to="/strat" style={{marginLeft: 10, marginRight: 10}}>전략</Link>
+                            <Link to="/dic" style={{marginLeft: 10, marginRight: 10}}>용어사전</Link>
+                            <Link to="/simulator" style={{marginLeft: 10, marginRight: 10}}>전략 시뮬레이터</Link>
+                            <Link to="/recruit" style={{marginLeft: 10, marginRight: 10}}>파티 모집</Link>
+                            <Link to="/prosetting" style={{marginLeft: 10, marginRight: 10}}>프로 세팅</Link>
+                        </div>
+                        :
+                        <Col xs={24} sm={22} md={20} lg={20} xl={16} >
+                            <div style={{display: 'flex', justifyContent: 'space-between', alignItems: 'center', height: '100%', fontSize: '1.2em'}}>
+                                <Link to="/guide">가이드</Link>
+                                <Link to="/agent">요원</Link>
+                                <Link to="/weapon">무기</Link>
+                                <Link to="/map">맵</Link>
+                                <Link to="/strat">캐릭터별 전략</Link>
+                                <Link to="/dic">용어사전</Link>
+                                <Link to="/simulator">전략 시뮬레이터</Link>
+                                <Link to="/recruit">파티 모집</Link>
+                                <Link to="/prosetting">프로 세팅</Link>
+                            </div>
+                        </Col>
+                    }
+                </Row>
+                <Content style={{backgroundColor: 'gray', minHeight: 600}}>
+                    <Row justify="center" >
+                        <Col xs={24} sm={22} md={20} lg={20} xl={16} style={{marginTop: 30, marginBottom: 30}}>
+                            <Switch>
+                                <Route path="/guide">
+                                    <Guide />
+                                </Route>
+                                <Route path="/agent">
+                                    <Agent />
+                                </Route>
+                                <Route path="/weapon">
+                                    <Weapon />
+                                </Route>
+                                <Route path="/skin">
+                                    <Skin />
+                                </Route>
+                                <Route path="/map">
+                                    <Map />
+                                </Route>
+                                <Route path="/strat">
+                                    <Strat />
+                                </Route>
+                                <Route path="/dic">
+                                    <Dic />
+                                </Route>
+                                <Route path="/simulator">
+                                    <Simulator />
+                                </Route>
+                                <Route path="/recruit">
+                                    <Recruit />
+                                </Route>
+                                <Route path="/prosetting">
+                                    <Prosetting />
+                                </Route>
+                                <Route path="/">
+                                    <Main />
+                                </Route>
+                            </Switch>
+                        </Col>
+                    </Row>
+                </Content>
+                <Footer style={{ backgroundColor: '#121212'}}>
+                    <Row justify="center">
+                        Contact : valang.gg@gmail.com
+                    </Row>
+                    <Row justify="center" >
+                        <Col xs={24} sm={22} md={20} lg={20} xl={16} style={{marginTop: 30, marginBottom: 30}}>
+                            Valang.gg isn't endorsed by Riot Games and doesn't reflect the views or opinions of Riot Games or anyone officially involved in producing or managing Riot Games properties. Riot Games, and all associated properties are trademarks or registered trademarks of Riot Games, Inc.
+                        </Col>
+                    </Row>
+                </Footer>
+            </Layout>
+        </Router>
+
+    );
+}
