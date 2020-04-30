@@ -1,7 +1,7 @@
 type agentType = {
     id: number;
     name: string;
-    name_kr: string;
+    name_ko: string;
     quote: string;
     skill: Array<{
         id: number;
@@ -17,7 +17,7 @@ export const agent: Array<agentType> = [
     {
         id: 0,
         name: "Breach",
-        name_kr: '브리치',
+        name_ko: '브리치',
         quote: "집중해. 하나씩 배워들 가라고.",
         skill: [
             {
@@ -53,7 +53,7 @@ export const agent: Array<agentType> = [
     {
         id: 1,
         name: "Brimstone",
-        name_kr: '브림스톤',
+        name_ko: '브림스톤',
         quote: "집중해. 하나씩 배워들 가라고.",
         skill: [
             {
@@ -89,7 +89,7 @@ export const agent: Array<agentType> = [
     {
         id: 2,
         name: "Cypher",
-        name_kr: '사이퍼',
+        name_ko: '사이퍼',
         quote: "네 위치는 파악됐다.",
         skill: [
             {
@@ -125,7 +125,7 @@ export const agent: Array<agentType> = [
     {
         id: 3,
         name: "Jett",
-        name_kr: '제트',
+        name_ko: '제트',
         quote: "잘해보자고.",
         skill: [
             {
@@ -161,7 +161,7 @@ export const agent: Array<agentType> = [
     {
         id: 4,
         name: "Omen",
-        name_kr: '오멘',
+        name_ko: '오멘',
         quote: "안전할 줄 알았나.",
         skill: [
             {
@@ -197,7 +197,7 @@ export const agent: Array<agentType> = [
     {
         id: 5,
         name: "Phoenix",
-        name_kr: '피닉스',
+        name_ko: '피닉스',
         quote: "내가 누군진 잘 알고 있지?",
         skill: [
             {
@@ -233,7 +233,7 @@ export const agent: Array<agentType> = [
     {
         id: 6,
         name: "Raze",
-        name_kr: '레이즈',
+        name_ko: '레이즈',
         quote: "폭탄 받아라",
         skill: [
             {
@@ -269,7 +269,7 @@ export const agent: Array<agentType> = [
     {
         id: 7,
         name: "Sage",
-        name_kr: '세이지',
+        name_ko: '세이지',
         quote: "저들은 결코 날 뚫지 못할 거야.",
         skill: [
             {
@@ -305,7 +305,7 @@ export const agent: Array<agentType> = [
     {
         id: 8,
         name: "Sova",
-        name_kr: '소바',
+        name_ko: '소바',
         quote: "어디로 도망가든, 내가 찾아내겠어.",
         skill: [
             {
@@ -341,7 +341,7 @@ export const agent: Array<agentType> = [
     {
         id: 9,
         name: "Viper",
-        name_kr: '바이퍼',
+        name_ko: '바이퍼',
         quote: "영원히 숨을 참을 수는 없을걸.",
         skill: [
             {
