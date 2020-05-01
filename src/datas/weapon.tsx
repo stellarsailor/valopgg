@@ -15,7 +15,7 @@ type weaponType = {
 
 type damageType = {
     distance: string;
-    damage: Array<number>;
+    damageSpec: Array<number>;
 }
 
 export const weapon: Array<weaponType> = [
@@ -28,11 +28,11 @@ export const weapon: Array<weaponType> = [
         damage: [
             {
                 distance: "0-30",
-                damage: [78, 26, 22],
+                damageSpec: [78, 26, 22],
             },
             {
                 distance: "30-50",
-                damage: [66, 22, 18],
+                damageSpec: [66, 22, 18],
             }
         ],
         primaryMode: "반자동",
@@ -51,15 +51,15 @@ export const weapon: Array<weaponType> = [
         damage: [
             {
                 distance: "0-9",
-                damage: [36, 12, 10],
+                damageSpec: [36, 12, 10],
             },
             {
                 distance: "9-15",
-                damage: [24, 8, 6],
+                damageSpec: [24, 8, 6],
             },
             {
                 distance: "15-50",
-                damage: [9, 3, 2],
+                damageSpec: [9, 3, 2],
             },
         ],
         primaryMode: "반자동",
@@ -76,11 +76,11 @@ export const weapon: Array<weaponType> = [
         damage: [
             {
                 distance: "0-20",
-                damage: [78, 26, 22],
+                damageSpec: [78, 26, 22],
             },
             {
                 distance: "9-15",
-                damage: [63, 21, 17],
+                damageSpec: [63, 21, 17],
             },
         ],
         primaryMode: "자동",
@@ -97,11 +97,11 @@ export const weapon: Array<weaponType> = [
         damage: [
             {
                 distance: "0-30",
-                damage: [105, 30, 26],
+                damageSpec: [105, 30, 26],
             },
             {
                 distance: "30-50",
-                damage: [88, 25, 21],
+                damageSpec: [88, 25, 21],
             },
         ],
         primaryMode: "반자동",
@@ -118,11 +118,11 @@ export const weapon: Array<weaponType> = [
         damage: [
             {
                 distance: "0-30",
-                damage: [160, 55, 47],
+                damageSpec: [160, 55, 47],
             },
             {
                 distance: "30-50",
-                damage: [145, 50, 43],
+                damageSpec: [145, 50, 43],
             },
         ],
         primaryMode: "반자동",
@@ -139,11 +139,11 @@ export const weapon: Array<weaponType> = [
         damage: [
             {
                 distance: "0-20",
-                damage: [67, 27, 23],
+                damageSpec: [67, 27, 23],
             },
             {
                 distance: "20-50",
-                damage: [62, 25, 21],
+                damageSpec: [62, 25, 21],
             },
         ],
         primaryMode: "자동",
@@ -162,11 +162,11 @@ export const weapon: Array<weaponType> = [
         damage: [
             {
                 distance: "0-20",
-                damage: [78, 26, 22],
+                damageSpec: [78, 26, 22],
             },
             {
                 distance: "20-50",
-                damage: [66, 22, 18],
+                damageSpec: [66, 22, 18],
             },
         ],
         primaryMode: "자동",
@@ -185,15 +185,15 @@ export const weapon: Array<weaponType> = [
         damage: [
             {
                 distance: "0-8",
-                damage: [44, 22, 19],
+                damageSpec: [44, 22, 19],
             },
             {
                 distance: "8-12",
-                damage: [34, 17, 14],
+                damageSpec: [34, 17, 14],
             },
             {
                 distance: "12-50",
-                damage: [18, 9, 8],
+                damageSpec: [18, 9, 8],
             },
         ],
         primaryMode: "반자동",
@@ -212,15 +212,15 @@ export const weapon: Array<weaponType> = [
         damage: [
             {
                 distance: "0-10",
-                damage: [34, 17, 14],
+                damageSpec: [34, 17, 14],
             },
             {
                 distance: "10-15",
-                damage: [26, 13, 11],
+                damageSpec: [26, 13, 11],
             },
             {
                 distance: "15-50",
-                damage: [20, 10, 9],
+                damageSpec: [20, 10, 9],
             },
         ],
         primaryMode: "반자동",
@@ -237,7 +237,7 @@ export const weapon: Array<weaponType> = [
         damage: [
             {
                 distance: "0-50",
-                damage: [116, 35, 30],
+                damageSpec: [116, 35, 30],
             },
         ],
         primaryMode: "자동",
@@ -256,7 +256,7 @@ export const weapon: Array<weaponType> = [
         damage: [
             {
                 distance: "0-50",
-                damage: [195, 65, 49],
+                damageSpec: [195, 65, 49],
             },
         ],
         primaryMode: "반자동",
@@ -275,15 +275,15 @@ export const weapon: Array<weaponType> = [
         damage: [
             {
                 distance: "0-15",
-                damage: [156, 39, 33],
+                damageSpec: [156, 39, 33],
             },
             {
                 distance: "15-30",
-                damage: [140, 35, 30],
+                damageSpec: [140, 35, 30],
             },
             {
                 distance: "30-50",
-                damage: [124, 31, 26],
+                damageSpec: [124, 31, 26],
             },
         ],
         primaryMode: "자동",
@@ -302,7 +302,7 @@ export const weapon: Array<weaponType> = [
         damage: [
             {
                 distance: "0-50",
-                damage: [156, 39, 33],
+                damageSpec: [156, 39, 33],
             },
         ],
         primaryMode: "자동",
@@ -321,7 +321,7 @@ export const weapon: Array<weaponType> = [
         damage: [
             {
                 distance: "0-50",
-                damage: [202, 101, 85],
+                damageSpec: [202, 101, 85],
             },
         ],
         primaryMode: "반자동",
@@ -340,7 +340,7 @@ export const weapon: Array<weaponType> = [
         damage: [
             {
                 distance: "0-50",
-                damage: [255, 150, 127],
+                damageSpec: [255, 150, 127],
             },
         ],
         primaryMode: "반자동",
@@ -359,11 +359,11 @@ export const weapon: Array<weaponType> = [
         damage: [
             {
                 distance: "0-30",
-                damage: [72, 30, 25],
+                damageSpec: [72, 30, 25],
             },
             {
                 distance: "30-50",
-                damage: [67, 28, 23],
+                damageSpec: [67, 28, 23],
             },
         ],
         primaryMode: "자동",
@@ -382,11 +382,11 @@ export const weapon: Array<weaponType> = [
         damage: [
             {
                 distance: "0-30",
-                damage: [95, 38, 32],
+                damageSpec: [95, 38, 32],
             },
             {
                 distance: "30-50",
-                damage: [77, 31, 26],
+                damageSpec: [77, 31, 26],
             },
         ],
         primaryMode: "자동",

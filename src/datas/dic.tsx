@@ -1,0 +1,165 @@
+type dicType = {
+    id: number;
+    letter: string;
+    word: string;
+    desc: string;
+}
+
+export const dic: Array<dicType> = [
+    {
+        id: 0,
+        letter: 'ㅎ',
+        word: '헤븐(Heaven)',
+        desc: '높은 위치의 난간'
+    },
+    {
+        id: 1,
+        letter: 'ㅇ',
+        word: '윈도우(Window)',
+        desc: '작게 열린 통로 혹은 창문처럼 턱이 있는 방 또는 구멍'
+    },
+    {
+        id: 2,
+        letter: 'ㅁ',
+        word: '메인(Main)',
+        desc: '상대가 러쉬 들어오는 가장 큰 입구'
+    },
+    {
+        id: 3,
+        letter: 'ㄹ',
+        word: '램프(Ramp)',
+        desc: '경사로',
+    },
+    {
+        id: 4,
+        letter: 'ㅇ',
+        word: '엘보우(Elbow)',
+        desc: 'ㄱ자 형태의 코너'
+    },
+    {
+        id: 5,
+        letter: 'ㄹ',
+        word: '롱(Long)',
+        desc: '긴 길'
+    },
+    {
+        id: 6,
+        letter: 'ㅅ',
+        word: '숏(Short)',
+        desc: '짧은 길'
+    },
+    {
+        id: 7,
+        letter: 'ㅍ',
+        word: '플랜트(Plant)',
+        desc: '스파이크를 설치하는 행위'
+    },
+    {
+        id: 8,
+        letter: 'ㅅ',
+        word: '스폰(Spawn)',
+        desc: '각 팀 별 소환되는 장소, 베이스와 동일함'
+    },
+    {
+        id: 9,
+        letter: 'ㄹ',
+        word: '로테이트(Rotate)',
+        desc: '다른 목적지로 돌아가는 행위'
+    },
+    {
+        id: 10,
+        letter: 'ㅇ',
+        word: '에코(Eco)',
+        desc: '이번 라운드에 돈을 아끼고 다음 라운드에 총을 사자는 뜻',
+    },
+    {
+        id: 11,
+        letter: 'ㅍ',
+        word: '풀 에코(Full Eco)',
+        desc: '에코와 비슷하나 어떠한 장비도 사지 않는 것',
+    },
+    {
+        id: 12,
+        letter: 'ㅇ',
+        word: 'SMG ',
+        desc: '기관단총을 뜻하는 단어, 혹은 이번 라운드에 기관 단총을 사자는 뜻',
+    },
+    {
+        id: 13,
+        letter: 'ㅍ',
+        word: '픽, 피킹(Peak)',
+        desc: '살짝 내다보는 행위'
+    },
+    {
+        id: 14,
+        letter: 'ㅅ',
+        word: '세이브(Save)',
+        desc: '적에게 죽어서 총을 잃어버리지 말고 숨어서 총을 보존하라는 뜻'
+    },
+    {
+        id: 16,
+        letter: 'ㅎ',
+        word: '후카(Hookah)',
+        desc: 'Bind 맵의 B 창문 표시 방'
+    },
+    {
+        id: 17,
+        letter: 'ㅂ',
+        word: '브레이킹(Breaking)',
+        desc: '반동을 최소화 하기 위하여 움직임을 멈추고 쏘는 것'
+    },
+    {
+        id: 18,
+        letter: 'ㅇ',
+        word: '오퍼',
+        desc: '오퍼레이터(Operator)의 줄임말'      
+    },
+    {
+        id: 19, 
+        letter: 'ㅍ',
+        word: '푸시(Push)',
+        desc: '목적 지역에 공격하러 들어가는 것'
+    },
+    {
+        id: 20, 
+        letter: 'ㄹ',
+        word: '러시(Rush)',
+        desc: '팀원 모두가 한꺼번에 목적 지역에 공격하러 빠르게 들어가는 것'
+    },
+    {
+        id: 21,
+        letter: 'ㅇ',
+        word: '에이스(Ace)',
+        desc: '혼자 모든 적을 처치 했을 때'
+    },
+    {
+        id: 22,
+        letter: 'ㅋ',
+        word: '클러치(Clutch)',
+        desc: '혼자 남은 플레이어가 남은 적들을 모두 처치하여 라운드를 승리로 이끌었을 때'
+    },
+    {
+        id: 23,
+        letter: 'ㅁ',
+        word: '미드(Mid)',
+        desc: '맵의 중앙 구역'
+    },
+    {
+        id: 24,
+        letter: 'ㄷ',
+        word: '디퓨즈(Defuse)',
+        desc: '스파이크를 해체하는 행위'
+    },
+    {
+        id: 25,
+        letter: 'ㅌ',
+        word: '탑 프래거(Top Fragger)',
+        desc: '팀에서 가장 많이 킬을 기록한 사람'
+    },
+    {
+        id: 15,
+        letter: 'ㅌ',
+        word: '트레이드 킬',
+        desc: '교환 킬, 예를 들어 2:1 상황에서 우리 팀 한명이 죽었을때 바로 앞으로 나가 적을 죽이는 행위 혹은 그렇게 된 상황'
+    }
+]

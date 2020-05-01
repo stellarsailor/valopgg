@@ -6,11 +6,23 @@ import PageTitle from './subcomponents/PageTitle';
 import ReactPlayer from 'react-player'
 import SkillCount from './subcomponents/SkillCount';
 import CredSVG from './subcomponents/CredSVG';
+import queryString from 'query-string'
+import isEmpty from '../logics/isEmpty'
 
-export default function Agent() {
+export default function Agent(props) {
+
+    const qs: any = queryString.parse(props.location.search)
+    let initialAgentNumber: null | number = null;
+
+    if(Object.entries(qs).length === 0){
+        initialAgentNumber = null
+    } else {
+        let selectedAgent = agent.filter(v => v.name.toLowerCase() === qs.name)
+        initialAgentNumber = selectedAgent[0].id;
+    }
 
     const arr = [0,1,2,3]
-    const [ agentSelection, setAgentSelection ] = useState<null | number>(0)
+    const [ agentSelection, setAgentSelection ] = useState<null | number>(initialAgentNumber)
     const [ abilitySelection, setAbilitySelection ] = useState<number>(0)
 
     const onChangeAgent = useCallback((agentNumber) => {

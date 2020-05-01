@@ -17,6 +17,8 @@ import Recruit from './components/Recruit';
 import Prosetting from './components/Prosetting';
 import Main from './components/Main';
 import AgentRecommendation from './components/AgentRecommendation';
+import MapDetail from './components/MapDetail';
+import WeaponDetail from './components/WeaponDetail';
 
 const { Header, Content, Footer } = Layout;
 const { Search } = Input;
@@ -38,7 +40,7 @@ export default function App () {
                             <Col xs={22} >
                                 <Link to="/">
                                     <div style={{fontSize: '1.2rem', color: 'white', fontWeight: 'bold'}}>
-                                        Valang.GG 발랑지지
+                                        Valog.gg 발로그
                                     </div>
                                 </Link>
                                 {/* <Search placeholder="전적 검색 기능을 준비 중입니다." onSearch={value => console.log(value)} enterButton /> */}
@@ -52,7 +54,7 @@ export default function App () {
                                     <Col span={16}>
                                         <Link to="/">
                                             <div style={{fontSize: '2rem', color: 'white', fontWeight: 'bold'}}>
-                                                Valang.GG 발랑지지
+                                                Valog.gg 발로그
                                             </div>
                                         </Link>
                                     </Col>
@@ -75,9 +77,9 @@ export default function App () {
                             <Link to="/map" style={{marginLeft: 10, marginRight: 10}}>맵</Link>
                             <Link to="/strat" style={{marginLeft: 10, marginRight: 10}}>전략</Link>
                             <Link to="/dic" style={{marginLeft: 10, marginRight: 10}}>용어사전</Link>
+                            <Link to="/prosetting" style={{marginLeft: 10, marginRight: 10}}>프로 세팅</Link>
                             <Link to="/simulator" style={{marginLeft: 10, marginRight: 10}}>전략 시뮬레이터</Link>
                             <Link to="/recruit" style={{marginLeft: 10, marginRight: 10}}>파티 모집</Link>
-                            <Link to="/prosetting" style={{marginLeft: 10, marginRight: 10}}>프로 세팅</Link>
                         </div>
                         :
                         <Col xs={24} sm={22} md={20} lg={20} xl={15} >
@@ -89,9 +91,9 @@ export default function App () {
                                 <Link to="/map">맵</Link>
                                 <Link to="/strat">캐릭터별 전략</Link>
                                 <Link to="/dic">용어사전</Link>
+                                <Link to="/prosetting">프로 세팅</Link>
                                 <Link to="/simulator">전략 시뮬레이터</Link>
                                 <Link to="/recruit">파티 모집</Link>
-                                <Link to="/prosetting">프로 세팅</Link>
                             </div>
                         </Col>
                     }
@@ -100,42 +102,20 @@ export default function App () {
                     <Row justify="center" >
                         <Col xs={24} sm={22} md={20} lg={20} xl={15} style={{marginBottom: 30}}>
                             <Switch>
-                                <Route path="/guide">
-                                    <Guide />
-                                </Route>
-                                <Route path="/agent">
-                                    <Agent />
-                                </Route>
-                                <Route path="/agentrecom">
-                                    <AgentRecommendation />
-                                </Route>
-                                <Route path="/weapon">
-                                    <Weapon />
-                                </Route>
-                                <Route path="/skin">
-                                    <Skin />
-                                </Route>
-                                <Route path="/map">
-                                    <Map />
-                                </Route>
-                                <Route path="/strat">
-                                    <Strat />
-                                </Route>
-                                <Route path="/dic">
-                                    <Dic />
-                                </Route>
-                                <Route path="/simulator">
-                                    <Simulator />
-                                </Route>
-                                <Route path="/recruit">
-                                    <Recruit />
-                                </Route>
-                                <Route path="/prosetting">
-                                    <Prosetting />
-                                </Route>
-                                <Route path="/">
-                                    <Main />
-                                </Route>
+                                <Route path="/guide" component={Guide} />
+                                <Route path="/agent" component={Agent} />
+                                <Route path="/agentrecom" component={AgentRecommendation} />
+                                <Route path="/weapon/:name" component={WeaponDetail} />
+                                <Route path="/weapon" component={Weapon} />
+                                <Route path="/skin" component={Skin} />
+                                <Route path="/map/:name" component={MapDetail} />
+                                <Route path="/map" component={Map} />
+                                <Route path="/strat" component={Strat} />
+                                <Route path="/dic" component={Dic} />
+                                <Route path="/prosetting" component={Prosetting} />
+                                <Route path="/simulator" component={Simulator} />
+                                <Route path="/recruit" component={Recruit} />
+                                <Route exact path="/" component={Main} />
                             </Switch>
                         </Col>
                     </Row>

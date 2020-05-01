@@ -8,7 +8,7 @@ type questionType = {
 export const question = [
     {
         id: 0,
-        question: "드론에 관심이 많아 드론이 있거나 사는걸 고려해보곤 했다.",
+        question: "드론에 관심이 많아 드론을 보유하고 있거나 사는걸 고려해보곤 했다.",
         action: ["sova"], 
         point: [3],
     },
@@ -16,7 +16,7 @@ export const question = [
         id: 1,
         question: "RPG 게임을 할때 주로 여자 캐릭터로 플레이하곤 했다.",
         action: ["viper", "sage", "jett", "raze"], 
-        point: [4,3,2,1],
+        point: [2,2,2,1],
     },
     {
         id: 2,
@@ -69,8 +69,8 @@ export const question = [
     {
         id: 10,
         question: "게임을 이기는것보다 상대방을 짜증나게 하는게 더욱 즐겁다.",
-        action: ["sage", "phoenix", "cypher", "omen","viper"],
-        point: [1,1,1,1,1]
+        action: ["sage", "phoenix", "cypher", "omen", "viper", "breach"],
+        point: [1,1,1,1,1,1]
     },
     {
         id: 11,
