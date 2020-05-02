@@ -8,7 +8,6 @@ import Banner from './images/banner.jpg'
 import Guide from './components/Guide'
 import Agent from './components/Agent';
 import Weapon from './components/Weapon';
-import Skin from './components/Skin';
 import Map from './components/Map';
 import Strat from './components/Strat';
 import Dic from './components/Dic';
@@ -19,6 +18,9 @@ import Main from './components/Main';
 import AgentRecommendation from './components/AgentRecommendation';
 import MapDetail from './components/MapDetail';
 import WeaponDetail from './components/WeaponDetail';
+import Community from './components/Community';
+
+import OfficialBackground from './images/official-background.jpg'
 
 const { Header, Content, Footer } = Layout;
 const { Search } = Input;
@@ -28,7 +30,23 @@ const HeaderContainer = styled.div`
     background-color: gray;
 `;
 
+const MenuTabHover = styled.div`
+    &:hover {
+        border-bottom: 2px solid lightgray;
+        margin-bottom: -2px;
+    }
+`
+
 export default function App () {
+
+    const divStyle = {
+        width: '100%',
+        height: 'auto',
+        backgroundImage: `url(${OfficialBackground})`,
+        backgroundRepeat: 'no-repeat',
+        backgroundAttachment: 'fixed',
+    };
+
     return (
         <Router>
             <Layout className="layout">
@@ -39,8 +57,8 @@ export default function App () {
                             <div style={{position: 'absolute', backgroundColor: 'black', width: '100%', height: 80, opacity: 0.4}}></div>
                             <Col xs={22} >
                                 <Link to="/">
-                                    <div style={{fontSize: '1.2rem', color: 'white', fontWeight: 'bold'}}>
-                                        Valog.gg 발로그
+                                    <div style={{display: 'flex', justifyContent: 'center'}}>
+                                        <img src={require('./images/mainLogo.png')} style={{width: '30%'}} />
                                     </div>
                                 </Link>
                                 {/* <Search placeholder="전적 검색 기능을 준비 중입니다." onSearch={value => console.log(value)} enterButton /> */}
@@ -53,9 +71,10 @@ export default function App () {
                                 <Row justify="space-between">
                                     <Col span={16}>
                                         <Link to="/">
-                                            <div style={{fontSize: '2rem', color: 'white', fontWeight: 'bold'}}>
-                                                Valog.gg 발로그
-                                            </div>
+                                            {/* <div style={{fontSize: '2rem', color: 'white', fontWeight: 'bold'}}>
+                                                Valog <span style={{fontSize: '1.4rem'}}>발로그.gg</span>
+                                            </div> */}
+                                            <img src={require('./images/mainLogo.png')} style={{width: '20%'}} />
                                         </Link>
                                     </Col>
                                     <Col span={8}>
@@ -66,63 +85,63 @@ export default function App () {
                         </Row>
                     }
                 </HeaderContainer>  
-                <Row justify="center" style={{height: 50, backgroundColor: '#222222'}}>
+                <Row justify="center" style={{height: 50, backgroundColor: '#161616'}}>
                     {
                         window.innerWidth < 576 ? 
                         <div style={{display: 'flex', justifyContent: 'space-between', alignItems: 'center', height: '100%', fontSize: '1.2em', overflowX: 'scroll', overflowY: 'hidden', whiteSpace: 'nowrap'}}>
                             <Link to="/guide" style={{marginLeft: 10, marginRight: 10}}>가이드</Link>
                             <Link to="/agent" style={{marginLeft: 10, marginRight: 10}}>요원</Link>
-                            <Link to="/agentrecom" style={{marginLeft: 10, marginRight: 10}}>나만의 요원 찾기</Link>
+                            <Link to="/agentrecom" style={{marginLeft: 10, marginRight: 10}}>맞는 요원 찾기</Link>
                             <Link to="/weapon" style={{marginLeft: 10, marginRight: 10}}>무기</Link>
                             <Link to="/map" style={{marginLeft: 10, marginRight: 10}}>맵</Link>
-                            <Link to="/strat" style={{marginLeft: 10, marginRight: 10}}>전략</Link>
+                            <Link to="/strat" style={{marginLeft: 10, marginRight: 10}}>요원별 전략</Link>
                             <Link to="/dic" style={{marginLeft: 10, marginRight: 10}}>용어사전</Link>
                             <Link to="/prosetting" style={{marginLeft: 10, marginRight: 10}}>프로 세팅</Link>
                             <Link to="/simulator" style={{marginLeft: 10, marginRight: 10}}>전략 시뮬레이터</Link>
                             <Link to="/recruit" style={{marginLeft: 10, marginRight: 10}}>파티 모집</Link>
+                            {/* <Link to="/community" style={{marginLeft: 10, marginRight: 10}}>커뮤니티</Link> */}
                         </div>
                         :
                         <Col xs={24} sm={22} md={20} lg={20} xl={15} >
                             <div style={{display: 'flex', justifyContent: 'space-between', alignItems: 'center', height: '100%', fontSize: '1.2em'}}>
-                                <Link to="/guide">가이드</Link>
-                                <Link to="/agent">요원</Link>
-                                <Link to="/agentrecom">나만의 요원 찾기</Link>
-                                <Link to="/weapon">무기</Link>
-                                <Link to="/map">맵</Link>
-                                <Link to="/strat">캐릭터별 전략</Link>
-                                <Link to="/dic">용어사전</Link>
-                                <Link to="/prosetting">프로 세팅</Link>
-                                <Link to="/simulator">전략 시뮬레이터</Link>
-                                <Link to="/recruit">파티 모집</Link>
+                                <MenuTabHover><Link to="/guide">가이드</Link></MenuTabHover>
+                                <MenuTabHover><Link to="/agent">요원</Link></MenuTabHover>
+                                <MenuTabHover><Link to="/agentrecom">맞는 요원 찾기</Link></MenuTabHover>
+                                <MenuTabHover><Link to="/weapon">무기</Link></MenuTabHover>
+                                <MenuTabHover><Link to="/map">맵</Link></MenuTabHover>
+                                <MenuTabHover><Link to="/strat">요원별 전략</Link></MenuTabHover>
+                                <MenuTabHover><Link to="/dic">용어사전</Link></MenuTabHover>
+                                <MenuTabHover><Link to="/prosetting">프로 세팅</Link></MenuTabHover>
+                                <MenuTabHover><Link to="/simulator">전략 시뮬레이터</Link></MenuTabHover>
+                                <MenuTabHover><Link to="/recruit">파티 모집</Link></MenuTabHover>
+                                {/* <Link to="/community">커뮤니티</Link> */}
                             </div>
                         </Col>
                     }
                 </Row>
-                <Content style={{backgroundColor: '#131c2e', minHeight: 600}}>
-                    <Row justify="center" >
-                        <Col xs={24} sm={22} md={20} lg={20} xl={15} style={{marginBottom: 30}}>
-                            <Switch>
-                                <Route path="/guide" component={Guide} />
-                                <Route path="/agent" component={Agent} />
-                                <Route path="/agentrecom" component={AgentRecommendation} />
-                                <Route path="/weapon/:name" component={WeaponDetail} />
-                                <Route path="/weapon" component={Weapon} />
-                                <Route path="/skin" component={Skin} />
-                                <Route path="/map/:name" component={MapDetail} />
-                                <Route path="/map" component={Map} />
-                                <Route path="/strat" component={Strat} />
-                                <Route path="/dic" component={Dic} />
-                                <Route path="/prosetting" component={Prosetting} />
-                                <Route path="/simulator" component={Simulator} />
-                                <Route path="/recruit" component={Recruit} />
-                                <Route exact path="/" component={Main} />
-                            </Switch>
-                        </Col>
-                    </Row>
+                <Content>
+                    <div style={divStyle}>
+                    <Switch>
+                        <Route path="/guide" component={Guide} />
+                        <Route path="/agent" component={Agent} />
+                        <Route path="/agentrecom" component={AgentRecommendation} />
+                        <Route path="/weapon/:name" component={WeaponDetail} />
+                        <Route path="/weapon" component={Weapon} />
+                        <Route path="/community" component={Community} />
+                        <Route path="/map/:name" component={MapDetail} />
+                        <Route path="/map" component={Map} />
+                        <Route path="/strat" component={Strat} />
+                        <Route path="/dic" component={Dic} />
+                        <Route path="/prosetting" component={Prosetting} />
+                        <Route path="/simulator" component={Simulator} />
+                        <Route path="/recruit" component={Recruit} />
+                        <Route exact path="/" component={Main} />
+                    </Switch>
+                    </div>
                 </Content>
                 <Footer style={{ backgroundColor: '#121212'}}>
                     <Row justify="center">
-                        Contact : valang.gg@gmail.com
+                        Contact : valog.gg@gmail.com
                     </Row>
                     <Row justify="center" >
                         <Col xs={24} sm={22} md={20} lg={20} xl={15} style={{marginTop: 30, marginBottom: 30}}>

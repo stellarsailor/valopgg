@@ -1,6 +1,6 @@
 import React, { useState, useCallback } from 'react'
 import styled from 'styled-components'
-import { Row, Col } from 'antd';
+import { Row, Col, Radio, Button, Tooltip } from 'antd';
 import { agent } from '../datas/agent'
 
 const Images = [
@@ -30,32 +30,48 @@ const BottomText = styled.div`
 
 export default function Strat() {
 
-    const [ agentSelection, setAgentSelection ] = useState<null | number>(null)
-    const arr = ["Bind", "Haven", "Split"]
+    const mapArr = ["Bind", "Haven", "Split"]
+    const agentArr = ['Breach', 'Brimstone', 'Cypher', 'Jett', 'Omen', 'Phoenix', 'Raze', 'Sage', 'Sova', 'Viper']
+    const difficultyArr = ['전체', '쉬움', '보통', '어려움'];
+
+    const [ agentSelection, setAgentSelection ] = useState<null | number | string>(null)
+    const [ mapSelection, setMapSelection ] = useState<null | number | string>(null)
+    const [ difficultySelection, setDifficultySelection ] = useState<string>('전체')
 
     const onChangeAgent = useCallback((agentNumber) => {
         setAgentSelection(agentNumber)
     },[])
 
     return(
-        <>
-            <Row justify="center" style={{marginTop: 15, marginBottom: 15}}>
-                {agent.map((v) => (
-                    <Col xs={4} sm={4} md={4} lg={2} xl={2} key={v.id} >
-                        <img src={require(`../images/agents/${v.name.toLowerCase()}.png`)} style={{border: '1px solid gray', width: '100%'}} onClick={() => onChangeAgent(v.id)} />
-                    </Col>  
-                ))}
-            </Row>
-            <Row>
-                {arr.map((v,index) => (
-                    <Col xs={24} sm={24} md={12} lg={8} xl={8} style={{width: '100%', height: 120, backgroundColor: '#202b43', padding: 10, marginTop: 15}} key={index}>
-                        <div style={{backgroundImage: `url(${Images[index]})`, width: "100%", height: '100%', backgroundSize: 'cover', backgroundPosition: 'center', borderRadius: 0}}>
-                            <TopText>{v}</TopText>
-                            <BottomText><div>Attacker</div> <div style={{marginLeft: 10, marginRight: 10}}>|</div> <div>Defender</div></BottomText>
-                        </div>
+        <Row justify="center" style={{backgroundColor: 'rgba(19, 28, 46, 0.95)', minHeight: 800}} >
+            <Col xs={24} sm={22} md={20} lg={20} xl={15}>
+                <Row justify='center' style={{fontSize: '1.4rem', marginTop: 15, marginBottom: 15, backgroundColor: '#202b43', padding: 10}} >
+                    <Col xs={22} sm={22} md={22} lg={22} xl={6}>
+                        {mapArr.map((v, index) => (
+                            <a style={mapSelection === v.toLowerCase() ? {color: 'white', fontWeight: 'bold', marginRight: '1.8rem'} : {color: 'gray', marginRight: '1.8rem'} } key={index} onClick={() => setMapSelection(v.toLowerCase())}>
+                                {v}
+                            </a>
+                        ))}
                     </Col>
-                ))}
-            </Row>
-        </>
+                    <Col xs={22} sm={22} md={22} lg={22} xl={12}>
+                        {agentArr.map((v, index) => (
+                            <Tooltip title={v} key={index}>
+                                <a style={{marginRight: '1rem'}} onClick={() => setAgentSelection(v.toLowerCase())}>
+                                    <img src={require(`../images/agents/${v.toLowerCase()}-headshot.png`)} style={agentSelection === v.toLowerCase() ? {width: '2.4rem', borderRadius: '2.4rem', border: '2px solid white'} : {width: '2.4rem', borderRadius: '2.4rem', border: '2px solid #202b43'}} />
+                                </a>
+                            </Tooltip>
+                        ))}
+                    </Col>
+                    <Col xs={22} sm={22} md={22} lg={22} xl={6}>
+                        {difficultyArr.map((v, index) => (
+                            <a style={difficultySelection === v ? {fontSize: '1.2rem', color: 'white', fontWeight: 'bold', marginRight: '1rem'} : {fontSize: '1.2rem', color: 'gray', marginRight: '1rem'} } key={index} onClick={() => setDifficultySelection(v)}>
+                                {v}
+                            </a>
+                        ))}
+                    </Col>
+                </Row>
+                {mapSelection} - {agentSelection} - {difficultySelection}
+            </Col>
+        </Row>
     )
 }

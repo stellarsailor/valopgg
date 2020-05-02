@@ -1,12 +1,8 @@
 import React from 'react'
 import styled from 'styled-components'
 import { Row, Col } from 'antd';
-import ReactMarkdown from 'react-markdown'
 import { dic } from '../datas/dic'
 
-const input = `
-
-`
 
 const dynamicSort = (property: string) => {
     let sortOrder = 1;
@@ -28,13 +24,20 @@ const dynamicSort = (property: string) => {
 export default function Dic() {
 
     return(
-        <>
-            전체 ㄱㄴㄷㄹㅁㅂㅅㅇㅈㅊㅋㅌㅍㅎ A-Z 0-9
-            {dic.slice(0).sort(dynamicSort('word')).map((v) => (
-                <div key={v.id} style={{fontSize: '1.2rem'}}>
-                    <div style={{marginBottom: 20}}>{v.word} : {v.desc}</div>
+        <Row justify="center" style={{backgroundColor: 'rgba(19, 28, 46, 0.95)', minHeight: 800}} >
+            <Col xs={24} sm={22} md={20} lg={20} xl={15} style={{padding: '1rem'}}>
+                <div style={{backgroundColor: '#202b43', padding: '5%'}}>
+                    {/* 전체 ㄱㄴㄷㄹㅁㅂㅅㅇㅈㅊㅋㅌㅍㅎ A-Z 0-9 */}
+                    {dic.slice(0).sort(dynamicSort('word')).map((v) => (
+                        <div key={v.id} style={{fontSize: '1rem'}}>
+                            <div style={{marginBottom: '1.2rem'}}>
+                                <span style={{fontWeight: 'bold', fontSize: '1.2rem'}}>{v.word}</span>
+                                <div>{v.desc}</div>
+                            </div>
+                        </div>
+                    ))}
                 </div>
-            ))}
-        </>
+            </Col>
+        </Row>
     )
 }

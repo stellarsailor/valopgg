@@ -17,22 +17,26 @@ const Images = [
 
 export default function MapDetail(props) {
 
+    const mapArr = ["Bind", "Haven", "Split"]
+
     const mapName = props.match.params.name;
     const [ side, setSide ] = useState(1)
     
     return (
-        <>
-            <div style={{fontSize: '1.2rem', marginTop: 15, marginBottom: 15}}>
-                <Link to="/map/bind" style={mapName === 'bind' ? {fontWeight: 'bold', marginRight: '1.8rem'} : {color: 'gray', marginRight: '1.8rem'} }>Bind</Link>
-                <Link to="/map/haven" style={mapName === 'haven' ? {fontWeight: 'bold', marginRight: '1.8rem'} : {color: 'gray', marginRight: '1.8rem'} }>Haven</Link>
-                <Link to="/map/split" style={mapName === 'split' ? {fontWeight: 'bold', marginRight: '1.8rem'} : {color: 'gray', marginRight: '1.8rem'} }>Split</Link>
-            </div>
+        <Row justify="center" style={{backgroundColor: 'rgba(19, 28, 46, 1)', minHeight: 800}} >
+            <Col xs={24} sm={22} md={20} lg={20} xl={15}>
+                <div style={{fontSize: '1.2rem', marginTop: 15, marginBottom: 15}}>
+                    {mapArr.map((v, index) => (
+                        <Link to={`/map/${v.toLowerCase()}`} style={mapName === v.toLowerCase() ? {fontWeight: 'bold', marginRight: '1.8rem'} : {color: 'gray', marginRight: '1.8rem'} } key={index}>{v}</Link>
+                    ))}
+                </div>
 
-            <Radio.Group onChange={(e) => setSide(e.target.value)} value={side} >
-                <Radio value={1} style={{color: 'white'}} >Attacker</Radio>
-                <Radio value={2} style={{color: 'white'}} >Defender</Radio>
-            </Radio.Group>
-            <img src={require(`../images/map/${mapName}-layout-${side === 1 ? 'offense' : 'defense' }.svg`)} style={{width: '100%'}} />
-        </>
+                <Radio.Group onChange={(e) => setSide(e.target.value)} value={side} >
+                    <Radio value={1} style={{color: 'white'}} >Attacker</Radio>
+                    <Radio value={2} style={{color: 'white'}} >Defender</Radio>
+                </Radio.Group>
+                <img src={require(`../images/map/${mapName}-layout-${side === 1 ? 'offense' : 'defense' }.svg`)} style={{width: '100%'}} />
+            </Col>
+        </Row>
     )
 }

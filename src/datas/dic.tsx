@@ -40,13 +40,13 @@ export const dic: Array<dicType> = [
         id: 5,
         letter: 'ㄹ',
         word: '롱(Long)',
-        desc: '긴 길'
+        desc: '사이트에서 이어지는 긴 길'
     },
     {
         id: 6,
         letter: 'ㅅ',
         word: '숏(Short)',
-        desc: '짧은 길'
+        desc: '사이트에서 이어지는 짧은 길'
     },
     {
         id: 7,
@@ -58,7 +58,7 @@ export const dic: Array<dicType> = [
         id: 8,
         letter: 'ㅅ',
         word: '스폰(Spawn)',
-        desc: '각 팀 별 소환되는 장소, 베이스와 동일함'
+        desc: '각 팀 별 소환되는 첫 시작 장소, 베이스와 동일함'
     },
     {
         id: 9,
@@ -161,5 +161,35 @@ export const dic: Array<dicType> = [
         letter: 'ㅌ',
         word: '트레이드 킬',
         desc: '교환 킬, 예를 들어 2:1 상황에서 우리 팀 한명이 죽었을때 바로 앞으로 나가 적을 죽이는 행위 혹은 그렇게 된 상황'
-    }
+    },
+    {
+        id: 26,
+        letter: 'A',
+        word: 'AWP',
+        desc: '오퍼레이터를 일컫는 용어'
+    },
+    {
+        id: 27,
+        letter: 'ㄴ',
+        word: '네이드(Nade)',
+        desc: '그레네이드(Granade)의 줄임말. 투척류 장비 혹은 스킬을 일컫는 용어'
+    },
+    {
+        id: 28,
+        letter: 'ㅅ',
+        word: '스모크(Smoke)',
+        desc: '연막류 장비 혹은 스킬을 일컫는 용어'
+    },
+    {
+        id: 29,
+        letter: 'ㅂ',
+        word: '베이팅(Baiting)',
+        desc: 'Bait 은 미끼를 일컫는 용어로써 팀원을 미끼 삼아 플레이 하는 방식'
+    },
+    {
+        id: 30,
+        letter: 'ㅂ',
+        word: '베이스(Base)',
+        desc: '각 팀 별 소환되는 첫 시작 장소'
+    },
 ]

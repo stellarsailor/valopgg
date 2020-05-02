@@ -26,10 +26,10 @@ type prosettingType = {
     equip3: string | null;
     equip4: string | null;
 
-    skill1: string | null;
-    skill2: string | null;
-    skill3: string | null;
-    skill4: string | null;
+    ability1: string | null;
+    ability2: string | null;
+    ability3: string | null;
+    ability4: string | null;
 
     color: string | null;
     outlines: string | "Off";
@@ -70,17 +70,17 @@ export const prosetting: Array<proType> = [
             equip3: "3",
             equip4: "4",
         
-            skill1: "C",
-            skill2: "Q",
-            skill3: "E",
-            skill4: "X",
+            ability1: "C",
+            ability2: "Q",
+            ability3: "E",
+            ability4: "X",
         
             color: "Green",
             outlines: "Off",
             centerDot: "Off",
             innerLines: "0.8 / 0 / 1 / 3",
             outerLines: "1 / 7 / 1 / 3",
-            error: "General: On Rest: Off",
+            error: "On",
         
             monitor: "BENQ XL2546",
             display: "Fullscreen",
@@ -113,10 +113,10 @@ export const prosetting: Array<proType> = [
             equip3: "3",
             equip4: "4",
         
-            skill1: "L-Shift",
-            skill2: "E",
-            skill3: "F",
-            skill4: "X",
+            ability1: "L-Shift",
+            ability2: "E",
+            ability3: "F",
+            ability4: "X",
         
             color: "Green",
             outlines: "On / 1 / 1",
@@ -156,10 +156,10 @@ export const prosetting: Array<proType> = [
             equip3: "3",
             equip4: "4",
         
-            skill1: "C",
-            skill2: "Q",
-            skill3: "E",
-            skill4: "X",
+            ability1: "C",
+            ability2: "Q",
+            ability3: "E",
+            ability4: "X",
         
             color: "White",
             outlines: "On / 1 / 1",
@@ -199,10 +199,10 @@ export const prosetting: Array<proType> = [
             equip3: "3",
             equip4: "4",
         
-            skill1: "C",
-            skill2: "Mouse 5",
-            skill3: "E",
-            skill4: "Wheel Up",
+            ability1: "C",
+            ability2: "Mouse 5",
+            ability3: "E",
+            ability4: "Wheel Up",
         
             color: "Green",
             outlines: "On",

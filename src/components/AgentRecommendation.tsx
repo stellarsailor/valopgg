@@ -66,57 +66,63 @@ export default function AgentRecommendation() {
     },[point, page])
 
     return(
-        <>
-            {
-                page === -1 ?
-                    <>
-                        <div style={{display: 'flex', justifyContent: 'center', alignItems: 'center'}}>
-                            <div style={{position: 'absolute', fontSize: '1.5rem'}}>나에게 맞는 요원 찾기</div>
-                            <div style={{position: 'absolute', width: '100%', backgroundColor: 'black', opacity: 0.3}}></div>
-                            <img src={require('../images/official-background-wide-darken.png')} style={{width: '100%'}} />
-                        </div>
-                        <div style={{display: 'flex', justifyContent: 'center', marginTop: 20, padding: '1rem'}}>
-                            <div style={{fontSize: '1.2rem'}}>Yes or No 질문에 대답을 고르고 나에게 맞는 요원을 찾아보세요!</div>
-                        </div>
-                        <div style={{display: 'flex', justifyContent: 'center', marginTop: 20}}>
-                            <Button type="primary" onClick={() => setPage(page+1)}>시작하기</Button>
-                        </div>
-                    </>
-                :
-                    null
-            }
+        <Row justify="center" style={{backgroundColor: 'rgba(19, 28, 46, 0.95)', minHeight: 800}} >
+            <Col xs={24} sm={22} md={20} lg={20} xl={15}>
+                {
+                    page === -1 ?
+                        <>
+                            <div style={{display: 'flex', justifyContent: 'center', alignItems: 'center'}}>
+                                <div style={{position: 'absolute', fontSize: '1.5rem'}}>나에게 맞는 요원 찾기</div>
+                                <div style={{position: 'absolute', width: '100%', backgroundColor: 'black', opacity: 0.3}}></div>
+                                <img src={require('../images/official-background-wide-darken.png')} style={{width: '100%'}} />
+                            </div>
+                            <div style={{display: 'flex', justifyContent: 'center', marginTop: 20, padding: '1rem'}}>
+                                <div style={{fontSize: '1.2rem'}}>True or False 질문에 답변을 고르고 나에게 맞는 요원을 찾아보세요!</div>
+                            </div>
+                            <div style={{display: 'flex', justifyContent: 'center', marginTop: 20}}>
+                                <Button type="primary" onClick={() => setPage(page+1)}>시작하기</Button>
+                            </div>
+                        </>
+                    :
+                        null
+                }
 
-            { page === -1 ? 
-                null
-            :
-                page === question.length ?
-                    <Row justify="center" style={{padding: '1rem', backgroundColor: '#202b43'}}>
-                        <Col xs={24} sm={22} md={20} lg={20} xl={15} >
-                            <div style={{fontSize: '1.5rem'}}>
-                                추천 캐릭터는 {capitalizeFirstLetter(Object.keys(point).reduce((a, b) => point[a] > point[b] ? a : b))} 입니다!
-                            </div>
-                            <div style={{display: 'flex', justifyContent: 'center', marginTop: 10}}>
-                                <Link to={`/agent?name=${Object.keys(point).reduce((a, b) => point[a] > point[b] ? a : b)}`}><Button type="primary" icon={<SearchOutlined />}>정보 보기</Button></Link>
-                            </div>
-                            <img src={require(`../images/agents/${Object.keys(point).reduce((a, b) => point[a] > point[b] ? a : b)}-standing.png`)} style={{width: '100%'}} />
-                        </Col>
-                    </Row>
+                { page === -1 ? 
+                    null
                 :
-                    <Row justify="center" style={{fontSize: '1.5rem', padding: '1rem', backgroundColor: '#202b43'}}>
-                        <Col xs={24} sm={22} md={20} lg={20} xl={15} >
-                            <div style={{minHeight: '6rem'}}>
-                                {page+1}. {shuffledQuestion[page].question}
-                            </div>
+                    page === question.length ?
+                        <Row justify="center" style={{padding: '1rem', backgroundColor: '#202b43'}}>
+                            <Col xs={24} sm={22} md={20} lg={20} xl={15} >
+                                <div style={{fontSize: '1.5rem'}}>
+                                    추천 캐릭터는 {capitalizeFirstLetter(Object.keys(point).reduce((a, b) => point[a] > point[b] ? a : b))} 입니다!
+                                </div>
+                                <div style={{display: 'flex', justifyContent: 'center', marginTop: 10}}>
+                                    <Link to={`/agent?name=${Object.keys(point).reduce((a, b) => point[a] > point[b] ? a : b)}`}><Button type="primary" icon={<SearchOutlined />}>정보 보기</Button></Link>
+                                </div>
+                                <img src={require(`../images/agents/${Object.keys(point).reduce((a, b) => point[a] > point[b] ? a : b)}-standing.png`)} style={{width: '100%'}} />
+                            </Col>
+                        </Row>
+                    :
+                        <Row justify="center" style={{fontSize: '1.5rem', padding: '1rem', backgroundColor: '#202b43'}}>
                             <div style={{display: 'flex', justifyContent: 'center'}}>
-                                <Button type="primary" onClick={() => onAccumulate(shuffledQuestion[page].action, shuffledQuestion[page].point, true)} style={{fontWeight: 'bold', margin: '2rem', width: '5rem', height: '2.5rem'}}>True</Button>
-                                <Button type="primary" onClick={() => onAccumulate(shuffledQuestion[page].action, shuffledQuestion[page].point, false)} style={{fontWeight: 'bold', margin: '2rem', width: '5rem', height: '2.5rem'}}>False</Button>
+                                <img src={require('../images/mainLogo.png')} style={{width: '30%'}} />
                             </div>
-                            <div style={{display: 'flex', justifyContent: 'center', marginBottom: '1rem'}}>
-                                <Progress percent={page / question.length * 100} showInfo={false} />
-                            </div>
-                        </Col>
-                    </Row>
-            }
-        </>
+
+                            <Col xs={24} sm={22} md={20} lg={20} xl={15} >
+                                <div style={{marginTop: '2rem', marginBottom: '2rem'}}>
+                                    {page+1}. {shuffledQuestion[page].question}
+                                </div>
+                                <div style={{display: 'flex', justifyContent: 'center'}}>
+                                    <Button type="primary" onClick={() => onAccumulate(shuffledQuestion[page].action, shuffledQuestion[page].point, true)} style={{fontWeight: 'bold', margin: '2rem', width: '5rem', height: '2.5rem'}}>True</Button>
+                                    <Button type="primary" onClick={() => onAccumulate(shuffledQuestion[page].action, shuffledQuestion[page].point, false)} style={{fontWeight: 'bold', margin: '2rem', width: '5rem', height: '2.5rem'}}>False</Button>
+                                </div>
+                                <div style={{display: 'flex', justifyContent: 'center', marginBottom: '1rem'}}>
+                                    <Progress percent={page / question.length * 100} showInfo={false} />
+                                </div>
+                            </Col>
+                        </Row>
+                }
+            </Col>
+        </Row>
     )
 }
