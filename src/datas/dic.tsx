@@ -192,4 +192,10 @@ export const dic: Array<dicType> = [
         word: '베이스(Base)',
         desc: '각 팀 별 소환되는 첫 시작 장소'
     },
+    {
+        id: 31,
+        letter: 'C',
+        word: 'C4',
+        desc: '스파이크를 의미함'
+    },
 ]

@@ -22,7 +22,7 @@ export const question = [
         id: 2,
         question: "돌진하는 암살자 스타일의 캐릭터들을 좋아한다.",
         action: ['jett', 'phoenix', 'omen'],
-        point: [3,2,1],
+        point: [3,2,2],
     },
     {
         id: 3,
@@ -46,7 +46,7 @@ export const question = [
         id: 6,
         question: "평소에 cctv나 차량의 블랙박스를 의식적으로 찾아본 적이 있다.",
         action: ["cypher", "sova"],
-        point: [3,2],
+        point: [4,3],
     },
     {
         id: 7,
@@ -74,7 +74,7 @@ export const question = [
     },
     {
         id: 11,
-        question: "패션에 관심이 많고 평소에 옷 매무새를 자주 고친다.",
+        question: "평소에 옷 매무새를 자주 고친다.",
         action: ["phoenix"],
         point: [2]
     },
@@ -82,6 +82,6 @@ export const question = [
         id: 12,
         question: "만약 초능력을 하나 고를 수 있다면 순간이동을 고를 것이다.",
         action: ['omen'],
-        point: [2]
+        point: [3]
     }
 ]

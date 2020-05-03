@@ -36,7 +36,7 @@ export default function WeaponDetail(props) {
                     <span style={{marginLeft: 10, marginRight: 10}}>></span>
                     <span style={{color: 'white'}}>{data.name}</span>
                 </div>
-                <Row style={{backgroundColor: '#202b43'}}>
+                <Row style={{backgroundColor: '#202b43', margin: '1rem'}}>
                     {
                         window.innerWidth < 576 ? 
                             null

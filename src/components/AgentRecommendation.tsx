@@ -26,6 +26,7 @@ export default function AgentRecommendation() {
     const [ page, setPage ] = useState<number>(-1)
 
     useEffect(() => {
+        window.scrollTo(0,0)
         setShuffledQuestion(shuffle(question))
     },[])
 

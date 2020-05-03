@@ -37,6 +37,10 @@ const MenuTabHover = styled.div`
     }
 `
 
+const mobileMenuTab = {
+    marginLeft: 5, marginRight: 10
+}
+
 export default function App () {
 
     const divStyle = {
@@ -72,7 +76,7 @@ export default function App () {
                                     <Col span={16}>
                                         <Link to="/">
                                             {/* <div style={{fontSize: '2rem', color: 'white', fontWeight: 'bold'}}>
-                                                Valog <span style={{fontSize: '1.4rem'}}>발로그.gg</span>
+                                                Valop <span style={{fontSize: '1.4rem'}}>발옵지지</span>
                                             </div> */}
                                             <img src={require('./images/mainLogo.png')} style={{width: '20%'}} />
                                         </Link>
@@ -89,17 +93,17 @@ export default function App () {
                     {
                         window.innerWidth < 576 ? 
                         <div style={{display: 'flex', justifyContent: 'space-between', alignItems: 'center', height: '100%', fontSize: '1.2em', overflowX: 'scroll', overflowY: 'hidden', whiteSpace: 'nowrap'}}>
-                            <Link to="/guide" style={{marginLeft: 10, marginRight: 10}}>가이드</Link>
-                            <Link to="/agent" style={{marginLeft: 10, marginRight: 10}}>요원</Link>
-                            <Link to="/agentrecom" style={{marginLeft: 10, marginRight: 10}}>맞는 요원 찾기</Link>
-                            <Link to="/weapon" style={{marginLeft: 10, marginRight: 10}}>무기</Link>
-                            <Link to="/map" style={{marginLeft: 10, marginRight: 10}}>맵</Link>
-                            <Link to="/strat" style={{marginLeft: 10, marginRight: 10}}>요원별 전략</Link>
-                            <Link to="/dic" style={{marginLeft: 10, marginRight: 10}}>용어사전</Link>
-                            <Link to="/prosetting" style={{marginLeft: 10, marginRight: 10}}>프로 세팅</Link>
-                            <Link to="/simulator" style={{marginLeft: 10, marginRight: 10}}>전략 시뮬레이터</Link>
-                            <Link to="/recruit" style={{marginLeft: 10, marginRight: 10}}>파티 모집</Link>
-                            {/* <Link to="/community" style={{marginLeft: 10, marginRight: 10}}>커뮤니티</Link> */}
+                            <Link to="/guide" style={mobileMenuTab}>가이드</Link>
+                            <Link to="/agent" style={mobileMenuTab}>요원</Link>
+                            <Link to="/agentrecom" style={mobileMenuTab}>맞는 요원 찾기</Link>
+                            <Link to="/weapon" style={mobileMenuTab}>무기</Link>
+                            <Link to="/map" style={mobileMenuTab}>맵</Link>
+                            <Link to="/strat" style={mobileMenuTab}>요원별 전략</Link>
+                            <Link to="/dic" style={mobileMenuTab}>용어사전</Link>
+                            <Link to="/prosetting" style={mobileMenuTab}>프로 세팅</Link>
+                            <Link to="/simulator" style={mobileMenuTab}>전략 시뮬레이터</Link>
+                            <Link to="/recruit" style={mobileMenuTab}>파티 모집</Link>
+                            {/* <Link to="/community" style={mobileMenuTab}>커뮤니티</Link> */}
                         </div>
                         :
                         <Col xs={24} sm={22} md={20} lg={20} xl={15} >
@@ -141,11 +145,11 @@ export default function App () {
                 </Content>
                 <Footer style={{ backgroundColor: '#121212'}}>
                     <Row justify="center">
-                        Contact : valog.gg@gmail.com
+                        Contact : valop.gg@gmail.com
                     </Row>
                     <Row justify="center" >
                         <Col xs={24} sm={22} md={20} lg={20} xl={15} style={{marginTop: 30, marginBottom: 30}}>
-                            Valang.gg isn't endorsed by Riot Games and doesn't reflect the views or opinions of Riot Games or anyone officially involved in producing or managing Riot Games properties. Riot Games, and all associated properties are trademarks or registered trademarks of Riot Games, Inc.
+                            Valop.gg isn't endorsed by Riot Games and doesn't reflect the views or opinions of Riot Games or anyone officially involved in producing or managing Riot Games properties. Riot Games, and all associated properties are trademarks or registered trademarks of Riot Games, Inc.
                         </Col>
                     </Row>
                 </Footer>

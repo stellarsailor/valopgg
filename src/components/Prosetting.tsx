@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useEffect } from 'react'
 import styled from 'styled-components'
 import { Row, Col, Divider } from 'antd';
 import { prosetting } from '../datas/prosetting'
@@ -12,6 +12,10 @@ const Bold = styled.span`
 `
 
 export default function Prosetting() {
+
+    useEffect(() => {
+        window.scrollTo(0, 0)
+    },[])
     
     return(
         <Row justify="center" style={{backgroundColor: 'rgba(19, 28, 46, 0.95)', minHeight: 800}} >
