@@ -51,7 +51,7 @@ export default function WeaponDetail(props) {
                             <Col xs={24} sm={24} md={18} lg={18} xl={18} style={{backgroundColor: 'rgb(24, 35, 56)', padding: '1rem'}}>
                                 <div style={{fontSize: '1.5rem', marginLeft: '1rem', marginBottom: '1rem'}}>{data.name_ko}</div>
                                 <div style={{display: 'flex', justifyContent: 'center'}}>
-                                    <img src={require(`../images/weapons/${data.name.toLowerCase()}-model.png`)} style={{width: '50%'}} />
+                                    <img src={require(`../images/weapons/${data.name.toLowerCase()}-model.png`)} style={{width: '50%', height: 'auto'}} />
                                 </div>
                                 <div style={{marginLeft: '1rem',}}>탄창 : {data.capacity}</div>
                                 <div style={{marginLeft: '1rem',}}>관통력 : {data.penetration}</div>

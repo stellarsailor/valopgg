@@ -111,9 +111,8 @@ export default function AgentRecommendation() {
                     :
                         <Row justify="center" style={{fontSize: '1.5rem', padding: '1rem', backgroundColor: '#202b43'}}>
                             <div style={{display: 'flex', justifyContent: 'center'}}>
-                                <img src={require('../images/mainLogo.png')} style={{width: '30%'}} />
+                                <img src={require('../images/mainLogo.png')} style={{width: '30%', alignSelf: 'flex-start'}} />
                             </div>
-
                             <Col xs={24} sm={22} md={20} lg={20} xl={15} >
                                 <div style={{marginTop: '2rem', marginBottom: '2rem'}}>
                                     {page+1}. {shuffledQuestion[page].question}

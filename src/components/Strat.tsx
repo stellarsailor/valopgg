@@ -113,8 +113,8 @@ export default function Strat() {
                                                 if(difficultySelection === '전체') return v
                                                 else if( v.difficulty === difficultySelection ) return v
                                             }).map((v) => (
-                                                <StratPane onClick={() => setDetailView(v)} onMouseEnter={() => setHoverImage(v.identifier)} onMouseLeave={() => setHoverImage('')}>
-                                                    <img src={`https://valop-static.s3.ap-northeast-2.amazonaws.com/abilities/${agentSelection}${v.abilityIcon}.svg`} style={{width: '2rem'}} />
+                                                <StratPane onClick={() => setDetailView(v)} onMouseEnter={() => setHoverImage(v.identifier)} onMouseLeave={() => setHoverImage('')} style={{width: '100%', height: 'auto'}}>
+                                                    <img src={`https://valop-static.s3.ap-northeast-2.amazonaws.com/abilities/${agentSelection}${v.abilityIcon}.svg`} style={{width: '2rem', alignSelf: 'flex-start'}} />
                                                     <div style={{marginLeft: 10}}>
                                                         <div style={{fontSize: '1rem', fontWeight: 'bold'}}>
                                                             {v.title}
@@ -183,7 +183,7 @@ export default function Strat() {
                                             </div>
                                             <TransformComponent>
                                                 <img src={mainLogo} style={{position: 'absolute', bottom: '10%', left: '3%', width: '30%'}} />
-                                                <img src={`https://valop-static.s3.ap-northeast-2.amazonaws.com/strat/${agentSelection}/${mapSelection}/${detailView.identifier}${v}.png`} style={{width: '100%'}} key={index} />
+                                                <img src={`https://valop-static.s3.ap-northeast-2.amazonaws.com/strat/${agentSelection}/${mapSelection}/${detailView.identifier}${v}.png`} style={{width: '100%', alignSelf: 'flex-start'}} key={index} />
                                             </TransformComponent>
                                         </div>
                                     )}
