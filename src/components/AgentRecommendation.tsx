@@ -1,11 +1,13 @@
 import React, { useState, useCallback, useEffect } from 'react'
 import styled from 'styled-components'
 import { Link } from 'react-router-dom'
-import { Row, Col, Button, Progress } from 'antd';
+import { Row, Col, Button, Progress, Typography } from 'antd';
 import { SearchOutlined } from '@ant-design/icons';
 import capitalizeFirstLetter from '../logics/capitalizeFirstLetter'
 
 import { question } from '../datas/question'
+
+const { Paragraph } = Typography;
 
 export default function AgentRecommendation() {
 
@@ -66,6 +68,8 @@ export default function AgentRecommendation() {
         setPage(page + 1)
     },[point, page])
 
+    const result = Object.keys(point).reduce((a, b) => point[a] > point[b] ? a : b)
+
     return(
         <Row justify="center" style={{backgroundColor: 'rgba(19, 28, 46, 0.95)', minHeight: 800}} >
             <Col xs={24} sm={22} md={20} lg={20} xl={15}>
@@ -95,12 +99,13 @@ export default function AgentRecommendation() {
                         <Row justify="center" style={{padding: '1rem', backgroundColor: '#202b43'}}>
                             <Col xs={24} sm={22} md={20} lg={20} xl={15} >
                                 <div style={{fontSize: '1.5rem'}}>
-                                    추천 캐릭터는 {capitalizeFirstLetter(Object.keys(point).reduce((a, b) => point[a] > point[b] ? a : b))} 입니다!
+                                    추천 캐릭터는 {capitalizeFirstLetter(result)} 입니다!
+                                    <Paragraph style={{color: 'white', fontSize: '1.2rem', textAlign: 'right'}} copyable={{ text: 'http://valop.gg/agentrecom/' }}>친구에게 URL 공유하기</Paragraph>
                                 </div>
                                 <div style={{display: 'flex', justifyContent: 'center', marginTop: 10}}>
-                                    <Link to={`/agent?name=${Object.keys(point).reduce((a, b) => point[a] > point[b] ? a : b)}`}><Button type="primary" icon={<SearchOutlined />}>정보 보기</Button></Link>
+                                    <Link to={`/agent?name=${result}`}><Button type="primary" icon={<SearchOutlined />}>정보 보기</Button></Link>
                                 </div>
-                                <img src={require(`../images/agents/${Object.keys(point).reduce((a, b) => point[a] > point[b] ? a : b)}-standing.png`)} style={{width: '100%'}} />
+                                <img src={require(`../images/agents/${result}-standing.png`)} style={{width: '100%'}} />
                             </Col>
                         </Row>
                     :

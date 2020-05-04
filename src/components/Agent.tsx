@@ -5,6 +5,17 @@ import { agent } from '../datas/agent'
 import SkillCount from './subcomponents/SkillCount';
 import queryString from 'query-string'
 
+const AgentPane = styled.div`
+    background-color: rgb(32, 43, 67);
+    border-radius: 20;
+    width: 300;
+    height: 300;
+
+    :hover {
+        background-color: blue;
+    }
+`
+
 export default function Agent(props) {
 
     const qs: any = queryString.parse(props.location.search)
@@ -38,29 +49,43 @@ export default function Agent(props) {
                         <img src={require('../images/official-background-wide-darken.png')} style={{width: '100%'}} />
                     </div>
                     :
-                    <></>
+                    null
                 }
                 <Row justify="center" style={{marginTop: 15, marginBottom: 15}}>
-                    {agent.map((v) => (
-                        <Tooltip title={v.name_ko}>
-                            <Col xs={4} sm={4} md={4} lg={2} xl={2} key={v.id}>
-                                <a>
-                                    <img src={require(`../images/agents/${v.name.toLowerCase()}.png`)} style={{border: '1px solid gray', width: '100%'}} onClick={() => onChangeAgent(v.id)} />
-                                </a>
-                            </Col>  
-                        </Tooltip>
-                    ))}
+                    {
+                        agentSelection === null ?
+                            agent.map((v, index) => (
+                                <Tooltip title={v.name_ko} key={index}>
+                                    <Col xs={24} sm={24} md={12} lg={8} xl={8} key={v.id}>
+                                        <a>
+                                            <div style={{backgroundColor: 'rgb(32, 43, 67)', borderRadius: 10, margin: '1rem'}}>
+                                                <img src={require(`../images/agents/${v.name.toLowerCase()}.png`)} onClick={() => onChangeAgent(v.id)} style={{width: '100%', height: 'auto'}} />
+                                            </div>
+                                        </a>
+                                    </Col>  
+                                </Tooltip>
+                            ))
+                        :
+                            agent.map((v, index) => (
+                                <Tooltip title={v.name_ko} key={index}>
+                                    <a style={{marginRight: '1rem'}} onClick={() => onChangeAgent(v.id)}>
+                                        <img src={require(`../images/agents/${v.name.toLowerCase()}-headshot.png`)} style={agentSelection === v.id ? {width: '4rem', borderRadius: '4rem', border: '2px solid white'} : {width: '4rem', borderRadius: '4rem', border: '2px solid #202b43'}} />
+                                    </a>
+                                </Tooltip>
+                            ))
+                    }
                 </Row>
                 {
                     agentSelection === null ?
-                        <></>
+                        null
                     :
                     <Row style={{backgroundColor: '#182338', borderRadius: 10, width: '100%'}} justify="center">
                         <Col style={{width: '100%', fontSize: '1.5rem', display: 'flex', justifyContent: 'center'}}>
                             { window.innerWidth < 768 ? agent[agentSelection].name_ko : null }
                         </Col>
                         <Col xs={24} sm={24} md={12} lg={12} xl={16} style={{padding: 20}}>
-                            <img src={`https://valop-static.s3.ap-northeast-2.amazonaws.com/abilities_gif/${agent[agentSelection].name.toLowerCase()}${abilitySelection}.gif`} style={{width: '100%', borderRadius: 10}} />
+                            {/* <img src={`https://valop-static.s3.ap-northeast-2.amazonaws.com/abilities_gif/${agent[agentSelection].name.toLowerCase()}${abilitySelection}.gif`} style={{width: '100%', borderRadius: 10}} /> */}
+                            <div style={{fontSize: '1.6rem', textAlign: 'center', marginBottom: '2rem'}}>"{agent[agentSelection].quote}"</div>
                             <Row style={{width: '100%', paddingLeft: '10%', paddingRight: '10%'}}>
                                 {arr.map(v => (
                                     <Col span={6} key={v} onClick={() => setAbilitySelection(v)} style={{padding: 10}}> 
@@ -80,8 +105,7 @@ export default function Agent(props) {
                         </Col>
                         <Col xs={0} sm={0} md={12} lg={12} xl={8} style={{width: '100%'}}>
                             <div style={{width: '100%', height: '100%', display: 'flex', justifyContent: 'center', alignItems: 'center'}}>
-                                <div style={{position: 'absolute', fontSize: '1.6rem', top: '1.6rem', textAlign: 'center', marginRight: 10}}>"{agent[agentSelection].quote}"</div>
-                                <div style={{position: 'absolute', fontSize: '2.5rem', bottom: '4rem', textAlign: 'center', marginRight: 10}}>{agent[agentSelection].name}</div>
+                                <div style={{position: 'absolute', fontSize: '2.5rem', fontWeight: 'bold', bottom: '4rem', textAlign: 'center', marginRight: 10}}>{agent[agentSelection].name}</div>
                                 <img src={`https://valop-static.s3.ap-northeast-2.amazonaws.com/agents/${agent[agentSelection].name.toLowerCase()}-standing.png`} style={{width: '100%'}} />
                             </div>
                         </Col>

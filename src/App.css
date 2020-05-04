@@ -12,3 +12,26 @@ div {
 h1, h2, h3, h4, h5, h6 {
   color: white;
 }
+
+.ant-page-header-back-button {
+  color: white !important;
+}
+
+.ant-page-header-heading-title {
+  color: white !important; 
+}
+
+.transition {
+  transition-property: all;
+  transition-duration: 0.25s;
+  transition-timing-function: ease-in-out;
+  transition-delay: 0s;
+}
+
+.transition :hover {
+  width: 150%;
+  transition-property: all;
+  transition-duration: 0.25s;
+  transition-timing-function: ease-in-out;
+  transition-delay: 0s;
+}

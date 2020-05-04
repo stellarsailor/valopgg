@@ -118,6 +118,9 @@ export default function WeaponDetail(props) {
                                     }
                                 </Row>
                             </Col>
+                            <Col xs={24} sm={24} md={6} lg={6} xl={6} style={{backgroundColor: 'rgb(24, 35, 56)', padding: '1rem'}}>
+                                * 무기 스킨 갤러리가 차후 추가될 예정입니다.
+                            </Col>
                         </Row>
                     </Col>
                 </Row>
