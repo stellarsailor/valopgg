@@ -87,7 +87,7 @@ export const dic: Array<dicType> = [
     {
         id: 13,
         letter: 'ㅍ',
-        word: '픽, 피킹(Peak)',
+        word: '픽, 피킹(Peek)',
         desc: '살짝 내다보는 행위'
     },
     {
@@ -197,5 +197,23 @@ export const dic: Array<dicType> = [
         letter: 'C',
         word: 'C4',
         desc: '스파이크를 의미함'
+    },
+    {
+        id: 32,
+        letter: 'A',
+        word: 'ADS',
+        desc: 'Aiming Down Sight. 정조준 모드'
+    },
+    {
+        id: 33,
+        letter: 'ㅇ',
+        word: '엔트리',
+        desc: '제일 앞장서서 가는 플레이어'
+    },
+    {
+        id: 34,
+        letter: 'C',
+        word: 'CT',
+        desc: '방어팀 진영 스폰 지점'
     },
 ]

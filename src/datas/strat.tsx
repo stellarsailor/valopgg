@@ -380,13 +380,131 @@ export const strat: agentType = {
     },
     jett: {
         bind: [
-
+            {
+                id: 0,
+                abilityIcon: 0,
+                title: 'A숏 헤븐 연막',
+                identifier: 'ashort-heaven-smoke',
+                difficulty: '보통',
+                type: 'image',
+                method: [
+                    1,2,3
+                ],
+            },
+            {
+                id: 1,
+                abilityIcon: 0,
+                title: 'A숏 연막',
+                identifier: 'ashort-smoke',
+                difficulty: '보통',
+                type: 'image',
+                method: [
+                    1,2,3
+                ],
+            },
+            {
+                id: 2,
+                abilityIcon: 0,
+                title: 'B홀 후카 연막',
+                identifier: 'bhall-hookah-smoke',
+                difficulty: '보통',
+                type: 'image',
+                method: [
+                    1,2,3
+                ],
+            },
+            {
+                id: 3,
+                abilityIcon: 0,
+                title: '후카 B홀 연막',
+                identifier: 'hookah-bhall-smoke',
+                difficulty: '보통',
+                type: 'image',
+                method: [
+                    1,2,3
+                ],
+            },
+            {
+                id: 4,
+                abilityIcon: 0,
+                title: '샤워 헤븐 연막',
+                identifier: 'shower-heaven-smoke',
+                difficulty: '어려움',
+                type: 'image',
+                method: [
+                    1,2,3
+                ],
+            },
         ],
         haven: [
-
+            {
+                id: 0,
+                abilityIcon: 0,
+                title: 'C롱 연막',
+                identifier: 'clong-smoke',
+                difficulty: '쉬움',
+                type: 'image',
+                method: [
+                    1,2
+                ],
+            },
+            {
+                id: 1,
+                abilityIcon: 0,
+                title: '창고 연막',
+                identifier: 'garage-smoke',
+                difficulty: '어려움',
+                type: 'image',
+                method: [
+                    1,2
+                ],
+            },
+            {
+                id: 2,
+                abilityIcon: 0,
+                title: '윈도우 B사이트 연막',
+                identifier: 'garage-smoke',
+                difficulty: '어려움',
+                type: 'image',
+                method: [
+                    1,2,3
+                ],
+            },
+            {
+                id: 3,
+                abilityIcon: 3,
+                title: 'A롱 궁 저격',
+                identifier: 'along-ult',
+                difficulty: '어려움',
+                type: 'image',
+                method: [
+                    1
+                ],
+            },
         ],
         split: [
-            
+            {
+                id: 0,
+                abilityIcon: 0,
+                title: '헤븐 A메인 연막',
+                identifier: 'heaven-amain-smoke',
+                difficulty: '쉬움',
+                type: 'image',
+                method: [
+                    1,2
+                ],
+            },
+            {
+                id: 1,
+                abilityIcon: 0,
+                title: '수비 미드 연막',
+                identifier: 'mid-smoke',
+                difficulty: '쉬움',
+                type: 'image',
+                method: [
+                    1,2
+                ],
+            },
         ]
     },
     omen: {
@@ -424,24 +542,392 @@ export const strat: agentType = {
     },
     sage: {
         bind: [
-
+            {
+                id: 0,
+                abilityIcon: 0,
+                title: 'A숏 장벽',
+                identifier: 'ashort-wall',
+                difficulty: '쉬움',
+                type: 'image',
+                method: [
+                    1,2,3
+                ],
+            },
+            {
+                id: 1,
+                abilityIcon: 0,
+                title: 'B사이트 장벽',
+                identifier: 'bsite-wall',
+                difficulty: '쉬움',
+                type: 'image',
+                method: [
+                    1,2
+                ],
+            },
+            {
+                id: 2,
+                abilityIcon: 0,
+                title: 'B윈도우 장벽',
+                identifier: 'bwindow-wall',
+                difficulty: '어려움',
+                type: 'image',
+                method: [
+                    1,2
+                ],
+            },
         ],
         haven: [
-
+            {
+                id: 0,
+                abilityIcon: 0,
+                title: 'A숏 장벽',
+                identifier: 'asite-wall',
+                difficulty: '쉬움',
+                type: 'image',
+                method: [
+                    1,2,3,4
+                ],
+            },
+            {
+                id: 1,
+                abilityIcon: 0,
+                title: 'B사이트 장벽',
+                identifier: 'bsite-wall',
+                difficulty: '쉬움',
+                type: 'image',
+                method: [
+                    1,2,3
+                ],
+            },
         ],
         split: [
-            
+            {
+                id: 0,
+                abilityIcon: 0,
+                title: 'A사이트 장벽',
+                identifier: 'asite-wall',
+                difficulty: '보통',
+                type: 'image',
+                method: [
+                    1,2,3,4
+                ],
+            },
+            {
+                id: 1,
+                abilityIcon: 0,
+                title: 'B사이트 장벽',
+                identifier: 'bsite-wall',
+                difficulty: '쉬움',
+                type: 'image',
+                method: [
+                    1,2
+                ],
+            },
+            {
+                id: 2,
+                abilityIcon: 0,
+                title: '미드 장벽',
+                identifier: 'mid-wall',
+                difficulty: '쉬움',
+                type: 'image',
+                method: [
+                    1,2
+                ],
+            },
         ]
     },
     sova: {
         bind: [
-
+            {
+                id: 0,
+                abilityIcon: 2,
+                title: 'A숏 A사이트 정찰화살',
+                identifier: 'ashort-asite-recon',
+                difficulty: '보통',
+                type: 'image',
+                method: [
+                    1,2
+                ],
+            },
+            {
+                id: 1,
+                abilityIcon: 2,
+                title: 'A숏 B미드 정찰화살',
+                identifier: 'ashort-bmid-recon',
+                difficulty: '보통',
+                type: 'image',
+                method: [
+                    1,2,3,4,5
+                ],
+            },
+            {
+                id: 2,
+                abilityIcon: 2,
+                title: 'A숏 정찰화살',
+                identifier: 'ashort-recon',
+                difficulty: '보통',
+                type: 'image',
+                method: [
+                    1,2,3,4,5
+                ],
+            },
+            {
+                id: 3,
+                abilityIcon: 2,
+                title: 'B미드 B사이트 정찰화살',
+                identifier: 'bmid-bsite-recon',
+                difficulty: '보통',
+                type: 'image',
+                method: [
+                    1,2,3,4
+                ],
+            },
+            {
+                id: 4,
+                abilityIcon: 2,
+                title: 'B숏 B사이트 정찰화살',
+                identifier: 'bshort-bsite-recon',
+                difficulty: '보통',
+                type: 'image',
+                method: [
+                    1,2,3
+                ],
+            },
+            {
+                id: 5,
+                abilityIcon: 2,
+                title: '후카 B미드 정찰화살',
+                identifier: 'hookah-bmid-recon',
+                difficulty: '보통',
+                type: 'image',
+                method: [
+                    1,2,3
+                ],
+            },
+            {
+                id: 6,
+                abilityIcon: 2,
+                title: '샤워 A숏 정찰화살',
+                identifier: 'shower-ashort-recon',
+                difficulty: '보통',
+                type: 'image',
+                method: [
+                    1,2,3,4
+                ],
+            },
+            {
+                id: 6,
+                abilityIcon: 2,
+                title: '샤워 A사이트 정찰화살',
+                identifier: 'shower-asite-recon',
+                difficulty: '보통',
+                type: 'image',
+                method: [
+                    1,2,3
+                ],
+            },
+            {
+                id: 7,
+                abilityIcon: 2,
+                title: 'A사이트 트럭 A숏 정찰화살',
+                identifier: 'truck-ashort-recon',
+                difficulty: '보통',
+                type: 'image',
+                method: [
+                    1,2,3
+                ],
+            },
         ],
         haven: [
-
+            {
+                id: 0,
+                abilityIcon: 2,
+                title: 'A링크 A사이트 정찰화살',
+                identifier: 'alink-asite-recon',
+                difficulty: '쉬움',
+                type: 'image',
+                method: [
+                    1,2,3
+                ],
+            },
+            {
+                id: 1,
+                abilityIcon: 2,
+                title: 'A롱 A사이트 정찰화살',
+                identifier: 'along-asite-recon',
+                difficulty: '보통',
+                type: 'image',
+                method: [
+                    1,2,3,4
+                ],
+            },
+            {
+                id: 2,
+                abilityIcon: 2,
+                title: 'A사이트 정원 정찰화살',
+                identifier: 'asite-garden-recon',
+                difficulty: '어려움',
+                type: 'image',
+                method: [
+                    1,2,3,4,5
+                ],
+            },
+            {
+                id: 3,
+                abilityIcon: 2,
+                title: 'B사이트 미드 윈도우 정찰화살',
+                identifier: 'bsite-midwindow-recon',
+                difficulty: '어려움',
+                type: 'image',
+                method: [
+                    1,2,3,4,5,6
+                ],
+            },
+            {
+                id: 4,
+                abilityIcon: 2,
+                title: 'B사이트 정찰화살',
+                identifier: 'bsite-recon',
+                difficulty: '보통',
+                type: 'image',
+                method: [
+                    1,2,3,
+                ],
+            },
+            {
+                id: 5,
+                abilityIcon: 2,
+                title: 'C롱 C사이트 정찰화살',
+                identifier: 'clong-csite-recon',
+                difficulty: '보통',
+                type: 'image',
+                method: [
+                    1,2,3,4,5
+                ],
+            },
+            {
+                id: 6,
+                abilityIcon: 2,
+                title: '미드 창고 정찰화살',
+                identifier: 'middoors-garage-recon',
+                difficulty: '보통',
+                type: 'image',
+                method: [
+                    1,2,3
+                ],
+            },
         ],
         split: [
-            
+            {
+                id: 0,
+                abilityIcon: 2,
+                title: 'A헤븐 공격진 스폰지역 정찰화살',
+                identifier: 'aheaven-tspawn-recon',
+                difficulty: '쉬움',
+                type: 'image',
+                method: [
+                    1,2,3
+                ],
+            },
+            {
+                id: 1,
+                abilityIcon: 2,
+                title: 'A램프 공격진 스폰지역 정찰화살',
+                identifier: 'aramp-tspawn-recon',
+                difficulty: '어려움',
+                type: 'image',
+                method: [
+                    1,2,3
+                ],
+            },
+            {
+                id: 2,
+                abilityIcon: 2,
+                title: 'B헤븐 B사이트 정찰화살',
+                identifier: 'bheaven-bsite-recon',
+                difficulty: '보통',
+                type: 'image',
+                method: [
+                    1,2
+                ],
+            },
+            {
+                id: 3,
+                abilityIcon: 2,
+                title: 'B사이트 B로비 정찰화살',
+                identifier: 'bsite-blobby-recon',
+                difficulty: '보통',
+                type: 'image',
+                method: [
+                    1,2,3
+                ],
+            },
+            {
+                id: 4,
+                abilityIcon: 2,
+                title: '우편함 미드 정찰화살',
+                identifier: 'mail-mid-recon',
+                difficulty: '보통',
+                type: 'image',
+                method: [
+                    1,2
+                ],
+            },
+            {
+                id: 5,
+                abilityIcon: 2,
+                title: '미드 정찰화살',
+                identifier: 'mid-recon',
+                difficulty: '보통',
+                type: 'image',
+                method: [
+                    1,2,3
+                ],
+            },
+            {
+                id: 6,
+                abilityIcon: 2,
+                title: '미드 정찰화살2',
+                identifier: 'mid-recon-2nd',
+                difficulty: '보통',
+                type: 'image',
+                method: [
+                    1,2
+                ],
+            },
+            {
+                id: 7,
+                abilityIcon: 2,
+                title: '공격진 스폰 지역 A램프 정찰화살',
+                identifier: 'tspawn-aramp-recon',
+                difficulty: '보통',
+                type: 'image',
+                method: [
+                    1,2,3,4
+                ],
+            },
+            {
+                id: 8,
+                abilityIcon: 2,
+                title: '공격진 스폰 지역 A사이트 정찰화살',
+                identifier: 'tspawn-asite-recon',
+                difficulty: '보통',
+                type: 'image',
+                method: [
+                    1,2,3
+                ],
+            },
+            {
+                id: 9,
+                abilityIcon: 2,
+                title: '공격진 스폰 지역 B사이트 정찰화살',
+                identifier: 'tspawn-bsite-recon',
+                difficulty: '보통',
+                type: 'image',
+                method: [
+                    1,2,3,4
+                ],
+            },
         ]
     },
     viper: {

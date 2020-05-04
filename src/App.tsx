@@ -61,17 +61,14 @@ export default function App () {
                             <div style={{position: 'absolute', backgroundColor: 'black', width: '100%', height: 80, opacity: 0.4}}></div>
                             <Col xs={22} >
                                 <Link to="/">
-                                    <div style={{display: 'flex', justifyContent: 'center'}}>
-                                        <img src={require('./images/mainLogo.png')} style={{width: '30%'}} />
-                                    </div>
+                                    <img src={require('./images/mainLogo.png')} style={{width: '30%', height: 'auto', marginLeft: '1rem'}} />
                                 </Link>
-                                {/* <Search placeholder="전적 검색 기능을 준비 중입니다." onSearch={value => console.log(value)} enterButton /> */}
                             </Col>
                         </Row>
                         :
                         <Row justify="center" style={{height: 150, display: 'flex', alignItems: 'center', backgroundImage: `url(${Banner})`, backgroundSize: 'cover', backgroundPosition: 'center'}}>
                             <div style={{position: 'absolute', backgroundColor: 'black', width: '100%', height: 150, opacity: 0.4}}></div>
-                            <Col xs={24} sm={22} md={20} lg={20} xl={15} >
+                            <Col xs={0} sm={22} md={20} lg={20} xl={15} >
                                 <Row justify="space-between">
                                     <Col span={16}>
                                         <Link to="/">
@@ -102,7 +99,7 @@ export default function App () {
                             <Link to="/dic" style={mobileMenuTab}>용어사전</Link>
                             <Link to="/prosetting" style={mobileMenuTab}>프로 세팅</Link>
                             <Link to="/simulator" style={mobileMenuTab}>전략 시뮬레이터</Link>
-                            <Link to="/recruit" style={mobileMenuTab}>파티 모집</Link>
+                            {/* <Link to="/recruit" style={mobileMenuTab}>파티 모집</Link> */}
                             {/* <Link to="/community" style={mobileMenuTab}>커뮤니티</Link> */}
                         </div>
                         :
@@ -117,7 +114,7 @@ export default function App () {
                                 <MenuTabHover><Link to="/dic">용어사전</Link></MenuTabHover>
                                 <MenuTabHover><Link to="/prosetting">프로 세팅</Link></MenuTabHover>
                                 <MenuTabHover><Link to="/simulator">전략 시뮬레이터</Link></MenuTabHover>
-                                <MenuTabHover><Link to="/recruit">파티 모집</Link></MenuTabHover>
+                                {/* <MenuTabHover><Link to="/recruit">파티 모집</Link></MenuTabHover> */}
                                 {/* <Link to="/community">커뮤니티</Link> */}
                             </div>
                         </Col>

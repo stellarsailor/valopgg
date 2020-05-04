@@ -105,22 +105,25 @@ export default function Strat() {
                                 agentSelection === null ?
                                     <div>요원을 선택해주세요</div>
                                 :
-                                    <div style={{padding: '1rem', width: '100%'}}>
-                                        {strat[agentSelection][mapSelection].filter(v => {
-                                            if(difficultySelection === '전체') return v
-                                            else if( v.difficulty === difficultySelection ) return v
-                                        }).map((v) => (
-                                            <StratPane onClick={() => setDetailView(v)} onMouseEnter={() => setHoverImage(v.identifier)} onMouseLeave={() => setHoverImage('')}>
-                                                <img src={`https://valop-static.s3.ap-northeast-2.amazonaws.com/abilities/${agentSelection}${v.abilityIcon}.svg`} style={{width: '2rem'}} />
-                                                <div style={{marginLeft: 10}}>
-                                                    <div style={{fontSize: '1rem', fontWeight: 'bold'}}>
-                                                        {v.title}
-                                                        <SearchOutlined style={{marginLeft: 10}} />
+                                    strat[agentSelection][mapSelection].length === 0 ?
+                                        <div style={{display: 'flex', justifyContent: 'center', height: 200}}>데이터를 준비 중 입니다.</div>
+                                    :
+                                        <div style={{padding: '1rem', width: '100%'}}>
+                                            {strat[agentSelection][mapSelection].filter(v => {
+                                                if(difficultySelection === '전체') return v
+                                                else if( v.difficulty === difficultySelection ) return v
+                                            }).map((v) => (
+                                                <StratPane onClick={() => setDetailView(v)} onMouseEnter={() => setHoverImage(v.identifier)} onMouseLeave={() => setHoverImage('')}>
+                                                    <img src={`https://valop-static.s3.ap-northeast-2.amazonaws.com/abilities/${agentSelection}${v.abilityIcon}.svg`} style={{width: '2rem'}} />
+                                                    <div style={{marginLeft: 10}}>
+                                                        <div style={{fontSize: '1rem', fontWeight: 'bold'}}>
+                                                            {v.title}
+                                                            <SearchOutlined style={{marginLeft: 10}} />
+                                                        </div>
                                                     </div>
-                                                </div>
-                                            </StratPane>
-                                        ))}
-                                    </div>
+                                                </StratPane>
+                                            ))}
+                                        </div>
                             }
                         </Col>
                         <Col xs={24} sm={22} md={12} lg={12} xl={12} style={{backgroundColor: 'rgb(19, 28, 46)'}}>

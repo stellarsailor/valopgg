@@ -81,7 +81,12 @@ export default function Agent(props) {
                     :
                     <Row style={{backgroundColor: '#182338', borderRadius: 10, width: '100%'}} justify="center">
                         <Col style={{width: '100%', fontSize: '1.5rem', display: 'flex', justifyContent: 'center'}}>
-                            { window.innerWidth < 768 ? agent[agentSelection].name_ko : null }
+                            { window.innerWidth < 768 ? 
+                            <div style={{fontSize: '1.6rem', textAlign: 'center'}}>
+                                {agent[agentSelection].name_ko}
+                                <img src={`https://valop-static.s3.ap-northeast-2.amazonaws.com/agents/${agent[agentSelection].name.toLowerCase()}-standing.png`} style={{width: '100%'}} />
+                            </div>
+                            : null }
                         </Col>
                         <Col xs={24} sm={24} md={12} lg={12} xl={16} style={{padding: 20}}>
                             {/* <img src={`https://valop-static.s3.ap-northeast-2.amazonaws.com/abilities_gif/${agent[agentSelection].name.toLowerCase()}${abilitySelection}.gif`} style={{width: '100%', borderRadius: 10}} /> */}
