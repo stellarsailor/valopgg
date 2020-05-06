@@ -21,6 +21,7 @@ import WeaponDetail from './components/WeaponDetail';
 import Community from './components/Community';
 
 import OfficialBackground from './images/official-background.jpg'
+import Calculator from './components/Calculator';
 
 const { Header, Content, Footer } = Layout;
 const { Search } = Input;
@@ -98,6 +99,7 @@ export default function App () {
                             <Link to="/strat" style={mobileMenuTab}>요원별 전략</Link>
                             <Link to="/dic" style={mobileMenuTab}>용어사전</Link>
                             <Link to="/prosetting" style={mobileMenuTab}>프로 세팅</Link>
+                            <Link to="/calculator" style={mobileMenuTab}>감도 계산기</Link>
                             <Link to="/simulator" style={mobileMenuTab}>전략 시뮬레이터</Link>
                             {/* <Link to="/recruit" style={mobileMenuTab}>파티 모집</Link> */}
                             {/* <Link to="/community" style={mobileMenuTab}>커뮤니티</Link> */}
@@ -113,6 +115,7 @@ export default function App () {
                                 <MenuTabHover><Link to="/strat">요원별 전략</Link></MenuTabHover>
                                 <MenuTabHover><Link to="/dic">용어사전</Link></MenuTabHover>
                                 <MenuTabHover><Link to="/prosetting">프로 세팅</Link></MenuTabHover>
+                                <MenuTabHover><Link to="/calculator">감도 계산기</Link></MenuTabHover>
                                 <MenuTabHover><Link to="/simulator">전략 시뮬레이터</Link></MenuTabHover>
                                 {/* <MenuTabHover><Link to="/recruit">파티 모집</Link></MenuTabHover> */}
                                 {/* <Link to="/community">커뮤니티</Link> */}
@@ -134,6 +137,7 @@ export default function App () {
                         <Route path="/strat" component={Strat} />
                         <Route path="/dic" component={Dic} />
                         <Route path="/prosetting" component={Prosetting} />
+                        <Route path="/calculator" component={Calculator} />
                         <Route path="/simulator" component={Simulator} />
                         <Route path="/recruit" component={Recruit} />
                         <Route exact path="/" component={Main} />

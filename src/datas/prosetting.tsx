@@ -8,9 +8,9 @@ type proType = {
 
 type prosettingType = {
     mouse: string | null;
-    dpi: number | null;
-    sensitivity: number | null;
-    eDpi: number | null;
+    dpi: number;
+    sensitivity: number;
+    eDpi?: number | null;
     hz: number | null;
     scopedSensitivity: number | null;
     windowSensitivity: number | null;
@@ -212,6 +212,48 @@ export const prosetting: Array<proType> = [
             error: "On",
         
             monitor: 'ASUS ROG SWIFT PG258Q',
+            display: "Fullscreen",
+            resolution: "1920×1080",
+            frameLimit: "Unlocked",
+        }
+    },
+    {
+        id: 2,
+        name: "TenZ",
+        team: "Twitch Streamer(former CS:GO player)",
+        photo: "https://cdn.cosmicjs.com/11f20f90-83bf-11ea-9591-67da5879e77c-tenz.jpg",
+        prosetting: {
+            mouse: 'Zowie S2',
+            dpi: 800,
+            sensitivity: 0.345,
+            hz: 1000,
+            scopedSensitivity: 1,
+            windowSensitivity: null,
+        
+            keyboard: 'HyperX Alloy FPS RGB',
+            walk: "?",
+            crouch: "?",
+            jump: "?",
+            useObject: "?",
+        
+            equip1: "1",
+            equip2: "2",
+            equip3: "3",
+            equip4: "4",
+        
+            ability1: "Mouse 4",
+            ability2: "Mouse 5",
+            ability3: "C",
+            ability4: "F",
+        
+            color: "Cyan",
+            outlines: "Off",
+            centerDot: "Off",
+            innerLines: '1 / 4 / 2 / 2',
+            outerLines: '0 / 0 / 0 / 0',
+            error: "Off",
+        
+            monitor: 'BenQ XL2546',
             display: "Fullscreen",
             resolution: "1920×1080",
             frameLimit: "Unlocked",

@@ -25,17 +25,9 @@ export default function Prosetting() {
                     <div style={{fontSize: '1.1rem'}}>CS:GO 프로 선수 및 스트리머들이 발로란트에서 평균적으로 가장 많이 사용하는</div>
                     <div style={{fontSize: '1.1rem', marginLeft: '2rem'}}>DPI 는 <Bold>400</Bold> 입니다. <span style={{fontSize: '0.8rem'}}>(평균치 381, 2순위 800)</span></div>
                     <div style={{fontSize: '1.1rem', marginLeft: '2rem'}}>조준경 감도 배율은 <Bold>1.00</Bold> 입니다. <span style={{fontSize: '0.8rem'}}>(평균치 0.914)</span></div>
-                    <div style={{fontSize: '1.1rem', marginLeft: '2rem'}}>마우스 폴링 레이트는 <Bold>1000</Bold> 입니다.</div>
+                    <div style={{fontSize: '1.1rem', marginLeft: '2rem'}}>마우스 폴링 레이트는 <Bold>1000 hz</Bold> 입니다.</div>
                     <div style={{fontSize: '1.1rem', marginLeft: '2rem'}}>미니맵 설정은 <Bold>회전:회전 / 플레이어 중앙에 고정:꺼짐 / 미니맵 크기:0.978 / 미니맵 확대:0.9 / 미니맵 시야 범위 표시:켜짐</Bold> 입니다.</div>
                     <div style={{fontSize: '1.1rem', marginLeft: '2rem'}}>조준선 설정은 <Bold>색상:녹색 / 윤곽선:켜짐, 0.187, 1 / 화면 중앙 도트: 꺼짐, 0.49, 2 / 오차 발생 시 흐리기: 꺼짐</Bold> 입니다.</div>
-                </div>
-
-                <div style={{backgroundColor: '#202b43', margin: '1rem', padding: '1rem'}}>
-                    <div style={{fontSize: '1.6rem'}}>타 FPS에서의 감도 변환 공식</div>
-                    <div style={{fontSize: '1.1rem', marginLeft: '2rem'}}>Overwatch / Destiny 2 / Call of Duty: Warzone ÷ 10.6</div>
-                    <div style={{fontSize: '1.1rem', marginLeft: '2rem'}}>CS:GO / Apex Legends ÷ 3.18</div>
-                    <div style={{fontSize: '1.1rem', marginLeft: '2rem'}}>Rainbow Six Siege ÷ 12.2</div>
-                    <div style={{fontSize: '1.1rem', marginLeft: '2rem'}}>Fortnite ÷ 12.6</div>
                 </div>
 
                 {prosetting.map(v => (
@@ -67,7 +59,7 @@ export default function Prosetting() {
                                 </Col> 
                                 <Col xs={8} sm={8} md={8} lg={8} xl={8}>
                                     <BlockTitle>eDPI</BlockTitle>
-                                    {v.prosetting.eDpi}
+                                    {v.prosetting.dpi * v.prosetting.sensitivity}
                                 </Col> 
                                 <Col xs={8} sm={8} md={8} lg={8} xl={8}>
                                     <BlockTitle>Hz</BlockTitle>

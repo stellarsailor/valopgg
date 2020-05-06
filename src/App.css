@@ -35,3 +35,11 @@ h1, h2, h3, h4, h5, h6 {
   transition-timing-function: ease-in-out;
   transition-delay: 0s;
 }
+
+.ant-select-selection-item {
+  color: rgba(0, 0, 0, 0.65);
+}
+
+.ant-select-item-option-content {
+  color: rgba(0, 0, 0, 0.65);
+}

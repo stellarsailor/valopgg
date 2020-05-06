@@ -34,6 +34,7 @@ export default function Agent(props) {
     const [ abilitySelection, setAbilitySelection ] = useState<number>(0)
 
     const onChangeAgent = useCallback((agentNumber) => {
+        window.scrollTo(0, 0)
         setAgentSelection(agentNumber)
         setAbilitySelection(0)
     },[])

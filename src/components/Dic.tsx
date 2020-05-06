@@ -32,7 +32,7 @@ export default function Dic() {
                         <div key={v.id} style={{fontSize: '1rem'}}>
                             <div style={{marginBottom: '1.2rem'}}>
                                 <span style={{fontWeight: 'bold', fontSize: '1.2rem'}}>{v.word}</span>
-                                <div>{v.desc}</div>
+                                <div style={{marginLeft: '0.5rem'}}>| {v.desc}</div>
                             </div>
                         </div>
                     ))}

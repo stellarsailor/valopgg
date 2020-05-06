@@ -1,11 +1,15 @@
 import React, { useState, useCallback, useEffect, useRef } from 'react'
 import styled from 'styled-components'
 import { Row, Col, PageHeader, Button, Tooltip } from 'antd';
-import { strat } from '../datas/strat'
-import { agent } from '../datas/agent'
 import { PlusOutlined, MinusOutlined, SearchOutlined } from '@ant-design/icons';
 import { TransformWrapper, TransformComponent } from "react-zoom-pan-pinch";
+import * as Scroll from 'react-scroll';
+import { Link, Element , Events, animateScroll as scroll, scrollSpy, scroller } from 'react-scroll'
+ 
+import { strat } from '../datas/strat'
+import { agent } from '../datas/agent'
 import mainLogo from '../images/mainLogo.png'
+
 
 const Images = [
     require('../images/map/bind-illust.jpeg'),
@@ -52,12 +56,6 @@ export default function Strat() {
         method: []
     });
 
-    const [ page, setPage ] = useState(0)
-
-    const onChangeAgent = useCallback((agentNumber) => {
-        setAgentSelection(agentNumber)
-    },[])
-
     return(
         <Row justify="center" style={{backgroundColor: 'rgba(19, 28, 46, 0.95)', minHeight: 800}} >
             <Col xs={24} sm={22} md={20} lg={20} xl={15}>
@@ -97,8 +95,9 @@ export default function Strat() {
                         ))}
                     </Col>
                 </Row>
-                    {
-                        detailView.id === -1 ?
+                <Element name="scroll-to-element">
+                {
+                    detailView.id === -1 ?
                     <Row>
                         <Col xs={24} sm={22} md={12} lg={12} xl={12} style={{backgroundColor: '#202b43'}}>
                             {
@@ -113,7 +112,11 @@ export default function Strat() {
                                                 if(difficultySelection === '전체') return v
                                                 else if( v.difficulty === difficultySelection ) return v
                                             }).map((v) => (
-                                                <StratPane onClick={() => setDetailView(v)} onMouseEnter={() => setHoverImage(v.identifier)} onMouseLeave={() => setHoverImage('')} style={{width: '100%', height: 'auto'}}>
+                                                <StratPane onClick={() => { setDetailView(v); scroller.scrollTo('scroll-to-element', {
+                                                    duration: 800,
+                                                    delay: 0,
+                                                    smooth: 'easeInOutQuart'
+                                                }) }} onMouseEnter={() => setHoverImage(v.identifier)} onMouseLeave={() => setHoverImage('')} style={{width: '100%', height: 'auto'}}>
                                                     <img src={`https://valop-static.s3.ap-northeast-2.amazonaws.com/abilities/${agentSelection}${v.abilityIcon}.svg`} style={{width: '2rem', alignSelf: 'flex-start'}} />
                                                     <div style={{marginLeft: 10}}>
                                                         <div style={{fontSize: '1rem', fontWeight: 'bold'}}>
@@ -156,42 +159,43 @@ export default function Strat() {
                                 </TransformWrapper>
                             }
                         </Col>
-                </Row>
-                        :
-                        <Row style={{backgroundColor: '#202b43'}}>
-                            <PageHeader
-                                style={{color: 'red', fontSize: '1.5rem', }}
-                                onBack={() => setDetailView({
-                                    id: -1,
-                                    abilityIcon: -1,
-                                    title: '',
-                                    identifier: '',
-                                    difficulty: '',
-                                    type: '',
-                                    method: []
-                                })}
-                                title={detailView.title}
-                            />
-                            {
-                                detailView.method.map((v, index) => (
-                                    <TransformWrapper>
-                                    {({ zoomIn, zoomOut, resetTransform, ...rest }) => (
-                                        <div style={{marginBottom: '4.5rem'}}>
-                                            <div style={{position: 'absolute', zIndex: 20, margin: 10, right: 0}}>
-                                                <PlusOutlined style={{backgroundColor: 'rgb(32, 43, 67)', color: 'white', fontSize: '1.4rem', padding: 5}} onClick={zoomIn} />
-                                                <MinusOutlined style={{backgroundColor: 'rgb(32, 43, 67)', color: 'white', fontSize: '1.4rem', padding: 5}} onClick={zoomOut} />
-                                            </div>
-                                            <TransformComponent>
-                                                <img src={mainLogo} style={{position: 'absolute', bottom: '10%', left: '3%', width: '30%'}} />
-                                                <img src={`https://valop-static.s3.ap-northeast-2.amazonaws.com/strat/${agentSelection}/${mapSelection}/${detailView.identifier}${v}.png`} style={{width: '100%', alignSelf: 'flex-start'}} key={index} />
-                                            </TransformComponent>
+                    </Row>
+                    :
+                    <Row style={{backgroundColor: '#202b43'}}>
+                        <PageHeader
+                            style={{color: 'red', fontSize: '1.5rem', }}
+                            onBack={() => setDetailView({
+                                id: -1,
+                                abilityIcon: -1,
+                                title: '',
+                                identifier: '',
+                                difficulty: '',
+                                type: '',
+                                method: []
+                            })}
+                            title={detailView.title}
+                        />
+                        {
+                            detailView.method.map((v, index) => (
+                                <TransformWrapper>
+                                {({ zoomIn, zoomOut, resetTransform, ...rest }) => (
+                                    <div style={{marginBottom: '4.5rem'}}>
+                                        <div style={{position: 'absolute', zIndex: 20, margin: 10, right: 0}}>
+                                            <PlusOutlined style={{backgroundColor: 'rgb(32, 43, 67)', color: 'white', fontSize: '1.4rem', padding: 5}} onClick={zoomIn} />
+                                            <MinusOutlined style={{backgroundColor: 'rgb(32, 43, 67)', color: 'white', fontSize: '1.4rem', padding: 5}} onClick={zoomOut} />
                                         </div>
-                                    )}
-                                    </TransformWrapper>
-                                ))
-                            }
-                        </Row>
-                    }
+                                        <TransformComponent>
+                                            <img src={mainLogo} style={{position: 'absolute', bottom: '10%', left: '3%', width: '30%'}} />
+                                            <img src={`https://valop-static.s3.ap-northeast-2.amazonaws.com/strat/${agentSelection}/${mapSelection}/${detailView.identifier}${v}.png`} style={{width: '100%', alignSelf: 'flex-start'}} key={index} />
+                                        </TransformComponent>
+                                    </div>
+                                )}
+                                </TransformWrapper>
+                            ))
+                        }
+                    </Row>
+                }
+                </Element>
             </Col>
         </Row>
     )
