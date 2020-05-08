@@ -2,6 +2,7 @@ import React, { useEffect } from 'react'
 import styled from 'styled-components'
 import { Row, Col, Divider } from 'antd';
 import { prosetting } from '../datas/prosetting'
+import shuffle from '../logics/shuffleArray'
 
 const BlockTitle = styled.div`
     font-weight: bold;
@@ -19,8 +20,8 @@ export default function Prosetting() {
     
     return(
         <Row justify="center" style={{backgroundColor: 'rgba(19, 28, 46, 0.95)', minHeight: 800}} >
-            <Col xs={24} sm={22} md={20} lg={20} xl={15}>
-                <div style={{backgroundColor: '#202b43', margin: '1rem', padding: '1rem'}}>
+            <Col xs={24} sm={22} md={20} lg={20} xl={15} style={{padding: '1rem 0'}}>
+                <div style={{backgroundColor: '#202b43', padding: '1rem', marginBottom: '1rem'}}>
                     <div style={{fontSize: '1.6rem'}}>최적의 세팅 가이드</div>
                     <div style={{fontSize: '1.1rem'}}>CS:GO 프로 선수 및 스트리머들이 발로란트에서 평균적으로 가장 많이 사용하는</div>
                     <div style={{fontSize: '1.1rem', marginLeft: '2rem'}}>DPI 는 <Bold>400</Bold> 입니다. <span style={{fontSize: '0.8rem'}}>(평균치 381, 2순위 800)</span></div>
@@ -30,9 +31,9 @@ export default function Prosetting() {
                     <div style={{fontSize: '1.1rem', marginLeft: '2rem'}}>조준선 설정은 <Bold>색상:녹색 / 윤곽선:켜짐, 0.187, 1 / 화면 중앙 도트: 꺼짐, 0.49, 2 / 오차 발생 시 흐리기: 꺼짐</Bold> 입니다.</div>
                 </div>
 
-                {prosetting.map(v => (
+                {shuffle(prosetting).map(v => (
                     <>
-                    <Row justify="center" key={v.id} style={{backgroundColor: '#202b43', margin: '1rem', padding: '1rem'}}>
+                    <Row justify="center" key={v.id} style={{backgroundColor: '#202b43', padding: '1rem'}}>
                         <Col xs={24} sm={24} md={24} lg={24} xl={24}>
                             <span style={{fontSize: '1.8rem'}}>
                                 <span style={{fontWeight: 'bold'}}>{v.name} </span>

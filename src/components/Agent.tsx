@@ -47,7 +47,7 @@ export default function Agent(props) {
                     <div style={{display: 'flex', justifyContent: 'center', alignItems: 'center'}}>
                         <div style={{position: 'absolute', fontSize: '1.5rem'}}>정보를 확인할 요원을 선택해주세요.</div>
                         <div style={{position: 'absolute', width: '100%', backgroundColor: 'black', opacity: 0.3}}></div>
-                        <img src={require('../images/official-background-wide-darken.png')} style={{width: '100%'}} />
+                        <img src={require('../images/official-background-wide-darken.jpg')} style={{width: '100%'}} />
                     </div>
                     :
                     null
@@ -56,15 +56,15 @@ export default function Agent(props) {
                     {
                         agentSelection === null ?
                             agent.map((v, index) => (
-                                <Tooltip title={v.name_ko} key={index}>
-                                    <Col xs={24} sm={24} md={12} lg={8} xl={8} key={v.id}>
-                                        <a>
-                                            <div style={{backgroundColor: 'rgb(32, 43, 67)', borderRadius: 10, margin: '1rem'}}>
-                                                <img src={require(`../images/agents/${v.name.toLowerCase()}.png`)} onClick={() => onChangeAgent(v.id)} style={{width: '100%', height: 'auto'}} />
-                                            </div>
-                                        </a>
-                                    </Col>  
-                                </Tooltip>
+                                <Col xs={24} sm={24} md={12} lg={8} xl={8} key={v.id}>
+                                    <a>
+                                        <div style={{position: 'relative', backgroundImage: 'linear-gradient(rgb(32, 43, 67), rgb(5,15,30))', borderRadius: 10, margin: '1rem', overflow: 'hidden'}}>
+                                            <div style={{fontSize: '1.8rem', fontWeight: 'bold', position: 'absolute', right: '5%', bottom: '5%', zIndex: 10}}>{v.name_ko}</div>
+                                            <img src={require(`../images/agents/${v.name.toLowerCase()}.png`)} onClick={() => onChangeAgent(v.id)} style={{width: '100%', height: 'auto', zIndex: 5, position: 'relative'}} />
+                                            <div style={{fontSize: '4rem', fontWeight: 'bold', position: 'absolute', left: '5%', top: '-5%', zIndex: 0, opacity: 0.4, color: 'white'}}>{v.name}</div>
+                                        </div>
+                                    </a>
+                                </Col>  
                             ))
                         :
                             agent.map((v, index) => (

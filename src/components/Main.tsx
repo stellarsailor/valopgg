@@ -2,7 +2,7 @@ import React from 'react'
 import styled from 'styled-components'
 import { Row, Col, Collapse, Button, Alert, Input } from 'antd';
 import { Link } from 'react-router-dom'
-import Jumbotron from '../images/official-background.png'
+import Jumbotron from '../images/official-background.jpg'
 import ReactMarkdown from 'react-markdown'
 
 const { Panel } = Collapse;

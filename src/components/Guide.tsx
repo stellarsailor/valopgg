@@ -92,15 +92,5 @@ export default function Guide(props) {
                 </Row>
             </Col>
         </Row>
-        // <Row justify="center" style={{backgroundColor: '#ece8e1', minHeight: 600}} >
-        //     <Col xs={24} sm={22} md={20} lg={20} xl={15}>
-        //         <div style={{display: 'flex', justifyContent: 'center', alignItems: 'center'}}>
-        //             <div style={{position: 'absolute', fontSize: '1.5rem'}}>.</div>
-        //             <div style={{position: 'absolute', width: '100%', backgroundColor: 'black', opacity: 0.3}}></div>
-        //             <img src={require('../images/official-background-wide-darken.png')} style={{width: '100%'}} />
-        //         </div>
-
-        //     </Col>
-        // </Row>
     )
 }

@@ -175,7 +175,7 @@ export const prosetting: Array<proType> = [
         }
     },
     {
-        id: 2,
+        id: 3,
         name: "summit1g",
         team: "Twitch Streamer",
         photo: "https://prosettings.net/wp-content/uploads/2020/04/summit1g-profile-picture-3.jpg",
@@ -218,9 +218,9 @@ export const prosetting: Array<proType> = [
         }
     },
     {
-        id: 2,
+        id: 4,
         name: "TenZ",
-        team: "Twitch Streamer(former CS:GO player)",
+        team: "Twitch Streamer, former CS:GO player",
         photo: "https://cdn.cosmicjs.com/11f20f90-83bf-11ea-9591-67da5879e77c-tenz.jpg",
         prosetting: {
             mouse: 'Zowie S2',
@@ -254,6 +254,48 @@ export const prosetting: Array<proType> = [
             error: "Off",
         
             monitor: 'BenQ XL2546',
+            display: "Fullscreen",
+            resolution: "1920×1080",
+            frameLimit: "Unlocked",
+        }
+    },
+    {
+        id: 5,
+        name: "dafran",
+        team: "Twitch Streamer, Valorant rank player",
+        photo: "https://cdn.cosmicjs.com/8a769be0-7f58-11ea-9359-7595985d0a95-dafran.png",
+        prosetting: {
+            mouse: 'BenQ Zowie EC2',
+            dpi: 400,
+            sensitivity: 0.6,
+            hz: 1000,
+            scopedSensitivity: null,
+            windowSensitivity: null,
+        
+            keyboard: 'Corsair K65',
+            walk: "L-shift",
+            crouch: "Ctrl",
+            jump: "Space",
+            useObject: "F",
+        
+            equip1: "1",
+            equip2: "2",
+            equip3: "3",
+            equip4: "4",
+        
+            ability1: "Q",
+            ability2: "E",
+            ability3: "C",
+            ability4: "X",
+        
+            color: "Green",
+            outlines: "Off",
+            centerDot: "Off",
+            innerLines: '1 / 11 / 3 / 4',
+            outerLines: '0 / 2 / 2 / 10',
+            error: "Off",
+        
+            monitor: 'HP OMEN X 25f 240Hz',
             display: "Fullscreen",
             resolution: "1920×1080",
             frameLimit: "Unlocked",

@@ -10,7 +10,7 @@ type weaponType = {
     altMode?: string;
     altRate?: string;
     capacity: number;
-    penetration: "낮음" | "보통" | "높음";
+    penetration: "없음" | "낮음" | "보통" | "높음";
 }
 
 type damageType = {
@@ -19,6 +19,29 @@ type damageType = {
 }
 
 export const weapon: Array<weaponType> = [
+    {
+        category: "Knife",
+        category_ko: "나이프",
+        name: "Knife",
+        name_ko: "나이프",
+        cost: 0,
+        damage: [
+            {
+                distance: "정면 0-1",
+                damageSpec: [50, 50, 50],
+            },
+            {
+                distance: "백어택 0-1",
+                damageSpec: [100, 100, 100],
+            },
+        ],
+        primaryMode: "베기",
+        primaryRate: "초당 2회",
+        altMode: "찍기(베기 데미지의 1.5배)",
+        altRate: "초당 1회",
+        capacity: 0,
+        penetration: "없음"
+    },
     {
         category: "Sidearm",
         category_ko: "보조무기",

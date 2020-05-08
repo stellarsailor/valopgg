@@ -216,4 +216,28 @@ export const dic: Array<dicType> = [
         word: 'CT',
         desc: '방어팀 진영 스폰 지점'
     },
+    {
+        id: 35,
+        letter: 'ㅇ',
+        word: '에땁(AWP)',
+        desc: '타 게임에서의 발로란트 오퍼레이터 무기와 비슷한 저격총 AWP를 이르는 말.'
+    },
+    {
+        id: 36,
+        letter: 'ㅂ',
+        word: '버니 합(Bunny Hop)',
+        desc: '토끼뜀이라는 뜻으로 FPS내 일종의 무빙 테크닉.'
+    },
+    {
+        id: 37,
+        letter: 'F',
+        word: 'FOV',
+        desc: 'Field of View의 줄임말로써 시야각을 뜻함.'
+    },
+    {
+        id: 38,
+        letter: 'ㅍ',
+        word: '프리 에이밍(Pre-aiming)',
+        desc: '상대방이 나타날 만한 곳에 미리 조준선을 두며 움직이는 것'
+    },
 ]

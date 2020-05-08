@@ -19,9 +19,12 @@ import AgentRecommendation from './components/AgentRecommendation';
 import MapDetail from './components/MapDetail';
 import WeaponDetail from './components/WeaponDetail';
 import Community from './components/Community';
-
-import OfficialBackground from './images/official-background.jpg'
 import Calculator from './components/Calculator';
+import Privacy from './components/Privacy';
+import Tier from './components/Tier';
+
+import OfficialBackground from './images/official-silhouette-background.jpg'
+import Skin from './components/Skin';
 
 const { Header, Content, Footer } = Layout;
 const { Search } = Input;
@@ -94,13 +97,14 @@ export default function App () {
                             <Link to="/guide" style={mobileMenuTab}>가이드</Link>
                             <Link to="/agent" style={mobileMenuTab}>요원</Link>
                             <Link to="/agentrecom" style={mobileMenuTab}>맞는 요원 찾기</Link>
+                            <Link to="/tier" style={mobileMenuTab}>티어</Link>
                             <Link to="/weapon" style={mobileMenuTab}>무기</Link>
                             <Link to="/map" style={mobileMenuTab}>맵</Link>
                             <Link to="/strat" style={mobileMenuTab}>요원별 전략</Link>
                             <Link to="/dic" style={mobileMenuTab}>용어사전</Link>
                             <Link to="/prosetting" style={mobileMenuTab}>프로 세팅</Link>
                             <Link to="/calculator" style={mobileMenuTab}>감도 계산기</Link>
-                            <Link to="/simulator" style={mobileMenuTab}>전략 시뮬레이터</Link>
+                            {/* <Link to="/simulator" style={mobileMenuTab}>전략 시뮬레이터</Link> */}
                             {/* <Link to="/recruit" style={mobileMenuTab}>파티 모집</Link> */}
                             {/* <Link to="/community" style={mobileMenuTab}>커뮤니티</Link> */}
                         </div>
@@ -110,13 +114,14 @@ export default function App () {
                                 <MenuTabHover><Link to="/guide">가이드</Link></MenuTabHover>
                                 <MenuTabHover><Link to="/agent">요원</Link></MenuTabHover>
                                 <MenuTabHover><Link to="/agentrecom">맞는 요원 찾기</Link></MenuTabHover>
+                                <MenuTabHover><Link to="/tier">티어</Link></MenuTabHover>
                                 <MenuTabHover><Link to="/weapon">무기</Link></MenuTabHover>
                                 <MenuTabHover><Link to="/map">맵</Link></MenuTabHover>
                                 <MenuTabHover><Link to="/strat">요원별 전략</Link></MenuTabHover>
                                 <MenuTabHover><Link to="/dic">용어사전</Link></MenuTabHover>
                                 <MenuTabHover><Link to="/prosetting">프로 세팅</Link></MenuTabHover>
                                 <MenuTabHover><Link to="/calculator">감도 계산기</Link></MenuTabHover>
-                                <MenuTabHover><Link to="/simulator">전략 시뮬레이터</Link></MenuTabHover>
+                                {/* <MenuTabHover><Link to="/simulator">전략 시뮬레이터</Link></MenuTabHover> */}
                                 {/* <MenuTabHover><Link to="/recruit">파티 모집</Link></MenuTabHover> */}
                                 {/* <Link to="/community">커뮤니티</Link> */}
                             </div>
@@ -129,6 +134,7 @@ export default function App () {
                         <Route path="/guide" component={Guide} />
                         <Route path="/agent" component={Agent} />
                         <Route path="/agentrecom" component={AgentRecommendation} />
+                        <Route path="/tier" component={Tier} />
                         <Route path="/weapon/:name" component={WeaponDetail} />
                         <Route path="/weapon" component={Weapon} />
                         <Route path="/community" component={Community} />
@@ -140,17 +146,23 @@ export default function App () {
                         <Route path="/calculator" component={Calculator} />
                         <Route path="/simulator" component={Simulator} />
                         <Route path="/recruit" component={Recruit} />
+                        <Route path="/privacy" component={Privacy} />
                         <Route exact path="/" component={Main} />
                     </Switch>
                     </div>
                 </Content>
                 <Footer style={{ backgroundColor: '#121212'}}>
                     <Row justify="center">
-                        Contact : valop.gg@gmail.com
+                    © 2020 Valop.gg all rights reserved. 
+                    </Row>
+                    <Row justify="center">
+                        Contact : valop.gg@gmail.com <Link to="/privacy" style={{marginLeft: 10}}>Privacy</Link> 
                     </Row>
                     <Row justify="center" >
                         <Col xs={24} sm={22} md={20} lg={20} xl={15} style={{marginTop: 30, marginBottom: 30}}>
                             Valop.gg isn't endorsed by Riot Games and doesn't reflect the views or opinions of Riot Games or anyone officially involved in producing or managing Riot Games properties. Riot Games, and all associated properties are trademarks or registered trademarks of Riot Games, Inc.
+                        </Col>
+                        <Col xs={24} sm={22} md={20} lg={20} xl={15} style={{marginTop: 30, marginBottom: 30}}>
                         </Col>
                     </Row>
                 </Footer>

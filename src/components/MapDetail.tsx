@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React, { useState, useEffect } from 'react'
 import styled from 'styled-components'
 import { Link } from "react-router-dom";
 import { Row, Col, Radio, Button } from 'antd';
@@ -12,6 +12,10 @@ const Images = [
 ];
 
 export default function MapDetail(props) {
+
+    useEffect(() => {
+        window.scrollTo(0, 0)
+    },[])
 
     const mapArr = ["Bind", "Haven", "Split"]
 
@@ -30,10 +34,31 @@ export default function MapDetail(props) {
                     <Radio value={"attacker"} style={{color: 'white'}}>공격</Radio>
                     <Radio value={"defender"} style={{color: 'white'}}>수비</Radio>
                 </Radio.Group>
-                <div>
-                    <img src={require(`../images/map/${mapName}-labels-${side}.svg`)} style={{width: '100%', position: 'absolute', zIndex: 10}} />
-                    <img src={require(`../images/map/${mapName}-layout-base.svg`)} style={side === "attacker" ? {width: '100%'} : {width: '100%', transform: 'rotate(180deg)'}} />
-                </div>
+                {
+                    window.innerWidth < 576 ?
+                        <TransformWrapper>
+                            {({ zoomIn, zoomOut, resetTransform, ...rest }) => (
+                                <div>
+                                    <div style={{padding: 10}}>
+                                        <PlusOutlined style={{backgroundColor: 'rgb(32, 43, 67)', color: 'white', fontSize: '1.4rem', padding: 5}} onClick={zoomIn} />
+                                        <MinusOutlined style={{backgroundColor: 'rgb(32, 43, 67)', color: 'white', fontSize: '1.4rem', padding: 5}} onClick={zoomOut} />
+                                    </div>
+                                    <TransformComponent >
+                                        <div style={{width: '100%', height: '100%'}}>
+                                            <img src={require(`../images/map/${mapName}-labels-${side}.svg`)} style={{width: '100%', position: 'absolute', zIndex: 10}} />
+                                            <img src={require(`../images/map/${mapName}-layout-base.svg`)} style={side === "attacker" ? {width: '100%'} : {width: '100%', transform: 'rotate(180deg)'}} />
+                                        </div>
+                                    </TransformComponent>
+                                </div>
+                            )}
+                        </TransformWrapper>
+                    :
+                    <div>
+                        <img src={require(`../images/map/${mapName}-labels-${side}.svg`)} style={{width: '100%', position: 'absolute', zIndex: 10}} />
+                        <img src={require(`../images/map/${mapName}-layout-base.svg`)} style={side === "attacker" ? {width: '100%'} : {width: '100%', transform: 'rotate(180deg)'}} />
+                    </div>
+                }
+
             </Col>
         </Row>
     )

@@ -1,9 +1,10 @@
 import React from 'react'
 import styled from 'styled-components'
 import { Link } from "react-router-dom";
-import { Row, Col, Divider } from 'antd';
+import { Row, Col, Divider, BackTop } from 'antd';
 import { AppstoreOutlined, UserOutlined } from '@ant-design/icons';
 import { weapon } from '../datas/weapon'
+import { skin } from '../datas/weaponSkin'
 import WeaponRender from './subcomponents/WeaponRender';
 
 const WeaponCategory = styled.div`
@@ -13,6 +14,13 @@ const WeaponCategory = styled.div`
     font-size: 1.1rem;
     width: 100%;
     text-align: center;
+`
+
+const TitleText = styled.div`
+    font-size: 1.6rem;
+    margin-left: 1rem;
+    margin-bottom: 1rem;
+    font-weight: bold;
 `
 
 export default function WeaponDetail(props) {
@@ -25,6 +33,7 @@ export default function WeaponDetail(props) {
     return (
         <Row justify="center" style={{backgroundColor: 'rgba(19, 28, 46, 0.95)', minHeight: 800}} >
             <Col xs={24} sm={22} md={20} lg={20} xl={15}>
+                <BackTop />
                 <div style={{fontSize: '1.1rem', color: 'gray', margin: 10}}>
                     <Link to="/weapon"><AppstoreOutlined /></Link> <span style={{marginLeft: 10, marginRight: 10}}>></span>
                     {
@@ -36,8 +45,8 @@ export default function WeaponDetail(props) {
                     <span style={{marginLeft: 10, marginRight: 10}}>></span>
                     <span style={{color: 'white'}}>{data.name}</span>
                 </div>
-                <Row style={{backgroundColor: '#202b43', margin: '1rem'}}>
-                    {
+                <Row style={{backgroundColor: '#202b43'}}>
+                {
                         window.innerWidth < 576 ? 
                             null
                         :
@@ -47,11 +56,11 @@ export default function WeaponDetail(props) {
                         </Col>
                     }
                     <Col xs={24} sm={12} md={12} lg={20} xl={20}>
-                        <Row style={{padding: 10}}>
-                            <Col xs={24} sm={24} md={18} lg={18} xl={18} style={{backgroundColor: 'rgb(24, 35, 56)', padding: '1rem'}}>
-                                <div style={{fontSize: '1.5rem', marginLeft: '1rem', marginBottom: '1rem'}}>{data.name_ko}</div>
+                        <Row style={{margin: 10, backgroundColor: 'rgb(24, 35, 56)'}} justify="center">
+                            <Col xs={24} sm={24} md={18} lg={18} xl={18} style={{ padding: '1rem', marginBottom: '1rem'}}>
+                                <TitleText>{data.name_ko}</TitleText>
                                 <div style={{display: 'flex', justifyContent: 'center'}}>
-                                    <img src={require(`../images/weapons/${data.name.toLowerCase()}-model.png`)} style={{width: '50%', height: 'auto'}} />
+                                    <img src={require(`../images/weaponskins/normal-${data.name.toLowerCase()}-skin.png`)} style={{width: '80%', alignSelf: 'flex-start'}} />
                                 </div>
                                 <div style={{marginLeft: '1rem',}}>탄창 : {data.capacity}</div>
                                 <div style={{marginLeft: '1rem',}}>관통력 : {data.penetration}</div>
@@ -118,8 +127,18 @@ export default function WeaponDetail(props) {
                                     }
                                 </Row>
                             </Col>
-                            <Col xs={24} sm={24} md={6} lg={6} xl={6} style={{backgroundColor: 'rgb(24, 35, 56)', padding: '1rem'}}>
-                                * 무기 스킨 갤러리가 차후 추가될 예정입니다.
+                            <Col xs={24} sm={24} md={24} lg={24} xl={24} style={{backgroundColor: 'rgb(24, 35, 56)', padding: '1rem'}}>
+                                <TitleText>스킨 갤러리</TitleText>
+                                <Row>
+                                    {
+                                        skin.filter(v => v.name.toLowerCase() === weaponName)[0].skins.map(v => (
+                                            <Col xs={24} sm={24} md={12} lg={12} xl={12} style={{padding: 10}}>
+                                                <div><span style={{fontSize: '1.3rem'}}>{v.name_ko}</span> ({v.cost})</div>
+                                                <img src={require(`../images/weaponskins/${v.category}-${weaponName.toLowerCase()}-${v.level === 0 ? '' : `level-${v.level}-`}skin.png`)} style={{backgroundColor: '#273552', width: '100%'}} />
+                                            </Col>
+                                        ))
+                                    }
+                                </Row>
                             </Col>
                         </Row>
                     </Col>

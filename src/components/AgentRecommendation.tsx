@@ -79,7 +79,7 @@ export default function AgentRecommendation() {
                             <div style={{display: 'flex', justifyContent: 'center', alignItems: 'center'}}>
                                 <div style={{position: 'absolute', fontSize: '1.5rem'}}>나에게 맞는 요원 찾기</div>
                                 <div style={{position: 'absolute', width: '100%', backgroundColor: 'black', opacity: 0.3}}></div>
-                                <img src={require('../images/official-background-wide-darken.png')} style={{width: '100%'}} />
+                                <img src={require('../images/official-background-wide-darken.jpg')} style={{width: '100%'}} />
                             </div>
                             <div style={{display: 'flex', justifyContent: 'center', marginTop: 20, padding: '1rem'}}>
                                 <div style={{fontSize: '1.2rem'}}>True or False 질문에 답변을 고르고 나에게 맞는 요원을 찾아보세요!</div>

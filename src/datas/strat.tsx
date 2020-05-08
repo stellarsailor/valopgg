@@ -932,13 +932,164 @@ export const strat: agentType = {
     },
     viper: {
         bind: [
-
+            {
+                id: 0,
+                abilityIcon: 1,
+                title: 'A사이트 숏 수비 연막',
+                identifier: 'asite-short-smoke',
+                difficulty: '보통',
+                type: 'image',
+                method: [
+                    1,2,3,4
+                ],
+            },
+            {
+                id: 1,
+                abilityIcon: 1,
+                title: 'A사이트 샤워 수비 연막',
+                identifier: 'asite-shower-smoke',
+                difficulty: '보통',
+                type: 'image',
+                method: [
+                    1,2,3,4
+                ],
+            },
+            {
+                id: 2,
+                abilityIcon: 1,
+                title: 'B롱 B사이트 공격 연막',
+                identifier: 'blong-bsite-smoke',
+                difficulty: '어려움',
+                type: 'image',
+                method: [
+                    1,2,3,4,5
+                ],
+            },
+            {
+                id: 3,
+                abilityIcon: 1,
+                title: 'B숏 B백사이드 연막',
+                identifier: 'bshort-bback-smoke',
+                difficulty: '어려움',
+                type: 'image',
+                method: [
+                    1,2,3,4,5,6,7
+                ],
+            },
+            {
+                id: 4,
+                abilityIcon: 1,
+                title: 'B사이트 B롱 수비 연막',
+                identifier: 'bsite-blong-smoke',
+                difficulty: '어려움',
+                type: 'image',
+                method: [
+                    1,2,3,4
+                ],
+            },
+            {
+                id: 5,
+                abilityIcon: 1,
+                title: 'A로비 A헤븐 공격 연막',
+                identifier: 'mid-aheaven-smoke',
+                difficulty: '어려움',
+                type: 'image',
+                method: [
+                    1,2,3,4
+                ],
+            },
+            {
+                id: 6,
+                abilityIcon: 1,
+                title: '샤워 A헤븐 공격 연막',
+                identifier: 'shower-heaven-smoke',
+                difficulty: '어려움',
+                type: 'image',
+                method: [
+                    1,2,3,4
+                ],
+            },
         ],
         haven: [
-
+            {
+                id: 0,
+                abilityIcon: 1,
+                title: 'A정원 B사이트 공격 연막',
+                identifier: 'agarden-bsite-smoke',
+                difficulty: '어려움',
+                type: 'image',
+                method: [
+                    1,2,3,4
+                ],
+            },
+            {
+                id: 1,
+                abilityIcon: 1,
+                title: 'A사이트 A롱 수비 연막',
+                identifier: 'asite-along-smoke',
+                difficulty: '어려움',
+                type: 'image',
+                method: [
+                    1,2,3
+                ],
+            },
+            {
+                id: 2,
+                abilityIcon: 1,
+                title: 'C롱 C사이트 공격 연막',
+                identifier: 'clong-csite-smoke',
+                difficulty: '어려움',
+                type: 'image',
+                method: [
+                    1,2,3
+                ],
+            },
         ],
         split: [
-            
+            {
+                id: 0,
+                abilityIcon: 1,
+                title: 'A램프 수비 연막',
+                identifier: 'aramp-smoke',
+                difficulty: '보통',
+                type: 'image',
+                method: [
+                    1,2,3
+                ],
+            },
+            {
+                id: 1,
+                abilityIcon: 1,
+                title: 'B로비 B헤븐 공격 연막',
+                identifier: 'blobby-bheaven-smoke',
+                difficulty: '어려움',
+                type: 'image',
+                method: [
+                    1,2,3,4,5
+                ],
+            },
+            {
+                id: 2,
+                abilityIcon: 1,
+                title: 'B사이트 창고 수비 연막',
+                identifier: 'bsite-garage-smoke',
+                difficulty: '보통',
+                type: 'image',
+                method: [
+                    1,2,3,4
+                ],
+            },
+            {
+                id: 3,
+                abilityIcon: 1,
+                title: '미드 수비 연막',
+                identifier: 'mid-smoke',
+                difficulty: '어려움',
+                type: 'image',
+                method: [
+                    1,2,3,4,5,6,7
+                ],
+            },
         ]
     },
 }

@@ -39,8 +39,8 @@ export default function Strat() {
     const agent_koArr = ['브리치', '브림스톤', '사이퍼', '제트', '오멘', '피닉스', '레이즈', '세이지', '소바', '바이퍼']
     const difficultyArr = ['전체', '쉬움', '보통', '어려움'];
 
-    const [ agentSelection, setAgentSelection ] = useState<number | string>('brimstone')
-    const [ mapSelection, setMapSelection ] = useState<null | number | string>('bind')
+    const [ agentSelection, setAgentSelection ] = useState<number | string>('viper')
+    const [ mapSelection, setMapSelection ] = useState<null | number | string>('split')
     const [ sideSelection, setSideSelection ] = useState('attacker')
     const [ difficultySelection, setDifficultySelection ] = useState<string>('전체')
 
