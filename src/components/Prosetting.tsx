@@ -178,7 +178,6 @@ export default function Prosetting() {
                     </Row>
                     </>
                 ))}
-                지속적으로 데이터가 추가될 예정입니다. 지켜봐주세요!
             </Col>
         </Row>
     )

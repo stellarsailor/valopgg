@@ -45,7 +45,7 @@ export default function MapDetail(props) {
                                     </div>
                                     <TransformComponent >
                                         <div style={{width: '100%', height: '100%'}}>
-                                            <img src={require(`../images/map/${mapName}-labels-${side}.svg`)} style={{width: '100%', position: 'absolute', zIndex: 10}} />
+                                            <img src={require(`../images/map/${mapName}-labels-${side}-ko.png`)} style={{width: '100%', position: 'absolute', zIndex: 10}} />
                                             <img src={require(`../images/map/${mapName}-layout-base.svg`)} style={side === "attacker" ? {width: '100%'} : {width: '100%', transform: 'rotate(180deg)'}} />
                                         </div>
                                     </TransformComponent>
@@ -54,7 +54,7 @@ export default function MapDetail(props) {
                         </TransformWrapper>
                     :
                     <div>
-                        <img src={require(`../images/map/${mapName}-labels-${side}.svg`)} style={{width: '100%', position: 'absolute', zIndex: 10}} />
+                        <img src={require(`../images/map/${mapName}-labels-${side}-ko.png`)} style={{width: '100%', position: 'absolute', zIndex: 10}} />
                         <img src={require(`../images/map/${mapName}-layout-base.svg`)} style={side === "attacker" ? {width: '100%'} : {width: '100%', transform: 'rotate(180deg)'}} />
                     </div>
                 }

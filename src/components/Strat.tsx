@@ -35,8 +35,8 @@ export default function Strat() {
     },[])
 
     const mapArr = ["Bind", "Haven", "Split"]
-    const agentArr = ['Breach', 'Brimstone', 'Cypher', 'Jett', 'Omen', 'Phoenix', 'Raze', 'Sage', 'Sova', 'Viper']
-    const agent_koArr = ['브리치', '브림스톤', '사이퍼', '제트', '오멘', '피닉스', '레이즈', '세이지', '소바', '바이퍼']
+    const agentArr = ['Brimstone', 'Jett', 'Sage', 'Sova', 'Viper'] //앱스토어 심사용으로 일단 5요원 제거 
+    const agent_koArr = ['브림스톤', '제트', '세이지', '소바', '바이퍼']
     const difficultyArr = ['전체', '쉬움', '보통', '어려움'];
 
     const [ agentSelection, setAgentSelection ] = useState<number | string>('viper')
@@ -131,8 +131,8 @@ export default function Strat() {
                         </Col>
                         <Col xs={24} sm={22} md={12} lg={12} xl={12} style={{backgroundColor: 'rgb(19, 28, 46)'}}>
                             {
-                                mapSelection === null ?
-                                <div>맵을 선택해주세요</div>
+                                window.innerWidth < 576?
+                                null
                                 :
                                 <TransformWrapper>
                                     {({ zoomIn, zoomOut, resetTransform, ...rest }) => (
