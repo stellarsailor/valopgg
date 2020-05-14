@@ -21,8 +21,8 @@ export default function Weapon(){
             <Col xs={24} sm={22} md={20} lg={20} xl={15} >
                 <Carousel autoplay style={{width: '100%', height: 200, overflowY: 'hidden'}} dots={true}>
                     {
-                        skinCollection.map((v) => 
-                        <div style={{textAlign: 'center', width: '100%', height: '100%'}}>
+                        skinCollection.map((v, index) => 
+                        <div style={{textAlign: 'center', width: '100%', height: '100%'}} key={index}>
                             <div style={{position: 'absolute', fontSize: '1.8rem', marginLeft: '1rem', marginTop: '0.5rem', fontWeight: 'bold'}}>{v.name_ko} <span style={{fontSize: '1.4rem'}}>{v.name}</span></div>
                             <img src={v.image} style={{width: '100%'}} />
                         </div>)

@@ -531,10 +531,10 @@ export const skinCollection = [
         name_ko: '약탈자',
         image: require('../images/weaponskins/reaver-skins-collection.png')
     },
-    // {
-    //     id: 3,
-    //     name: 'Hypebeast',
-    //     name_ko: '하이퍼비스트',
-    //     image: require('../images/weaponskins/hypebeast-skins-collection.png')
-    // },
+    {
+        id: 3,
+        name: 'Hypebeast',
+        name_ko: '',
+        image: require('../images/weaponskins/hypebeast-skins-collection.png')
+    },
 ]

@@ -67,6 +67,27 @@ export default function Tier(){
                                 renderAgentImage(v))}
                         </TierTitle>
                     </Col>
+                    <Col xs={24} sm={22} md={12} lg={12} xl={12} >
+                        <SideTitle>Dafran의 대회용 티어 리스트(200511)</SideTitle>
+                        <TierTitle><div><span style={{color: 'red'}}>S</span> 티어</div>
+                            {renderAgentImage({name: 'Sova', id: Math.random()})}
+                            {renderAgentImage({name: 'Cypher', id: Math.random()})}
+                            {renderAgentImage({name: 'Sage', id: Math.random()})}
+                        </TierTitle>
+                        <TierTitle><div><span style={{color: 'gold'}}>A</span> 티어</div>
+                            {renderAgentImage({name: 'Breach', id: Math.random()})}
+                            {renderAgentImage({name: 'Raze', id: Math.random()})}
+                        </TierTitle>
+                        <TierTitle><div><span style={{color: 'green'}}>B</span> 티어</div>
+                            {renderAgentImage({name: 'Phoenix', id: Math.random()})}
+                            {renderAgentImage({name: 'Brimstone', id: Math.random()})}
+                            {renderAgentImage({name: 'Viper', id: Math.random()})}
+                        </TierTitle>
+                        <TierTitle><div><span style={{color: 'purple'}}>C</span> 티어</div>
+                            {renderAgentImage({name: 'Omen', id: Math.random()})}
+                            {renderAgentImage({name: 'Jett', id: Math.random()})}
+                        </TierTitle>
+                    </Col>
                 </Row>
             </Col>
         </Row>

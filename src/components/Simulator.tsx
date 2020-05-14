@@ -15,6 +15,9 @@ export default function Simulator() {
                     <div style={{display: 'flex', justifyContent: 'center'}}>
                         콘텐츠를 준비 중입니다. 조금만 기다려주세요!
                     </div>
+                    <div style={{display: 'flex', justifyContent: 'center'}}>
+                        Contacts: brittea.alice@gmail.com
+                    </div>
                 </div>
             </Col>
         </Row>

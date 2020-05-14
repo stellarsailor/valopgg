@@ -83,7 +83,7 @@ export default function App () {
                                         </Link>
                                     </Col>
                                     <Col span={8}>
-                                        <Search placeholder="전적 검색 기능을 준비 중입니다." onSearch={value => console.log(value)} enterButton />
+                                        {/* <Search placeholder="전적 검색 기능을 준비 중입니다." onSearch={value => console.log(value)} enterButton /> */}
                                     </Col>
                                 </Row>
                             </Col>
@@ -145,6 +145,7 @@ export default function App () {
                         <Route path="/prosetting" component={Prosetting} />
                         <Route path="/calculator" component={Calculator} />
                         <Route path="/simulator" component={Simulator} />
+                        <Route path="/prove" component={Skin} />
                         <Route path="/recruit" component={Recruit} />
                         <Route path="/privacy" component={Privacy} />
                         <Route exact path="/" component={Main} />

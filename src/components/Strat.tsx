@@ -35,8 +35,8 @@ export default function Strat() {
     },[])
 
     const mapArr = ["Bind", "Haven", "Split"]
-    const agentArr = ['Brimstone', 'Jett', 'Sage', 'Sova', 'Viper'] //앱스토어 심사용으로 일단 5요원 제거 
-    const agent_koArr = ['브림스톤', '제트', '세이지', '소바', '바이퍼']
+    const agentArr = ['Brimstone', 'Jett', 'Phoenix', 'Sage', 'Sova', 'Viper'] //앱스토어 심사용으로 일단 5요원 제거 
+    const agent_koArr = ['브림스톤', '제트', '피닉스', '세이지', '소바', '바이퍼']
     const difficultyArr = ['전체', '쉬움', '보통', '어려움'];
 
     const [ agentSelection, setAgentSelection ] = useState<number | string>('viper')
@@ -117,7 +117,7 @@ export default function Strat() {
                                                     delay: 0,
                                                     smooth: 'easeInOutQuart'
                                                 }) }} onMouseEnter={() => setHoverImage(v.identifier)} onMouseLeave={() => setHoverImage('')} style={{width: '100%', height: 'auto'}}>
-                                                    <img src={`https://valop-static.s3.ap-northeast-2.amazonaws.com/abilities/${agentSelection}${v.abilityIcon}.svg`} style={{width: '2rem', alignSelf: 'flex-start'}} />
+                                                    <img src={`http://d3s0uoqa61ipmr.cloudfront.net/abilities/${agentSelection}${v.abilityIcon}.svg`} style={{width: '2rem', alignSelf: 'flex-start'}} />
                                                     <div style={{marginLeft: 10}}>
                                                         <div style={{fontSize: '1rem', fontWeight: 'bold'}}>
                                                             {v.title}
@@ -186,7 +186,7 @@ export default function Strat() {
                                         </div>
                                         <TransformComponent>
                                             <img src={mainLogo} style={{position: 'absolute', bottom: '10%', left: '3%', width: '30%'}} />
-                                            <img src={`https://valop-static.s3.ap-northeast-2.amazonaws.com/strat/${agentSelection}/${mapSelection}/${detailView.identifier}${v}.png`} style={{width: '100%', alignSelf: 'flex-start'}} key={index} />
+                                            <img src={`http://d3s0uoqa61ipmr.cloudfront.net/strat/${agentSelection}/${mapSelection}/${detailView.identifier}${v}.png`} style={{width: '100%', alignSelf: 'flex-start'}} key={index} />
                                         </TransformComponent>
                                     </div>
                                 )}

@@ -46,8 +46,13 @@ export const guide: Array<groupType> = [
         tabs: [
             {
                 id: 0,
-                tabName: '클로즈베타 0.49',
+                tabName: '클로즈베타 0.50',
                 markdown: patchMD[0],
+            },
+            {
+                id: 1,
+                tabName: '클로즈베타 0.49',
+                markdown: patchMD[1],
             }
         ]
     },

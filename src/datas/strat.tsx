@@ -520,13 +520,153 @@ export const strat: agentType = {
     },
     phoenix: {
         bind: [
-
+            {
+                id: 0,
+                abilityIcon: 2,
+                title: 'A숏 A코너 뜨거운 손',
+                identifier: 'ashort-corner-molly',
+                difficulty: '보통',
+                type: 'image',
+                method: [
+                    1,2,3,4
+                ],
+            },
+            {
+                id: 1,
+                abilityIcon: 2,
+                title: 'A숏 뜨거운 손',
+                identifier: 'ashort-molly',
+                difficulty: '보통',
+                type: 'image',
+                method: [
+                    1,2
+                ],
+            },
+            {
+                id: 2,
+                abilityIcon: 2,
+                title: 'A숏 트럭 뜨거운 손',
+                identifier: 'ashort-truck-molly',
+                difficulty: '보통',
+                type: 'image',
+                method: [
+                    1,2,3
+                ],
+            },
+            {
+                id: 3,
+                abilityIcon: 2,
+                title: 'B숏 B은신처 뜨거운 손',
+                identifier: 'bshort-bcubby-molly',
+                difficulty: '어려움',
+                type: 'image',
+                method: [
+                    1,2,3
+                ],
+            },
+            {
+                id: 4,
+                abilityIcon: 2,
+                title: 'B숏 후카 뜨거운 손',
+                identifier: 'bshort-hookah-molly',
+                difficulty: '보통',
+                type: 'image',
+                method: [
+                    1,2,3,4
+                ],
+            },
+            {
+                id: 5,
+                abilityIcon: 2,
+                title: '샤워 A코너 뜨거운 손',
+                identifier: 'shower-acorner-molly',
+                difficulty: '보통',
+                type: 'image',
+                method: [
+                    1,2,3,4
+                ],
+            },
         ],
         haven: [
-
+            {
+                id: 0,
+                abilityIcon: 2,
+                title: 'A링크 A사이트 뜨거운 손',
+                identifier: 'alink-asite-molly',
+                difficulty: '보통',
+                type: 'image',
+                method: [
+                    1,2,3
+                ],
+            },
+            {
+                id: 1,
+                abilityIcon: 2,
+                title: 'A롱 A숏 뜨거운 손',
+                identifier: 'along-ashort-molly',
+                difficulty: '보통',
+                type: 'image',
+                method: [
+                    1,2,3
+                ],
+            },
         ],
         split: [
-            
+            {
+                id: 0,
+                abilityIcon: 2,
+                title: 'A난간 A메인 뜨거운 손',
+                identifier: 'arafters-amain-molly',
+                difficulty: '보통',
+                type: 'image',
+                method: [
+                    1,2,3,4
+                ],
+            },
+            {
+                id: 1,
+                abilityIcon: 2,
+                title: 'A난간 A사이트 뜨거운 손',
+                identifier: 'arafters-asite-molly',
+                difficulty: '보통',
+                type: 'image',
+                method: [
+                    1,2,3
+                ],
+            },
+            {
+                id: 2,
+                abilityIcon: 2,
+                title: '우편함 미드봇 뜨거운 손',
+                identifier: 'mail-midbot-molly',
+                difficulty: '보통',
+                type: 'image',
+                method: [
+                    1,2
+                ],
+            },
+            {
+                id: 3,
+                abilityIcon: 2,
+                title: '미드봇 우편함 뜨거운 손',
+                identifier: 'midbot-mail-molly',
+                difficulty: '보통',
+                type: 'image',
+                method: [
+                    1,2,3
+                ],
+            },
+            {
+                id: 4,
+                abilityIcon: 2,
+                title: '미드탑 미드봇 뜨거운 손',
+                identifier: 'midtop-midbot-molly',
+                difficulty: '보통',
+                type: 'image',
+                method: [
+                    1,2
+                ],
+            },
         ]
     },
     raze: {

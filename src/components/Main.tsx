@@ -34,19 +34,22 @@ export default function Main() {
         <Row justify="center" style={{backgroundColor: 'rgba(236, 232, 225, 0.95)', height: 'auto'}} >
             {
                 window.innerWidth < 576 ?
-                <div style={{display: 'flex', width: '100%', height: 200, backgroundImage: `url(${Jumbotron})`, backgroundSize: 'cover', backgroundPosition: 'center', justifyContent: 'center', alignItems: 'center'}}>
+                <div style={{display: 'flex', width: '100%', height: 200, backgroundImage: `url(${Jumbotron})`, backgroundSize: 'cover', backgroundPosition: 'center', justifyContent: 'center', alignItems: 'center', flexDirection: 'column'}}>
                         {/* <Search placeholder="전적 검색 기능을 준비 중입니다." onSearch={value => console.log(value)} enterButton style={{width: '80%'}} /> */}
-                        <a href="https://beta.playvalorant.com/ko-kr/news/game-updates/valorant-patch-notes-0-49/" target="_blank"><Alert message="0.49 패치 노트 확인하기" type="success" showIcon /></a>
+                        <div style={{fontSize: '1.2rem', fontWeight: 'bold'}}>무기 탭에서 업데이트된 무기 스킨을 확인해보세요.</div>
+                        <div>
+                            <Link to="/guide"><Alert message="0.50 패치 노트 확인하기" type="success" showIcon /></Link>
+                        </div>
                 </div>
                 :
                 <Col xs={0} sm={0} md={24} lg={24} xl={24} style={{marginBottom: '2rem'}}>
                     <div style={{display: 'flex', justifyContent: 'center'}} >
-                        <div style={{position: 'absolute', fontSize: '2rem', top: '33%', textAlign: 'center'}}>
+                        <div style={{position: 'absolute', fontSize: '2rem', top: '30%', textAlign: 'center'}}>
                             <div>
-                                발로란트 클로즈 베타 테스트가 진행 중입니다.
+                                발로란트 정보의 모든 것, 발옵지지
                             </div>
                             <div style={{fontSize: '1.2rem'}}>
-                                <Button type="primary" href="https://beta.playvalorant.com/ko-kr/" target="_blank">베타 테스트 참여하기</Button>
+                                <Button type="primary" href="https://beta.playvalorant.com/ko-kr/" target="_blank">발로란트 공식 사이트 바로가기</Button>
                             </div>
                         </div>
                     </div>

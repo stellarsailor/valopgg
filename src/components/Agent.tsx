@@ -84,8 +84,9 @@ export default function Agent(props) {
                         <Col style={{width: '100%', fontSize: '1.5rem', display: 'flex', justifyContent: 'center'}}>
                             { window.innerWidth < 768 ? 
                             <div style={{fontSize: '1.6rem', textAlign: 'center'}}>
-                                {agent[agentSelection].name_ko}
-                                <img src={`https://valop-static.s3.ap-northeast-2.amazonaws.com/agents/${agent[agentSelection].name.toLowerCase()}-standing.png`} style={{width: '100%'}} />
+                                {agent[agentSelection].name_ko} <span style={{fontSize: '1rem'}}> / {agent[agentSelection].origin}</span>
+                                <div style={{fontSize: '1.2rem'}}>{agent[agentSelection].type}</div>
+                                <img src={`http://d3s0uoqa61ipmr.cloudfront.net/agents/${agent[agentSelection].name.toLowerCase()}-standing.png`} style={{width: '100%'}} />
                             </div>
                             : null }
                         </Col>
@@ -96,7 +97,7 @@ export default function Agent(props) {
                                 {arr.map(v => (
                                     <Col span={6} key={v} onClick={() => setAbilitySelection(v)} style={{padding: 10}}> 
                                         <div style={{backgroundColor: '#202b43', borderRadius: 5, width: '2rem', display: 'flex', justifyContent: 'center', fontWeight: 'bold'}}>{key[v]}</div>
-                                        <img src={`https://valop-static.s3.ap-northeast-2.amazonaws.com/abilities/${agent[agentSelection].name.toLowerCase() + v}.svg`} style={{width: '4rem'}} />
+                                        <img src={`http://d3s0uoqa61ipmr.cloudfront.net/abilities/${agent[agentSelection].name.toLowerCase() + v}.svg`} style={{width: '4rem'}} />
                                         <div style={{width: '100%'}}>
                                             <SkillCount count={agent[agentSelection].skill[v].count} selected={ abilitySelection === v ? true : false } />
                                         </div>
@@ -111,8 +112,13 @@ export default function Agent(props) {
                         </Col>
                         <Col xs={0} sm={0} md={12} lg={12} xl={8} style={{width: '100%'}}>
                             <div style={{width: '100%', height: '100%', display: 'flex', justifyContent: 'center', alignItems: 'center'}}>
-                                <div style={{position: 'absolute', fontSize: '2.5rem', fontWeight: 'bold', bottom: '4rem', textAlign: 'center', marginRight: 10}}>{agent[agentSelection].name}</div>
-                                <img src={`https://valop-static.s3.ap-northeast-2.amazonaws.com/agents/${agent[agentSelection].name.toLowerCase()}-standing.png`} style={{width: '100%'}} />
+                                <div style={{position: 'absolute', fontSize: '2.5rem', fontWeight: 'bold', bottom: '4rem', textAlign: 'center', marginRight: 10}}>
+                                    {agent[agentSelection].name} <span style={{fontSize: '1rem'}}> / {agent[agentSelection].origin}</span>
+                                    <div style={{fontSize: '1rem'}}>
+                                        {agent[agentSelection].type}
+                                    </div>
+                                </div>
+                                <img src={`http://d3s0uoqa61ipmr.cloudfront.net/agents/${agent[agentSelection].name.toLowerCase()}-standing.png`} style={{width: '100%'}} />
                             </div>
                         </Col>
                     </Row>
