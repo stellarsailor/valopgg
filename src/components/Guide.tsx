@@ -45,9 +45,7 @@ export default function Guide(props) {
                             mode="inline"
                             theme="dark"
                         >
-                            <SubMenu
-                            key="sub1"
-                            title={ <span>가이드</span> }>
+                            <SubMenu key="sub1" title="패치노트">
                                 {
                                     guide[0].tabs.map((v) => (
                                         <Menu.Item key={v.id + 1}>
@@ -55,8 +53,9 @@ export default function Guide(props) {
                                         </Menu.Item>
                                     ))
                                 }
+                                
                             </SubMenu>
-                            <SubMenu key="sub2" title="패치노트">
+                            <SubMenu key="sub2" title="가이드">
                                 {
                                     guide[1].tabs.map((v) => (
                                         <Menu.Item key={v.id + guide[0].tabs.length + 1}>
@@ -65,9 +64,7 @@ export default function Guide(props) {
                                     ))
                                 }
                             </SubMenu>
-                            <SubMenu
-                            key="sub3"
-                            title={ <span>유저 공략</span> }>
+                            <SubMenu key="sub3" title="유저 공략">
                                 {
                                     guide[2].tabs.map((v) => (
                                         <Menu.Item key={v.id + guide[0].tabs.length + guide[1].tabs.length + 1}>

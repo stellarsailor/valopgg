@@ -16,19 +16,24 @@ const TierTitle = styled.div`
     padding: 1rem;
 `
 
-const mapImageStyle = {
-    width: '3rem', 
-    borderRadius: '3rem',
-    border: '1px gray solid',
-    marginRight: '1rem',
+const mapImageStyle = (borderColor) => {
+    return(
+        {
+            width: '3rem', 
+            borderRadius: '3rem',
+            border: '2px solid ' + borderColor,
+            marginRight: '1rem',
+        }
+    )
 }
+
 
 export default function Tier(){
 
-    const renderAgentImage = (v) => (
+    const renderAgentImage = (v, borderColor) => (
         <Link to={`/agent?name=${v.name.toLowerCase()}`}>
             <Tooltip title={v.name_ko} key={v.id}>
-                <img src={require(`../images/agents/${v.name.toLowerCase()}-headshot.png`)} style={mapImageStyle} />
+                <img src={require(`../images/agents/${v.name.toLowerCase()}-headshot.png`)} style={mapImageStyle(borderColor)} />
             </Tooltip>
         </Link>
     )
@@ -41,52 +46,55 @@ export default function Tier(){
                         <SideTitle>공격</SideTitle>
                         <TierTitle><div><span style={{color: 'red'}}>S</span> 티어</div>
                             {agent.filter(v => v.tier_offense === 's').map((v, index) => 
-                                renderAgentImage(v))}
+                                renderAgentImage(v, 'red'))}
                         </TierTitle>
                         <TierTitle><div><span style={{color: 'gold'}}>A</span> 티어</div>
                             {agent.filter(v => v.tier_offense === 'a').map((v, index) => 
-                                renderAgentImage(v))}
+                                renderAgentImage(v, 'gold'))}
                         </TierTitle>
                         <TierTitle><div><span style={{color: 'green'}}>B</span> 티어</div>
                             {agent.filter(v => v.tier_offense === 'b').map((v, index) => 
-                                renderAgentImage(v))}
+                                renderAgentImage(v, 'green'))}
                         </TierTitle>
                     </Col>
                     <Col xs={24} sm={22} md={12} lg={12} xl={12} >
                         <SideTitle>수비</SideTitle>
                         <TierTitle><div><span style={{color: 'red'}}>S</span> 티어</div>
                             {agent.filter(v => v.tier_defense === 's').map((v, index) => 
-                                renderAgentImage(v))}
+                                renderAgentImage(v, 'red'))}
                         </TierTitle>
                         <TierTitle><div><span style={{color: 'gold'}}>A</span> 티어</div>
                             {agent.filter(v => v.tier_defense === 'a').map((v, index) => 
-                                renderAgentImage(v))}
+                                renderAgentImage(v, 'gold'))}
                         </TierTitle>
                         <TierTitle><div><span style={{color: 'green'}}>B</span> 티어</div>
                             {agent.filter(v => v.tier_defense === 'b').map((v, index) => 
-                                renderAgentImage(v))}
+                                renderAgentImage(v, 'green'))}
                         </TierTitle>
                     </Col>
                     <Col xs={24} sm={22} md={12} lg={12} xl={12} >
                         <SideTitle>Dafran의 대회용 티어 리스트(200511)</SideTitle>
                         <TierTitle><div><span style={{color: 'red'}}>S</span> 티어</div>
-                            {renderAgentImage({name: 'Sova', id: Math.random()})}
-                            {renderAgentImage({name: 'Cypher', id: Math.random()})}
-                            {renderAgentImage({name: 'Sage', id: Math.random()})}
+                            {renderAgentImage({name: 'Sova', id: Math.random()}, 'red')}
+                            {renderAgentImage({name: 'Cypher', id: Math.random()}, 'red')}
+                            {renderAgentImage({name: 'Sage', id: Math.random()}, 'red')}
                         </TierTitle>
                         <TierTitle><div><span style={{color: 'gold'}}>A</span> 티어</div>
-                            {renderAgentImage({name: 'Breach', id: Math.random()})}
-                            {renderAgentImage({name: 'Raze', id: Math.random()})}
+                            {renderAgentImage({name: 'Breach', id: Math.random()}, 'gold')}
+                            {renderAgentImage({name: 'Raze', id: Math.random()}, 'gold')}
                         </TierTitle>
                         <TierTitle><div><span style={{color: 'green'}}>B</span> 티어</div>
-                            {renderAgentImage({name: 'Phoenix', id: Math.random()})}
-                            {renderAgentImage({name: 'Brimstone', id: Math.random()})}
-                            {renderAgentImage({name: 'Viper', id: Math.random()})}
+                            {renderAgentImage({name: 'Phoenix', id: Math.random()}, 'green')}
+                            {renderAgentImage({name: 'Brimstone', id: Math.random()}, 'green')}
+                            {renderAgentImage({name: 'Viper', id: Math.random()}, 'green')}
                         </TierTitle>
                         <TierTitle><div><span style={{color: 'purple'}}>C</span> 티어</div>
-                            {renderAgentImage({name: 'Omen', id: Math.random()})}
-                            {renderAgentImage({name: 'Jett', id: Math.random()})}
+                            {renderAgentImage({name: 'Omen', id: Math.random()}, 'purple')}
+                            {renderAgentImage({name: 'Jett', id: Math.random()}, 'purple')}
                         </TierTitle>
+                    </Col>
+                    <Col xs={0} sm={0} md={12} lg={12} xl={12} >
+
                     </Col>
                 </Row>
             </Col>

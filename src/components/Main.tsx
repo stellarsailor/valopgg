@@ -36,9 +36,8 @@ export default function Main() {
                 window.innerWidth < 576 ?
                 <div style={{display: 'flex', width: '100%', height: 200, backgroundImage: `url(${Jumbotron})`, backgroundSize: 'cover', backgroundPosition: 'center', justifyContent: 'center', alignItems: 'center', flexDirection: 'column'}}>
                         {/* <Search placeholder="전적 검색 기능을 준비 중입니다." onSearch={value => console.log(value)} enterButton style={{width: '80%'}} /> */}
-                        <div style={{fontSize: '1.2rem', fontWeight: 'bold'}}>무기 탭에서 업데이트된 무기 스킨을 확인해보세요.</div>
                         <div>
-                            <Link to="/guide"><Alert message="0.50 패치 노트 확인하기" type="success" showIcon /></Link>
+                            <Link to="/guide"><Button type="primary">0.50 패치노트 바로가기</Button></Link>
                         </div>
                 </div>
                 :
@@ -49,7 +48,7 @@ export default function Main() {
                                 발로란트 정보의 모든 것, 발옵지지
                             </div>
                             <div style={{fontSize: '1.2rem'}}>
-                                <Button type="primary" href="https://beta.playvalorant.com/ko-kr/" target="_blank">발로란트 공식 사이트 바로가기</Button>
+                                <Link to="/guide"><Button type="primary">0.50 패치노트 바로가기</Button></Link>
                             </div>
                         </div>
                     </div>
@@ -60,9 +59,9 @@ export default function Main() {
             }
             <Col xs={24} sm={22} md={20} lg={20} xl={15}>
                 {/* { window.innerWidth < 576 ? <div style={{fontSize: '1rem', fontWeight: 'bold', textAlign: 'center', color: 'black', marginTop: '1rem'}}>발로란트 클로즈 베타 테스트가 진행 중입니다.</div> : null } */}
-                {/* <div style={{display: 'flex', justifyContent: 'center', marginTop: '1rem'}}>
-                    <a href="https://beta.playvalorant.com/ko-kr/news/game-updates/valorant-patch-notes-0-49/" target="_blank"><Alert message="0.49 패치 업데이트 완료 - 내용 확인하기" type="success" showIcon /></a>
-                </div> */}
+                <div style={{display: 'flex', justifyContent: 'center', marginTop: '1rem', marginLeft: '1rem', marginRight: '1rem'}}>
+                    <Link to="/weapon"><Alert message="무기 스킨 및 요원 별 전략(피닉스, 오멘, 레이즈)가 업데이트 되었습니다!" type="success" showIcon /></Link>
+                </div>
                 <Row style={{padding: '1rem'}}>
                     <Col xs={24} sm={12} md={12} lg={12} xl={12} style={{padding: '5%'}}>
                         <img src={require('../images/mainImages0.jpg')} style={{width: '100%'}} />

@@ -21,6 +21,22 @@ type subTabType = {
 export const guide: Array<groupType> = [
     {
         id: 0,
+        groupName: '패치노트',
+        tabs: [
+            {
+                id: 0,
+                tabName: '클로즈베타 0.50',
+                markdown: patchMD[0],
+            },
+            {
+                id: 1,
+                tabName: '클로즈베타 0.49',
+                markdown: patchMD[1],
+            }
+        ]
+    },
+    {
+        id: 1,
         groupName: '가이드',
         tabs:[
             {
@@ -38,22 +54,6 @@ export const guide: Array<groupType> = [
                 tabName: '계약 시스템',
                 markdown: guideMD[2]
             },
-        ]
-    },
-    {
-        id: 1,
-        groupName: '패치노트',
-        tabs: [
-            {
-                id: 0,
-                tabName: '클로즈베타 0.50',
-                markdown: patchMD[0],
-            },
-            {
-                id: 1,
-                tabName: '클로즈베타 0.49',
-                markdown: patchMD[1],
-            }
         ]
     },
     {
