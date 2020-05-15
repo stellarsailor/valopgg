@@ -509,13 +509,98 @@ export const strat: agentType = {
     },
     omen: {
         bind: [
-
+            {
+                id: 0,
+                abilityIcon: 2,
+                title: 'A사이트 공격 장막',
+                identifier: 'asite-attack-smoke',
+                difficulty: '보통',
+                type: 'image',
+                method: [
+                    1,2,3
+                ],
+            },
+            {
+                id: 1,
+                abilityIcon: 2,
+                title: 'B사이트 공격 장막',
+                identifier: 'bsite-attack-smoke',
+                difficulty: '보통',
+                type: 'image',
+                method: [
+                    1,2,3
+                ],
+            },
         ],
         haven: [
-
+            {
+                id: 0,
+                abilityIcon: 2,
+                title: 'A사이트 공격 장막',
+                identifier: 'asite-attack-smoke',
+                difficulty: '보통',
+                type: 'image',
+                method: [
+                    1,2,3
+                ],
+            },
+            {
+                id: 1,
+                abilityIcon: 2,
+                title: 'B사이트 공격 장막',
+                identifier: 'bsite-attack-smoke',
+                difficulty: '보통',
+                type: 'image',
+                method: [
+                    1,2,3
+                ],
+            },
+            {
+                id: 2,
+                abilityIcon: 2,
+                title: 'C사이트 공격 장막',
+                identifier: 'csite-attack-smoke',
+                difficulty: '보통',
+                type: 'image',
+                method: [
+                    1,2,3
+                ],
+            },
         ],
         split: [
-            
+            {
+                id: 0,
+                abilityIcon: 2,
+                title: 'A사이트 공격 장막',
+                identifier: 'asite-attack-smoke',
+                difficulty: '보통',
+                type: 'image',
+                method: [
+                    1,2,3
+                ],
+            },
+            {
+                id: 1,
+                abilityIcon: 2,
+                title: '미드 공격 장막',
+                identifier: 'mid-attack-smoke',
+                difficulty: '보통',
+                type: 'image',
+                method: [
+                    1,2
+                ],
+            },
+            {
+                id: 2,
+                abilityIcon: 2,
+                title: 'A사이트 공격 장막',
+                identifier: 'asite-attack-smoke',
+                difficulty: '보통',
+                type: 'image',
+                method: [
+                    1,2,3
+                ],
+            },
         ]
     },
     phoenix: {
@@ -671,13 +756,87 @@ export const strat: agentType = {
     },
     raze: {
         bind: [
-
+            {
+                id: 0,
+                abilityIcon: 0,
+                title: 'B숏 방어 폭발 봇',
+                identifier: 'bshort-defense-boombot',
+                difficulty: '보통',
+                type: 'image',
+                method: [
+                    1,2,3
+                ],
+            },
         ],
         haven: [
-
+            {
+                id: 0,
+                abilityIcon: 0,
+                title: '이중문 공격 폭발 봇',
+                identifier: 'doubledoor-garage-boombot',
+                difficulty: '보통',
+                type: 'image',
+                method: [
+                    1,2,3,4,5
+                ],
+            },
+            {
+                id: 1,
+                abilityIcon: 0,
+                title: '미드 A링크 공격 폭발 봇',
+                identifier: 'mid-alink-boombot',
+                difficulty: '보통',
+                type: 'image',
+                method: [
+                    1,2,3,4,5
+                ],
+            },
+            {
+                id: 2,
+                abilityIcon: 0,
+                title: '미드 C링크 공격 폭발 봇',
+                identifier: 'mid-clink-boombot',
+                difficulty: '보통',
+                type: 'image',
+                method: [
+                    1,2,3,4
+                ],
+            },
         ],
         split: [
-            
+            {
+                id: 0,
+                abilityIcon: 0,
+                title: 'A메인 A사이트 공격 폭발 봇',
+                identifier: 'amain-asite-boombot',
+                difficulty: '보통',
+                type: 'image',
+                method: [
+                    1,2,3,4
+                ],
+            },
+            {
+                id: 1,
+                abilityIcon: 0,
+                title: '우편함 미드봇 수비 폭발 봇',
+                identifier: 'mail-midbot-boombot',
+                difficulty: '어려움',
+                type: 'image',
+                method: [
+                    1,2,3,4,5,6
+                ],
+            },
+            {
+                id: 2,
+                abilityIcon: 0,
+                title: '미드봇 미드탑 공격 폭발 봇',
+                identifier: 'midbot-midtop-boombot',
+                difficulty: '어려움',
+                type: 'image',
+                method: [
+                    1,2,3,4,5,6
+                ],
+            },
         ]
     },
     sage: {

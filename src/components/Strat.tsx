@@ -1,6 +1,6 @@
 import React, { useState, useCallback, useEffect, useRef } from 'react'
 import styled from 'styled-components'
-import { Row, Col, PageHeader, Button, Tooltip } from 'antd';
+import { Row, Col, PageHeader, BackTop, Tooltip } from 'antd';
 import { PlusOutlined, MinusOutlined, SearchOutlined } from '@ant-design/icons';
 import { TransformWrapper, TransformComponent } from "react-zoom-pan-pinch";
 import * as Scroll from 'react-scroll';
@@ -35,12 +35,12 @@ export default function Strat() {
     },[])
 
     const mapArr = ["Bind", "Haven", "Split"]
-    const agentArr = ['Brimstone', 'Jett', 'Phoenix', 'Sage', 'Sova', 'Viper'] //앱스토어 심사용으로 일단 5요원 제거 
-    const agent_koArr = ['브림스톤', '제트', '피닉스', '세이지', '소바', '바이퍼']
+    const agentArr = ['Brimstone', 'Jett', 'Omen', 'Phoenix', 'Raze', 'Sage', 'Sova', 'Viper'] //앱스토어 심사용으로 일단 5요원 제거 
+    const agent_koArr = ['브림스톤', '제트', '오멘', '피닉스', '레이즈', '세이지', '소바', '바이퍼']
     const difficultyArr = ['전체', '쉬움', '보통', '어려움'];
 
-    const [ agentSelection, setAgentSelection ] = useState<number | string>('viper')
-    const [ mapSelection, setMapSelection ] = useState<null | number | string>('split')
+    const [ agentSelection, setAgentSelection ] = useState<number | string>('brimstone')
+    const [ mapSelection, setMapSelection ] = useState<null | number | string>('bind')
     const [ sideSelection, setSideSelection ] = useState('attacker')
     const [ difficultySelection, setDifficultySelection ] = useState<string>('전체')
 
@@ -59,6 +59,7 @@ export default function Strat() {
     return(
         <Row justify="center" style={{backgroundColor: 'rgba(19, 28, 46, 0.95)', minHeight: 800}} >
             <Col xs={24} sm={22} md={20} lg={20} xl={15}>
+                <BackTop />
                 <Row justify='center' style={{fontSize: '1.4rem', marginTop: 15, marginBottom: 15, backgroundColor: '#202b43', padding: 10}} >
                     <Col xs={22} sm={22} md={22} lg={22} xl={12}>
                         {agentArr.map((v, index) => (
@@ -196,6 +197,9 @@ export default function Strat() {
                     </Row>
                 }
                 </Element>
+                <div style={{margin: '1rem'}}>
+                    문의 및 건의사항이 있을 경우 valop.gg@gmail.com 으로 메일 주시면 답변드리겠습니다!
+                </div>
             </Col>
         </Row>
     )

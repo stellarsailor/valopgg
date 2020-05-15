@@ -58,7 +58,6 @@ export default function Main() {
                 </Col>
             }
             <Col xs={24} sm={22} md={20} lg={20} xl={15}>
-                {/* { window.innerWidth < 576 ? <div style={{fontSize: '1rem', fontWeight: 'bold', textAlign: 'center', color: 'black', marginTop: '1rem'}}>발로란트 클로즈 베타 테스트가 진행 중입니다.</div> : null } */}
                 <div style={{display: 'flex', justifyContent: 'center', marginTop: '1rem', marginLeft: '1rem', marginRight: '1rem'}}>
                     <Link to="/weapon"><Alert message="무기 스킨 및 요원 별 전략(피닉스, 오멘, 레이즈)가 업데이트 되었습니다!" type="success" showIcon /></Link>
                 </div>
