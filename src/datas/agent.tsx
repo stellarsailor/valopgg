@@ -16,6 +16,7 @@ type agentType = {
     }>;
     tier_offense: 's' | 'a' | 'b' ;
     tier_defense: 's' | 'a' | 'b' ;
+    tier_dafran: 's' | 'a' | 'b' | 'c' | 'd' ;
 }
 
 
@@ -59,6 +60,7 @@ export const agent: Array<agentType> = [
         ],
         tier_offense: 's',
         tier_defense: 'a',
+        tier_dafran: 'a',
     },
     {
         id: 1,
@@ -99,6 +101,7 @@ export const agent: Array<agentType> = [
         ],
         tier_offense: 's',
         tier_defense: 'a',
+        tier_dafran: 'a',
     },
     {
         id: 2,
@@ -139,6 +142,7 @@ export const agent: Array<agentType> = [
         ],
         tier_offense: 'b',
         tier_defense: 's',
+        tier_dafran: 's',
     },
     {
         id: 3,
@@ -179,6 +183,7 @@ export const agent: Array<agentType> = [
         ],
         tier_offense: 'a',
         tier_defense: 'b',
+        tier_dafran: 'd',
     },
     {
         id: 4,
@@ -219,6 +224,7 @@ export const agent: Array<agentType> = [
         ],
         tier_offense: 'b',
         tier_defense: 'b',
+        tier_dafran: 'c',
     },
     {
         id: 5,
@@ -259,6 +265,7 @@ export const agent: Array<agentType> = [
         ],
         tier_offense: 's',
         tier_defense: 'b',
+        tier_dafran: 'b',
     },
     {
         id: 6,
@@ -299,6 +306,7 @@ export const agent: Array<agentType> = [
         ],
         tier_offense: 's',
         tier_defense: 'a',
+        tier_dafran: 'a',
     },
     {
         id: 7,
@@ -339,6 +347,7 @@ export const agent: Array<agentType> = [
         ],
         tier_offense: 'a',
         tier_defense: 's',
+        tier_dafran: 's',
     },
     {
         id: 8,
@@ -379,6 +388,7 @@ export const agent: Array<agentType> = [
         ],
         tier_offense: 'a',
         tier_defense: 'a',
+        tier_dafran: 's',
     },
     {
         id: 9,
@@ -419,5 +429,6 @@ export const agent: Array<agentType> = [
         ],
         tier_offense: 'b',
         tier_defense: 'a',
+        tier_dafran: 'b',
     },
 ]
