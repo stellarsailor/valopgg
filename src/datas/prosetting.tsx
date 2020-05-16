@@ -220,7 +220,7 @@ export const prosetting: Array<proType> = [
     {
         id: 4,
         name: "TenZ",
-        team: "Twitch Streamer, former CS:GO player",
+        team: "C9",
         photo: "https://prosettings.net/wp-content/uploads/2020/05/tenz-profile-picture.jpg",
         prosetting: {
             mouse: 'RAZER VIPER ULTIMATE',
@@ -380,6 +380,174 @@ export const prosetting: Array<proType> = [
             error: "Off",
         
             monitor: 'BENQ XL2546',
+            display: "Fullscreen",
+            resolution: "1920×1080",
+            frameLimit: "Unlocked",
+        }
+    },
+    {
+        id: 8,
+        name: "Mendo",
+        team: "Team Liquid",
+        photo: "https://prosettings.net/wp-content/uploads/2020/05/mendo-profile-picture.jpg",
+        prosetting: {
+            mouse: 'LOGITECH G PRO WIRELESS EASTER PINK',
+            dpi: 450,
+            sensitivity: 0.55,
+            hz: 1000,
+            scopedSensitivity: 1,
+            windowSensitivity: 6,
+        
+            keyboard: 'TOFU 60% ZEALIOS 67G SWITCHES',
+            walk: "L-Shift",
+            crouch: "L-Ctrl",
+            jump: "Wheel Down",
+            useObject: "F",
+        
+            equip1: "1",
+            equip2: "2",
+            equip3: "3",
+            equip4: "4",
+        
+            ability1: "C",
+            ability2: "E",
+            ability3: "V",
+            ability4: "X",
+        
+            color: "Red",
+            outlines: "Off",
+            centerDot: "Off",
+            innerLines: '1 / 2 / 2 / 4',
+            outerLines: '0 / 0 / 2 / 12',
+            error: "Off",
+        
+            monitor: 'ASUS ROG SWIFT PG258Q',
+            display: "Fullscreen",
+            resolution: "1920×1080",
+            frameLimit: "Unlocked",
+        }
+    },
+    {
+        id: 9,
+        name: "Sinatraa",
+        team: "Sentinels",
+        photo: "https://prosettings.net/wp-content/uploads/2020/05/sinatraa-profile-picture-2.jpg",
+        prosetting: {
+            mouse: 'LOGITECH G PRO WIRELESS PIXEL',
+            dpi: 800,
+            sensitivity: 0.48,
+            hz: 1000,
+            scopedSensitivity: 1,
+            windowSensitivity: 6,
+        
+            keyboard: 'LOGITECH G PRO X MK',
+            walk: "L-Shift",
+            crouch: "L-Ctrl",
+            jump: "Wheel Down",
+            useObject: "F",
+        
+            equip1: "1",
+            equip2: "2",
+            equip3: "3",
+            equip4: "4",
+        
+            ability1: "C",
+            ability2: "Q",
+            ability3: "E",
+            ability4: "X",
+        
+            color: "Green",
+            outlines: "Off",
+            centerDot: "Off",
+            innerLines: '1 / 4 / 2 / 3',
+            outerLines: '0 / 0 / 0 / 0',
+            error: "Off",
+        
+            monitor: 'OMEN BY HP 24.5″',
+            display: "Fullscreen",
+            resolution: "1920×1080",
+            frameLimit: "Unlocked",
+        }
+    },
+    {
+        id: 10,
+        name: "SicK",
+        team: "Sentinels",
+        photo: "https://prosettings.net/wp-content/uploads/2020/05/sick-profile-picture.jpg",
+        prosetting: {
+            mouse: 'LOGITECH G PRO WIRELESS',
+            dpi: 800,
+            sensitivity: 0.235,
+            hz: 1000,
+            scopedSensitivity: 1,
+            windowSensitivity: 6,
+        
+            keyboard: 'HYPERX ALLOY FPS PRO',
+            walk: "L-Shift",
+            crouch: "L-Ctrl",
+            jump: "Wheel Down",
+            useObject: "F",
+        
+            equip1: "1",
+            equip2: "2",
+            equip3: "3",
+            equip4: "4",
+        
+            ability1: "C",
+            ability2: "Mouse 4",
+            ability3: "E",
+            ability4: "X",
+        
+            color: "Green",
+            outlines: "On / 1 / 1",
+            centerDot: "Off",
+            innerLines: '0.808 / 3 / 2 / 5',
+            outerLines: '0.379 / 2 / 0 / 10',
+            error: "Off",
+        
+            monitor: 'BENQ XL2546',
+            display: "Fullscreen",
+            resolution: "1920×1080",
+            frameLimit: "Unlocked",
+        }
+    },
+    {
+        id: 11,
+        name: "zombs",
+        team: "Sentinels",
+        photo: "https://prosettings.net/wp-content/uploads/2020/05/zombs-profile-picture.jpg",
+        prosetting: {
+            mouse: 'LOGITECH G PRO WIRELESS',
+            dpi: 400,
+            sensitivity: 0.54,
+            hz: 1000,
+            scopedSensitivity: 1,
+            windowSensitivity: 6,
+        
+            keyboard: 'HYPERX ALLOY FPS PRO',
+            walk: "L-Shift",
+            crouch: "L-Ctrl",
+            jump: "Wheel Down",
+            useObject: "F",
+        
+            equip1: "1",
+            equip2: "2",
+            equip3: "3",
+            equip4: "4",
+        
+            ability1: "C",
+            ability2: "Q",
+            ability3: "E",
+            ability4: "X",
+        
+            color: "Green",
+            outlines: "Off",
+            centerDot: "Off",
+            innerLines: '1 / 4 / 2 / 2',
+            outerLines: '0 / 0 / 0 / 0',
+            error: "Off",
+        
+            monitor: 'BENQ XL2540',
             display: "Fullscreen",
             resolution: "1920×1080",
             frameLimit: "Unlocked",

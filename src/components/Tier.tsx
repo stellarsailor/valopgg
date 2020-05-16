@@ -68,6 +68,7 @@ export default function Tier(){
             <Col xs={24} sm={22} md={20} lg={20} xl={15} style={{margin: '1rem 0' , padding: '1rem', backgroundColor: '#202b43'}}>
                 <div style={{paddingLeft: '1rem', margin: '1rem', marginBottom: '1.5rem'}}>
                     <PageTitle>Dafran's Tier List for Tournament</PageTitle>
+                    <div style={{fontSize: '1.4rem'}}>Dafran의 대회용 요원 티어 리스트</div>
                 </div>
                 {tierColor.map((arr) => (
                     <Row style={{margin: '1rem 0'}}>

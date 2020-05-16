@@ -83,7 +83,18 @@ export default function Strat() {
                     </Col>
                     <Col xs={22} sm={22} md={22} lg={22} xl={6}>
                         {mapArr.map((v, index) => (
-                            <a style={mapSelection === v.toLowerCase() ? {color: 'white', fontWeight: 'bold', marginRight: '1.8rem'} : {color: 'gray', marginRight: '1.8rem'} } key={index} onClick={() => setMapSelection(v.toLowerCase())}>
+                            <a style={mapSelection === v.toLowerCase() ? {color: 'white', fontWeight: 'bold', marginRight: '1.8rem'} : {color: 'gray', marginRight: '1.8rem'} } key={index} onClick={() => {
+                                    setMapSelection(v.toLowerCase())
+                                    setDetailView({ // 디테일뷰가 있었다면 초기화
+                                        id: -1,
+                                        abilityIcon: -1,
+                                        title: '',
+                                        identifier: '',
+                                        difficulty: '',
+                                        type: '',
+                                        method: []
+                                    })
+                                }}>
                                 {v}
                             </a>
                         ))}
