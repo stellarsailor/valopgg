@@ -262,7 +262,7 @@ export const prosetting: Array<proType> = [
     {
         id: 5,
         name: "dafran",
-        team: "Twitch Streamer, Valorant rank player",
+        team: "Twitch Streamer",
         photo: "https://cdn.cosmicjs.com/8a769be0-7f58-11ea-9359-7595985d0a95-dafran.png",
         prosetting: {
             mouse: 'BenQ Zowie EC2',

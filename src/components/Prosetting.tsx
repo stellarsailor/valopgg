@@ -60,7 +60,7 @@ export default function Prosetting() {
                                 </Col> 
                                 <Col xs={8} sm={8} md={8} lg={8} xl={8}>
                                     <BlockTitle>eDPI</BlockTitle>
-                                    {v.prosetting.dpi * v.prosetting.sensitivity}
+                                    {Math.round(v.prosetting.dpi * v.prosetting.sensitivity)}
                                 </Col> 
                                 <Col xs={8} sm={8} md={8} lg={8} xl={8}>
                                     <BlockTitle>Hz</BlockTitle>
