@@ -59,7 +59,7 @@ export default function Main() {
             }
             <Col xs={24} sm={22} md={20} lg={20} xl={15}>
                 <div style={{display: 'flex', justifyContent: 'center', marginTop: '1rem', marginLeft: '1rem', marginRight: '1rem'}}>
-                    <Link to="/weapon"><Alert message="무기 스킨 및 요원 별 전략(피닉스, 오멘, 레이즈)가 업데이트 되었습니다!" type="success" showIcon /></Link>
+                    <Link to="/weapon"><Alert message="무기 스킨 및 요원 별 전략(피닉스, 오멘, 레이즈, 사이퍼)가 업데이트 되었습니다!" type="success" showIcon /></Link>
                 </div>
                 <Row style={{padding: '1rem'}}>
                     <Col xs={24} sm={12} md={12} lg={12} xl={12} style={{padding: '5%'}}>

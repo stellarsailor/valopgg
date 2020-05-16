@@ -369,13 +369,175 @@ export const strat: agentType = {
     },
     cypher: {
         bind: [
-
+            {
+                id: 0,
+                abilityIcon: 2,
+                title: 'A숏 스파이캠 1',
+                identifier: 'ashort-spycam',
+                difficulty: '보통',
+                type: 'image',
+                method: [
+                    1,2,3
+                ],
+            },
+            {
+                id: 1,
+                abilityIcon: 2,
+                title: 'A숏 스파이캠 2',
+                identifier: 'ashort-spycam-2nd',
+                difficulty: '어려움',
+                type: 'image',
+                method: [
+                    1,2,3,4
+                ],
+            },
+            {
+                id: 2,
+                abilityIcon: 2,
+                title: 'B사이트 스파이캠',
+                identifier: 'bsite-spycam',
+                difficulty: '보통',
+                type: 'image',
+                method: [
+                    1,2,3
+                ],
+            },
+            {
+                id: 3,
+                abilityIcon: 2,
+                title: '후카 스파이캠 1',
+                identifier: 'hookah-spycam',
+                difficulty: '어려움',
+                type: 'image',
+                method: [
+                    1,2
+                ],
+            },
+            {
+                id: 4,
+                abilityIcon: 2,
+                title: '후카 스파이캠 2',
+                identifier: 'hookah-spycam-2nd',
+                difficulty: '보통',
+                type: 'image',
+                method: [
+                    1,2
+                ],
+            },
+            {
+                id: 5,
+                abilityIcon: 2,
+                title: '샤워실 스파이캠',
+                identifier: 'shower-spycam',
+                difficulty: '보통',
+                type: 'image',
+                method: [
+                    1,2,3,4
+                ],
+            },
         ],
         haven: [
-
+            {
+                id: 0,
+                abilityIcon: 2,
+                title: 'A정원 A롱 스파이캠',
+                identifier: 'agarden-along-spycam',
+                difficulty: '어려움',
+                type: 'image',
+                method: [
+                    1,2
+                ],
+            },
+            {
+                id: 1,
+                abilityIcon: 2,
+                title: 'A사이트 스파이캠',
+                identifier: 'asite-spycam',
+                difficulty: '어려움',
+                type: 'image',
+                method: [
+                    1,2
+                ],
+            },
+            {
+                id: 2,
+                abilityIcon: 2,
+                title: 'C사이트 스파이캠 1',
+                identifier: 'csite-spycam',
+                difficulty: '보통',
+                type: 'image',
+                method: [
+                    1,2,3
+                ],
+            },
+            {
+                id: 3,
+                abilityIcon: 2,
+                title: 'C사이트 스파이캠 2',
+                identifier: 'csite-spycam-2nd',
+                difficulty: '보통',
+                type: 'image',
+                method: [
+                    1,2,3,4
+                ],
+            },
         ],
         split: [
-            
+            {
+                id: 0,
+                abilityIcon: 2,
+                title: 'A난간 A로비 스파이캠',
+                identifier: 'alobby-spycam',
+                difficulty: '보통',
+                type: 'image',
+                method: [
+                    1,2,3,4
+                ],
+            },
+            {
+                id: 1,
+                abilityIcon: 2,
+                title: 'A램프 스파이캠',
+                identifier: 'aramps-spycam',
+                difficulty: '보통',
+                type: 'image',
+                method: [
+                    1,2,3
+                ],
+            },
+            {
+                id: 2,
+                abilityIcon: 2,
+                title: 'B사이트 스파이캠',
+                identifier: 'bsite-spycam',
+                difficulty: '어려움',
+                type: 'image',
+                method: [
+                    1,2,3
+                ],
+            },
+            {
+                id: 3,
+                abilityIcon: 2,
+                title: '미드봇 스파이캠',
+                identifier: 'midbot-spycam',
+                difficulty: '보통',
+                type: 'image',
+                method: [
+                    1,2
+                ],
+            },
+            {
+                id: 4,
+                abilityIcon: 2,
+                title: '우편함 미드 스파이캠',
+                identifier: 'midmail-spycam',
+                difficulty: '어려움',
+                type: 'image',
+                method: [
+                    1,2,3
+                ],
+            },
         ]
     },
     jett: {

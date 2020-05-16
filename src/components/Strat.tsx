@@ -35,8 +35,8 @@ export default function Strat() {
     },[])
 
     const mapArr = ["Bind", "Haven", "Split"]
-    const agentArr = ['Brimstone', 'Jett', 'Omen', 'Phoenix', 'Raze', 'Sage', 'Sova', 'Viper'] //앱스토어 심사용으로 일단 5요원 제거 
-    const agent_koArr = ['브림스톤', '제트', '오멘', '피닉스', '레이즈', '세이지', '소바', '바이퍼']
+    const agentArr = ['Brimstone', 'Cypher', 'Jett', 'Omen', 'Phoenix', 'Raze', 'Sage', 'Sova', 'Viper'] //앱스토어 심사용으로 일단 5요원 제거 
+    const agent_koArr = ['브림스톤', '사이퍼', '제트', '오멘', '피닉스', '레이즈', '세이지', '소바', '바이퍼']
     const difficultyArr = ['전체', '쉬움', '보통', '어려움'];
 
     const [ agentSelection, setAgentSelection ] = useState<number | string>('brimstone')
