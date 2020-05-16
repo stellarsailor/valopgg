@@ -11,8 +11,7 @@ import Weapon from './components/Weapon';
 import Map from './components/Map';
 import Strat from './components/Strat';
 import Dic from './components/Dic';
-import Simulator from './components/Simulator';
-import Recruit from './components/Recruit';
+import Contact from './components/Contact';
 import Prosetting from './components/Prosetting';
 import Main from './components/Main';
 import AgentRecommendation from './components/AgentRecommendation';
@@ -144,9 +143,8 @@ export default function App () {
                         <Route path="/dic" component={Dic} />
                         <Route path="/prosetting" component={Prosetting} />
                         <Route path="/calculator" component={Calculator} />
-                        <Route path="/simulator" component={Simulator} />
-                        <Route path="/prove" component={Skin} />
-                        <Route path="/recruit" component={Recruit} />
+                        <Route path="/contact" component={Contact} />
+                        <Route path="/prove" component={Contact} />
                         <Route path="/privacy" component={Privacy} />
                         <Route exact path="/" component={Main} />
                     </Switch>
@@ -156,8 +154,8 @@ export default function App () {
                     <Row justify="center">
                     © 2020 Valop.gg all rights reserved. 
                     </Row>
-                    <Row justify="center">
-                        Contact : valop.gg@gmail.com <Link to="/privacy" style={{marginLeft: 10}}>Privacy</Link> 
+                    <Row justify="center" style={{margin: '1rem 0'}}>
+                        <Link to="/contact" style={{marginLeft: 10}}>Contact</Link> <Link to="/privacy" style={{marginLeft: 10}}>Privacy</Link> 
                     </Row>
                     <Row justify="center" >
                         <Col xs={24} sm={22} md={20} lg={20} xl={15} style={{marginTop: 30, marginBottom: 30}}>
