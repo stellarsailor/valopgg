@@ -10,7 +10,7 @@ export const dic: Array<dicType> = [
         id: 0,
         letter: 'ㅎ',
         word: '헤븐(Heaven)',
-        desc: '높은 위치의 난간'
+        desc: "높은 위치의 난간, '2층'과 의미가 같음"
     },
     {
         id: 1,
@@ -22,13 +22,13 @@ export const dic: Array<dicType> = [
         id: 2,
         letter: 'ㅁ',
         word: '메인(Main)',
-        desc: '상대가 러쉬 들어오는 가장 큰 입구'
+        desc: '상대가 들어오는 가장 큰 입구'
     },
     {
         id: 3,
         letter: 'ㄹ',
         word: '램프(Ramp)',
-        desc: '경사로',
+        desc: '경사가 있는 길',
     },
     {
         id: 4,
@@ -100,19 +100,19 @@ export const dic: Array<dicType> = [
         id: 16,
         letter: 'ㅎ',
         word: '후카(Hookah)',
-        desc: 'Bind 맵의 B 창문 표시 방'
+        desc: "Bind 맵의 'B 창문' 표시 방(B숏)"
     },
     {
         id: 17,
         letter: 'ㅂ',
         word: '브레이킹(Breaking)',
-        desc: '반동을 최소화 하기 위하여 움직임을 멈추고 쏘는 것'
+        desc: '반동을 최소화 하기 위하여 움직임을 멈추고 쏘는 것. wasd에서 손을 떼거나 a를 입력하던도중 d와 같이 반대방향의 키를 눌러 브레이킹이 가능함.'
     },
     {
         id: 18,
         letter: 'ㅇ',
         word: '오퍼',
-        desc: '오퍼레이터(Operator)의 줄임말'      
+        desc: '오퍼레이터(Operator)의 줄임말. (=에땁, 땁)'      
     },
     {
         id: 19, 
@@ -184,13 +184,13 @@ export const dic: Array<dicType> = [
         id: 29,
         letter: 'ㅂ',
         word: '베이팅(Baiting)',
-        desc: 'Bait 은 미끼를 일컫는 용어로써 팀원을 미끼 삼아 플레이 하는 방식'
+        desc: 'Bait은 미끼를 일컫는 용어로써 팀원을 미끼 삼아 플레이 하는 방식'
     },
     {
         id: 30,
         letter: 'ㅂ',
         word: '베이스(Base)',
-        desc: '각 팀 별 소환되는 첫 시작 장소'
+        desc: '각 팀 별 소환되는 첫 시작 장소 (=스폰)'
     },
     {
         id: 31,
@@ -214,12 +214,12 @@ export const dic: Array<dicType> = [
         id: 34,
         letter: 'C',
         word: 'CT',
-        desc: '방어팀 진영 스폰 지점'
+        desc: 'Counter Terrorist 카운터 테러리스트, 방어팀 진영 스폰 지점(반대말 T, 테러리스트)'
     },
     {
         id: 35,
         letter: 'ㅇ',
-        word: '에땁(AWP)',
+        word: '에땁, 땁(AWP)',
         desc: '타 게임에서의 발로란트 오퍼레이터 무기와 비슷한 저격총 AWP를 이르는 말.'
     },
     {
@@ -238,6 +238,18 @@ export const dic: Array<dicType> = [
         id: 38,
         letter: 'ㅍ',
         word: '프리 에이밍(Pre-aiming)',
-        desc: '상대방이 나타날 만한 곳에 미리 조준선을 두며 움직이는 것'
+        desc: '상대방이 나타날 만한 곳에 미리 조준선을 두며 움직이는 것. 쏘면서 들어가는것은 프리 파이어(Pre-fire)'
+    },
+    {
+        id: 39,
+        letter: 'ㅁ',
+        word: '무결점 플레이',
+        desc: '팀원 모두 죽지 않고 라운드 승리'
+    },
+    {
+        id: 40,
+        letter: 'ㅈ',
+        word: '절약왕',
+        desc: '상대팀보다 적은 크레드를 소비하여 라운드 승리'
     },
 ]
