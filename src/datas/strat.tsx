@@ -1389,6 +1389,50 @@ export const strat: agentType = {
                     1,2,3,4
                 ],
             },
+            {
+                id: 10,
+                abilityIcon: 2,
+                title: 'A헤븐 A로비 수비 정찰화살',
+                identifier: 'aheaven-alobby-defense-recon',
+                difficulty: '보통',
+                type: 'image',
+                method: [
+                    1,2,3
+                ],
+            },
+            {
+                id: 11,
+                abilityIcon: 2,
+                title: 'A로비 A경사로 공격 정찰화살',
+                identifier: 'alobby-aramps-offense-recon',
+                difficulty: '어려움',
+                type: 'image',
+                method: [
+                    1,2,3,4
+                ],
+            },
+            {
+                id: 12,
+                abilityIcon: 2,
+                title: 'B헤븐 B사이트 수비 정찰화살',
+                identifier: 'bheaven-bsite-defense-recon',
+                difficulty: '보통',
+                type: 'image',
+                method: [
+                    1,2,3,4
+                ],
+            },
+            {
+                id: 13,
+                abilityIcon: 2,
+                title: 'B로비 B사이트 공격 정찰화살',
+                identifier: 'blobby-bsite-offense-recon',
+                difficulty: '보통',
+                type: 'image',
+                method: [
+                    1,2,3
+                ],
+            },
         ]
     },
     viper: {

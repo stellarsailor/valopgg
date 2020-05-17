@@ -5,9 +5,11 @@ import { PlusOutlined, MinusOutlined, SearchOutlined } from '@ant-design/icons';
 import { TransformWrapper, TransformComponent } from "react-zoom-pan-pinch";
 import * as Scroll from 'react-scroll';
 import { Link, Element , Events, animateScroll as scroll, scrollSpy, scroller } from 'react-scroll'
+import queryString from 'query-string'
  
 import { strat } from '../datas/strat'
 import { agent } from '../datas/agent'
+import { dynamicSort } from '../logics/dynamicSort'
 import mainLogo from '../images/mainLogo.png'
 
 
@@ -28,7 +30,16 @@ const StratPane = styled.a`
     }
 `
 
-export default function Strat() {
+export default function Strat(props) {
+
+    const qs: any = queryString.parse(props.location.search)
+    let initialAgentNumber: string = 'brimstone';
+
+    if(Object.entries(qs).length === 0){
+        initialAgentNumber = 'brimstone'
+    } else {
+        initialAgentNumber = qs.name
+    }
 
     useEffect(() => {
         window.scrollTo(0, 0)
@@ -39,7 +50,7 @@ export default function Strat() {
     const agent_koArr = ['브림스톤', '사이퍼', '제트', '오멘', '피닉스', '레이즈', '세이지', '소바', '바이퍼']
     const difficultyArr = ['전체', '쉬움', '보통', '어려움'];
 
-    const [ agentSelection, setAgentSelection ] = useState<number | string>('brimstone')
+    const [ agentSelection, setAgentSelection ] = useState<string>(initialAgentNumber)
     const [ mapSelection, setMapSelection ] = useState<null | number | string>('bind')
     const [ sideSelection, setSideSelection ] = useState('attacker')
     const [ difficultySelection, setDifficultySelection ] = useState<string>('전체')
@@ -123,7 +134,7 @@ export default function Strat() {
                                             {strat[agentSelection][mapSelection].filter(v => {
                                                 if(difficultySelection === '전체') return v
                                                 else if( v.difficulty === difficultySelection ) return v
-                                            }).map((v) => (
+                                            }).slice(0).sort(dynamicSort('title')).map((v) => (
                                                 <StratPane onClick={() => { setDetailView(v); scroller.scrollTo('scroll-to-element', {
                                                     duration: 800,
                                                     delay: 0,
