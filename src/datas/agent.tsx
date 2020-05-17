@@ -320,7 +320,7 @@ export const agent: Array<agentType> = [
                 id: 0,
                 name: '장벽 구슬',
                 count: 1,
-                cost: '300 크레드',
+                cost: '400 크레드',
                 desc: '장벽 구슬을 장착합니다. 발사하면 단단한 장벽을 설치합니다. 보조 공격 시 장벽이 회전합니다. ',
             },
             {

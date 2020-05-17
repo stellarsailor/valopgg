@@ -103,7 +103,6 @@ export default function App () {
                             <Link to="/calculator" style={mobileMenuTab}>감도 계산기</Link>
                             {/* <Link to="/simulator" style={mobileMenuTab}>전략 시뮬레이터</Link> */}
                             {/* <Link to="/recruit" style={mobileMenuTab}>파티 모집</Link> */}
-                            {/* <Link to="/community" style={mobileMenuTab}>커뮤니티</Link> */}
                         </div>
                         :
                         <Col xs={24} sm={22} md={20} lg={20} xl={15} >
@@ -120,7 +119,6 @@ export default function App () {
                                 <MenuTabHover><Link to="/calculator">감도 계산기</Link></MenuTabHover>
                                 {/* <MenuTabHover><Link to="/simulator">전략 시뮬레이터</Link></MenuTabHover> */}
                                 {/* <MenuTabHover><Link to="/recruit">파티 모집</Link></MenuTabHover> */}
-                                {/* <Link to="/community">커뮤니티</Link> */}
                             </div>
                         </Col>
                     }
@@ -134,7 +132,6 @@ export default function App () {
                         <Route path="/tier" component={Tier} />
                         <Route path="/weapon/:name" component={WeaponDetail} />
                         <Route path="/weapon" component={Weapon} />
-                        <Route path="/community" component={Community} />
                         <Route path="/map/:name" component={MapDetail} />
                         <Route path="/map" component={Map} />
                         <Route path="/strat" component={Strat} />
