@@ -81,7 +81,7 @@ export const agent: Array<agentType> = [
                 id: 1,
                 name: '소이탄',
                 count: 1,
-                cost: '200 크레드',
+                cost: '300 크레드',
                 desc: '소이탄 발사기를 장착합니다. 발사하면 바닥에 떨어졌을 때 폭발하는 소이탄을 날려 적에게 피해를 입히는 화염 구역을 생성합니다. 생성된 구역은 일정 시간 유지됩니다.',
             },
             {
@@ -163,7 +163,7 @@ export const agent: Array<agentType> = [
                 id: 1,
                 name: '상승 기류',
                 count: 2,
-                cost: '200 크레드',
+                cost: '100 크레드',
                 desc: '제트가 즉시 높이 날아오릅니다.',
             },
             {
@@ -245,7 +245,7 @@ export const agent: Array<agentType> = [
                 id: 1,
                 name: '커브볼',
                 count: 2,
-                cost: '100 크레드',
+                cost: '200 크레드',
                 desc: '던지면 휘어져 날아간 후 곧 폭발하는 섬광 구슬을 장착합니다. 발사하면 섬광 구슬이 왼쪽으로 휘어지며 폭발합니다. 이때 구슬을 바라보는 플레이어는 전부 실명합니다. 보조 공격 시 섬광 구슬이 오른쪽으로 휘어집니다. ',
             },
             {
