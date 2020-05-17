@@ -29,7 +29,7 @@ export default function Map() {
                     {arr.map((v,index) => (
                         <Col xs={24} sm={24} md={12} lg={8} xl={8} style={{width: '100%', height: 300, backgroundColor: '#202b43', padding: 10, marginTop: 15}} key={index}>
                             <Link to={`/map/${v.toLowerCase()}`}>
-                                <div style={{backgroundImage: `url(${Images[index]})`, width: "100%", height: '100%', backgroundSize: 'cover', backgroundPosition: 'center', borderRadius: 15}}>
+                                <div style={{backgroundImage: `url(${Images[index]})`, width: "100%", height: '100%', backgroundSize: 'cover', backgroundPosition: 'center', borderRadius: 5}}>
                                     <BottomText>{v}</BottomText>
                                 </div>
                             </Link>
