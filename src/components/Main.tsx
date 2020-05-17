@@ -3,7 +3,7 @@ import styled from 'styled-components'
 import { Row, Col, Collapse, Button, Alert, Input } from 'antd';
 import { Link } from 'react-router-dom'
 import Jumbotron from '../images/official-background.jpg'
-import ReactMarkdown from 'react-markdown'
+import AdSense from 'react-adsense';
 
 const { Panel } = Collapse;
 const { Search } = Input;
@@ -108,6 +108,15 @@ export default function Main() {
                         <Button style={{marginTop: 10}}><Link to="/prosetting">바로가기</Link></Button>
                     </Col>
                 </Row>
+
+                <AdSense.Google
+                    key={Math.random()}
+                    client="ca-pub-1635386604461382"
+                    slot="1654741413"
+                    style={{ display: 'block' }}
+                    format="auto"
+                    responsive="true"
+                />
 
                 {/* <Collapse defaultActiveKey={['1']} >
                     <Panel header="0.49 패치노트" key="1">

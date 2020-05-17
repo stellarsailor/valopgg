@@ -86,7 +86,7 @@ export default function Agent(props) {
                             <div style={{fontSize: '1.6rem', textAlign: 'center'}}>
                                 {agent[agentSelection].name_ko} <span style={{fontSize: '1rem'}}> / {agent[agentSelection].origin}</span>
                                 <div style={{fontSize: '1.2rem'}}>{agent[agentSelection].type}</div>
-                                <img src={`http://d3s0uoqa61ipmr.cloudfront.net/agents/${agent[agentSelection].name.toLowerCase()}-standing.png`} style={{width: '100%'}} />
+                                <img src={`https://d3s0uoqa61ipmr.cloudfront.net/agents/${agent[agentSelection].name.toLowerCase()}-standing.png`} style={{width: '100%'}} />
                             </div>
                             : null }
                         </Col>
@@ -97,7 +97,7 @@ export default function Agent(props) {
                                 {arr.map(v => (
                                     <Col span={6} key={v} onClick={() => setAbilitySelection(v)} style={{padding: 10}}> 
                                         <div style={{backgroundColor: '#202b43', borderRadius: 5, width: '2rem', display: 'flex', justifyContent: 'center', fontWeight: 'bold'}}>{key[v]}</div>
-                                        <img src={`http://d3s0uoqa61ipmr.cloudfront.net/abilities/${agent[agentSelection].name.toLowerCase() + v}.svg`} style={{width: '4rem'}} />
+                                        <img src={`https://d3s0uoqa61ipmr.cloudfront.net/abilities/${agent[agentSelection].name.toLowerCase() + v}.svg`} style={{width: '4rem'}} />
                                         <div style={{width: '100%'}}>
                                             <SkillCount count={agent[agentSelection].skill[v].count} selected={ abilitySelection === v ? true : false } />
                                         </div>
@@ -118,7 +118,7 @@ export default function Agent(props) {
                                         {agent[agentSelection].type}
                                     </div>
                                 </div>
-                                <img src={`http://d3s0uoqa61ipmr.cloudfront.net/agents/${agent[agentSelection].name.toLowerCase()}-standing.png`} style={{width: '100%'}} />
+                                <img src={`https://d3s0uoqa61ipmr.cloudfront.net/agents/${agent[agentSelection].name.toLowerCase()}-standing.png`} style={{width: '100%'}} />
                             </div>
                         </Col>
                     </Row>
