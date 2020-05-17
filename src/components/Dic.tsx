@@ -2,24 +2,8 @@ import React from 'react'
 import styled from 'styled-components'
 import { Row, Col } from 'antd';
 import { dic } from '../datas/dic'
-
-
-const dynamicSort = (property: string) => {
-    let sortOrder = 1;
-
-    if(property[0] === "-") {
-        sortOrder = -1;
-        property = property.substr(1);
-    }
-
-    return function (a, b) {
-        if(sortOrder == -1){
-            return b[property].localeCompare(a[property]);
-        }else{
-            return a[property].localeCompare(b[property]);
-        }        
-    }
-}
+import { dynamicSort } from '../logics/dynamicSort'
+import DicWordRender from './subcomponents/DicWordRenser';
 
 export default function Dic() {
 
@@ -28,13 +12,8 @@ export default function Dic() {
             <Col xs={24} sm={22} md={20} lg={20} xl={15} style={{padding: '1rem 0'}}>
                 <div style={{backgroundColor: '#202b43', padding: '5%'}}>
                     {/* 전체 ㄱㄴㄷㄹㅁㅂㅅㅇㅈㅊㅋㅌㅍㅎ A-Z 0-9 */}
-                    {dic.slice(0).sort(dynamicSort('word')).map((v) => (
-                        <div key={v.id} style={{fontSize: '1rem'}}>
-                            <div style={{marginBottom: '1.2rem'}}>
-                                <span style={{fontWeight: 'bold', fontSize: '1.2rem'}}>{v.word}</span>
-                                <div style={{marginLeft: '0.5rem'}}>| {v.desc}</div>
-                            </div>
-                        </div>
+                    {dic.slice(0).sort(dynamicSort('word_ko')).map((v) => (
+                        <DicWordRender id={v.id} word_ko={v.word_ko} word_en={v.word_en} desc={v.desc} isImg={v.isImg} />
                     ))}
                 </div>
             </Col>
