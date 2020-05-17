@@ -99,7 +99,10 @@ export default function AgentRecommendation() {
                         <Row justify="center" style={{padding: '1rem', backgroundColor: '#202b43'}}>
                             <Col xs={24} sm={22} md={20} lg={20} xl={15} >
                                 <div style={{fontSize: '1.5rem'}}>
-                                    추천 캐릭터는 {capitalizeFirstLetter(result)} 입니다!
+                                    추천 캐릭터는 <span style={{fontWeight: 'bold'}}>{capitalizeFirstLetter(result)}</span> 입니다!
+                                    <div style={{fontSize: '1rem'}}>
+                                        결과는 재미로만 봐주세요..!
+                                    </div>
                                     <Paragraph style={{color: 'white', fontSize: '1.2rem', textAlign: 'right'}} copyable={{ text: 'https://valop.gg/agentrecom' }}>친구에게 URL 공유하기</Paragraph>
                                 </div>
                                 <div style={{display: 'flex', justifyContent: 'center', marginTop: 10}}>
