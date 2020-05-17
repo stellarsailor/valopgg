@@ -105,7 +105,7 @@ export default function AgentRecommendation() {
                                 <div style={{display: 'flex', justifyContent: 'center', marginTop: 10}}>
                                     <Link to={`/agent?name=${result}`}><Button type="primary" icon={<SearchOutlined />}>정보 보기</Button></Link>
                                 </div>
-                                <img src={require(`../images/agents/${result}-standing.png`)} style={{width: '100%'}} />
+                                <img src={`https://d3s0uoqa61ipmr.cloudfront.net/agents/${result}-standing.png`} style={{width: '100%'}} />
                             </Col>
                         </Row>
                     :
