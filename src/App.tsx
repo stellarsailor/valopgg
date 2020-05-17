@@ -17,13 +17,11 @@ import Main from './components/Main';
 import AgentRecommendation from './components/AgentRecommendation';
 import MapDetail from './components/MapDetail';
 import WeaponDetail from './components/WeaponDetail';
-import Community from './components/Community';
 import Calculator from './components/Calculator';
 import Privacy from './components/Privacy';
 import Tier from './components/Tier';
 
 import OfficialBackground from './images/official-silhouette-background.jpg'
-import Skin from './components/Skin';
 
 const { Header, Content, Footer } = Layout;
 const { Search } = Input;
