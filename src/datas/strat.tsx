@@ -111,7 +111,7 @@ export const strat: agentType = {
                 {
                     id: 3,
                     abilityIcon: 2,
-                    title: 'A사이트 연막',
+                    title: 'A사이트 진입 연막',
                     identifier: 'asite-smoke',
                     difficulty: '쉬움',
                     type: 'image',
@@ -144,7 +144,7 @@ export const strat: agentType = {
                 {
                     id: 6,
                     abilityIcon: 2,
-                    title: 'B사이트 연막',
+                    title: 'B사이트 진입 연막',
                     identifier: 'bsite-smoke',
                     difficulty: '쉬움',
                     type: 'image',
@@ -247,7 +247,51 @@ export const strat: agentType = {
                 abilityIcon: 2,
                 title: 'C사이트 진입 연막',
                 identifier: 'csite-smoke',
-                difficulty: '보통',
+                difficulty: '쉬움',
+                type: 'image',
+                method: [
+                    1,2
+                ],
+            },
+            {
+                id: 7,
+                abilityIcon: 2,
+                title: 'B사이트 진입 연막 1',
+                identifier: 'bsite-smoke',
+                difficulty: '쉬움',
+                type: 'image',
+                method: [
+                    1,2
+                ],
+            },
+            {
+                id: 8,
+                abilityIcon: 2,
+                title: 'B사이트 진입 연막 2',
+                identifier: 'bsite-smoke-2nd',
+                difficulty: '쉬움',
+                type: 'image',
+                method: [
+                    1,2
+                ],
+            },
+            {
+                id: 9,
+                abilityIcon: 2,
+                title: 'A롱 A사이트 진입 연막',
+                identifier: 'along-asite-smoke',
+                difficulty: '쉬움',
+                type: 'image',
+                method: [
+                    1,2
+                ],
+            },
+            {
+                id: 9,
+                abilityIcon: 2,
+                title: 'A숏 A사이트 진입 연막',
+                identifier: 'ashort-asite-smoke',
+                difficulty: '쉬움',
                 type: 'image',
                 method: [
                     1,2
@@ -363,6 +407,39 @@ export const strat: agentType = {
                 type: 'image',
                 method: [
                     1,2
+                ],
+            },
+            {
+                id: 10,
+                abilityIcon: 2,
+                title: 'B사이트 진입 연막',
+                identifier: 'bsite-smoke',
+                difficulty: '쉬움',
+                type: 'image',
+                method: [
+                    1,2,3
+                ],
+            },
+            {
+                id: 11,
+                abilityIcon: 2,
+                title: '미드 A사이트 진입 연막',
+                identifier: 'mid-asite-smoke',
+                difficulty: '쉬움',
+                type: 'image',
+                method: [
+                    1,2,3
+                ],
+            },
+            {
+                id: 12,
+                abilityIcon: 2,
+                title: '미드 B사이트 진입 연막',
+                identifier: 'mid-bsite-smoke',
+                difficulty: '쉬움',
+                type: 'image',
+                method: [
+                    1,2,3
                 ],
             },
         ]

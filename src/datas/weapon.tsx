@@ -378,7 +378,7 @@ export const weapon: Array<weaponType> = [
         category_ko: "기관총",
         name: "Ares",
         name_ko: "아레스",
-        cost: 1700,
+        cost: 1600,
         damage: [
             {
                 distance: "0-30",
