@@ -4,6 +4,8 @@ import { Row, Col, Collapse, Button, Alert, Input } from 'antd';
 import { Link } from 'react-router-dom'
 import Jumbotron from '../images/official-background.jpg'
 import AdSense from 'react-adsense';
+import { TwitterTimelineEmbed } from 'react-twitter-embed';
+
 
 const { Panel } = Collapse;
 const { Search } = Input;
@@ -58,6 +60,16 @@ export default function Main() {
                 </Col>
             }
             <Col xs={24} sm={22} md={20} lg={20} xl={15}>
+                {/* <div style={{display: 'flex', justifyContent: 'center', width: '100%', backgroundColor: 'green'}}>
+                    <TwitterTimelineEmbed
+                    sourceType="profile"
+                    screenName="GgValop"
+                    theme="light"
+                    noHeader
+                    noFooter
+                    options={{width: '100%'}}
+                    />
+                </div>     */}
                 <div style={{display: 'flex', justifyContent: 'center', marginTop: '1rem', marginLeft: '1rem', marginRight: '1rem'}}>
                     <Link to="/weapon"><Alert message="무기 스킨 및 요원 별 전략(피닉스, 오멘, 레이즈, 사이퍼, 소바)이 업데이트 되었으며 UI/UX가 업그레이드 되었습니다!" type="success" showIcon /></Link>
                 </div>
