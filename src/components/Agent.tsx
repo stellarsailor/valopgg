@@ -117,7 +117,7 @@ export default function Agent(props) {
                                 agentSelection !== 0 ?
                                 <Link to={`/strat?name=${agent[agentSelection].name.toLowerCase()}`} 
                                 style={{display: 'flex', flexDirection: 'row', padding: '1rem', alignItems: 'center', backgroundColor: '#202b43', margin: '1rem 0'}}>
-                                    <img src={require(`../images/agents/${agent[agentSelection].name.toLowerCase()}-headshot.png`)} style={{width: '3rem', borderRadius: '3rem', border: '1px solid white'}} />
+                                    <img src={`https://d3s0uoqa61ipmr.cloudfront.net/agents/${agent[agentSelection].name.toLowerCase()}-headshot.png`} style={{width: '3rem', borderRadius: '3rem', border: '1px solid white'}} />
                                     <div style={{margin: '0 1rem'}}>
                                         <div style={{fontWeight: 'bold'}}>
                                             {agent[agentSelection].name_ko} 전략 메뉴얼 확인하기
