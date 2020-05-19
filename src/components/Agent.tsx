@@ -108,10 +108,14 @@ export default function Agent(props) {
                                     </Col>
                                 ))}
                             </Row>
-                            <div style={{backgroundColor: '#202b43', padding: 20}}>
+                            <div style={{backgroundColor: '#202b43', padding: '1rem'}}>
                                 <div style={{ fontSize: '1.5rem', fontWeight: 'bold'}}>{agent[agentSelection].skill[abilitySelection].name}</div>
-                                비용 : {agent[agentSelection].skill[abilitySelection].cost}
+                                <div style={{fontWeight: 'bold'}}>비용 : {agent[agentSelection].skill[abilitySelection].cost}</div>
                                 <div>{agent[agentSelection].skill[abilitySelection].desc}</div>
+                            </div>
+                            <div style={{backgroundColor: '#202b43', margin: '1rem 0', padding: '1rem'}}>
+                                <div style={{color: '#00ffae', fontWeight: 'bold'}}>아군 {agent[agentSelection].skill[3].name} 대사 : <span style={{color: 'white'}}>"{agent[agentSelection].ally_ult}"</span></div>
+                                <div style={{color: '#ff324c', fontWeight: 'bold'}}>적군 {agent[agentSelection].skill[3].name} 대사 : <span style={{color: 'white'}}>"{agent[agentSelection].enemy_ult}"</span></div>
                             </div>
                             {
                                 agentSelection !== 0 ?
