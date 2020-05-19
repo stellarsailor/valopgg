@@ -95,7 +95,7 @@ export default function App () {
                             <Link to="/agent" style={mobileMenuTab}>요원</Link>
                             <Link to="/agentrecom" style={mobileMenuTab}>맞는 요원 찾기</Link>
                             <Link to="/tier" style={mobileMenuTab}>티어</Link>
-                            <Link to="/weapon" style={mobileMenuTab}>무기</Link>
+                            <Link to="/weapon" style={mobileMenuTab}>무기/스킨</Link>
                             <Link to="/map" style={mobileMenuTab}>맵</Link>
                             <Link to="/strat" style={mobileMenuTab}>요원별 전략</Link>
                             <Link to="/dic" style={mobileMenuTab}>용어사전</Link>
@@ -111,7 +111,7 @@ export default function App () {
                                 <MenuTabHover><Link to="/agent">요원</Link></MenuTabHover>
                                 <MenuTabHover><Link to="/agentrecom">맞는 요원 찾기</Link></MenuTabHover>
                                 <MenuTabHover><Link to="/tier">티어</Link></MenuTabHover>
-                                <MenuTabHover><Link to="/weapon">무기</Link></MenuTabHover>
+                                <MenuTabHover><Link to="/weapon">무기/스킨</Link></MenuTabHover>
                                 <MenuTabHover><Link to="/map">맵</Link></MenuTabHover>
                                 <MenuTabHover><Link to="/strat">요원별 전략</Link></MenuTabHover>
                                 <MenuTabHover><Link to="/dic">용어사전</Link></MenuTabHover>
