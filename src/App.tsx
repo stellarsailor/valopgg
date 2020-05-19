@@ -39,7 +39,7 @@ const MenuTabHover = styled.div`
 `
 
 const mobileMenuTab = {
-    marginLeft: 5, marginRight: 10
+    marginLeft: 5, marginRight: 5
 }
 
 export default function App () {

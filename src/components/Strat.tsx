@@ -173,7 +173,7 @@ export default function Strat(props) {
                                             <TransformComponent>
                                                 <div>
                                                     <img src={require(`../images/minimap-preview.png`)} style={hoverImage === '' ? {display: 'none'} : {width: '100%', position: 'absolute', zIndex: 15}} />
-                                                    <img src={require(`../images/map/${mapSelection}-labels-${sideSelection}.svg`)} style={{width: '100%', position: 'absolute', zIndex: 10}} />
+                                                    <img src={require(`../images/map/${mapSelection}-labels-${sideSelection}-ko.png`)} style={{width: '100%', position: 'absolute', zIndex: 10}} />
                                                     <img src={require(`../images/map/${mapSelection}-layout-base.svg`)} style={sideSelection === "attacker" ? {width: '100%'} : {width: '100%', transform: 'rotate(180deg)'}} />
                                                 </div>
                                             </TransformComponent>
