@@ -94,7 +94,7 @@ export default function App () {
                             <Link to="/guide" style={mobileMenuTab}>가이드</Link>
                             <Link to="/agent" style={mobileMenuTab}>요원</Link>
                             <Link to="/agentrecom" style={mobileMenuTab}>맞는 요원 찾기</Link>
-                            <Link to="/tier" style={mobileMenuTab}>티어</Link>
+                            {/* <Link to="/tier" style={mobileMenuTab}>티어</Link> */}
                             <Link to="/weapon" style={mobileMenuTab}>무기/스킨</Link>
                             <Link to="/map" style={mobileMenuTab}>맵</Link>
                             <Link to="/strat" style={mobileMenuTab}>요원별 전략</Link>
@@ -110,7 +110,7 @@ export default function App () {
                                 <MenuTabHover><Link to="/guide">가이드</Link></MenuTabHover>
                                 <MenuTabHover><Link to="/agent">요원</Link></MenuTabHover>
                                 <MenuTabHover><Link to="/agentrecom">맞는 요원 찾기</Link></MenuTabHover>
-                                <MenuTabHover><Link to="/tier">티어</Link></MenuTabHover>
+                                {/* <MenuTabHover><Link to="/tier">티어</Link></MenuTabHover> */}
                                 <MenuTabHover><Link to="/weapon">무기/스킨</Link></MenuTabHover>
                                 <MenuTabHover><Link to="/map">맵</Link></MenuTabHover>
                                 <MenuTabHover><Link to="/strat">요원별 전략</Link></MenuTabHover>
@@ -129,7 +129,7 @@ export default function App () {
                         <Route path="/guide" component={Guide} />
                         <Route path="/agent" component={Agent} />
                         <Route path="/agentrecom" component={AgentRecommendation} />
-                        <Route path="/tier" component={Tier} />
+                        {/* <Route path="/tier" component={Tier} /> */}
                         <Route path="/weapon/:name" component={WeaponDetail} />
                         <Route path="/weapon" component={Weapon} />
                         <Route path="/map/:name" component={MapDetail} />

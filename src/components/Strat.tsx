@@ -161,18 +161,18 @@ export default function Strat(props) {
                                     {({ zoomIn, zoomOut, resetTransform, ...rest }) => (
                                         <div>
                                             <div style={{padding: 10}}>
-                                                <span style={{backgroundColor: '#202b43', fontSize: '1.4rem', padding: 5}} onClick={() => setSideSelection('attacker')}>
-                                                    Attacker
+                                                <span style={{backgroundColor: '#202b43', fontSize: '1.2rem', padding: 5}} onClick={() => setSideSelection('attacker')}>
+                                                    <a>공격진영</a>
                                                 </span>
-                                                <span style={{backgroundColor: '#202b43', fontSize: '1.4rem', padding: 5, marginRight: '1rem'}} onClick={() => setSideSelection('defender')}>
-                                                    Defender
+                                                <span style={{backgroundColor: '#202b43', fontSize: '1.2rem', padding: 5, marginRight: '1rem'}} onClick={() => setSideSelection('defender')}>
+                                                    <a>수비진영</a>
                                                 </span>
                                                 <PlusOutlined style={{backgroundColor: 'rgb(32, 43, 67)', color: 'white', fontSize: '1.4rem', padding: 5}} onClick={zoomIn} />
                                                 <MinusOutlined style={{backgroundColor: 'rgb(32, 43, 67)', color: 'white', fontSize: '1.4rem', padding: 5}} onClick={zoomOut} />
                                             </div>
                                             <TransformComponent>
                                                 <div>
-                                                    <img src={require(`../images/minimap-preview.png`)} style={hoverImage === '' ? {display: 'none'} : {width: '100%', position: 'absolute', zIndex: 15}} />
+                                                    {/* <img src={require(`../images/minimap-preview.png`)} style={hoverImage === '' ? {display: 'none'} : {width: '100%', position: 'absolute', zIndex: 15}} /> */}
                                                     <img src={require(`../images/map/${mapSelection}-labels-${sideSelection}-ko.png`)} style={{width: '100%', position: 'absolute', zIndex: 10}} />
                                                     <img src={require(`../images/map/${mapSelection}-layout-base.svg`)} style={sideSelection === "attacker" ? {width: '100%'} : {width: '100%', transform: 'rotate(180deg)'}} />
                                                 </div>
