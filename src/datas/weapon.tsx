@@ -292,6 +292,25 @@ export const weapon: Array<weaponType> = [
     {
         category: "Rifle",
         category_ko: "소총",
+        name: "Vandal",
+        name_ko: "밴달",
+        cost: 2900,
+        damage: [
+            {
+                distance: "0-50",
+                damageSpec: [156, 39, 33],
+            },
+        ],
+        primaryMode: "자동",
+        primaryRate: "초당 9.25발",
+        altMode: "1.25배율, 탄퍼짐 감소",
+        altRate: "초당 8.32발",
+        capacity: 25,
+        penetration: "보통"
+    },
+    {
+        category: "Rifle",
+        category_ko: "소총",
         name: "Phantom",
         name_ko: "팬텀",
         cost: 2900,
@@ -314,25 +333,6 @@ export const weapon: Array<weaponType> = [
         altMode: "1.25배율, 탄퍼짐 감소",
         altRate: "초당 9.9발",
         capacity: 30,
-        penetration: "보통"
-    },
-    {
-        category: "Rifle",
-        category_ko: "소총",
-        name: "Vandal",
-        name_ko: "밴달",
-        cost: 2900,
-        damage: [
-            {
-                distance: "0-50",
-                damageSpec: [156, 39, 33],
-            },
-        ],
-        primaryMode: "자동",
-        primaryRate: "초당 9.25발",
-        altMode: "1.25배율, 탄퍼짐 감소",
-        altRate: "초당 8.32발",
-        capacity: 25,
         penetration: "보통"
     },
     {
