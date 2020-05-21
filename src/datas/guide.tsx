@@ -1,6 +1,6 @@
 import { guideMD } from './markdown/guideMD'
 import { patchMD } from './markdown/patchMD'
-import { userguideMD } from './markdown/userguideMD'
+import { etcMD } from './markdown/etcMD'
 
 type groupType = {
     id: number;
@@ -58,12 +58,17 @@ export const guide: Array<groupType> = [
     },
     {
         id: 2,
-        groupName: '유저 공략',
+        groupName: '기타',
         tabs: [
             {
                 id: 0,
                 tabName: '모든 요원 체험해보기',
-                markdown: userguideMD[0]
+                markdown: etcMD[0]
+            },
+            {
+                id: 1,
+                tabName: '자주 묻는 질문',
+                markdown: etcMD[1]
             }
         ]
     }
