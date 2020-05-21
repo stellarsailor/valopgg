@@ -82,7 +82,7 @@ export default function Guide(props) {
                         }
                     </Col>
                     <Col xs={24} sm={22} md={16} lg={16} xl={18} >
-                        <div style={{backgroundColor: '#202b43', padding: '5%', marginTop: '1rem'}}>
+                        <div style={{backgroundColor: '#202b43', padding: '5%', marginTop: '1rem', marginBottom: '1rem'}}>
                             <ReactMarkdown source={markdown} escapeHtml={false} />
                         </div>
                     </Col>
