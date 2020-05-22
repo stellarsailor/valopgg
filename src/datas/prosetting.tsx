@@ -49,7 +49,7 @@ export const prosetting: Array<proType> = [
         id: 0,
         name: "aceu",
         team: "NRG Esports",
-        photo: "https://prosettings.net/wp-content/uploads/2020/04/aceu-profile-picture.jpg",
+        photo: "aceu",
         prosetting: {
             mouse: "FINALMOUSE ULTRALIGHT 2",
             dpi: 800,
@@ -548,6 +548,48 @@ export const prosetting: Array<proType> = [
             error: "Off",
         
             monitor: 'BENQ XL2540',
+            display: "Fullscreen",
+            resolution: "1920×1080",
+            frameLimit: "Unlocked",
+        }
+    },
+    {
+        id: 12,
+        name: "stax",
+        team: "前 CS:GO Pro Player",
+        photo: "",
+        prosetting: {
+            mouse: 'BenQ Zowie EC2',
+            dpi: 400,
+            sensitivity: 0.42,
+            hz: 1000,
+            scopedSensitivity: 0.9,
+            windowSensitivity: 6,
+        
+            keyboard: 'Razer BlackWidow X Chroma',
+            walk: "L-Shift",
+            crouch: "L-Ctrl",
+            jump: "Wheel Down",
+            useObject: "F",
+        
+            equip1: "1",
+            equip2: "2",
+            equip3: "3",
+            equip4: "E",
+        
+            ability1: "V",
+            ability2: "X",
+            ability3: "C",
+            ability4: "4",
+        
+            color: "Green",
+            outlines: "Off",
+            centerDot: "Off",
+            innerLines: '1 / 4 / 2 / 2',
+            outerLines: '0 / 0 / 0 / 0',
+            error: "Off",
+        
+            monitor: 'BENQ XL2546',
             display: "Fullscreen",
             resolution: "1920×1080",
             frameLimit: "Unlocked",

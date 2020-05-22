@@ -41,7 +41,7 @@ export default function Prosetting() {
                             </span>
                         </Col>
                         <Col xs={24} sm={24} md={6} lg={6} xl={6}>
-                            <img src={`https://d3s0uoqa61ipmr.cloudfront.net/prosetting/${v.name.toLowerCase()}-profile-picture.jpg`} style={{width: '100%'}} />
+                            {v.photo === '' ? <div style={{backgroundColor: 'white', width: '100%', height: 300}}></div> : <img src={`https://d3s0uoqa61ipmr.cloudfront.net/prosetting/${v.name.toLowerCase()}-profile-picture.jpg`} style={{width: '100%'}} /> }
                         </Col>
 
                         <Col xs={24} sm={24} md={18} lg={18} xl={18} style={{paddingLeft: '1rem', paddingRight: '1rem', paddingBottom: '1rem', backgroundColor: '#273552'}}>
