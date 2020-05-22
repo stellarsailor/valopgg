@@ -1,6 +1,6 @@
 import React, { useState, useCallback } from 'react'
 import styled from 'styled-components'
-import { Row, Col, Menu } from 'antd';
+import { Row, Col, Menu, BackTop } from 'antd';
 import { Link } from 'react-router-dom'
 import queryString from 'query-string'
 
@@ -41,6 +41,7 @@ export default function GuideDetail(props) {
     return(
         <Row justify="center" style={{backgroundColor: 'rgba(19, 28, 46, 0.95)', minHeight: 800}} >
             <Col xs={24} sm={22} md={20} lg={20} xl={15}>
+                <BackTop />
                 <Row>
                     <Col xs={24} sm={24} md={8} lg={8} xl={6} style={{marginTop: '1rem'}}>
                         <Menu
