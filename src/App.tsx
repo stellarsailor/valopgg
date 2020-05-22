@@ -6,19 +6,20 @@ import './App.css';
 
 import Banner from './images/banner.jpg'
 import Agent from './components/Agent';
+import AgentDetail from './components/AgentDetail'
 import Weapon from './components/Weapon';
 import Map from './components/Map';
 import Strat from './components/Strat';
 import Dic from './components/Dic';
 import Contact from './components/Contact';
 import Prosetting from './components/Prosetting';
+import ProsettingDetail from './components/ProsettingDetail';
 import Main from './components/Main';
 import AgentRecommendation from './components/AgentRecommendation';
 import MapDetail from './components/MapDetail';
 import WeaponDetail from './components/WeaponDetail';
 import Calculator from './components/Calculator';
 import Privacy from './components/Privacy';
-import Tier from './components/Tier';
 
 import OfficialBackground from './images/official-silhouette-background.jpg'
 import GuideDetail from './components/GuideDetail';
@@ -128,6 +129,7 @@ export default function App () {
                     <div style={divStyle}>
                     <Switch>
                         <Route path="/guide/:groupNumber/:tabName" component={GuideDetail} />
+                        <Route path="/agent/:agentName" component={AgentDetail} />
                         <Route path="/agent" component={Agent} />
                         <Route path="/agentrecom" component={AgentRecommendation} />
                         {/* <Route path="/tier" component={Tier} /> */}
@@ -137,6 +139,7 @@ export default function App () {
                         <Route path="/map" component={Map} />
                         <Route path="/strat" component={Strat} />
                         <Route path="/dic" component={Dic} />
+                        <Route path="/prosetting/:proName" component={ProsettingDetail} />
                         <Route path="/prosetting" component={Prosetting} />
                         <Route path="/calculator" component={Calculator} />
                         <Route path="/contact" component={Contact} />

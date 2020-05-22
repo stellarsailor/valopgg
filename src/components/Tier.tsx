@@ -55,7 +55,7 @@ const tierColor = [
 export default function Tier(){
 
     const renderAgentImage = (v, borderColor) => (
-        <Link to={`/agent?name=${v.name.toLowerCase()}`} key={v.id}>
+        <Link to={`/agent/${v.name.toLowerCase()}`} key={v.id}>
             {/* <Tooltip title={v.name_ko} key={v.id}> */}
                 <img src={require(`../images/agents/${v.name.toLowerCase()}-headshot.png`)} style={mapImageStyle(borderColor)} />
                 <div style={{display: 'flex', justifyContent: 'center'}}>{v.name_ko}</div>

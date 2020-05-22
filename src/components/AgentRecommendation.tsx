@@ -106,7 +106,7 @@ export default function AgentRecommendation() {
                                     <Paragraph style={{color: 'white', fontSize: '1.2rem', textAlign: 'right'}} copyable={{ text: 'https://valop.gg/agentrecom' }}>친구에게 URL 공유하기</Paragraph>
                                 </div>
                                 <div style={{display: 'flex', justifyContent: 'center', marginTop: 10}}>
-                                    <Link to={`/agent?name=${result}`}><Button type="primary" icon={<SearchOutlined />}>정보 보기</Button></Link>
+                                    <Link to={`/agent/${result}`}><Button type="primary" icon={<SearchOutlined />}>정보 보기</Button></Link>
                                 </div>
                                 <img src={`https://d3s0uoqa61ipmr.cloudfront.net/agents/${result}-standing.png`} style={{width: '100%'}} />
                             </Col>

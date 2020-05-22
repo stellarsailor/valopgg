@@ -1,6 +1,6 @@
 import React from 'react'
 import styled from 'styled-components'
-import { Row, Col, Carousel } from 'antd';
+import { Row, Col, Carousel, BackTop } from 'antd';
 import { weapon } from '../datas/weapon'
 import { skinCollection } from '../datas/weaponSkin'
 import WeaponRender from './subcomponents/WeaponRender';
@@ -19,6 +19,7 @@ export default function Weapon(){
     return (
         <Row justify="center" style={{backgroundColor: 'rgba(19, 28, 46, 0.95)'}} >
             <Col xs={24} sm={22} md={20} lg={20} xl={15} >
+                <BackTop/>
                 <Carousel autoplay style={{width: '100%', height: 200, overflowY: 'hidden'}} dots={true}>
                     {
                         skinCollection.map((v, index) => 
