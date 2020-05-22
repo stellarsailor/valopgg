@@ -14,6 +14,7 @@ type agentType = {
         cost: string;
         desc: string;
     }>;
+    inline_guide: string;
     ally_ult: string;
     enemy_ult: string;
     tier_offense: 's' | 'a' | 'b' ;
@@ -60,6 +61,7 @@ export const agent: Array<agentType> = [
                 desc: '지진탄을 장착합니다. 발사하면 모든 지형을 통과하는 지진 파동을 날려 경로상에 있는 모든 적을 멍하게 하고 공중으로 띄웁니다.',
             }
         ],
+        inline_guide: '',
         ally_ult: '간다!',
         enemy_ult: '저리 꺼져!',
         tier_offense: 's',
@@ -103,6 +105,7 @@ export const agent: Array<agentType> = [
                 desc: '전술 지도를 장착합니다. 발사하면 선택한 위치에 궤도 일격 레이저를 쏘아 해당 영역에 있는 플레이어에게 큰 지속 피해를 입힙니다.',
             }
         ],
+        inline_guide: '',
         ally_ult: '하늘이 열린다!',
         enemy_ult: '지옥불을 받아라!',
         tier_offense: 's',
@@ -146,6 +149,7 @@ export const agent: Array<agentType> = [
                 desc: '적 플레이어가 처치된 즉시 조준한 후 사용하면 생존한 모든 적 플레이어의 위치가 드러납니다.',
             }
         ],
+        inline_guide: '',
         ally_ult: '자, 다들 어디 숨어있지?',
         enemy_ult: '네 위치는 파악됐다!',
         tier_offense: 'b',
@@ -189,6 +193,7 @@ export const agent: Array<agentType> = [
                 desc: '명중률이 높으며 적 처치 시 다시 충전되는 투척용 단검을 장착합니다. 발사하면 대상에게 단검 하나를 던집니다. 보조 공격 시 대상에게 남은 단검을 전부 던집니다. 단검 1개당 데미지 : 50',
             }
         ],
+        inline_guide: '',
         ally_ult: '똑똑히 봐라!',
         enemy_ult: '저리 비켜!',
         tier_offense: 'a',
@@ -232,6 +237,7 @@ export const agent: Array<agentType> = [
                 desc: '전술 지도를 장착합니다. 발사하면 선택한 위치로 순간 이동을 시작합니다. 순간 이동 중에는 오멘이 그림자로 나나타며 이때 적이 그림자를 파괴하면 순간 이동이 취소됩니다.',
             }
         ],
+        inline_guide: '',
         ally_ult: '어디, 도망쳐봐라.',
         enemy_ult: '흩어져라!',
         tier_offense: 'b',
@@ -275,6 +281,7 @@ export const agent: Array<agentType> = [
                 desc: '즉시 피닉스의 위치에 표식을 놓습니다. 스킬 사용 도중 죽거나 지속시간이 끝나면 해당 위치에서 최대 체력으로 부활합니다.',
             }
         ],
+        inline_guide: '',
         ally_ult: '좋아, 가자!',
         enemy_ult: '장난 끝이야, 넌 죽었어!',
         tier_offense: 's',
@@ -318,6 +325,7 @@ export const agent: Array<agentType> = [
                 desc: '로켓 발사기를 장착합니다. 발사하면 충돌 시 대량의 광역 피해를 입히는 로켓을 발사합니다.',
             }
         ],
+        inline_guide: '',
         ally_ult: '파티를 열어볼까?',
         enemy_ult: '폭탄 받아라!',
         tier_offense: 's',
@@ -361,6 +369,7 @@ export const agent: Array<agentType> = [
                 desc: '부활 스킬을 장착합니다. 죽은 아군을 조준한 후 발사하면 해당 아군이 부활하기 시작합니다. 짧은 정신 집중이 끝나면 아군이 최대 체력으로 되살아납니다.',
             }
         ],
+        inline_guide: '',
         ally_ult: '네 임무는 끝나지 않았어!',
         enemy_ult: '내 동료를 죽이게 두진 않겠어!',
         tier_offense: 'a',
@@ -404,6 +413,7 @@ export const agent: Array<agentType> = [
                 desc: '벽을 관통하는 에너지 3개를 장거리로 발사하는 활을 장착합니다. 발사하면 전방에 일직선상으로 에너지를 날려 닿은 적에게 피해를 입히고 위치를 드러냅니다. 스킬 지속시간이 활성화된 상태에서 최대 두 번 더 다시 사용할 수 있습니다.',
             }
         ],
+        inline_guide: '',
         ally_ult: '내가 바로 사냥꾼이다!',
         enemy_ult: '도망칠 곳은 없다!',
         tier_offense: 'a',
@@ -447,6 +457,7 @@ export const agent: Array<agentType> = [
                 desc: '화학 물질 분사기를 장착합니다. 발사하면 사방으로 화학 물질 연기를 분사해 안에 있는 플레이어의 가시거리와 최대 체력을 감소시키는 거대 연기를 생성합니다.',
             }
         ],
+        inline_guide: '',
         ally_ult: '비키는게 좋을걸?',
         enemy_ult: '이게 내 세상이야!',
         tier_offense: 'b',
