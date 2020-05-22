@@ -186,7 +186,7 @@ export default function Strat(props) {
                     :
                     <Row style={{backgroundColor: '#202b43'}}>
                         <PageHeader
-                            style={{color: 'red', fontSize: '1.5rem', }}
+                            style={{color: 'white', fontSize: '1.5rem', }}
                             onBack={() => setDetailView({
                                 id: -1,
                                 abilityIcon: -1,

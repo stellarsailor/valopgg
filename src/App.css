@@ -43,3 +43,11 @@ h1, h2, h3, h4, h5, h6 {
 .ant-select-item-option-content {
   color: rgba(0, 0, 0, 0.65);
 }
+
+.ant-table-cell {
+  color: rgba(0, 0, 0, 0.65);
+}
+
+.ant-table-column-sorters {
+  color: rgba(0, 0, 0, 0.65);
+}
