@@ -22,7 +22,7 @@ export const question = [
         id: 2,
         question: "돌진하는 암살자 스타일의 캐릭터들을 좋아한다.",
         action: ['jett', 'phoenix', 'omen'],
-        point: [3,2,2],
+        point: [3,2,1],
     },
     {
         id: 3,
@@ -69,8 +69,8 @@ export const question = [
     {
         id: 10,
         question: "게임을 이기는것보다 상대방을 짜증나게 하는게 더욱 즐겁다.",
-        action: ["sage", "phoenix", "cypher", "omen", "viper", "breach"],
-        point: [1,1,1,1,1,1]
+        action: ["sage", "phoenix", "cypher", "viper", "breach"],
+        point: [1,1,1,1,1]
     },
     {
         id: 11,

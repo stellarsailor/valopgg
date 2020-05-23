@@ -4,6 +4,7 @@ import { Row, Col, Tooltip, BackTop } from 'antd';
 import { ArrowRightOutlined } from '@ant-design/icons';
 import { Link } from 'react-router-dom'
 import { Element , animateScroll as scroll, scroller } from 'react-scroll'
+import ReactMarkdown from 'react-markdown';
 
 import SkillCount from './subcomponents/SkillCount';
 import { agent } from '../datas/agent'
@@ -79,10 +80,12 @@ export default function AgentDetail(props) {
                                 {arr.map(v => (
                                     <Col span={6} key={v} onClick={() => setAbilitySelection(v)} style={{padding: 10}}> 
                                         <div style={{backgroundColor: '#202b43', borderRadius: 5, width: '2rem', display: 'flex', justifyContent: 'center', fontWeight: 'bold'}}>{key[v]}</div>
-                                        <img src={`https://d3s0uoqa61ipmr.cloudfront.net/abilities/${agent[agentSelection].name.toLowerCase() + v}.svg`} style={{width: '4rem'}} />
-                                        <div style={{width: '100%'}}>
-                                            <SkillCount count={agent[agentSelection].skill[v].count} selected={ abilitySelection === v ? true : false } />
-                                        </div>
+                                        <a>
+                                            <img src={`https://d3s0uoqa61ipmr.cloudfront.net/abilities/${agent[agentSelection].name.toLowerCase() + v}.svg`} style={{width: '4rem'}} />
+                                            <div style={{width: '100%'}}>
+                                                <SkillCount count={agent[agentSelection].skill[v].count} selected={ abilitySelection === v ? true : false } />
+                                            </div>
+                                        </a>
                                     </Col>
                                 ))}
                             </Row>
@@ -92,14 +95,6 @@ export default function AgentDetail(props) {
                                 <div style={{fontWeight: 'bold', fontSize: '1.1rem'}}>비용 : {agent[agentSelection].skill[abilitySelection].cost}</div>
                                 <div>{agent[agentSelection].skill[abilitySelection].desc}</div>
                             </div>
-                            <div style={{backgroundColor: '#202b43', padding: '1rem', marginBottom: '1rem'}}>
-                                <div style={{fontWeight: 'bold', fontSize: '1.1rem'}}>
-                                    플레이 가이드
-                                </div>
-                                <div>
-                                    {agent[agentSelection].inline_guide}
-                                </div>
-                            </div>
                             <div style={{backgroundColor: '#202b43', marginBottom: '1rem', padding: '1rem'}}>
                                 <div style={{color: '#00ffae', fontWeight: 'bold'}}>아군 {agent[agentSelection].skill[3].name} 대사 : <span style={{color: 'white'}}>"{agent[agentSelection].ally_ult}"</span></div>
                                 <div style={{color: '#ff324c', fontWeight: 'bold'}}>적군 {agent[agentSelection].skill[3].name} 대사 : <span style={{color: 'white'}}>"{agent[agentSelection].enemy_ult}"</span></div>
@@ -107,7 +102,7 @@ export default function AgentDetail(props) {
                             {
                                 agentSelection !== 0 ?
                                 <Link to={`/strat?name=${agent[agentSelection].name.toLowerCase()}`} 
-                                style={{display: 'flex', flexDirection: 'row', padding: '1rem', alignItems: 'center', backgroundColor: '#202b43', margin: '1rem 0'}}>
+                                style={{display: 'flex', flexDirection: 'row', padding: '1rem', alignItems: 'center', backgroundColor: '#202b43', marginTop: '1rem'}}>
                                     <img src={`https://d3s0uoqa61ipmr.cloudfront.net/agents/${agent[agentSelection].name.toLowerCase()}-headshot.png`} style={{width: '3rem', borderRadius: '3rem', border: '1px solid white'}} />
                                     <div style={{margin: '0 1rem'}}>
                                         <div style={{fontWeight: 'bold'}}>
@@ -125,6 +120,14 @@ export default function AgentDetail(props) {
                                 null // 브리치 준비중
                             }
                         </Col>
+                    <div style={{backgroundColor: '#202b43', padding: '1rem', margin: '1rem'}}>
+                        <div style={{fontWeight: 'bold', fontSize: '1.2rem', marginBottom: '0.5rem'}}>
+                            플레이 가이드
+                        </div>
+                        <div>
+                            <ReactMarkdown source={agent[agentSelection].inline_guide} escapeHtml={false} />
+                        </div>
+                    </div>
                     </Row>
                 </Element>
             </Col>
