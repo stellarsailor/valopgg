@@ -39,7 +39,7 @@ export default function Main() {
                 <div style={{display: 'flex', width: '100%', height: 200, backgroundImage: `url(${Jumbotron})`, backgroundSize: 'cover', backgroundPosition: 'center', justifyContent: 'center', alignItems: 'center', flexDirection: 'column'}}>
                         {/* <Search placeholder="전적 검색 기능을 준비 중입니다." onSearch={value => console.log(value)} enterButton style={{width: '80%'}} /> */}
                         <div>
-                            <Link to={`/guide/0/${guide[0].tabs[0].tabName}`}><Button type="primary">0.50 패치노트 바로가기</Button></Link>
+                            <Link to={`/guide/0/0`}><Button type="primary">0.50 패치노트 바로가기</Button></Link>
                         </div>
                 </div>
                 :
@@ -50,7 +50,7 @@ export default function Main() {
                                 발로란트 정보의 모든 것, 발옵지지
                             </div>
                             <div style={{fontSize: '1.2rem'}}>
-                                <Link to={`/guide/0/${guide[0].tabs[0].tabName}`}><Button type="primary">0.50 패치노트 바로가기</Button></Link>
+                                <Link to={`/guide/0/0`}><Button type="primary">0.50 패치노트 바로가기</Button></Link>
                             </div>
                         </div>
                     </div>

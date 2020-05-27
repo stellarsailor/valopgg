@@ -11,10 +11,15 @@ const { SubMenu } = Menu;
 
 export default function GuideDetail(props) {
 
-    const groupNumber = props.match.params.groupNumber;
-    const tabName = props.match.params.tabName;
+    let groupId = props.match.params.groupId;
+    let tabId = props.match.params.tabId;
 
-    const data = guide[groupNumber].tabs.filter((v) => v.tabName === tabName)
+    if(groupId === undefined || tabId === undefined){
+        groupId = 0
+        tabId = 0
+    } 
+
+    const data = guide[groupId].tabs.filter((v) => v.id === parseInt(tabId))
     const markdown = data[0].markdown;
     let selectedArticle = 0;
 
@@ -30,11 +35,11 @@ export default function GuideDetail(props) {
     //         setMarkdown(guide[2].tabs[keyValueFromZero - guide[0].tabs.length - guide[1].tabs.length].markdown)
     //     }
     // },[])
-    if(groupNumber === '0'){
+    if(groupId === '0'){
         selectedArticle = data[0].id
-    } else if(groupNumber === '1'){
+    } else if(groupId === '1'){
         selectedArticle = guide[0].tabs.length + data[0].id
-    } else if(groupNumber === '2') {
+    } else if(groupId === '2') {
         selectedArticle = guide[0].tabs.length + guide[1].tabs.length + data[0].id
     }
 
@@ -56,7 +61,7 @@ export default function GuideDetail(props) {
                                 {
                                     guide[0].tabs.map((v) => (
                                         <Menu.Item key={v.id + 1}>
-                                            <Link to={`/guide/${0}/${v.tabName}`} >
+                                            <Link to={`/guide/${0}/${v.id}`} >
                                             {v.tabName}
                                             </Link>
                                         </Menu.Item>
@@ -68,7 +73,7 @@ export default function GuideDetail(props) {
                                 {
                                     guide[1].tabs.map((v) => (
                                         <Menu.Item key={v.id + guide[0].tabs.length + 1}>
-                                            <Link to={`/guide/${1}/${v.tabName}`} >
+                                            <Link to={`/guide/${1}/${v.id}`} >
                                             {v.tabName}
                                             </Link>
                                         </Menu.Item>
@@ -79,7 +84,7 @@ export default function GuideDetail(props) {
                                 {
                                     guide[2].tabs.map((v) => (
                                         <Menu.Item key={v.id + guide[0].tabs.length + guide[1].tabs.length + 1}>
-                                            <Link to={`/guide/${2}/${v.tabName}`} >
+                                            <Link to={`/guide/${2}/${v.id}`} >
                                             {v.tabName}
                                             </Link>
                                         </Menu.Item>
