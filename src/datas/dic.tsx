@@ -309,4 +309,46 @@ export const dic: Array<dicType> = [
         desc: '스파이크를 설치하는 장소. 수비진영에서 봤을때 좌측부터 A B C 순',
         isImg: true
     },
+    {
+        id: 42,
+        letter: 'ㅌ',
+        word_ko: '티배깅',
+        word_en: 'Tea-Bagging',
+        desc: '죽은 상대 캐릭터 위에서 앉았다 일어나는 행동을 반복하며 상대방을 도발하는 행위',
+    },
+    {
+        id: 43,
+        letter: 'N',
+        word_ko: 'NS',
+        word_en: 'Nice Shot',
+        desc: '나이스 샷의 약어',
+    },
+    {
+        id: 44,
+        letter: 'N',
+        word_ko: 'NT',
+        word_en: 'Nice Try',
+        desc: '나이스 트라이의 약어',
+    },
+    {
+        id: 45,
+        letter: 'ㄹ',
+        word_ko: '럴킹',
+        word_en: 'Lurking',
+        desc: '상대방이 올만한 루트에서 대기하고 있다가 공격하는 것.',
+    },
+    {
+        id: 46,
+        letter: 'ㅍ',
+        word_ko: '플랭킹',
+        word_en: 'Flanking',
+        desc: 'Flank란 옆구리를 뜻하는 단어로써 뒤로 돌아 상대방의 후면, 측면을 공격하는 것.',
+    },
+    {
+        id: 47,
+        letter: 'A',
+        word_ko: 'AR',
+        word_en: 'Assault Rifle',
+        desc: '돌격 소총, 밴달과 팬텀.',
+    },
 ]
