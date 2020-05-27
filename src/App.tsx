@@ -24,6 +24,7 @@ import Privacy from './components/Privacy';
 import OfficialBackground from './images/official-silhouette-background.jpg'
 import GuideDetail from './components/GuideDetail';
 import { guide } from './datas/guide'
+import ReactionTest from './components/ReactionTest';
 
 const { Header, Content, Footer } = Layout;
 const { Search } = Input;
@@ -93,7 +94,7 @@ export default function App () {
                     {
                         window.innerWidth < 576 ? 
                         <div style={{display: 'flex', justifyContent: 'space-between', alignItems: 'center', height: '100%', fontSize: '1.2em', overflowX: 'scroll', overflowY: 'hidden', whiteSpace: 'nowrap'}}>
-                            <Link to={`/guide/0/${guide[0].tabs[0].tabName}`} style={mobileMenuTab}>가이드</Link>
+                            <Link to={`/guide/0/0`} style={mobileMenuTab}>가이드</Link>
                             <Link to="/agent" style={mobileMenuTab}>요원</Link>
                             <Link to="/agentrecom" style={mobileMenuTab}>맞는 요원 찾기</Link>
                             {/* <Link to="/tier" style={mobileMenuTab}>티어</Link> */}
@@ -109,7 +110,7 @@ export default function App () {
                         :
                         <Col xs={24} sm={22} md={20} lg={20} xl={15} >
                             <div style={{display: 'flex', justifyContent: 'space-between', alignItems: 'center', height: '100%', fontSize: '1.2em'}}>
-                                <MenuTabHover><Link to={`/guide/0/${guide[0].tabs[0].tabName}`}>가이드</Link></MenuTabHover>
+                                <MenuTabHover><Link to={`/guide/0/0`}>가이드</Link></MenuTabHover>
                                 <MenuTabHover><Link to="/agent">요원</Link></MenuTabHover>
                                 <MenuTabHover><Link to="/agentrecom">맞는 요원 찾기</Link></MenuTabHover>
                                 {/* <MenuTabHover><Link to="/tier">티어</Link></MenuTabHover> */}
@@ -128,7 +129,8 @@ export default function App () {
                 <Content>
                     <div style={divStyle}>
                     <Switch>
-                        <Route path="/guide/:groupNumber/:tabName" component={GuideDetail} />
+                        <Route path="/guide/:groupId/:tabId" component={GuideDetail} />
+                        <Route path="/guide" component={GuideDetail} />
                         <Route path="/agent/:agentName" component={AgentDetail} />
                         <Route path="/agent" component={Agent} />
                         <Route path="/agentrecom" component={AgentRecommendation} />
@@ -143,6 +145,7 @@ export default function App () {
                         <Route path="/prosetting" component={Prosetting} />
                         <Route path="/calculator" component={Calculator} />
                         <Route path="/contact" component={Contact} />
+                        <Route path="/reaction" component={ReactionTest} />
                         <Route path="/prove" component={Contact} />
                         <Route path="/privacy" component={Privacy} />
                         <Route exact path="/" component={Main} />
