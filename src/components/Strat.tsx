@@ -1,23 +1,24 @@
-import React, { useState, useCallback, useEffect, useRef } from 'react'
+import React, { useState, useEffect } from 'react'
+import MetaTags from 'react-meta-tags';
 import styled from 'styled-components'
-import { Row, Col, PageHeader, BackTop, Tooltip } from 'antd';
-import { PlusOutlined, MinusOutlined, SearchOutlined } from '@ant-design/icons';
+import { Row, Col, BackTop, Tooltip } from 'antd';
+import { PlusOutlined, MinusOutlined, SearchOutlined, ArrowLeftOutlined } from '@ant-design/icons';
 import { TransformWrapper, TransformComponent } from "react-zoom-pan-pinch";
-import * as Scroll from 'react-scroll';
-import { Link, Element , Events, animateScroll as scroll, scrollSpy, scroller } from 'react-scroll'
+// import * as Scroll from 'react-scroll';
+import { Element , scroller } from 'react-scroll'
 import queryString from 'query-string'
  
 import { strat } from '../datas/strat'
-import { agent } from '../datas/agent'
+// import { agent } from '../datas/agent'
 import { dynamicSort } from '../logics/dynamicSort'
 import mainLogo from '../images/mainLogo.png'
 
 
-const Images = [
-    require('../images/map/bind-illust.jpeg'),
-    require('../images/map/haven-illust.jpeg'),
-    require('../images/map/split-illust.jpeg')
-];
+// const Images = [
+//     require('../images/map/bind-illust.jpeg'),
+//     require('../images/map/haven-illust.jpeg'),
+//     require('../images/map/split-illust.jpeg')
+// ];
 
 const StratPane = styled.a`
     background-color: rgb(24, 35, 56); 
@@ -33,10 +34,10 @@ const StratPane = styled.a`
 export default function Strat(props) {
 
     const qs: any = queryString.parse(props.location.search)
-    let initialAgentNumber: string = 'brimstone';
+    let initialAgentNumber: string = 'viper';
 
     if(Object.entries(qs).length === 0){
-        initialAgentNumber = 'brimstone'
+        initialAgentNumber = 'viper'
     } else {
         initialAgentNumber = qs.name
     }
@@ -46,8 +47,8 @@ export default function Strat(props) {
     },[])
 
     const mapArr = ["Bind", "Haven", "Split"]
-    const agentArr = ['Brimstone', 'Cypher', 'Jett', 'Omen', 'Phoenix', 'Raze', 'Sage', 'Sova', 'Viper'] //앱스토어 심사용으로 일단 5요원 제거 
-    const agent_koArr = ['브림스톤', '사이퍼', '제트', '오멘', '피닉스', '레이즈', '세이지', '소바', '바이퍼']
+    const agentArr = ['Breach', 'Brimstone', 'Cypher', 'Jett', 'Omen', 'Phoenix', 'Raze', 'Sage', 'Sova', 'Viper'] 
+    const agent_koArr = ['브리치', '브림스톤', '사이퍼', '제트', '오멘', '피닉스', '레이즈', '세이지', '소바', '바이퍼']
     const difficultyArr = ['전체', '쉬움', '보통', '어려움'];
 
     const [ agentSelection, setAgentSelection ] = useState<string>(initialAgentNumber)
@@ -71,11 +72,15 @@ export default function Strat(props) {
         <Row justify="center" style={{backgroundColor: 'rgba(19, 28, 46, 0.95)', minHeight: 800}} >
             <Col xs={24} sm={22} md={20} lg={20} xl={15}>
                 <BackTop />
+                <MetaTags>
+                    <title>발옵지지 발로란트 요원별 전략</title>
+                    <meta name="description" content='발로란트 요원들의 공략 및 원웨이 스모크 등을 확인가능합니다.' />
+                </MetaTags>
                 <Row justify='center' style={{fontSize: '1.4rem', marginTop: 15, marginBottom: 15, backgroundColor: '#202b43', padding: 10}} >
                     <Col xs={22} sm={22} md={22} lg={22} xl={12}>
                         {agentArr.map((v, index) => (
                             <Tooltip title={agent_koArr[index]} key={index}>
-                                <a style={{marginRight: '1rem'}} onClick={() => {
+                                <a style={{marginRight: '0.5rem'}} onClick={() => {
                                     setAgentSelection(v.toLowerCase())
                                     setDetailView({ // 디테일뷰가 있었다면 초기화
                                         id: -1,
@@ -87,7 +92,7 @@ export default function Strat(props) {
                                         method: []
                                     })
                                 }}>
-                                    <img src={require(`../images/agents/${v.toLowerCase()}-headshot.png`)} style={agentSelection === v.toLowerCase() ? {width: '2.4rem', borderRadius: '2.4rem', border: '2px solid white'} : {width: '2.4rem', borderRadius: '2.4rem', border: '2px solid #202b43'}} />
+                                    <img src={require(`../images/agents/${v.toLowerCase()}-headshot.png`)} style={agentSelection === v.toLowerCase() ? {width: '2.4rem', borderRadius: '2.4rem', border: '2px solid white'} : {width: '2.4rem', borderRadius: '2.4rem', border: '2px solid #202b43'}} alt={`agent button for ${agentSelection}`} />
                                 </a>
                             </Tooltip>
                         ))}
@@ -139,8 +144,8 @@ export default function Strat(props) {
                                                     duration: 800,
                                                     delay: 0,
                                                     smooth: 'easeInOutQuart'
-                                                }) }} onMouseEnter={() => setHoverImage(v.identifier)} onMouseLeave={() => setHoverImage('')} style={{width: '100%', height: 'auto'}}>
-                                                    <img src={`https://d3s0uoqa61ipmr.cloudfront.net/abilities/${agentSelection}${v.abilityIcon}.svg`} style={{width: '2rem', alignSelf: 'flex-start'}} />
+                                                }) }} onMouseEnter={() => setHoverImage(v.identifier)} onMouseLeave={() => setHoverImage('')} style={{width: '100%', height: 'auto'}} key={v.id}>
+                                                    <img src={`https://d3s0uoqa61ipmr.cloudfront.net/abilities/${agentSelection}${v.abilityIcon}.svg`} style={{width: '2rem', alignSelf: 'flex-start'}} alt={`${v.title}`} />
                                                     <div style={{marginLeft: 10}}>
                                                         <div style={{fontSize: '1rem', fontWeight: 'bold'}}>
                                                             {v.title}
@@ -173,8 +178,8 @@ export default function Strat(props) {
                                             <TransformComponent>
                                                 <div>
                                                     {/* <img src={require(`../images/minimap-preview.png`)} style={hoverImage === '' ? {display: 'none'} : {width: '100%', position: 'absolute', zIndex: 15}} /> */}
-                                                    <img src={require(`../images/map/${mapSelection}-labels-${sideSelection}-ko.png`)} style={{width: '100%', position: 'absolute', zIndex: 10}} />
-                                                    <img src={require(`../images/map/${mapSelection}-layout-base.svg`)} style={sideSelection === "attacker" ? {width: '100%'} : {width: '100%', transform: 'rotate(180deg)'}} />
+                                                    <img src={require(`../images/map/${mapSelection}-labels-${sideSelection}-ko.png`)} style={{width: '100%', position: 'absolute', zIndex: 10}} alt={`발로란트 맵 ${mapSelection} 그래픽`} />
+                                                    <img src={require(`../images/map/${mapSelection}-layout-base.svg`)} style={sideSelection === "attacker" ? {width: '100%'} : {width: '100%', transform: 'rotate(180deg)'}} alt={`발로란트 맵 ${mapSelection} 그래픽`} />
                                                 </div>
                                             </TransformComponent>
                                         </div>
@@ -185,9 +190,7 @@ export default function Strat(props) {
                     </Row>
                     :
                     <Row style={{backgroundColor: '#202b43'}}>
-                        <PageHeader
-                            style={{color: 'white', fontSize: '1.5rem', }}
-                            onBack={() => setDetailView({
+                        <a style={{display: 'flex', alignItems: 'center', margin: '1.2rem'}} onClick={() => setDetailView({
                                 id: -1,
                                 abilityIcon: -1,
                                 title: '',
@@ -195,9 +198,12 @@ export default function Strat(props) {
                                 difficulty: '',
                                 type: '',
                                 method: []
-                            })}
-                            title={detailView.title}
-                        />
+                            })} >
+                            <ArrowLeftOutlined style={{fontSize: '1.4rem', margin: '0 1rem'}} />
+                            <span style={{fontSize: '1.5rem'}}>
+                                <span style={{fontWeight: 'bold'}}> {detailView.title} </span>
+                            </span>
+                        </a>
                         {
                             detailView.method.map((v, index) => (
                                 <TransformWrapper>
@@ -208,8 +214,8 @@ export default function Strat(props) {
                                             <MinusOutlined style={{backgroundColor: 'rgb(32, 43, 67)', color: 'white', fontSize: '1.4rem', padding: 5}} onClick={zoomOut} />
                                         </div>
                                         <TransformComponent>
-                                            <img src={mainLogo} style={{position: 'absolute', bottom: '10%', left: '3%', width: '30%'}} />
-                                            <img src={`https://d3s0uoqa61ipmr.cloudfront.net/strat/${agentSelection}/${mapSelection}/${detailView.identifier}${v}.png`} style={{width: '100%', alignSelf: 'flex-start'}} key={index} />
+                                            <img src={mainLogo} style={{position: 'absolute', bottom: '10%', left: '3%', width: '30%'}} alt="valop.gg main logo" />
+                                            <img src={`https://d3s0uoqa61ipmr.cloudfront.net/strat/${agentSelection}/${mapSelection}/${detailView.identifier}${v}.png`} style={{width: '100%', alignSelf: 'flex-start'}} key={index} alt={`strategy ${detailView.identifier} of ${agentSelection} in ${mapSelection}`} />
                                         </TransformComponent>
                                     </div>
                                 )}

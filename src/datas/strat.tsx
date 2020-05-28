@@ -64,13 +64,142 @@ type stratType = {
 export const strat: agentType = {
     breach: {
         bind: [
-
+            {
+                id: 0,
+                abilityIcon: 1,
+                title: 'A사이트 미드 수비 섬광',
+                identifier: 'asite-mid-defense-flash',
+                difficulty: '쉬움',
+                type: 'image',
+                method: [
+                    1
+                ],
+            },
+            {
+                id: 1,
+                abilityIcon: 1,
+                title: 'A사이트 샤워실 수비 섬광',
+                identifier: 'asite-shower-defense-flash',
+                difficulty: '쉬움',
+                type: 'image',
+                method: [
+                    1
+                ],
+            },
+            {
+                id: 2,
+                abilityIcon: 1,
+                title: 'B로비 후카 진입 섬광',
+                identifier: 'blobby-hookah-offense-flash',
+                difficulty: '보통',
+                type: 'image',
+                method: [
+                    1
+                ],
+            },
+            {
+                id: 3,
+                abilityIcon: 1,
+                title: 'B사이트 B롱 수비 섬광',
+                identifier: 'bsite-blong-defense-flash',
+                difficulty: '보통',
+                type: 'image',
+                method: [
+                    1,2
+                ],
+            },
+            {
+                id: 4,
+                abilityIcon: 1,
+                title: '미드 A사이트 진입 섬광',
+                identifier: 'mid-asite-offense-flash',
+                difficulty: '보통',
+                type: 'image',
+                method: [
+                    1
+                ],
+            },
         ],
         haven: [
-
+            {
+                id: 0,
+                abilityIcon: 1,
+                title: 'A연결부 수비 섬광',
+                identifier: 'aconnector-flash',
+                difficulty: '보통',
+                type: 'image',
+                method: [
+                    1,2
+                ],
+            },
+            {
+                id: 1,
+                abilityIcon: 1,
+                title: 'A롱 푸시 섬광',
+                identifier: 'along-flash',
+                difficulty: '어려움',
+                type: 'image',
+                method: [
+                    1,2
+                ],
+            },
+            {
+                id: 2,
+                abilityIcon: 1,
+                title: 'A숏 미드 수비 섬광',
+                identifier: 'ashort-mid-defense-flash',
+                difficulty: '어려움',
+                type: 'image',
+                method: [
+                    1,2
+                ],
+            },
+            {
+                id: 3,
+                abilityIcon: 1,
+                title: 'C사이트 창고 수비 섬광',
+                identifier: 'csite-garage-defense-flash',
+                difficulty: '보통',
+                type: 'image',
+                method: [
+                    1,2
+                ],
+            },
         ],
         split: [
-            
+            {
+                id: 0,
+                abilityIcon: 1,
+                title: 'B헤븐 창고 수비 섬광',
+                identifier: 'bheaven-garage-flash',
+                difficulty: '보통',
+                type: 'image',
+                method: [
+                    1,2
+                ],
+            },
+            {
+                id: 1,
+                abilityIcon: 1,
+                title: '우편함 미드 수비 섬광',
+                identifier: 'mail-mid-flash',
+                difficulty: '보통',
+                type: 'image',
+                method: [
+                    1,2
+                ],
+            },
+            {
+                id: 2,
+                abilityIcon: 1,
+                title: '환기구 A램프 수비 섬광',
+                identifier: 'vent-ramps-flash',
+                difficulty: '보통',
+                type: 'image',
+                method: [
+                    1
+                ],
+            },
         ]
     },
     brimstone: {
@@ -166,7 +295,7 @@ export const strat: agentType = {
                 {
                     id: 8,
                     abilityIcon: 1,
-                    title: '샤워 B사이트 소이탄',
+                    title: '샤워 A사이트 소이탄',
                     identifier: 'shower-bsite-molly',
                     difficulty: '보통',
                     type: 'image',
@@ -287,7 +416,7 @@ export const strat: agentType = {
                 ],
             },
             {
-                id: 9,
+                id: 10,
                 abilityIcon: 2,
                 title: 'A숏 A사이트 진입 연막',
                 identifier: 'ashort-asite-smoke',
@@ -390,7 +519,7 @@ export const strat: agentType = {
             {
                 id: 8,
                 abilityIcon: 1,
-                title: 'A사이트 스크린방 소이탄',
+                title: 'A사이트 스크린룸 소이탄',
                 identifier: 'asite-screen-molly',
                 difficulty: '보통',
                 type: 'image',
@@ -718,6 +847,28 @@ export const strat: agentType = {
                 type: 'image',
                 method: [
                     1
+                ],
+            },
+            {
+                id: 4,
+                abilityIcon: 1,
+                title: '이중문 상승 기류',
+                identifier: 'doubledoor-updraft',
+                difficulty: '어려움',
+                type: 'image',
+                method: [
+                    1,2,3
+                ],
+            },
+            {
+                id: 5,
+                abilityIcon: 1,
+                title: '윈도우 방 문틀 상승 기류',
+                identifier: 'mid-window-updraft',
+                difficulty: '어려움',
+                type: 'image',
+                method: [
+                    1,2,3
                 ],
             },
         ],
@@ -1254,7 +1405,7 @@ export const strat: agentType = {
                 ],
             },
             {
-                id: 6,
+                id: 7,
                 abilityIcon: 2,
                 title: '샤워 A사이트 정찰화살',
                 identifier: 'shower-asite-recon',
@@ -1265,7 +1416,7 @@ export const strat: agentType = {
                 ],
             },
             {
-                id: 7,
+                id: 8,
                 abilityIcon: 2,
                 title: 'A사이트 트럭 A숏 정찰화살',
                 identifier: 'truck-ashort-recon',
@@ -1591,6 +1742,50 @@ export const strat: agentType = {
                     1,2,3,4
                 ],
             },
+            {
+                id: 7,
+                abilityIcon: 2,
+                title: 'A사이트 B사이트 수비 장막',
+                identifier: 'asite-bsite-defense-wall',
+                difficulty: '어려움',
+                type: 'image',
+                method: [
+                    1,2,3
+                ],
+            },
+            {
+                id: 8,
+                abilityIcon: 2,
+                title: '미드 A사이트 진입 장막',
+                identifier: 'mid-asite-offense-wall',
+                difficulty: '보통',
+                type: 'image',
+                method: [
+                    1,2,3
+                ],
+            },
+            {
+                id: 9,
+                abilityIcon: 2,
+                title: '미드 B사이트 진입 장막',
+                identifier: 'mid-bsite-offense-wall',
+                difficulty: '보통',
+                type: 'image',
+                method: [
+                    1,2,3
+                ],
+            },
+            {
+                id: 10,
+                abilityIcon: 2,
+                title: '샤워 A사이트 진입 장막',
+                identifier: 'shower-asite-offense-wall',
+                difficulty: '보통',
+                type: 'image',
+                method: [
+                    1,2,3
+                ],
+            },
         ],
         haven: [
             {
@@ -1621,6 +1816,39 @@ export const strat: agentType = {
                 title: 'C롱 C사이트 공격 연막',
                 identifier: 'clong-csite-smoke',
                 difficulty: '어려움',
+                type: 'image',
+                method: [
+                    1,2,3
+                ],
+            },
+            {
+                id: 3,
+                abilityIcon: 2,
+                title: 'A롱 A사이트 진입 장막',
+                identifier: 'along-asite-offense-wall',
+                difficulty: '보통',
+                type: 'image',
+                method: [
+                    1,2,3
+                ],
+            },
+            {
+                id: 4,
+                abilityIcon: 2,
+                title: 'A사이트 B사이트 수비 장막',
+                identifier: 'asite-bsite-defense-wall',
+                difficulty: '보통',
+                type: 'image',
+                method: [
+                    1,2,3,4
+                ],
+            },
+            {
+                id: 5,
+                abilityIcon: 2,
+                title: 'C롱 C사이트 진입 장막',
+                identifier: 'clong-csite-wall',
+                difficulty: '보통',
                 type: 'image',
                 method: [
                     1,2,3
@@ -1670,6 +1898,61 @@ export const strat: agentType = {
                 type: 'image',
                 method: [
                     1,2,3,4,5,6,7
+                ],
+            },
+            {
+                id: 4,
+                abilityIcon: 2,
+                title: '미드 B헤븐 진입 장막',
+                identifier: 'alobby-mid-offense-wall',
+                difficulty: '보통',
+                type: 'image',
+                method: [
+                    1,2,3
+                ],
+            },
+            {
+                id: 5,
+                abilityIcon: 2,
+                title: 'A사이트 수비 장막',
+                identifier: 'asite-defense-wall',
+                difficulty: '보통',
+                type: 'image',
+                method: [
+                    1,2,3
+                ],
+            },
+            {
+                id: 6,
+                abilityIcon: 2,
+                title: 'A사이트 진입 장막',
+                identifier: 'asite-offense-wall',
+                difficulty: '어려움',
+                type: 'image',
+                method: [
+                    1,2,3,4
+                ],
+            },
+            {
+                id: 7,
+                abilityIcon: 2,
+                title: '미드 A헤븐 진입 장막',
+                identifier: 'blobby-mid-offense-wall',
+                difficulty: '보통',
+                type: 'image',
+                method: [
+                    1,2,3,4,5
+                ],
+            },
+            {
+                id: 8,
+                abilityIcon: 2,
+                title: 'B사이트 진입 장막',
+                identifier: 'bsite-offense-wall',
+                difficulty: '보통',
+                type: 'image',
+                method: [
+                    1,2,3,4,5,6
                 ],
             },
         ]
