@@ -1,7 +1,8 @@
 import React, { useState, useEffect } from 'react'
+import MetaTags from 'react-meta-tags';
 import styled from 'styled-components'
 import { Link } from "react-router-dom";
-import { Row, Col, Radio, Button } from 'antd';
+import { Row, Col, Radio } from 'antd';
 import { PlusOutlined, MinusOutlined } from '@ant-design/icons';
 import { TransformWrapper, TransformComponent } from "react-zoom-pan-pinch";
 
@@ -35,6 +36,10 @@ export default function MapDetail(props) {
     return (
         <Row justify="center" style={{backgroundColor: 'rgba(19, 28, 46, 1)', minHeight: 800}} >
             <Col xs={24} sm={22} md={20} lg={20} xl={15}>
+                <MetaTags>
+                    <title>{mapName} - 발로란트 맵 정보, 용어</title>
+                    <meta name="description" content={`${mapName} 발로란트 맵에 대한 정보와 용어(콜아웃)를 확인할 수 있습니다.`} />
+                </MetaTags>
                 <Row>
                     {mapArr.map((v,index) => (
                         <Col xs={8} sm={8} md={8} lg={8} xl={8} style={{width: '100%', padding: 10}} key={index}>
@@ -68,8 +73,8 @@ export default function MapDetail(props) {
                                     </div>
                                     <TransformComponent >
                                         <div style={{width: '100%', height: '100%'}}>
-                                            <img src={require(`../images/map/${mapName}-labels-${side}-ko.png`)} style={{width: '100%', position: 'absolute', zIndex: 10}} />
-                                            <img src={require(`../images/map/${mapName}-layout-base.svg`)} style={side === "attacker" ? {width: '100%'} : {width: '100%', transform: 'rotate(180deg)'}} />
+                                            <img src={require(`../images/map/${mapName}-labels-${side}-ko.png`)} style={{width: '100%', position: 'absolute', zIndex: 10}} alt="발로란트 맵 용어 콜아웃" />
+                                            <img src={require(`../images/map/${mapName}-layout-base.svg`)} style={side === "attacker" ? {width: '100%'} : {width: '100%', transform: 'rotate(180deg)'}} alt="Valorant map" />
                                         </div>
                                     </TransformComponent>
                                 </div>
@@ -77,8 +82,8 @@ export default function MapDetail(props) {
                         </TransformWrapper>
                     :
                     <div>
-                        <img src={require(`../images/map/${mapName}-labels-${side}-ko.png`)} style={{width: '100%', position: 'absolute', zIndex: 10}} />
-                        <img src={require(`../images/map/${mapName}-layout-base.svg`)} style={side === "attacker" ? {width: '100%'} : {width: '100%', transform: 'rotate(180deg)'}} />
+                        <img src={require(`../images/map/${mapName}-labels-${side}-ko.png`)} style={{width: '100%', position: 'absolute', zIndex: 10}} alt="발로란트 맵 용어 콜아웃" />
+                        <img src={require(`../images/map/${mapName}-layout-base.svg`)} style={side === "attacker" ? {width: '100%'} : {width: '100%', transform: 'rotate(180deg)'}} alt="발로란트 맵 그래픽" />
                     </div>
                 }
 

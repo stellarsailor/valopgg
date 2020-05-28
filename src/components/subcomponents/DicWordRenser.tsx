@@ -17,7 +17,7 @@ export default function DicWordRender(props){
                 <span style={{fontWeight: 'bold', fontSize: '1.4rem'}}>{word_ko}</span> {word_en !== '' ? <span>({word_en})</span> : null } 
                 {isImg === true ? <CameraOutlined style={{color: 'dodgerblue', fontSize: '1.4rem', marginLeft: '0.5rem'}} onClick={() => handleImageOpen()} /> : null }
                 <div style={{marginLeft: '0.5rem'}}>| {desc}</div>
-                {openImage === true ? <img src={`https://d3s0uoqa61ipmr.cloudfront.net/dic/${word_en.toLowerCase()}.png`} style={{width: '100%', alignSelf: 'flex-start', marginTop: '0.5rem'}} /> : null}
+                {openImage === true ? <img src={`https://d3s0uoqa61ipmr.cloudfront.net/dic/${word_en.toLowerCase()}.png`} style={{width: '100%', alignSelf: 'flex-start', marginTop: '0.5rem'}} alt={`${word_ko} - ${word_en} helper`} /> : null}
             </div>
         </div>
     )

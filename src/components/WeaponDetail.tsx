@@ -1,8 +1,9 @@
 import React from 'react'
+import MetaTags from 'react-meta-tags';
 import styled from 'styled-components'
 import { Link } from "react-router-dom";
 import { Row, Col, Divider, BackTop } from 'antd';
-import { AppstoreOutlined, UserOutlined } from '@ant-design/icons';
+import { AppstoreOutlined } from '@ant-design/icons';
 import { weapon } from '../datas/weapon'
 import { skin } from '../datas/weaponSkin'
 import WeaponRender from './subcomponents/WeaponRender';
@@ -33,6 +34,10 @@ export default function WeaponDetail(props) {
     return (
         <Row justify="center" style={{backgroundColor: 'rgba(19, 28, 46, 0.95)', minHeight: 800}} >
             <Col xs={24} sm={22} md={20} lg={20} xl={15}>
+                <MetaTags>
+                    <title>{data.name_ko} - 무기 정보 및 스킨</title>
+                    <meta name="description" content={`${data.name_ko} 탄창, 관통력, 주 공격모드, 보조 공격모드, 연사 횟수, 데미지, 무기 스킨 등 자세한 정보를 확인하세요.`} />
+                </MetaTags>
                 <BackTop />
                 <div style={{fontSize: '1.1rem', color: 'gray', margin: 10}}>
                     <Link to="/weapon"><AppstoreOutlined /></Link> <span style={{marginLeft: 10, marginRight: 10}}>></span>
@@ -60,7 +65,7 @@ export default function WeaponDetail(props) {
                             <Col xs={24} sm={24} md={18} lg={18} xl={18} style={{ padding: '1rem', marginBottom: '1rem'}}>
                                 <TitleText>{data.name_ko}</TitleText>
                                 <div style={{display: 'flex', justifyContent: 'center'}}>
-                                    <img src={require(`../images/weaponskins/normal-${data.name.toLowerCase()}-skin.png`)} style={{width: '80%', alignSelf: 'flex-start'}} />
+                                    <img src={require(`../images/weaponskins/normal-${data.name.toLowerCase()}-skin.png`)} style={{width: '80%', alignSelf: 'flex-start'}} alt="발로란트 무기 스킨" />
                                 </div>
                                 <div style={{marginLeft: '1rem',}}>탄창 : {data.capacity}</div>
                                 <div style={{marginLeft: '1rem',}}>관통력 : {data.penetration}</div>
@@ -89,7 +94,7 @@ export default function WeaponDetail(props) {
                                             <div>{data.damage[0].distance}m</div>
                                             <Row justify="center">
                                                 <Col xs={12} sm={12} md={12} lg={12} xl={12} style={{display: 'flex', alignItems: 'center', justifyContent:'center'}}>
-                                                    <img src={require(`../images/body.png`)} style={{width: '2rem'}} />
+                                                    <img src={require(`../images/body.png`)} style={{width: '2rem'}} alt="발로란트 거리별 무기 데미지" />
                                                 </Col>
                                                 <Col xs={12} sm={12} md={12} lg={12} xl={12}>{data.damage[0].damageSpec.map((v, index) => <div style={{fontWeight: 'bold', color: '#49b4ff'}} key={index}>{v}</div>)}</Col>
                                             </Row>
@@ -103,7 +108,7 @@ export default function WeaponDetail(props) {
                                             <div>{data.damage[1].distance}m</div>
                                             <Row justify="center">
                                                 <Col xs={12} sm={12} md={12} lg={12} xl={12} style={{display: 'flex', alignItems: 'center', justifyContent:'center'}}>
-                                                    <img src={require(`../images/body.png`)} style={{width: '1.6rem'}} />
+                                                    <img src={require(`../images/body.png`)} style={{width: '1.6rem'}} alt="발로란트 거리별 무기 데미지" />
                                                 </Col>
                                                 <Col xs={12} sm={12} md={12} lg={12} xl={12}>{data.damage[1].damageSpec.map((v, index) => <div style={{fontWeight: 'bold', color: '#8dc1ec'}} key={index}>{v}</div>)}</Col>
                                             </Row>
@@ -117,7 +122,7 @@ export default function WeaponDetail(props) {
                                             <div>{data.damage[2].distance}m</div>
                                             <Row justify="center">
                                                 <Col xs={12} sm={12} md={12} lg={12} xl={12} style={{display: 'flex', alignItems: 'center', justifyContent:'center'}}>
-                                                    <img src={require(`../images/body.png`)} style={{width: '1.2rem'}} />
+                                                    <img src={require(`../images/body.png`)} style={{width: '1.2rem'}} alt="발로란트 거리별 무기 데미지" />
                                                 </Col>
                                                 <Col xs={12} sm={12} md={12} lg={12} xl={12}>{data.damage[2].damageSpec.map((v, index) => <div style={{fontWeight: 'bold', color: '#bbc9e0'}} key={index}>{v}</div>)}</Col>
                                             </Row>
@@ -132,9 +137,9 @@ export default function WeaponDetail(props) {
                                 <Row>
                                     {
                                         skin.filter(v => v.name.toLowerCase() === weaponName)[0].skins.map(v => (
-                                            <Col xs={24} sm={24} md={12} lg={12} xl={12} style={{padding: 10}}>
+                                            <Col xs={24} sm={24} md={12} lg={12} xl={12} style={{padding: 10}} key={v.id}>
                                                 <div><span style={{fontSize: '1.3rem'}}>{v.name_ko}</span> ({v.cost})</div>
-                                                <img src={require(`../images/weaponskins/${v.category}-${weaponName.toLowerCase()}-${v.level === 0 ? '' : `level-${v.level}-`}skin.png`)} style={{backgroundColor: '#273552', width: '100%'}} />
+                                                <img src={require(`../images/weaponskins/${v.category}-${weaponName.toLowerCase()}-${v.level === 0 ? '' : `level-${v.level}-`}skin.png`)} style={{backgroundColor: '#273552', width: '100%'}} alt={`${weaponName} 발로란트 무기 스킨`} />
                                             </Col>
                                         ))
                                     }

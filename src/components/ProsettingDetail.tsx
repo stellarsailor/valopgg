@@ -1,19 +1,15 @@
 import React, { useEffect } from 'react'
+import MetaTags from 'react-meta-tags';
 import styled from 'styled-components'
 import { Row, Col, Divider, BackTop } from 'antd';
 import { ArrowLeftOutlined } from '@ant-design/icons';
 import { prosetting } from '../datas/prosetting'
-import { Element , animateScroll as scroll, scroller } from 'react-scroll'
+import { Element , scroller } from 'react-scroll'
 import { Link } from 'react-router-dom'
-import shuffle from '../logics/shuffleArray'
 
 const BlockTitle = styled.div`
     font-weight: bold;
 `;
-
-const Bold = styled.span`
-    color: lightgreen;
-`
 
 export default function ProsettingDetail(props) {
 
@@ -39,9 +35,13 @@ export default function ProsettingDetail(props) {
         <Row justify="center" style={{backgroundColor: 'rgba(19, 28, 46, 0.95)', minHeight: 800}} >
             <Col xs={24} sm={22} md={20} lg={20} xl={15} style={{padding: '1rem 0'}}>
                 <BackTop />
+                <MetaTags>
+                    <title>{proName}의 발로란트 마우스 감도, 키보드 세팅</title>
+                    <meta name="description" content={`${proName}이 발로란트에서 사용하는 마우스 감도, 키보드 설정, 그래픽 설정, 조준선 설정 등을 확인가능합니다!`} />
+                </MetaTags>
                 {prosetting.filter(v => v.name.toLowerCase() === proName).map(v => (
-                <Element name="scroll-to-element">
-                    <Row justify="center" key={v.id} style={{backgroundColor: '#202b43', padding: '1rem'}}>
+                <Element name="scroll-to-element" key={v.id} >
+                    <Row justify="center" style={{backgroundColor: '#202b43', padding: '1rem'}}>
                         <Col xs={24} sm={24} md={24} lg={24} xl={24}>
                             <Link to="/prosetting" style={{display: 'flex', alignItems: 'center', marginBottom: '1rem'}}>
                                 <ArrowLeftOutlined style={{fontSize: '1.4rem', marginLeft: '0.5rem', marginRight: '1rem'}} />
@@ -52,7 +52,7 @@ export default function ProsettingDetail(props) {
                             </Link>
                         </Col>
                         <Col xs={24} sm={24} md={6} lg={6} xl={6}>
-                            {v.photo !== true ? <div style={{backgroundColor: 'white', width: '100%', height: 300}}></div> : <img src={`https://d3s0uoqa61ipmr.cloudfront.net/prosetting/${v.name.toLowerCase()}-profile-picture.jpg`} style={{width: '100%'}} /> }
+                            {v.photo !== true ? <div style={{backgroundColor: 'white', width: '100%', height: 300}}></div> : <img src={`https://d3s0uoqa61ipmr.cloudfront.net/prosetting/${v.name.toLowerCase()}-profile-picture.jpg`} style={{width: '100%'}} alt="발로란트 프로 프로필 이미지" /> }
                         </Col>
 
                         <Col xs={24} sm={24} md={18} lg={18} xl={18} style={{paddingLeft: '1rem', paddingRight: '1rem', paddingBottom: '1rem', backgroundColor: '#273552'}}>

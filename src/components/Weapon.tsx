@@ -1,4 +1,5 @@
 import React from 'react'
+import MetaTags from 'react-meta-tags';
 import styled from 'styled-components'
 import { Row, Col, Carousel, BackTop } from 'antd';
 import { weapon } from '../datas/weapon'
@@ -20,12 +21,16 @@ export default function Weapon(){
         <Row justify="center" style={{backgroundColor: 'rgba(19, 28, 46, 0.95)'}} >
             <Col xs={24} sm={22} md={20} lg={20} xl={15} >
                 <BackTop/>
+                <MetaTags>
+                    <title>발로란트 무기 정보 및 스킨</title>
+                    <meta name="description" content={`발로란트의 모든 무기에 대한 정보와 스킨 이미지를 확인가능합니다.`} />
+                </MetaTags>
                 <Carousel autoplay style={{width: '100%', height: 200, overflowY: 'hidden'}} dots={true}>
                     {
                         skinCollection.map((v, index) => 
                         <div style={{textAlign: 'center', width: '100%', height: '100%'}} key={index}>
                             <div style={{position: 'absolute', fontSize: '1.8rem', marginLeft: '1rem', marginTop: '0.5rem', fontWeight: 'bold'}}>{v.name_ko} <span style={{fontSize: '1.4rem'}}>{v.name}</span></div>
-                            <img src={v.image} style={{width: '100%'}} />
+                            <img src={v.image} style={{width: '100%'}} alt={`${v.name} skin collection jumbotron`} />
                         </div>)
                     }
                 </Carousel>

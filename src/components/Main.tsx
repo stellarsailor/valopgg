@@ -1,14 +1,13 @@
 import React from 'react'
+import MetaTags from 'react-meta-tags';
 import styled from 'styled-components'
-import { Row, Col, Collapse, Button, Alert, Input } from 'antd';
+import { Row, Col, Button } from 'antd';
 import { Link } from 'react-router-dom'
 import Jumbotron from '../images/official-background.jpg'
 import AdSense from 'react-adsense';
 import { TwitterTimelineEmbed } from 'react-twitter-embed';
-import { guide } from '../datas/guide'
 
-const { Panel } = Collapse;
-const { Search } = Input;
+// const { Search } = Input;
 
 const MainTextTitle = styled.div`
     color: black;
@@ -44,6 +43,10 @@ export default function Main() {
                 </div>
                 :
                 <Col xs={0} sm={0} md={24} lg={24} xl={24} style={{marginBottom: '1rem'}}>
+                <MetaTags>              
+                    <title>발옵지지 - 발로란트 정보의 모든 것</title>
+                    <meta name="description" content={`발옵지지에서 요원, 무기, 스킨, 맵, 요원 별 전략 등 다양하고 유용한 정보를 습득하세요!`} />
+                </MetaTags>
                     <div style={{display: 'flex', justifyContent: 'center'}} >
                         <div style={{position: 'absolute', fontSize: '2rem', top: '30%', textAlign: 'center'}}>
                             <div>
@@ -55,7 +58,7 @@ export default function Main() {
                         </div>
                     </div>
                     <div >
-                        <img src={require('../images/official-image.png')} style={{width: '100%'}} />   
+                        <img src={require('../images/official-image.png')} style={{width: '100%'}} alt="background cut 20 degree" />   
                     </div>
                 </Col>
             }
@@ -100,13 +103,13 @@ export default function Main() {
                         <Button style={{marginTop: 10}}><Link to="/strat">바로가기</Link></Button>
                     </Col>
                     <Col xs={24} sm={12} md={12} lg={12} xl={12} style={{padding: '5%'}}>
-                        <img src={require('../images/mainImages1.jpg')} style={{width: '100%'}} />
+                        <img src={require('../images/mainImages1.jpg')} style={{width: '100%'}} alt="helper to explain website" />
                     </Col>
                     <HR />
                 </Row>
                 <Row style={{padding: '1rem'}}>
                     <Col xs={24} sm={12} md={12} lg={12} xl={12} style={{padding: '5%'}}>
-                        <img src={require('../images/mainImages2.jpg')} style={{width: '100%'}} />
+                        <img src={require('../images/mainImages2.jpg')} style={{width: '100%'}} alt="helper to explain website" />
                     </Col>
                     <Col xs={24} sm={12} md={12} lg={12} xl={12} style={{padding: '5%'}}>
                         <MainTextTitle>

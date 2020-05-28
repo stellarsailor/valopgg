@@ -19,7 +19,11 @@ export default function WeaponRender(props){
     return (
         <Link to={`/weapon/${name.toLowerCase()}`} style={selectedWeapon === name ? {...selectedBorder} : {...unselectedBorder} } >
             <div style={{display: 'flex', justifyContent: 'center', paddingTop: 20}}>
-                { resize ? <img src={require(`../../images/weaponskins/normal-${name.toLowerCase()}-skin.png`)} style={{width: '40%', alignSelf: 'flex-start'}} /> : <img src={require(`../../images/weaponskins/normal-${name.toLowerCase()}-skin.png`)} style={{width: '70%', alignSelf: 'flex-start'}} />}
+                { resize ? 
+                    <img src={require(`../../images/weaponskins/normal-${name.toLowerCase()}-skin.png`)} style={{width: '40%', alignSelf: 'flex-start'}} alt={`${name} rendering for mobile`} /> 
+                : 
+                    <img src={require(`../../images/weaponskins/normal-${name.toLowerCase()}-skin.png`)} style={{width: '70%', alignSelf: 'flex-start'}} alt={`${name} rendering`} />
+                }
             </div>
             <div style={{fontSize: '0.8rem', marginLeft: 10, display: 'flex', alignItems: 'center'}}>
                 <CredSVG />

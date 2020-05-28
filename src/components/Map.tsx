@@ -1,4 +1,5 @@
 import React from 'react'
+import MetaTags from 'react-meta-tags';
 import styled from 'styled-components'
 import { Link } from "react-router-dom";
 import { Row, Col } from 'antd';
@@ -25,6 +26,10 @@ export default function Map() {
     return(
         <Row justify="center" style={{backgroundColor: 'rgba(19, 28, 46, 0.95)', minHeight: 800}} >
             <Col xs={24} sm={22} md={20} lg={20} xl={15}>
+                <MetaTags>
+                    <title>발로란트 맵 정보, 용어(콜아웃)</title>
+                    <meta name="description" content={`발로란트 맵에 대한 정보와 용어(콜아웃)를 확인할 수 있습니다.`} />
+                </MetaTags>
                 <Row>
                     {arr.map((v,index) => (
                         <Col xs={24} sm={24} md={12} lg={8} xl={8} style={{width: '100%', height: 300, backgroundColor: '#202b43', padding: 10, marginTop: 15}} key={index}>

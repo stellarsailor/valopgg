@@ -1,15 +1,11 @@
 import React, { useEffect } from 'react'
+import MetaTags from 'react-meta-tags';
 import styled from 'styled-components'
 import { Row, Col, Table, BackTop } from 'antd';
 import { SearchOutlined } from '@ant-design/icons';
 import { Link } from 'react-router-dom'
 import { prosetting } from '../datas/prosetting'
-import shuffle from '../logics/shuffleArray'
 import { dynamicSort } from '../logics/dynamicSort'
-
-const BlockTitle = styled.div`
-    font-weight: bold;
-`;
 
 const Bold = styled.span`
     color: lightgreen;
@@ -113,6 +109,10 @@ export default function Prosetting() {
         <Row justify="center" style={{backgroundColor: 'rgba(19, 28, 46, 0.95)', minHeight: 800}} >
             <Col xs={24} sm={22} md={20} lg={20} xl={15} style={{padding: '1rem 0'}}>
                 <BackTop />
+                <MetaTags>
+                    <title>발로란트 프로들의 마우스 감도, 조준선 설정, 키보드 설정</title>
+                    <meta name="description" content={`발로란트 프로 혹은 스트리머들이 사용하는 마우스 감도, 키보드 설정, 그래픽 설정, 조준선 설정 등을 확인가능합니다!`} />
+                </MetaTags>
                 <div style={{backgroundColor: '#202b43', padding: '1rem', marginBottom: '1rem'}}>
                     <div style={{fontSize: '1.6rem'}}>최적의 세팅 가이드</div>
                     <div style={{fontSize: '1.1rem'}}>CS:GO 프로 선수 및 스트리머들이 발로란트에서 평균적으로 가장 많이 사용하는</div>

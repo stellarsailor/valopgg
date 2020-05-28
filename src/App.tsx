@@ -1,7 +1,7 @@
-import React, { Component } from 'react';
+import React from 'react';
 import { BrowserRouter as Router, Switch, Route, Link } from "react-router-dom";
 import styled from 'styled-components'
-import { Layout, Menu, Row, Col, Input } from 'antd';
+import { Layout, Row, Col } from 'antd';
 import './App.css';
 
 import Banner from './images/banner.jpg'
@@ -23,11 +23,10 @@ import Privacy from './components/Privacy';
 
 import OfficialBackground from './images/official-silhouette-background.jpg'
 import GuideDetail from './components/GuideDetail';
-import { guide } from './datas/guide'
 import ReactionTest from './components/ReactionTest';
 
-const { Header, Content, Footer } = Layout;
-const { Search } = Input;
+const { Content, Footer } = Layout;
+// const { Search } = Input;
 
 const HeaderContainer = styled.div`
     width: '100%';
@@ -65,7 +64,7 @@ export default function App () {
                             <div style={{position: 'absolute', backgroundColor: 'black', width: '100%', height: 80, opacity: 0.4}}></div>
                             <Col xs={22} >
                                 <Link to="/">
-                                    <img src={require('./images/mainLogo.png')} style={{width: '30%', height: 'auto', marginLeft: '1rem'}} />
+                                    <img src={require('./images/mainLogo.png')} style={{width: '30%', height: 'auto', marginLeft: '1rem'}} alt="valopgg main logo" />
                                 </Link>
                             </Col>
                         </Row>
@@ -79,7 +78,7 @@ export default function App () {
                                             {/* <div style={{fontSize: '2rem', color: 'white', fontWeight: 'bold'}}>
                                                 Valop <span style={{fontSize: '1.4rem'}}>발옵지지</span>
                                             </div> */}
-                                            <img src={require('./images/mainLogo.png')} style={{width: '20%'}} />
+                                            <img src={require('./images/mainLogo.png')} style={{width: '20%'}} alt="valopgg main logo" />
                                         </Link>
                                     </Col>
                                     <Col span={8}>
@@ -145,7 +144,7 @@ export default function App () {
                         <Route path="/prosetting" component={Prosetting} />
                         <Route path="/calculator" component={Calculator} />
                         <Route path="/contact" component={Contact} />
-                        <Route path="/reaction" component={ReactionTest} />
+                        {/* <Route path="/reaction" component={ReactionTest} /> */}
                         <Route path="/prove" component={Contact} />
                         <Route path="/privacy" component={Privacy} />
                         <Route exact path="/" component={Main} />

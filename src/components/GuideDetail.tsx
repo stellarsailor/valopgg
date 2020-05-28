@@ -1,8 +1,8 @@
-import React, { useState, useCallback } from 'react'
-import styled from 'styled-components'
+import React from 'react'
+import MetaTags from 'react-meta-tags';
 import { Row, Col, Menu, BackTop } from 'antd';
 import { Link } from 'react-router-dom'
-import queryString from 'query-string'
+// import queryString from 'query-string'
 
 import { guide } from '../datas/guide'
 import ReactMarkdown from 'react-markdown';
@@ -47,6 +47,9 @@ export default function GuideDetail(props) {
         <Row justify="center" style={{backgroundColor: 'rgba(19, 28, 46, 0.95)', minHeight: 800}} >
             <Col xs={24} sm={22} md={20} lg={20} xl={15}>
                 <BackTop />
+                <MetaTags>
+                    <title>{data[0].tabName} - 발로란트 가이드</title>
+                </MetaTags>
                 <Row>
                     <Col xs={24} sm={24} md={8} lg={8} xl={6} style={{marginTop: '1rem'}}>
                         <Menu
@@ -96,7 +99,7 @@ export default function GuideDetail(props) {
                             window.innerWidth < 576 ?
                                 null
                             :
-                                <img src={require('../images/official-jett.png')} style={{width: '100%'}}/>
+                                <img src={require('../images/official-jett.png')} style={{width: '100%'}} alt="official jett standing back" />
                         }
                     </Col>
                     <Col xs={24} sm={22} md={16} lg={16} xl={18} >

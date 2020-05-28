@@ -1,4 +1,5 @@
 import React, { useState, useEffect, useCallback } from 'react'
+import MetaTags from 'react-meta-tags';
 import { Row, Col, Select, Input, Typography } from 'antd';
 import styled from 'styled-components'
 
@@ -72,6 +73,10 @@ export default function Calculator() {
     return(
         <Row justify="center" style={{backgroundColor: 'rgba(19, 28, 46, 0.95)', minHeight: 800}} >
             <Col xs={24} sm={22} md={20} lg={20} xl={15} style={{padding: '5%', backgroundColor: '#f5f5f5'}}>
+                <MetaTags>
+                    <title>발옵지지 감도계산기 타 FPS 에서 발로란트로의 감도</title>
+                    <meta name="description" content={'오버워치, 배틀그라운드, 배틀필드, 카스 글옵(CS:GO), 레인보우 식스 등 게임에서 발로란트로의 감도 변환기 계산기를 제공합니다.'} />
+                </MetaTags>
                 <div style={{textAlign: 'center', color: 'black', fontSize: '1.4rem', marginBottom: '5%', fontWeight: 'bold'}}>
                     Valop.gg 감도 계산기
                 </div>
@@ -123,7 +128,7 @@ export default function Calculator() {
                 </div>
             </Col>
             <div style={{display: 'flex', justifyContent: 'center', margin: '2rem'}}>
-                <img src={require('../images/mainLogo.png')} style={{width: '20%', alignSelf: 'flex-start'}} />
+                <img src={require('../images/mainLogo.png')} style={{width: '20%', alignSelf: 'flex-start'}} alt='valop.gg main logo' />
             </div>
         </Row>
     )

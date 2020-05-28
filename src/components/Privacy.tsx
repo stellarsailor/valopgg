@@ -1,4 +1,5 @@
 import React, { useEffect } from 'react'
+import MetaTags from 'react-meta-tags';
 
 export default function Privacy (props) {
 
@@ -17,8 +18,13 @@ export default function Privacy (props) {
     </body>`
 
     return (
+        <>
+        <MetaTags>
+            <title>발옵지지 개인정보 처리 방침</title>
+        </MetaTags>
         <div dangerouslySetInnerHTML={{__html: ht}} style={{padding: '5%', backgroundColor: 'gray'}} >
         </div>
+        </>
     )
 
 }

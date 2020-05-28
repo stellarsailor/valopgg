@@ -1,5 +1,6 @@
 import React, { useState, useCallback, useEffect } from 'react'
-import styled from 'styled-components'
+import MetaTags from 'react-meta-tags';
+// import styled from 'styled-components'
 import { Link } from 'react-router-dom'
 import { Row, Col, Button, Progress, Typography } from 'antd';
 import { SearchOutlined } from '@ant-design/icons';
@@ -73,13 +74,17 @@ export default function AgentRecommendation() {
     return(
         <Row justify="center" style={{backgroundColor: 'rgba(19, 28, 46, 0.95)', minHeight: 800}} >
             <Col xs={24} sm={22} md={20} lg={20} xl={15}>
+                <MetaTags>
+                    <title>발로란트 요원 추천 / 나에게 맞는 요원 찾기</title>
+                    <meta name="description" content={'간단한 True or False 게임을 통해 나에게 맞는 발로란트 요원을 찾아보세요!'} />
+                </MetaTags>
                 {
                     page === -1 ?
                         <>
                             <div style={{display: 'flex', justifyContent: 'center', alignItems: 'center'}}>
                                 <div style={{position: 'absolute', fontSize: '1.5rem'}}>나에게 맞는 요원 찾기</div>
                                 <div style={{position: 'absolute', width: '100%', backgroundColor: 'black', opacity: 0.3}}></div>
-                                <img src={require('../images/official-background-wide-darken.jpg')} style={{width: '100%'}} />
+                                <img src={require('../images/official-background-wide-darken.jpg')} style={{width: '100%'}} alt="Valorant background loading screeshot" />
                             </div>
                             <div style={{display: 'flex', justifyContent: 'center', marginTop: 20, padding: '1rem'}}>
                                 <div style={{fontSize: '1.2rem'}}>True or False 질문에 답변을 고르고 나에게 맞는 요원을 찾아보세요!</div>
@@ -108,13 +113,13 @@ export default function AgentRecommendation() {
                                 <div style={{display: 'flex', justifyContent: 'center', marginTop: 10}}>
                                     <Link to={`/agent/${result}`}><Button type="primary" icon={<SearchOutlined />}>정보 보기</Button></Link>
                                 </div>
-                                <img src={`https://d3s0uoqa61ipmr.cloudfront.net/agents/${result}-standing.png`} style={{width: '100%'}} />
+                                <img src={`https://d3s0uoqa61ipmr.cloudfront.net/agents/${result}-standing.png`} style={{width: '100%'}} alt="agent standing" />
                             </Col>
                         </Row>
                     :
                         <Row justify="center" style={{fontSize: '1.5rem', padding: '1rem', backgroundColor: '#202b43'}}>
                             <div style={{display: 'flex', justifyContent: 'center'}}>
-                                <img src={require('../images/mainLogo.png')} style={{width: '30%', alignSelf: 'flex-start'}} />
+                                <img src={require('../images/mainLogo.png')} style={{width: '30%', alignSelf: 'flex-start'}} alt="valop.gg main logo" />
                             </div>
                             <Col xs={24} sm={22} md={20} lg={20} xl={15} >
                                 <div style={{marginTop: '2rem', marginBottom: '2rem'}}>
