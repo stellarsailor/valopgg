@@ -1,7 +1,7 @@
 import React from 'react'
 import MetaTags from 'react-meta-tags';
 import styled from 'styled-components'
-import { Row, Col, Button } from 'antd';
+import { Row, Col, Button, Alert } from 'antd';
 import { Link } from 'react-router-dom'
 import Jumbotron from '../images/official-background.jpg'
 import AdSense from 'react-adsense';
@@ -33,39 +33,37 @@ export default function Main() {
 
     return(
         <Row justify="center" style={{backgroundColor: 'rgba(236, 232, 225, 0.95)', height: 'auto'}} >
-            {
-                window.innerWidth < 576 ?
+            <MetaTags>              
+                <title>발옵지지 - 발로란트 정보의 모든 것</title>
+                <meta name="description" content={`발옵지지에서 요원, 무기, 스킨, 맵, 요원 별 전략 등 다양하고 유용한 정보를 습득하세요!`} />
+            </MetaTags>
+            <Col xs={24} sm={24} md={0} lg={0} xl={0} style={{marginBottom: '1rem'}}>
                 <div style={{display: 'flex', width: '100%', height: 200, backgroundImage: `url(${Jumbotron})`, backgroundSize: 'cover', backgroundPosition: 'center', justifyContent: 'center', alignItems: 'center', flexDirection: 'column'}}>
                         {/* <Search placeholder="전적 검색 기능을 준비 중입니다." onSearch={value => console.log(value)} enterButton style={{width: '80%'}} /> */}
                         <div>
                             <Link to={`/guide/0/0`}><Button type="primary">0.50 패치노트 바로가기</Button></Link>
                         </div>
                 </div>
-                :
-                <Col xs={0} sm={0} md={24} lg={24} xl={24} style={{marginBottom: '1rem'}}>
-                <MetaTags>              
-                    <title>발옵지지 - 발로란트 정보의 모든 것</title>
-                    <meta name="description" content={`발옵지지에서 요원, 무기, 스킨, 맵, 요원 별 전략 등 다양하고 유용한 정보를 습득하세요!`} />
-                </MetaTags>
-                    <div style={{display: 'flex', justifyContent: 'center'}} >
-                        <div style={{position: 'absolute', fontSize: '2rem', top: '30%', textAlign: 'center'}}>
-                            <div>
-                                발로란트 정보의 모든 것, 발옵지지
-                            </div>
-                            <div style={{fontSize: '1.2rem'}}>
-                                <Link to={`/guide/0/0`}><Button type="primary">0.50 패치노트 바로가기</Button></Link>
-                            </div>
+            </Col>
+            <Col xs={0} sm={0} md={24} lg={24} xl={24} style={{marginBottom: '1rem'}}>
+                <div style={{display: 'flex', justifyContent: 'center'}} >
+                    <div style={{position: 'absolute', fontSize: '2rem', top: '30%', textAlign: 'center'}}>
+                        <div>
+                            발로란트 정보의 모든 것, 발옵지지
+                        </div>
+                        <div style={{fontSize: '1.2rem'}}>
+                            <Link to={`/guide/0/0`}><Button type="primary">0.50 패치노트 바로가기</Button></Link>
                         </div>
                     </div>
-                    <div >
-                        <img src={require('../images/official-image.png')} style={{width: '100%'}} alt="background cut 20 degree" />   
-                    </div>
-                </Col>
-            }
+                </div>
+                <div >
+                    <img src={require('../images/official-image.png')} style={{width: '100%'}} alt="background cut 20 degree" />   
+                </div>
+            </Col>
             <Col xs={24} sm={22} md={20} lg={20} xl={15}>
-                {/* <div style={{display: 'flex', justifyContent: 'center', marginTop: '1rem', marginLeft: '1rem', marginRight: '1rem'}}>
-                    <Link to="/weapon"><Alert message="무기 스킨 및 요원 별 전략(피닉스, 오멘, 레이즈, 사이퍼, 소바)이 업데이트 되었으며 UI/UX가 업그레이드 되었습니다!" type="success" showIcon /></Link>
-                </div> */}
+                    <a target='_blank' href="https://play.google.com/store/apps/details?id=com.mobile_valopgg" style={{display: 'flex', justifyContent: 'center', marginTop: '1rem', marginLeft: '1rem', marginRight: '1rem'}}>
+                        <Alert message="발옵지지 안드로이드 앱이 출시되었습니다! 바로가기" type="success" showIcon closable />
+                    </a>
                 <Row style={{padding: '1rem'}}>
                     <Col xs={24} sm={12} md={12} lg={12} xl={12} style={{padding: '5%'}}>
                         {/* <img src={require('../images/mainImages0.jpg')} style={{width: '100%'}} /> */}

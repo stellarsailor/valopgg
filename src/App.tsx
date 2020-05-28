@@ -156,14 +156,16 @@ export default function App () {
                     © 2020 Valop.gg all rights reserved. 
                     </Row>
                     <Row justify="center" style={{margin: '1rem 0'}}>
-                        <Link to="/contact" style={{marginLeft: 10}}>Contact</Link> <Link to="/privacy" style={{marginLeft: 10}}>Privacy</Link> 
+                        <Link to="/contact" style={{marginLeft: 10}}>Contact</Link> 
+                        <Link to="/privacy" style={{marginLeft: 10}}>Privacy</Link> 
                     </Row>
                     <Row justify="center" >
-                        <Col xs={24} sm={22} md={20} lg={20} xl={15} style={{marginTop: 30, marginBottom: 30}}>
+                        <Col xs={24} sm={22} md={20} lg={20} xl={15} style={{marginTop: '1rem', marginBottom: '1rem'}}>
                             Valop.gg isn't endorsed by Riot Games and doesn't reflect the views or opinions of Riot Games or anyone officially involved in producing or managing Riot Games properties. Riot Games, and all associated properties are trademarks or registered trademarks of Riot Games, Inc.
                         </Col>
-                        <Col xs={24} sm={22} md={20} lg={20} xl={15} style={{marginTop: 30, marginBottom: 30}}>
-                        </Col>
+                        {/* <Col xs={24} sm={22} md={20} lg={20} xl={15} style={{marginTop: '1rem', marginBottom: '1rem', textAlign: 'right'}}> */}
+                        {/* <a href="https://twitter.com/valopgg">Twitter</a> */}
+                        {/* </Col> */}
                     </Row>
                 </Footer>
             </Layout>
