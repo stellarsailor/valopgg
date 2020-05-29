@@ -225,7 +225,7 @@ export default function Strat(props) {
                     </Row>
                 }
                 </Element>
-                <div style={{margin: '1rem'}}>
+                <div style={{marginTop: '4rem', marginBottom: '4rem'}}>
                     문의 및 건의사항이 있을 경우 valop.gg@gmail.com 으로 메일 주시면 답변드리겠습니다!
                 </div>
             </Col>

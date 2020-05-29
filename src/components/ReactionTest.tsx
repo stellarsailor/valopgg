@@ -1,6 +1,7 @@
 import React, { useState, useRef, useEffect } from 'react'
-import { Row, Col, BackTop } from 'antd';
-import { ShakeHard } from 'reshake'
+import { Row, Col, BackTop, Typography } from 'antd';
+
+const { Paragraph } = Typography
 
 const styles = {
     layers: {
@@ -167,6 +168,7 @@ export default function ReactionTest({ navigation }) {
                                             <div style={{color: 'white', fontSize: '1.4rem', fontWeight: 'bold'}}>시작하기</div>
                                 }
                             </a>
+                            <Paragraph style={{color: 'white', fontSize: '1rem', textAlign: 'center', margin: '2rem 0'}} copyable={{ text: 'https://valop.gg/reaction' }}>친구에게 URL 공유</Paragraph>
                         </div>
                     </Col>
                 </Row>
