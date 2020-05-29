@@ -103,6 +103,7 @@ export default function App () {
                             <Link to="/dic" style={mobileMenuTab}>용어사전</Link>
                             <Link to="/prosetting" style={mobileMenuTab}>프로 세팅</Link>
                             <Link to="/calculator" style={mobileMenuTab}>감도 계산기</Link>
+                            <Link to="/reaction" style={mobileMenuTab}>반응속도 측정</Link>
                             {/* <Link to="/simulator" style={mobileMenuTab}>전략 시뮬레이터</Link> */}
                             {/* <Link to="/recruit" style={mobileMenuTab}>파티 모집</Link> */}
                         </div>
@@ -119,6 +120,7 @@ export default function App () {
                                 <MenuTabHover><Link to="/dic">용어사전</Link></MenuTabHover>
                                 <MenuTabHover><Link to="/prosetting">프로 세팅</Link></MenuTabHover>
                                 <MenuTabHover><Link to="/calculator">감도 계산기</Link></MenuTabHover>
+                                <MenuTabHover><Link to="/reaction">반응속도 측정</Link></MenuTabHover>
                                 {/* <MenuTabHover><Link to="/simulator">전략 시뮬레이터</Link></MenuTabHover> */}
                                 {/* <MenuTabHover><Link to="/recruit">파티 모집</Link></MenuTabHover> */}
                             </div>
@@ -144,7 +146,7 @@ export default function App () {
                         <Route path="/prosetting" component={Prosetting} />
                         <Route path="/calculator" component={Calculator} />
                         <Route path="/contact" component={Contact} />
-                        {/* <Route path="/reaction" component={ReactionTest} /> */}
+                        <Route path="/reaction" component={ReactionTest} />
                         <Route path="/prove" component={Contact} />
                         <Route path="/privacy" component={Privacy} />
                         <Route exact path="/" component={Main} />
