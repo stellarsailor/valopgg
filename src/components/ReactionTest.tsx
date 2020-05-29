@@ -1,5 +1,6 @@
 import React, { useState, useRef, useEffect } from 'react'
 import { Row, Col, BackTop, Typography } from 'antd';
+import MetaTags from 'react-meta-tags';
 
 const { Paragraph } = Typography
 
@@ -85,6 +86,10 @@ export default function ReactionTest({ navigation }) {
         <Row justify="center" style={{backgroundColor: 'rgba(19, 28, 46, 0.95)', minHeight: 800}} >
             <Col xs={24} sm={22} md={20} lg={20} xl={15}>
                 <BackTop />
+                <MetaTags>              
+                    <title>발옵지지 발로란트 FPS 반응속도 측정 테스트</title>
+                    <meta name="description" content={`발로란트 게임을 옮겨놓은듯한 시뮬레이터로 본인의 FPS 반응속도 재능을 측정해보세요!`} />
+                </MetaTags>
                 <Row>
                     <Col xs={24} sm={24} md={15} lg={15} xl={15} >
                         <div style={{width: '100%', height: containerHeight}} ref={ref}>
