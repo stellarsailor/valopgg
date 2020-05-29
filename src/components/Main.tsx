@@ -6,6 +6,7 @@ import { Link } from 'react-router-dom'
 import Jumbotron from '../images/official-background.jpg'
 import AdSense from 'react-adsense';
 import { TwitterTimelineEmbed } from 'react-twitter-embed';
+import { Adfit } from './subcomponents/Adfit';
 
 // const { Search } = Input;
 
@@ -129,6 +130,9 @@ export default function Main() {
                     format="auto"
                     responsive="true"
                 />
+                <div style={{display: 'flex', justifyContent: 'center'}}>
+                    <Adfit key={Math.random()} />
+                </div>
 
                 {/* <Collapse defaultActiveKey={['1']} >
                     <Panel header="0.49 패치노트" key="1">
