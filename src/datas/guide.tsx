@@ -18,6 +18,8 @@ type subTabType = {
 
 }
 
+export const patchNotePhrase = '발로란트 정식출시! 패치노트 1.0 바로가기'
+
 export const guide: Array<groupType> = [
     {
         id: 0,

@@ -1,10 +1,11 @@
 import React from 'react';
 import { BrowserRouter as Router, Switch, Route, Link } from "react-router-dom";
 import styled from 'styled-components'
-import { Layout, Row, Col, Input } from 'antd';
+import { Layout, Row, Col, Alert } from 'antd';
 import './App.css';
 
 import Banner from './images/banner.jpg'
+import OfficialBackground from './images/official-silhouette-background.jpg'
 
 import Player from './components/Player'
 import Agent from './components/Agent';
@@ -22,13 +23,13 @@ import MapDetail from './components/MapDetail';
 import WeaponDetail from './components/WeaponDetail';
 import Calculator from './components/Calculator';
 import Privacy from './components/Privacy';
-
-import OfficialBackground from './images/official-silhouette-background.jpg'
 import GuideDetail from './components/GuideDetail';
 import ReactionTest from './components/ReactionTest';
 
+import { patchNotePhrase } from './datas/guide'
+
+import SearchInput from './components/subcomponents/SearchInput'
 const { Content, Footer } = Layout;
-const { Search } = Input;
 
 const HeaderContainer = styled.div`
     width: '100%';
@@ -46,7 +47,7 @@ const mobileMenuTab = {
     marginLeft: 5, marginRight: 5
 }
 
-export default function App () {
+export default function App (props) {
 
     const divStyle = {
         width: '100%',
@@ -61,20 +62,20 @@ export default function App () {
             <Layout className="layout">
                 <HeaderContainer>
                     <Row>
-                        <Col xs={24} sm={0} md={0} lg={0} xl={0} >
-                            <Row justify="center" style={{height: 80, display: 'flex', alignItems: 'center', backgroundImage: `url(${Banner})`, backgroundSize: 'cover', backgroundPosition: 'center'}}>
+                        <Col xs={24} sm={24} md={0} lg={0} xl={0} >
+                            <Row style={{height: 80, display: 'flex', alignItems: 'center', backgroundImage: `url(${Banner})`, backgroundSize: 'cover', backgroundPosition: 'center'}}>
                                 <div style={{position: 'absolute', backgroundColor: 'black', width: '100%', height: 80, opacity: 0.4}}></div>
-                                <Col xs={22} >
+                                <Col xs={8} >
                                     <Link to="/">
-                                        <img src={require('./images/mainLogo.png')} style={{width: '30%', height: 'auto', marginLeft: '1rem'}} alt="valopgg main logo" />
+                                        <img src={require('./images/mainLogo.png')} style={{width: '100%', height: 'auto', marginLeft: '1rem'}} alt="valopgg main logo" />
                                     </Link>
                                 </Col>
                             </Row>
                         </Col>
-                        <Col xs={0} sm={24} md={24} lg={24} xl={24} >
+                        <Col xs={0} sm={0} md={24} lg={24} xl={24} >
                             <Row justify="center" style={{height: 150, display: 'flex', alignItems: 'center', backgroundImage: `url(${Banner})`, backgroundSize: 'cover', backgroundPosition: 'center'}}>
                                 <div style={{position: 'absolute', backgroundColor: 'black', width: '100%', height: 150, opacity: 0.4}}></div>
-                                <Col xs={0} sm={22} md={20} lg={20} xl={15} >
+                                <Col xs={0} sm={0} md={20} lg={20} xl={15} >
                                     <Row justify="space-between">
                                         <Col span={16}>
                                             <Link to="/">
@@ -85,9 +86,10 @@ export default function App () {
                                             </Link>
                                         </Col>
                                         <Col span={8}>
-                                            <Search placeholder="유저 네임을 입력해주세요." onSearch={value => console.log(value)} enterButton />
+                                            <SearchInput />
                                         </Col>
                                     </Row>
+                                <Link to="/guide" style={{position: 'absolute', bottom: -40, color: 'white', fontSize: '0.8rem', backgroundColor: 'rgb(32, 43, 67)', padding: '3px 10px', borderRadius: 5}}>{patchNotePhrase}</Link>
                                 </Col>
                             </Row>
                         </Col>

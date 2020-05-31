@@ -7,6 +7,7 @@ import Jumbotron from '../images/official-background.jpg'
 import AdSense from 'react-adsense';
 import { TwitterTimelineEmbed } from 'react-twitter-embed';
 import Adfit from './subcomponents/Adfit';
+import { patchNotePhrase } from '../datas/guide'
 
 const { Search } = Input;
 
@@ -30,7 +31,7 @@ const HR = styled.div`
     margin-bottom: 1rem;
 `
 
-export default function Main() {
+export default function Main(props) {
 
     return(
         <Row justify="center" style={{backgroundColor: 'rgba(236, 232, 225, 0.95)', height: 'auto'}} >
@@ -39,8 +40,19 @@ export default function Main() {
                 <meta name="description" content={`발옵지지에서 요원, 무기, 스킨, 맵, 요원 별 전략 등 다양하고 유용한 정보를 습득하세요!`} />
             </MetaTags>
             <Col xs={24} sm={24} md={0} lg={0} xl={0} style={{marginBottom: '1rem'}}>
+                {/* <div style={{display: 'flex', justifyContent: 'center', alignItems: 'center', width: '100%', height: 30, backgroundColor: 'orange'}}>
+                    발로란트 정식출시! 패치노트 1.0 바로가기
+                </div> */}
+                <Alert type="warning" message={<Link to="/guide" style={{color: 'black'}}>{patchNotePhrase}</Link>} showIcon={false} banner closable />
                 <div style={{display: 'flex', width: '100%', height: 200, backgroundImage: `url(${Jumbotron})`, backgroundSize: 'cover', backgroundPosition: 'center', justifyContent: 'center', alignItems: 'center', flexDirection: 'column'}}>
-                        <Search placeholder="유저 네임을 입력해주세요." onSearch={value => console.log(value)} enterButton style={{width: '80%'}} />
+                        {/* <div style={{fontWeight: 'bold', fontSize: '1.2rem'}}>
+                            발로란트 정보의 모든 것, 발옵지지
+                        </div> */}
+                        <Search 
+                        placeholder="유저 네임을 입력해주세요." 
+                        size="large"
+                        onSearch={value => props.history.push(`/player/${value}`)} 
+                        enterButton style={{width: '90%'}} />
                         {/* <div>
                             <Link to={`/guide/0/0`}><Button type="primary">0.50 패치노트 바로가기</Button></Link>
                         </div> */}
@@ -52,9 +64,15 @@ export default function Main() {
                         <div>
                             발로란트 정보의 모든 것, 발옵지지
                         </div>
-                        <div style={{fontSize: '1.2rem'}}>
+                        <Search
+                        placeholder="유저 네임을 입력해주세요."
+                        enterButton="검색"
+                        size="large"
+                        onSearch={value => props.history.push(`/player/${value}`)}
+                        />
+                        {/* <div style={{fontSize: '1.2rem'}}>
                             <Link to={`/guide/0/0`}><Button type="primary">0.50 패치노트 바로가기</Button></Link>
-                        </div>
+                        </div> */}
                     </div>
                 </div>
                 <div >
