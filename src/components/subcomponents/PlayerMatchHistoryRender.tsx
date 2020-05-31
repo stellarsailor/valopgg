@@ -15,7 +15,7 @@ export default function PlayerMatchHistoryRender(props){
 
     const victory = {
         backgroundColor: '#5bb09f',
-        marginBottom: '0.5rem',
+        marginBottom: '0.7rem',
         display: 'flex',
         flexDirection: 'row' as 'row',
         justifyContent: 'space-between'
@@ -23,7 +23,7 @@ export default function PlayerMatchHistoryRender(props){
 
     const defeat = {
         backgroundColor: '#e24c4e',
-        marginBottom: '0.5rem',
+        marginBottom: '0.7rem',
         display: 'flex',
         flexDirection: 'row' as 'row',
         justifyContent: 'space-between'
@@ -49,7 +49,7 @@ export default function PlayerMatchHistoryRender(props){
             </div>
             {
                 openDetail ?
-                <div style={{backgroundColor: '#f5f5f5', width: '100%', height: 400, marginBottom: '0.5rem' }}>
+                <div style={{backgroundColor: '#f5f5f5', width: '100%', height: 400, marginBottom: '0.7rem' }}>
 
                 </div>
                 :
