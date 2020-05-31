@@ -58,40 +58,41 @@ export default function App () {
         <Router>
             <Layout className="layout">
                 <HeaderContainer>
-                    {
-                        window.innerWidth < 576 ? 
-                        <Row justify="center" style={{height: 80, display: 'flex', alignItems: 'center', backgroundImage: `url(${Banner})`, backgroundSize: 'cover', backgroundPosition: 'center'}}>
-                            <div style={{position: 'absolute', backgroundColor: 'black', width: '100%', height: 80, opacity: 0.4}}></div>
-                            <Col xs={22} >
-                                <Link to="/">
-                                    <img src={require('./images/mainLogo.png')} style={{width: '30%', height: 'auto', marginLeft: '1rem'}} alt="valopgg main logo" />
-                                </Link>
-                            </Col>
-                        </Row>
-                        :
-                        <Row justify="center" style={{height: 150, display: 'flex', alignItems: 'center', backgroundImage: `url(${Banner})`, backgroundSize: 'cover', backgroundPosition: 'center'}}>
-                            <div style={{position: 'absolute', backgroundColor: 'black', width: '100%', height: 150, opacity: 0.4}}></div>
-                            <Col xs={0} sm={22} md={20} lg={20} xl={15} >
-                                <Row justify="space-between">
-                                    <Col span={16}>
-                                        <Link to="/">
-                                            {/* <div style={{fontSize: '2rem', color: 'white', fontWeight: 'bold'}}>
-                                                Valop <span style={{fontSize: '1.4rem'}}>발옵지지</span>
-                                            </div> */}
-                                            <img src={require('./images/mainLogo.png')} style={{width: '20%'}} alt="valopgg main logo" />
-                                        </Link>
-                                    </Col>
-                                    <Col span={8}>
-                                        {/* <Search placeholder="전적 검색 기능을 준비 중입니다." onSearch={value => console.log(value)} enterButton /> */}
-                                    </Col>
-                                </Row>
-                            </Col>
-                        </Row>
-                    }
+                    <Row>
+                        <Col xs={24} sm={0} md={0} lg={0} xl={0} >
+                            <Row justify="center" style={{height: 80, display: 'flex', alignItems: 'center', backgroundImage: `url(${Banner})`, backgroundSize: 'cover', backgroundPosition: 'center'}}>
+                                <div style={{position: 'absolute', backgroundColor: 'black', width: '100%', height: 80, opacity: 0.4}}></div>
+                                <Col xs={22} >
+                                    <Link to="/">
+                                        <img src={require('./images/mainLogo.png')} style={{width: '30%', height: 'auto', marginLeft: '1rem'}} alt="valopgg main logo" />
+                                    </Link>
+                                </Col>
+                            </Row>
+                        </Col>
+                        <Col xs={0} sm={24} md={24} lg={24} xl={24} >
+                            <Row justify="center" style={{height: 150, display: 'flex', alignItems: 'center', backgroundImage: `url(${Banner})`, backgroundSize: 'cover', backgroundPosition: 'center'}}>
+                                <div style={{position: 'absolute', backgroundColor: 'black', width: '100%', height: 150, opacity: 0.4}}></div>
+                                <Col xs={0} sm={22} md={20} lg={20} xl={15} >
+                                    <Row justify="space-between">
+                                        <Col span={16}>
+                                            <Link to="/">
+                                                {/* <div style={{fontSize: '2rem', color: 'white', fontWeight: 'bold'}}>
+                                                    Valop <span style={{fontSize: '1.4rem'}}>발옵지지</span>
+                                                </div> */}
+                                                <img src={require('./images/mainLogo.png')} style={{width: '20%'}} alt="valopgg main logo" />
+                                            </Link>
+                                        </Col>
+                                        <Col span={8}>
+                                            {/* <Search placeholder="전적 검색 기능을 준비 중입니다." onSearch={value => console.log(value)} enterButton /> */}
+                                        </Col>
+                                    </Row>
+                                </Col>
+                            </Row>
+                        </Col>
+                    </Row>
                 </HeaderContainer>  
                 <Row justify="center" style={{height: 50, backgroundColor: '#161616'}}>
-                    {
-                        window.innerWidth < 576 ? 
+                    <Col xs={24} sm={0} md={0} lg={0} xl={0} >
                         <div style={{display: 'flex', justifyContent: 'space-between', alignItems: 'center', height: '100%', fontSize: '1.2em', overflowX: 'scroll', overflowY: 'hidden', whiteSpace: 'nowrap'}}>
                             <Link to={`/guide/0/0`} style={mobileMenuTab}>가이드</Link>
                             <Link to="/agent" style={mobileMenuTab}>요원</Link>
@@ -107,52 +108,59 @@ export default function App () {
                             {/* <Link to="/simulator" style={mobileMenuTab}>전략 시뮬레이터</Link> */}
                             {/* <Link to="/recruit" style={mobileMenuTab}>파티 모집</Link> */}
                         </div>
-                        :
-                        <Col xs={24} sm={22} md={20} lg={20} xl={15} >
-                            <div style={{display: 'flex', justifyContent: 'space-between', alignItems: 'center', height: '100%', fontSize: '1.2em'}}>
-                                <MenuTabHover><Link to={`/guide/0/0`}>가이드</Link></MenuTabHover>
-                                <MenuTabHover><Link to="/agent">요원</Link></MenuTabHover>
-                                <MenuTabHover><Link to="/agentrecom">맞는 요원 찾기</Link></MenuTabHover>
-                                {/* <MenuTabHover><Link to="/tier">티어</Link></MenuTabHover> */}
-                                <MenuTabHover><Link to="/weapon">무기/스킨</Link></MenuTabHover>
-                                <MenuTabHover><Link to="/map">맵</Link></MenuTabHover>
-                                <MenuTabHover><Link to="/strat">요원별 전략</Link></MenuTabHover>
-                                <MenuTabHover><Link to="/dic">용어사전</Link></MenuTabHover>
-                                <MenuTabHover><Link to="/prosetting">프로 세팅</Link></MenuTabHover>
-                                <MenuTabHover><Link to="/calculator">감도 계산기</Link></MenuTabHover>
-                                <MenuTabHover><Link to="/reaction">반응속도 측정</Link></MenuTabHover>
-                                {/* <MenuTabHover><Link to="/simulator">전략 시뮬레이터</Link></MenuTabHover> */}
-                                {/* <MenuTabHover><Link to="/recruit">파티 모집</Link></MenuTabHover> */}
-                            </div>
-                        </Col>
-                    }
+                    </Col>
+                    <Col xs={0} sm={22} md={20} lg={20} xl={15} >
+                        <div style={{display: 'flex', justifyContent: 'space-between', alignItems: 'center', height: '100%', fontSize: '1.2em'}}>
+                            <MenuTabHover><Link to={`/guide/0/0`}>가이드</Link></MenuTabHover>
+                            <MenuTabHover><Link to="/agent">요원</Link></MenuTabHover>
+                            <MenuTabHover><Link to="/agentrecom">맞는 요원 찾기</Link></MenuTabHover>
+                            {/* <MenuTabHover><Link to="/tier">티어</Link></MenuTabHover> */}
+                            <MenuTabHover><Link to="/weapon">무기/스킨</Link></MenuTabHover>
+                            <MenuTabHover><Link to="/map">맵</Link></MenuTabHover>
+                            <MenuTabHover><Link to="/strat">요원별 전략</Link></MenuTabHover>
+                            <MenuTabHover><Link to="/dic">용어사전</Link></MenuTabHover>
+                            <MenuTabHover><Link to="/prosetting">프로 세팅</Link></MenuTabHover>
+                            <MenuTabHover><Link to="/calculator">감도 계산기</Link></MenuTabHover>
+                            <MenuTabHover><Link to="/reaction">반응속도 측정</Link></MenuTabHover>
+                            {/* <MenuTabHover><Link to="/simulator">전략 시뮬레이터</Link></MenuTabHover> */}
+                            {/* <MenuTabHover><Link to="/recruit">파티 모집</Link></MenuTabHover> */}
+                        </div>
+                    </Col>
                 </Row>
                 <Content>
                     <div style={divStyle}>
-                    <Switch>
-                        <Route path="/guide/:groupId/:tabId" component={GuideDetail} />
-                        <Route path="/guide" component={GuideDetail} />
-                        <Route path="/agent/:agentName" component={AgentDetail} />
-                        <Route path="/agent" component={Agent} />
-                        <Route path="/agentrecom" component={AgentRecommendation} />
-                        {/* <Route path="/tier" component={Tier} /> */}
-                        <Route path="/weapon/:name" component={WeaponDetail} />
-                        <Route path="/weapon" component={Weapon} />
-                        <Route path="/map/:name" component={MapDetail} />
-                        <Route path="/map" component={Map} />
-                        <Route path="/strat" component={Strat} />
-                        <Route path="/dic" component={Dic} />
-                        <Route path="/prosetting/:proName" component={ProsettingDetail} />
-                        <Route path="/prosetting" component={Prosetting} />
-                        <Route path="/calculator" component={Calculator} />
-                        <Route path="/contact" component={Contact} />
-                        <Route path="/reaction" component={ReactionTest} />
-                        <Route path="/prove" component={Contact} />
-                        <Route path="/privacy" component={Privacy} />
-                        <Route exact path="/" component={Main} />
-                    </Switch>
+                        <Switch>
+                            <Route path="/guide/:groupId/:tabId" component={GuideDetail} />
+                            <Route path="/guide" component={GuideDetail} />
+                            <Route path="/agent/:agentName" component={AgentDetail} />
+                            <Route path="/agent" component={Agent} />
+                            <Route path="/agentrecom" component={AgentRecommendation} />
+                            {/* <Route path="/tier" component={Tier} /> */}
+                            <Route path="/weapon/:name" component={WeaponDetail} />
+                            <Route path="/weapon" component={Weapon} />
+                            <Route path="/map/:name" component={MapDetail} />
+                            <Route path="/map" component={Map} />
+                            <Route path="/strat" component={Strat} />
+                            <Route path="/dic" component={Dic} />
+                            <Route path="/prosetting/:proName" component={ProsettingDetail} />
+                            <Route path="/prosetting" component={Prosetting} />
+                            <Route path="/calculator" component={Calculator} />
+                            <Route path="/contact" component={Contact} />
+                            <Route path="/reaction" component={() => <ReactionTest/> } />
+                            <Route path="/prove" component={Contact} />
+                            <Route path="/privacy" component={Privacy} />
+                            <Route exact path="/" component={() => <Main/> } />
+                        </Switch>
                     </div>
                 </Content>
+                <Row justify="center" style={{width: '100%', backgroundColor: '#f0f0f0', display: 'flex', justifyContent: 'center', alignItems: 'center'}}>
+                    <span style={{fontWeight: 'bold', color: 'black', margin: '1rem'}}>
+                        GET THE VALOP.GG MOBILE APP!
+                    </span>
+                    <a target='_blank' href="https://play.google.com/store/apps/details?id=com.mobile_valopgg" >
+                        <img src={require('./images/googleplay.png')} style={{width: 120, margin: '1rem 0'}} />
+                    </a>
+                </Row>
                 <Footer style={{ backgroundColor: '#121212'}}>
                     <Row justify="center">
                     © 2020 Valop.gg all rights reserved. 
