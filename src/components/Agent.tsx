@@ -4,6 +4,7 @@ import MetaTags from 'react-meta-tags';
 import { Row, Col, BackTop } from 'antd';
 import { Link } from 'react-router-dom'
 
+import { dynamicSort } from '../logics/dynamicSort'
 // import SkillCount from './subcomponents/SkillCount';
 import { agent } from '../datas/agent'
 // import { strat } from '../datas/strat'
@@ -24,7 +25,7 @@ export default function Agent(props) {
                     <img src={require('../images/official-background-wide-darken.jpg')} style={{width: '100%'}} alt="background loading screenshot" />
                 </div>
                 <Row justify="center" style={{marginTop: 15, marginBottom: 15}}>
-                    { agent.map((v, index) => (
+                    { agent.slice(0).sort(dynamicSort('name')).map((v, index) => (
                         <Col xs={24} sm={24} md={12} lg={8} xl={8} key={v.id}>
                             <div style={{position: 'relative', backgroundImage: 'linear-gradient(rgb(32, 43, 67), rgb(5,15,30))', borderRadius: 10, margin: '1rem', overflow: 'hidden'}}>
                                 <Link to={`/agent/${v.name.toLowerCase()}`}>
