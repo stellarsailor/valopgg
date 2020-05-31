@@ -65,10 +65,10 @@ export default function Player(props) {
                     {
                         selectedTab === 0 ?
                         <>
-                        <Col xs={24} sm={22} md={20} lg={8} xl={6}>
+                        <Col xs={0} sm={0} md={0} lg={8} xl={6}>
                             <img src="https://valorantlocker.com/wp-content/uploads/Valorant-Jett-Card-player-card.png" style={{width: '100%'}} />
                         </Col>
-                        <Col xs={24} sm={22} md={20} lg={16} xl={18} style={{backgroundColor: '#182338'}}>
+                        <Col xs={24} sm={24} md={24} lg={16} xl={18} style={{backgroundColor: '#182338'}}>
 
                             <Col xs={24} sm={24} md={24} lg={24} xl={24} style={{height: 300, backgroundColor: 'darkgray'}}>
                                 각종 통계 정보 - 티어 /
