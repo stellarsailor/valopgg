@@ -155,7 +155,7 @@ export default function App () {
                 </Content>
                 <Row justify="center" style={{width: '100%', backgroundColor: '#f0f0f0', display: 'flex', justifyContent: 'center', alignItems: 'center'}}>
                     <span style={{fontWeight: 'bold', color: 'black', margin: '1rem'}}>
-                        GET THE VALOP.GG MOBILE APP!
+                        VALOP.GG 모바일 앱을 만나보세요!
                     </span>
                     <a target='_blank' href="https://play.google.com/store/apps/details?id=com.mobile_valopgg" >
                         <img src={require('./images/googleplay.png')} style={{width: 120, margin: '1rem 0'}} />

@@ -7,6 +7,7 @@ import { TransformWrapper, TransformComponent } from "react-zoom-pan-pinch";
 // import * as Scroll from 'react-scroll';
 import { Element , scroller } from 'react-scroll'
 import queryString from 'query-string'
+import { staticServer } from '../serverUrl'
  
 import { strat } from '../datas/strat'
 // import { agent } from '../datas/agent'
@@ -145,7 +146,7 @@ export default function Strat(props) {
                                                     delay: 0,
                                                     smooth: 'easeInOutQuart'
                                                 }) }} onMouseEnter={() => setHoverImage(v.identifier)} onMouseLeave={() => setHoverImage('')} style={{width: '100%', height: 'auto'}} key={v.id}>
-                                                    <img src={`https://d3s0uoqa61ipmr.cloudfront.net/abilities/${agentSelection}${v.abilityIcon}.svg`} style={{width: '2rem', alignSelf: 'flex-start'}} alt={`${v.title}`} />
+                                                    <img src={`${staticServer}/abilities/${agentSelection}${v.abilityIcon}.svg`} style={{width: '2rem', alignSelf: 'flex-start'}} alt={`${v.title}`} />
                                                     <div style={{marginLeft: 10}}>
                                                         <div style={{fontSize: '1rem', fontWeight: 'bold'}}>
                                                             {v.title}
@@ -215,7 +216,7 @@ export default function Strat(props) {
                                         </div>
                                         <TransformComponent>
                                             <img src={mainLogo} style={{position: 'absolute', bottom: '10%', left: '3%', width: '30%'}} alt="valop.gg main logo" />
-                                            <img src={`https://d3s0uoqa61ipmr.cloudfront.net/strat/${agentSelection}/${mapSelection}/${detailView.identifier}${v}.png`} style={{width: '100%', alignSelf: 'flex-start'}} key={index} alt={`strategy ${detailView.identifier} of ${agentSelection} in ${mapSelection}`} />
+                                            <img src={`${staticServer}/strat/${agentSelection}/${mapSelection}/${detailView.identifier}${v}.png`} style={{width: '100%', alignSelf: 'flex-start'}} key={index} alt={`strategy ${detailView.identifier} of ${agentSelection} in ${mapSelection}`} />
                                         </TransformComponent>
                                     </div>
                                 )}

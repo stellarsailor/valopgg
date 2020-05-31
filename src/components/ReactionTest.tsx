@@ -83,10 +83,6 @@ export default function ReactionTest() {
         startTargetAppear()
     }
 
-    const renderAds = () => {
-        return <Adfit />
-    }
-
     return(
         <Row justify="center" style={{backgroundColor: 'rgba(19, 28, 46, 0.95)', minHeight: 800}} >
             <Col xs={24} sm={22} md={20} lg={20} xl={15}>

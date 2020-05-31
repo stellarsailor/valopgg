@@ -6,6 +6,7 @@ import { ArrowLeftOutlined } from '@ant-design/icons';
 import { prosetting } from '../datas/prosetting'
 import { Element , scroller } from 'react-scroll'
 import { Link } from 'react-router-dom'
+import { staticServer } from '../serverUrl'
 
 const BlockTitle = styled.div`
     font-weight: bold;
@@ -52,7 +53,7 @@ export default function ProsettingDetail(props) {
                             </Link>
                         </Col>
                         <Col xs={24} sm={24} md={6} lg={6} xl={6}>
-                            {v.photo !== true ? <div style={{backgroundColor: 'white', width: '100%', height: 300}}></div> : <img src={`https://d3s0uoqa61ipmr.cloudfront.net/prosetting/${v.name.toLowerCase()}-profile-picture.jpg`} style={{width: '100%'}} alt="발로란트 프로 프로필 이미지" /> }
+                            {v.photo !== true ? <div style={{backgroundColor: 'white', width: '100%', height: 300}}></div> : <img src={`${staticServer}/prosetting/${v.name.toLowerCase()}-profile-picture.jpg`} style={{width: '100%'}} alt="발로란트 프로 프로필 이미지" /> }
                         </Col>
 
                         <Col xs={24} sm={24} md={18} lg={18} xl={18} style={{paddingLeft: '1rem', paddingRight: '1rem', paddingBottom: '1rem', backgroundColor: '#273552'}}>

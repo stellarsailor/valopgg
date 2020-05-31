@@ -5,6 +5,7 @@ import { Link } from 'react-router-dom'
 import { Row, Col, Button, Progress, Typography } from 'antd';
 import { SearchOutlined } from '@ant-design/icons';
 import capitalizeFirstLetter from '../logics/capitalizeFirstLetter'
+import { staticServer } from '../serverUrl'
 
 import { question } from '../datas/question'
 
@@ -113,7 +114,7 @@ export default function AgentRecommendation() {
                                 <div style={{display: 'flex', justifyContent: 'center', marginTop: 10}}>
                                     <Link to={`/agent/${result}`}><Button type="primary" icon={<SearchOutlined />}>정보 보기</Button></Link>
                                 </div>
-                                <img src={`https://d3s0uoqa61ipmr.cloudfront.net/agents/${result}-standing.png`} style={{width: '100%'}} alt="agent standing" />
+                                <img src={`${staticServer}/agents/${result}-standing.png`} style={{width: '100%'}} alt="agent standing" />
                             </Col>
                         </Row>
                     :

@@ -6,6 +6,7 @@ import { ArrowRightOutlined } from '@ant-design/icons';
 import { Link } from 'react-router-dom'
 import { Element , scroller } from 'react-scroll'
 import ReactMarkdown from 'react-markdown';
+import { staticServer } from '../serverUrl'
 
 import SkillCount from './subcomponents/SkillCount';
 import { agent } from '../datas/agent'
@@ -66,7 +67,7 @@ export default function AgentDetail(props) {
                                         {agent[agentSelection].type}
                                     </div>
                                 </div>
-                                <img src={`https://d3s0uoqa61ipmr.cloudfront.net/agents/${agent[agentSelection].name.toLowerCase()}-standing.png`} style={{width: '100%'}} alt="Valorant agent standing full shot" />
+                                <img src={`${staticServer}/agents/${agent[agentSelection].name.toLowerCase()}-standing.png`} style={{width: '100%'}} alt="Valorant agent standing full shot" />
                             </div>
                         </Col>
                         <Col xs={24} sm={24} md={12} lg={12} xl={16} style={{padding: 20}}>
@@ -77,7 +78,7 @@ export default function AgentDetail(props) {
                                     <Col span={6} key={v} onClick={() => setAbilitySelection(v)} style={{padding: 10}}> 
                                         <div style={{backgroundColor: '#202b43', borderRadius: 5, width: '2rem', display: 'flex', justifyContent: 'center', fontWeight: 'bold'}}>{key[v]}</div>
                                         <a>
-                                            <img src={`https://d3s0uoqa61ipmr.cloudfront.net/abilities/${agent[agentSelection].name.toLowerCase() + v}.svg`} style={{width: '4rem'}} alt='Valorant agent skill icon' />
+                                            <img src={`${staticServer}/abilities/${agent[agentSelection].name.toLowerCase() + v}.svg`} style={{width: '4rem'}} alt='Valorant agent skill icon' />
                                             <div style={{width: '100%'}}>
                                                 <SkillCount count={agent[agentSelection].skill[v].count} selected={ abilitySelection === v ? true : false } />
                                             </div>
@@ -97,7 +98,7 @@ export default function AgentDetail(props) {
                             </div>
                             <Link to={`/strat?name=${agent[agentSelection].name.toLowerCase()}`} 
                             style={{display: 'flex', flexDirection: 'row', padding: '1rem', alignItems: 'center', backgroundColor: '#202b43', marginTop: '1rem'}}>
-                                <img src={`https://d3s0uoqa61ipmr.cloudfront.net/agents/${agent[agentSelection].name.toLowerCase()}-headshot.png`} style={{width: '3rem', borderRadius: '3rem', border: '1px solid white'}} alt='agent headshot' />
+                                <img src={`${staticServer}/agents/${agent[agentSelection].name.toLowerCase()}-headshot.png`} style={{width: '3rem', borderRadius: '3rem', border: '1px solid white'}} alt='agent headshot' />
                                 <div style={{margin: '0 1rem'}}>
                                     <div style={{fontWeight: 'bold'}}>
                                         {agent[agentSelection].name_ko} 전략 메뉴얼 확인하기
