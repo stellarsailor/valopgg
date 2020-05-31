@@ -4,7 +4,7 @@ import MetaTags from 'react-meta-tags';
 import { Row, Col, BackTop } from 'antd';
 import { dic } from '../datas/dic'
 import { dynamicSort } from '../logics/dynamicSort'
-import DicWordRender from './subcomponents/DicWordRenser';
+import DicWordRender from './subcomponents/DicWordRender';
 
 export default function Dic() {
 

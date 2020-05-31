@@ -1,10 +1,12 @@
 import React from 'react';
 import { BrowserRouter as Router, Switch, Route, Link } from "react-router-dom";
 import styled from 'styled-components'
-import { Layout, Row, Col } from 'antd';
+import { Layout, Row, Col, Input } from 'antd';
 import './App.css';
 
 import Banner from './images/banner.jpg'
+
+import Player from './components/Player'
 import Agent from './components/Agent';
 import AgentDetail from './components/AgentDetail'
 import Weapon from './components/Weapon';
@@ -26,7 +28,7 @@ import GuideDetail from './components/GuideDetail';
 import ReactionTest from './components/ReactionTest';
 
 const { Content, Footer } = Layout;
-// const { Search } = Input;
+const { Search } = Input;
 
 const HeaderContainer = styled.div`
     width: '100%';
@@ -83,7 +85,7 @@ export default function App () {
                                             </Link>
                                         </Col>
                                         <Col span={8}>
-                                            {/* <Search placeholder="전적 검색 기능을 준비 중입니다." onSearch={value => console.log(value)} enterButton /> */}
+                                            <Search placeholder="유저 네임을 입력해주세요." onSearch={value => console.log(value)} enterButton />
                                         </Col>
                                     </Row>
                                 </Col>
@@ -106,7 +108,6 @@ export default function App () {
                             <Link to="/calculator" style={mobileMenuTab}>감도 계산기</Link>
                             <Link to="/reaction" style={mobileMenuTab}>반응속도 측정</Link>
                             {/* <Link to="/simulator" style={mobileMenuTab}>전략 시뮬레이터</Link> */}
-                            {/* <Link to="/recruit" style={mobileMenuTab}>파티 모집</Link> */}
                         </div>
                     </Col>
                     <Col xs={0} sm={22} md={20} lg={20} xl={15} >
@@ -123,13 +124,16 @@ export default function App () {
                             <MenuTabHover><Link to="/calculator">감도 계산기</Link></MenuTabHover>
                             <MenuTabHover><Link to="/reaction">반응속도 측정</Link></MenuTabHover>
                             {/* <MenuTabHover><Link to="/simulator">전략 시뮬레이터</Link></MenuTabHover> */}
-                            {/* <MenuTabHover><Link to="/recruit">파티 모집</Link></MenuTabHover> */}
                         </div>
                     </Col>
                 </Row>
                 <Content>
                     <div style={divStyle}>
                         <Switch>
+                            <Route path="/player/:userName/matches/:pageNum" component={Player} />
+                            <Route path="/player/:userName/:subMenu" component={Player} />
+                            <Route path="/player/:userName" component={Player} />
+                            <Route path="/player" component={Player} />
                             <Route path="/guide/:groupId/:tabId" component={GuideDetail} />
                             <Route path="/guide" component={GuideDetail} />
                             <Route path="/agent/:agentName" component={AgentDetail} />
@@ -145,8 +149,8 @@ export default function App () {
                             <Route path="/prosetting/:proName" component={ProsettingDetail} />
                             <Route path="/prosetting" component={Prosetting} />
                             <Route path="/calculator" component={Calculator} />
-                            <Route path="/contact" component={Contact} />
                             <Route path="/reaction" component={ReactionTest} />
+                            <Route path="/contact" component={Contact} />
                             <Route path="/prove" component={Contact} />
                             <Route path="/privacy" component={Privacy} />
                             <Route exact path="/" component={Main} />

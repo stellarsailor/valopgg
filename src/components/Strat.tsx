@@ -8,7 +8,8 @@ import { TransformWrapper, TransformComponent } from "react-zoom-pan-pinch";
 import { Element , scroller } from 'react-scroll'
 import queryString from 'query-string'
 import { staticServer } from '../serverUrl'
- 
+import axios from 'axios';
+
 import { strat } from '../datas/strat'
 // import { agent } from '../datas/agent'
 import { dynamicSort } from '../logics/dynamicSort'
@@ -45,6 +46,11 @@ export default function Strat(props) {
 
     useEffect(() => {
         window.scrollTo(0, 0)
+        axios.get(`http://54.180.152.66:8181/test`)
+        .then(res => {
+            const data = res.data;
+            console.log(data.stratData)
+        })
     },[])
 
     const mapArr = ["Bind", "Haven", "Split"]

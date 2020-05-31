@@ -1,14 +1,14 @@
 import React from 'react'
 import MetaTags from 'react-meta-tags';
 import styled from 'styled-components'
-import { Row, Col, Button, Alert } from 'antd';
+import { Row, Col, Button, Alert, Input } from 'antd';
 import { Link } from 'react-router-dom'
 import Jumbotron from '../images/official-background.jpg'
 import AdSense from 'react-adsense';
 import { TwitterTimelineEmbed } from 'react-twitter-embed';
 import Adfit from './subcomponents/Adfit';
 
-// const { Search } = Input;
+const { Search } = Input;
 
 const MainTextTitle = styled.div`
     color: black;
@@ -40,10 +40,10 @@ export default function Main() {
             </MetaTags>
             <Col xs={24} sm={24} md={0} lg={0} xl={0} style={{marginBottom: '1rem'}}>
                 <div style={{display: 'flex', width: '100%', height: 200, backgroundImage: `url(${Jumbotron})`, backgroundSize: 'cover', backgroundPosition: 'center', justifyContent: 'center', alignItems: 'center', flexDirection: 'column'}}>
-                        {/* <Search placeholder="전적 검색 기능을 준비 중입니다." onSearch={value => console.log(value)} enterButton style={{width: '80%'}} /> */}
-                        <div>
+                        <Search placeholder="유저 네임을 입력해주세요." onSearch={value => console.log(value)} enterButton style={{width: '80%'}} />
+                        {/* <div>
                             <Link to={`/guide/0/0`}><Button type="primary">0.50 패치노트 바로가기</Button></Link>
-                        </div>
+                        </div> */}
                 </div>
             </Col>
             <Col xs={0} sm={0} md={24} lg={24} xl={24} style={{marginBottom: '1rem'}}>
