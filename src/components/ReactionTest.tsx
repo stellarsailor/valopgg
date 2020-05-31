@@ -1,6 +1,7 @@
 import React, { useState, useRef, useEffect } from 'react'
 import { Row, Col, BackTop, Typography } from 'antd';
 import MetaTags from 'react-meta-tags';
+import Adfit from './subcomponents/Adfit';
 
 const { Paragraph } = Typography
 
@@ -30,7 +31,7 @@ const styles = {
     },
 }
 
-export default function ReactionTest({ navigation }) {
+export default function ReactionTest() {
 
     const ref = useRef<HTMLHeadingElement>(null);
     const [ containerHeight, setContainerHeight ] = useState(0)
@@ -80,6 +81,10 @@ export default function ReactionTest({ navigation }) {
         setTestEnded(false)
 
         startTargetAppear()
+    }
+
+    const renderAds = () => {
+        return <Adfit />
     }
 
     return(
@@ -176,6 +181,10 @@ export default function ReactionTest({ navigation }) {
                             <Paragraph style={{color: 'white', fontSize: '1rem', textAlign: 'center', margin: '2rem 0'}} copyable={{ text: 'https://valop.gg/reaction' }}>친구에게 URL 공유</Paragraph>
                         </div>
                     </Col>
+                    {/* <AdfitWebComponent
+                    adUnit="DAN-qe74ylevqulf"
+                    /> */}
+                    <Adfit adUnit="DAN-qe74ylevqulf" />
                 </Row>
             </Col>
         </Row>

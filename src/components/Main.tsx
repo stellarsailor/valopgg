@@ -6,7 +6,7 @@ import { Link } from 'react-router-dom'
 import Jumbotron from '../images/official-background.jpg'
 import AdSense from 'react-adsense';
 import { TwitterTimelineEmbed } from 'react-twitter-embed';
-import { Adfit } from './subcomponents/Adfit';
+import Adfit from './subcomponents/Adfit';
 
 // const { Search } = Input;
 
@@ -62,9 +62,9 @@ export default function Main() {
                 </div>
             </Col>
             <Col xs={24} sm={22} md={20} lg={20} xl={15}>
-                    <a target='_blank' href="https://play.google.com/store/apps/details?id=com.mobile_valopgg" style={{display: 'flex', justifyContent: 'center', marginTop: '1rem', marginLeft: '1rem', marginRight: '1rem'}}>
-                        <Alert message="발옵지지 안드로이드 앱이 출시되었습니다! 바로가기" type="success" showIcon closable />
-                    </a>
+                {/* <a target='_blank' href="https://play.google.com/store/apps/details?id=com.mobile_valopgg" style={{display: 'flex', justifyContent: 'center', marginTop: '1rem', marginLeft: '1rem', marginRight: '1rem'}}>
+                    <Alert message="발옵지지 안드로이드 앱이 출시되었습니다! 바로가기" type="success" showIcon closable />
+                </a> */}
                 <Row style={{padding: '1rem'}}>
                     <Col xs={24} sm={12} md={12} lg={12} xl={12} style={{padding: '5%'}}>
                         {/* <img src={require('../images/mainImages0.jpg')} style={{width: '100%'}} /> */}
@@ -131,7 +131,13 @@ export default function Main() {
                     responsive="true"
                 />
                 <div style={{display: 'flex', justifyContent: 'center'}}>
-                    <Adfit key={Math.random()} />
+                    {/* <Adfit adUnit="DAN-u8ap0m0ade0n" adWidth = "320" adHeight  = "50" /> */}
+                    <Adfit adUnit="DAN-qe74ylevqulf" adWidth = "728" adHeight  = "90" />
+                    {/* <AdfitWebComponent
+                    key={Math.random()}
+                    adUnit="DAN-qe74ylevqulf"
+                    adHeight="100"
+                    /> */}
                 </div>
 
                 {/* <Collapse defaultActiveKey={['1']} >

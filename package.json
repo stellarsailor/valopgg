@@ -18,6 +18,7 @@
     "less-loader": "5.0.0",
     "query-string": "^6.12.1",
     "react": "^16.13.1",
+    "react-adfit-web-component": "^1.0.2",
     "react-adsense": "^0.1.0",
     "react-app-rewired": "^2.1.5",
     "react-dom": "^16.13.1",

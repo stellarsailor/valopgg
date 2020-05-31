@@ -146,10 +146,10 @@ export default function App () {
                             <Route path="/prosetting" component={Prosetting} />
                             <Route path="/calculator" component={Calculator} />
                             <Route path="/contact" component={Contact} />
-                            <Route path="/reaction" component={() => <ReactionTest/> } />
+                            <Route path="/reaction" component={ReactionTest} />
                             <Route path="/prove" component={Contact} />
                             <Route path="/privacy" component={Privacy} />
-                            <Route exact path="/" component={() => <Main/> } />
+                            <Route exact path="/" component={Main} />
                         </Switch>
                     </div>
                 </Content>
