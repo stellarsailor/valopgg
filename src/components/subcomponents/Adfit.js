@@ -30,7 +30,7 @@ export default class Adfit extends React.Component {
     render() {
 
         return (
-            <div key={Math.random} style={ this.props.margin ? {display: 'flex', justifyContent: 'center', margin: '1rem'} : {display: 'flex', justifyContent: 'center'}}>
+            <div key={Math.random} style={{display: 'flex', justifyContent: 'center', margin: this.props.margin, height: parseInt(this.props.adHeight)}}>
                 {/* <ins className={'kakao_ad_area'}
                     style={{
                         display: 'block',

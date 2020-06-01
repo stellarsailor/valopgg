@@ -6,6 +6,7 @@ import { SearchOutlined } from '@ant-design/icons';
 import { Link } from 'react-router-dom'
 import { prosetting } from '../datas/prosetting'
 import { dynamicSort } from '../logics/dynamicSort'
+import Adfit from './subcomponents/Adfit';
 
 const Bold = styled.span`
     color: lightgreen;
@@ -123,6 +124,7 @@ export default function Prosetting() {
                     <div style={{fontSize: '1.1rem', marginLeft: '2rem'}}>미니맵 설정은 <Bold>회전:회전 / 플레이어 중앙에 고정:꺼짐 / 미니맵 크기:0.978 / 미니맵 확대:0.9 / 미니맵 시야 범위 표시:켜짐</Bold> 입니다.</div>
                     <div style={{fontSize: '1.1rem', marginLeft: '2rem'}}>조준선 설정은 <Bold>색상:녹색 / 1 / 4 / 2 / 2 / 화면 중앙 도트: 꺼짐 / 오류: 꺼짐</Bold> 입니다.</div>
                 </div>
+                <Adfit adUnit="DAN-skxug7w2pkjd" adWidth="320" adHeight="100" />
 
                 <div style={{backgroundColor: '#fafafa'}}>
                     {

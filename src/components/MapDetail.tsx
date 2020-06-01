@@ -5,6 +5,7 @@ import { Link } from "react-router-dom";
 import { Row, Col, Radio } from 'antd';
 import { PlusOutlined, MinusOutlined } from '@ant-design/icons';
 import { TransformWrapper, TransformComponent } from "react-zoom-pan-pinch";
+import Adfit from './subcomponents/Adfit';
 
 const Images = [
     require('../images/map/bind-illust.jpeg'),
@@ -56,6 +57,8 @@ export default function MapDetail(props) {
                         <Link to={`/map/${v.toLowerCase()}`} style={mapName === v.toLowerCase() ? {fontWeight: 'bold', marginRight: '1.8rem'} : {color: 'gray', marginRight: '1.8rem'} } key={index}>{v}</Link>
                     ))}
                 </div> */}
+                {window.innerWidth < 576 ? <Adfit adUnit="DAN-skxug7w2pkjd" adWidth="320" adHeight="100" /> : <Adfit adUnit="DAN-qe74ylevqulf" adWidth="728" adHeight="90" /> }
+
                 <div style={{display: 'flex', justifyContent: 'center', margin: '10px 0'}}>
                     <Radio.Group onChange={(e) => setSide(e.target.value)} value={side} >
                         <Radio value={"attacker"} style={{color: 'white'}}>공격 진영</Radio>

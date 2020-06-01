@@ -7,7 +7,6 @@ import { Link } from 'react-router-dom'
 import { dynamicSort } from '../logics/dynamicSort'
 // import SkillCount from './subcomponents/SkillCount';
 import { agent } from '../datas/agent'
-import Adfit from './subcomponents/Adfit';
 // import { strat } from '../datas/strat'
 
 export default function Agent(props) {
@@ -25,7 +24,6 @@ export default function Agent(props) {
                     <div style={{position: 'absolute', width: '100%', backgroundColor: 'black', opacity: 0.3}}></div>
                     <img src={require('../images/official-background-wide-darken.jpg')} style={{width: '100%'}} alt="background loading screenshot" />
                 </div>
-                {window.innerWidth < 576 ? <Adfit adUnit="DAN-skxug7w2pkjd" adWidth="320" adHeight="100" /> : <Adfit adUnit="DAN-qe74ylevqulf" adWidth="728" adHeight="90" /> }
                 <Row justify="center" style={{marginTop: 15, marginBottom: 15}}>
                     { agent.slice(0).sort(dynamicSort('name')).map((v, index) => (
                         <Col xs={24} sm={24} md={12} lg={8} xl={8} key={v.id}>
