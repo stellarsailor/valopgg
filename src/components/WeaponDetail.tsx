@@ -25,6 +25,15 @@ const TitleText = styled.div`
     font-weight: bold;
 `
 
+const GrayText = styled.div`
+    color: lightgray;
+`
+
+const WhiteBoldText = styled.span`
+    color: white;
+    font-weight: bold;
+`
+
 export default function WeaponDetail(props) {
     window.scrollTo(0, 0);
 
@@ -69,19 +78,19 @@ export default function WeaponDetail(props) {
                                 <div style={{display: 'flex', justifyContent: 'center'}}>
                                     <img src={require(`../images/weaponskins/normal-${data.name.toLowerCase()}-skin.png`)} style={{width: '80%', alignSelf: 'flex-start'}} alt="발로란트 무기 스킨" />
                                 </div>
-                                <div style={{marginLeft: '1rem',}}>탄창 : {data.capacity}</div>
-                                <div style={{marginLeft: '1rem',}}>관통력 : {data.penetration}</div>
+                                <div style={{marginLeft: '1rem', color: 'lightgray'}}>탄창 : <WhiteBoldText>{data.capacity}</WhiteBoldText></div>
+                                <div style={{marginLeft: '1rem', color: 'lightgray'}}>관통력 : <WhiteBoldText>{data.penetration}</WhiteBoldText></div>
 
                                 <Row style={{backgroundColor: 'rgb(24, 35, 56)', padding: '1rem'}}>
                                     <Col xs={12} sm={12} md={12} lg={12} xl={12}>
-                                        <div>주 공격 모드 : {data.primaryMode}</div>
-                                        <div>연사 횟수 : {data.primaryRate}</div>
+                                        <GrayText>주 공격 모드 : <WhiteBoldText>{data.primaryMode}</WhiteBoldText></GrayText>
+                                        <GrayText>연사 횟수 : <WhiteBoldText>{data.primaryRate}</WhiteBoldText></GrayText>
                                     </Col>
                                     {
                                         data.altMode ? 
                                             <Col xs={12} sm={12} md={12} lg={12} xl={12}>
-                                                <div>보조 공격 모드 : {data.altMode}</div>
-                                                <div>연사 횟수 : {data.altRate}</div>
+                                                <GrayText>보조 공격 모드 : <WhiteBoldText>{data.altMode}</WhiteBoldText></GrayText>
+                                                <GrayText>연사 횟수 : <WhiteBoldText>{data.altRate}</WhiteBoldText></GrayText>
                                             </Col>
                                         :   
                                             null
@@ -140,7 +149,7 @@ export default function WeaponDetail(props) {
                                     {
                                         skin.filter(v => v.name.toLowerCase() === weaponName)[0].skins.map(v => (
                                             <Col xs={24} sm={24} md={12} lg={12} xl={12} style={{padding: 10}} key={v.id}>
-                                                <div><span style={{fontSize: '1.3rem'}}>{v.name_ko}</span> ({v.cost})</div>
+                                                <div><span style={{fontSize: '1.3rem'}}>{v.name_ko}</span> ({v.cost}{parseInt(v.cost) > 0 ? ` = 약 ${parseInt(v.cost) * 11}원` : null})</div>
                                                 <img src={require(`../images/weaponskins/${v.category}-${weaponName.toLowerCase()}-${v.level === 0 ? '' : `level-${v.level}-`}skin.png`)} style={{backgroundColor: '#273552', width: '100%'}} alt={`${weaponName} 발로란트 무기 스킨`} />
                                             </Col>
                                         ))
