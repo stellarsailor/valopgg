@@ -49,6 +49,11 @@ type agentType = {
         haven: Array<stratType>;
         split: Array<stratType>;
     },
+    reyna: {
+        bind: Array<stratType>;
+        haven: Array<stratType>;
+        split: Array<stratType>;
+    },
 }
 
 type stratType = {
@@ -2123,4 +2128,13 @@ export const strat: agentType = {
             },
         ]
     },
+    reyna: {
+        bind: [
+        ],
+        haven: [
+
+        ],
+        split: [
+        ],
+    }
 }

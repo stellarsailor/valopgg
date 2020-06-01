@@ -66,7 +66,7 @@ export default function Tier(){
     return (
         <Row justify="center" style={{backgroundColor: 'rgba(19, 28, 46, 0.95)', minHeight: 800}} >
             <Col xs={24} sm={22} md={20} lg={20} xl={15} style={{margin: '1rem 0' , padding: '1rem', backgroundColor: '#202b43'}}>
-                <div style={{paddingLeft: '1rem', margin: '1rem', marginBottom: '1.5rem'}}>
+                {/* <div style={{paddingLeft: '1rem', margin: '1rem', marginBottom: '1.5rem'}}>
                     <PageTitle>대회용 요원 티어 리스트 Ver 0.50 Dafran</PageTitle>
                 </div>
                 {tierColor.map((arr) => (
@@ -80,7 +80,7 @@ export default function Tier(){
                             {agent.filter(v => v.tier_dafran === arr.tier).map((v, index) => renderAgentImage(v, arr.color))}
                         </Col>
                     </Row>
-                ))}
+                ))} */}
                 {/* <div style={{textAlign: 'left', marginTop: '4rem', marginLeft: '1rem'}}>
                     출처 : Twitch ATL Dafran - The grind never ends, lets GO (20/05/11) - 09:11:50
                 </div> */}

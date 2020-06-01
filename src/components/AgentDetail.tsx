@@ -53,7 +53,7 @@ export default function AgentDetail(props) {
                     { agent.map((v, index) => (
                         <Tooltip title={v.name_ko} key={index}>
                             <Link to ={`/agent/${v.name.toLowerCase()}`} style={{margin: '0 1rem'}} onClick={() => agentScroll()}>
-                                <img src={require(`../images/agents/${v.name.toLowerCase()}-headshot.png`)} style={agentSelection === v.id ? {width: '4rem', borderRadius: '4rem', border: '2px solid white'} : {width: '4rem', borderRadius: '4rem', border: '2px solid #202b43'}} alt="Valorant agent select button" />
+                                <img src={require(`../images/agents/${v.name.toLowerCase()}-headshot.png`)} style={agentSelection === v.id ? {width: '4rem', borderRadius: '4rem', border: `2px solid ${v.signature_color}`} : {width: '4rem', borderRadius: '4rem', border: '2px solid #202b43'}} alt="Valorant agent select button" />
                             </Link>
                         </Tooltip>
                     ))}
@@ -99,7 +99,7 @@ export default function AgentDetail(props) {
                             </div>
                             <Link to={`/strat?name=${agent[agentSelection].name.toLowerCase()}`} 
                             style={{display: 'flex', flexDirection: 'row', padding: '1rem', alignItems: 'center', backgroundColor: '#202b43', marginTop: '1rem', marginBottom: '1rem'}}>
-                                <img src={`${staticServer}/agents/${agent[agentSelection].name.toLowerCase()}-headshot.png`} style={{width: '3rem', borderRadius: '3rem', border: '1px solid white'}} alt='agent headshot' />
+                                <img src={`${staticServer}/agents/${agent[agentSelection].name.toLowerCase()}-headshot.png`} style={{width: '3rem', borderRadius: '3rem', border: `2px solid ${agent[agentSelection].signature_color}`}} alt='agent headshot' />
                                 <div style={{margin: '0 1rem'}}>
                                     <div style={{fontWeight: 'bold'}}>
                                         {agent[agentSelection].name_ko} 전략 메뉴얼 확인하기

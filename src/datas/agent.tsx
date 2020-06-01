@@ -8,6 +8,7 @@ type agentType = {
     voice_ko?: string;
     origin: string;
     type: string;
+    signature_color: string;
     quote: string;
     skill: Array<{
         id: number;
@@ -19,9 +20,6 @@ type agentType = {
     inline_guide: string;
     ally_ult: string;
     enemy_ult: string;
-    tier_offense: 's' | 'a' | 'b' ;
-    tier_defense: 's' | 'a' | 'b' ;
-    tier_dafran: 's' | 'a' | 'b' | 'c' | 'd' ;
 }
 
 
@@ -32,6 +30,7 @@ export const agent: Array<agentType> = [
         name_ko: '브리치',
         origin: '스웨덴',
         type: '척후대',
+        signature_color: '#9E644B',
         quote: "뇌진탕이다!",
         skill: [
             {
@@ -66,9 +65,6 @@ export const agent: Array<agentType> = [
         inline_guide: agentMD[0],
         ally_ult: '간다!',
         enemy_ult: '저리 꺼져!',
-        tier_offense: 's',
-        tier_defense: 'a',
-        tier_dafran: 'a',
     },
     {
         id: 1,
@@ -76,6 +72,7 @@ export const agent: Array<agentType> = [
         name_ko: '브림스톤',
         origin: '미국',
         type: '전략가',
+        signature_color: '#468EB7',
         quote: "집중해. 하나씩 배워들 가라고.",
         skill: [
             {
@@ -110,9 +107,6 @@ export const agent: Array<agentType> = [
         inline_guide: agentMD[1],
         ally_ult: '하늘이 열린다!',
         enemy_ult: '지옥불을 받아라!',
-        tier_offense: 's',
-        tier_defense: 'a',
-        tier_dafran: 'a',
     },
     {
         id: 2,
@@ -120,6 +114,7 @@ export const agent: Array<agentType> = [
         name_ko: '사이퍼',
         origin: '모로코',
         type: '감시자',
+        signature_color: '#A9AD96',
         quote: "네 위치는 파악됐다.",
         skill: [
             {
@@ -154,9 +149,6 @@ export const agent: Array<agentType> = [
         inline_guide: agentMD[2],
         ally_ult: '자, 다들 어디 숨어있지?',
         enemy_ult: '네 위치는 파악됐다!',
-        tier_offense: 'b',
-        tier_defense: 's',
-        tier_dafran: 's',
     },
     {
         id: 3,
@@ -164,6 +156,7 @@ export const agent: Array<agentType> = [
         name_ko: '제트',
         origin: '대한민국',
         type: '타격대',
+        signature_color: '#55D1E0',
         quote: "잘해보자고.",
         skill: [
             {
@@ -198,9 +191,6 @@ export const agent: Array<agentType> = [
         inline_guide: agentMD[3],
         ally_ult: '똑똑히 봐라!',
         enemy_ult: '저리 비켜!',
-        tier_offense: 'a',
-        tier_defense: 'b',
-        tier_dafran: 'd',
     },
     {
         id: 4,
@@ -208,6 +198,7 @@ export const agent: Array<agentType> = [
         name_ko: '오멘',
         origin: '불명',
         type: '전략가',
+        signature_color: '#543EFF',
         quote: "안전할 줄 알았나.",
         skill: [
             {
@@ -242,9 +233,6 @@ export const agent: Array<agentType> = [
         inline_guide: agentMD[4],
         ally_ult: '어디, 도망쳐봐라.',
         enemy_ult: '흩어져라!',
-        tier_offense: 'b',
-        tier_defense: 'b',
-        tier_dafran: 'c',
     },
     {
         id: 5,
@@ -252,6 +240,7 @@ export const agent: Array<agentType> = [
         name_ko: '피닉스',
         origin: '영국',
         type: '타격대',
+        signature_color: '#F0753A',
         quote: "내가 누군진 잘 알고 있지?",
         skill: [
             {
@@ -286,9 +275,6 @@ export const agent: Array<agentType> = [
         inline_guide: agentMD[5],
         ally_ult: '좋아, 가자!',
         enemy_ult: '장난 끝이야, 넌 죽었어!',
-        tier_offense: 's',
-        tier_defense: 'b',
-        tier_dafran: 'b',
     },
     {
         id: 6,
@@ -296,6 +282,7 @@ export const agent: Array<agentType> = [
         name_ko: '레이즈',
         origin: '브라질',
         type: '타격대',
+        signature_color: '#F6AD40',
         quote: "폭탄 받아라~!",
         skill: [
             {
@@ -330,9 +317,6 @@ export const agent: Array<agentType> = [
         inline_guide: agentMD[6],
         ally_ult: '파티를 열어볼까?',
         enemy_ult: '폭탄 받아라!',
-        tier_offense: 's',
-        tier_defense: 'a',
-        tier_dafran: 'a',
     },
     {
         id: 7,
@@ -340,6 +324,7 @@ export const agent: Array<agentType> = [
         name_ko: '세이지',
         origin: '중국',
         type: '감시자',
+        signature_color: '#21CEAF',
         quote: "저들은 결코 날 뚫지 못할 거야.",
         skill: [
             {
@@ -374,9 +359,6 @@ export const agent: Array<agentType> = [
         inline_guide: agentMD[7],
         ally_ult: '네 임무는 끝나지 않았어!',
         enemy_ult: '내 동료를 죽이게 두진 않겠어!',
-        tier_offense: 'a',
-        tier_defense: 's',
-        tier_dafran: 's',
     },
     {
         id: 8,
@@ -384,6 +366,7 @@ export const agent: Array<agentType> = [
         name_ko: '소바',
         origin: '러시아',
         type: '척후대',
+        signature_color: '#325FFF',
         quote: "어디로 도망가든, 내가 찾아내겠어.",
         skill: [
             {
@@ -418,9 +401,6 @@ export const agent: Array<agentType> = [
         inline_guide: agentMD[8],
         ally_ult: '내가 바로 사냥꾼이다!',
         enemy_ult: '도망칠 곳은 없다!',
-        tier_offense: 'a',
-        tier_defense: 'a',
-        tier_dafran: 's',
     },
     {
         id: 9,
@@ -428,6 +408,7 @@ export const agent: Array<agentType> = [
         name_ko: '바이퍼',
         origin: '미국',
         type: '전략가',
+        signature_color: '#2AC849',
         quote: "영원히 숨을 참을 수는 없을걸.",
         skill: [
             {
@@ -462,9 +443,6 @@ export const agent: Array<agentType> = [
         inline_guide: agentMD[9],
         ally_ult: '비키는게 좋을걸?',
         enemy_ult: '이게 내 세상이야!',
-        tier_offense: 'b',
-        tier_defense: 'a',
-        tier_dafran: 'b',
     },
     {
         id: 10,
@@ -472,6 +450,7 @@ export const agent: Array<agentType> = [
         name_ko: '레이나',
         origin: '멕시코',
         type: '전략가',
+        signature_color: '#a34bee',
         quote: "",
         skill: [
             {
@@ -506,8 +485,5 @@ export const agent: Array<agentType> = [
         inline_guide: agentMD[10],
         ally_ult: '',
         enemy_ult: '',
-        tier_offense: 'b',
-        tier_defense: 'a',
-        tier_dafran: 'b',
     },
 ]

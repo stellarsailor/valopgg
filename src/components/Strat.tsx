@@ -11,7 +11,7 @@ import { staticServer } from '../serverUrl'
 import axios from 'axios';
 
 import { strat } from '../datas/strat'
-// import { agent } from '../datas/agent'
+import { agent } from '../datas/agent'
 import { dynamicSort } from '../logics/dynamicSort'
 import mainLogo from '../images/mainLogo.png'
 import Adfit from './subcomponents/Adfit';
@@ -103,7 +103,7 @@ export default function Strat(props) {
                                         method: []
                                     })
                                 }}>
-                                    <img src={require(`../images/agents/${v.toLowerCase()}-headshot.png`)} style={agentSelection === v.toLowerCase() ? {width: '2.4rem', borderRadius: '2.4rem', border: '2px solid white'} : {width: '2.4rem', borderRadius: '2.4rem', border: '2px solid #202b43'}} alt={`agent button for ${agentSelection}`} />
+                                    <img src={require(`../images/agents/${v.toLowerCase()}-headshot.png`)} style={agentSelection === v.toLowerCase() ? {width: '2.4rem', borderRadius: '2.4rem', border: `2px solid ${agent[index].signature_color}`} : {width: '2.4rem', borderRadius: '2.4rem', border: '2px solid #202b43'}} alt={`agent button for ${agentSelection}`} />
                                 </a>
                             </Tooltip>
                         ))}
