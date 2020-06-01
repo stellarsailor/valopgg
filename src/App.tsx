@@ -86,7 +86,7 @@ export default function App (props) {
                                             </Link>
                                         </Col>
                                         <Col span={8}>
-                                            <SearchInput />
+                                            {/* <SearchInput /> */}
                                         </Col>
                                     </Row>
                                 <Link to="/guide" style={{position: 'absolute', bottom: -40, color: 'white', fontSize: '0.8rem', backgroundColor: 'rgb(32, 43, 67)', padding: '3px 10px', borderRadius: 5}}>{patchNotePhrase}</Link>
