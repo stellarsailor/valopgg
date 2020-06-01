@@ -1,3 +1,5 @@
+import { staticServer } from "../serverUrl"
+
 export const skin = [
     {
         id: 0,
@@ -517,24 +519,24 @@ export const skinCollection = [
         id: 0,
         name: 'Luxe',
         name_ko: '럭스',
-        image: require('../images/weaponskins/luxe-skins-collection.png')
+        image: `${staticServer}/weaponskins/luxe-skins-collection.png`
     },
     {
         id: 1,
         name: 'Prism',
         name_ko: '프리즘',
-        image: require('../images/weaponskins/prism-skins-collection.png')
+        image: `${staticServer}/weaponskins/prism-skins-collection.png`
     },
     {
         id: 2,
         name: 'Reaver',
         name_ko: '약탈자',
-        image: require('../images/weaponskins/reaver-skins-collection.png')
+        image: `${staticServer}/weaponskins/reaver-skins-collection.png`
     },
     {
         id: 3,
         name: 'Hypebeast',
         name_ko: '',
-        image: require('../images/weaponskins/hypebeast-skins-collection.png')
+        image: `${staticServer}/weaponskins/hypebeast-skins-collection.png`
     },
 ]

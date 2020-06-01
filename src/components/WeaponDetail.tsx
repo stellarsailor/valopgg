@@ -8,6 +8,7 @@ import { weapon } from '../datas/weapon'
 import { skin } from '../datas/weaponSkin'
 import WeaponRender from './subcomponents/WeaponRender';
 import Adfit from './subcomponents/Adfit';
+import { staticServer } from '../serverUrl'
 
 const WeaponCategory = styled.div`
     background-color: #273552;
@@ -76,7 +77,7 @@ export default function WeaponDetail(props) {
                             <Col xs={24} sm={24} md={18} lg={18} xl={18} style={{ padding: '1rem', marginBottom: '1rem'}}>
                                 <TitleText>{data.name_ko}</TitleText>
                                 <div style={{display: 'flex', justifyContent: 'center'}}>
-                                    <img src={require(`../images/weaponskins/normal-${data.name.toLowerCase()}-skin.png`)} style={{width: '80%', alignSelf: 'flex-start'}} alt="발로란트 무기 스킨" />
+                                    <img src={(`${staticServer}/weaponskins/normal-${data.name.toLowerCase()}-skin.png`)} style={{width: '80%', alignSelf: 'flex-start'}} alt="발로란트 무기 스킨" />
                                 </div>
                                 <div style={{marginLeft: '1rem', color: 'lightgray'}}>탄창 : <WhiteBoldText>{data.capacity}</WhiteBoldText></div>
                                 <div style={{marginLeft: '1rem', color: 'lightgray'}}>관통력 : <WhiteBoldText>{data.penetration}</WhiteBoldText></div>
@@ -150,7 +151,7 @@ export default function WeaponDetail(props) {
                                         skin.filter(v => v.name.toLowerCase() === weaponName)[0].skins.map(v => (
                                             <Col xs={24} sm={24} md={12} lg={12} xl={12} style={{padding: 10}} key={v.id}>
                                                 <div><span style={{fontSize: '1.3rem'}}>{v.name_ko}</span> ({v.cost}{parseInt(v.cost) > 0 ? ` = 약 ${parseInt(v.cost) * 11}원` : null})</div>
-                                                <img src={require(`../images/weaponskins/${v.category}-${weaponName.toLowerCase()}-${v.level === 0 ? '' : `level-${v.level}-`}skin.png`)} style={{backgroundColor: '#273552', width: '100%'}} alt={`${weaponName} 발로란트 무기 스킨`} />
+                                                <img src={(`${staticServer}/weaponskins/${v.category}-${weaponName.toLowerCase()}-${v.level === 0 ? '' : `level-${v.level}-`}skin.png`)} style={{backgroundColor: '#273552', width: '100%'}} alt={`${weaponName} 발로란트 무기 스킨`} />
                                             </Col>
                                         ))
                                     }
