@@ -5,6 +5,7 @@ import { Row, Col, BackTop } from 'antd';
 import { dic } from '../datas/dic'
 import { dynamicSort } from '../logics/dynamicSort'
 import DicWordRender from './subcomponents/DicWordRender';
+import Adfit from './subcomponents/Adfit';
 
 export default function Dic() {
 
@@ -16,6 +17,7 @@ export default function Dic() {
                     <title>발옵지지 발로란트 용어 사전</title>
                     <meta name="description" content={`발로란트에서 사용하는 모든 용어 사전`} />
                 </MetaTags>
+                <Adfit adUnit="DAN-skxug7w2pkjd" adWidth="320" adHeight="100" />
                 <div style={{backgroundColor: '#202b43', padding: '5%'}}>
                     {/* 전체 ㄱㄴㄷㄹㅁㅂㅅㅇㅈㅊㅋㅌㅍㅎ A-Z 0-9 */}
                     {dic.slice(0).sort(dynamicSort('word_ko')).map((v) => (

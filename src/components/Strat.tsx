@@ -14,6 +14,7 @@ import { strat } from '../datas/strat'
 // import { agent } from '../datas/agent'
 import { dynamicSort } from '../logics/dynamicSort'
 import mainLogo from '../images/mainLogo.png'
+import Adfit from './subcomponents/Adfit';
 
 
 // const Images = [
@@ -83,6 +84,7 @@ export default function Strat(props) {
                     <title>발옵지지 발로란트 요원별 전략</title>
                     <meta name="description" content='발로란트 요원들의 공략 및 원웨이 스모크 등을 확인가능합니다.' />
                 </MetaTags>
+                <Adfit adUnit="DAN-qeexz0nlvvp2" adWidth="320" adHeight="50" />
                 <Row justify='center' style={{fontSize: '1.4rem', marginTop: 15, marginBottom: 15, backgroundColor: '#202b43', padding: 10}} >
                     <Col xs={22} sm={22} md={22} lg={22} xl={12}>
                         {agentArr.map((v, index) => (
@@ -224,6 +226,7 @@ export default function Strat(props) {
                                             <img src={mainLogo} style={{position: 'absolute', bottom: '10%', left: '3%', width: '30%'}} alt="valop.gg main logo" />
                                             <img src={`${staticServer}/strat/${agentSelection}/${mapSelection}/${detailView.identifier}${v}.png`} style={{width: '100%', alignSelf: 'flex-start'}} key={index} alt={`strategy ${detailView.identifier} of ${agentSelection} in ${mapSelection}`} />
                                         </TransformComponent>
+                                        { index === 0 ? <Adfit adUnit="DAN-skxug7w2pkjd" adWidth="320" adHeight="100" /> : null }
                                     </div>
                                 )}
                                 </TransformWrapper>

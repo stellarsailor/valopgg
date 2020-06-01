@@ -91,7 +91,8 @@ export default function ReactionTest() {
                     <title>발옵지지 발로란트 FPS 반응속도 측정 테스트</title>
                     <meta name="description" content={`발로란트 게임을 옮겨놓은듯한 시뮬레이터로 본인의 FPS 반응속도 재능을 측정해보세요!`} />
                 </MetaTags>
-                <Row>
+                { window.innerWidth < 576 ? <Adfit adUnit="DAN-qeexz0nlvvp2" adWidth="320" adHeight="50" /> : null }
+                <Row justify='center'>
                     <Col xs={24} sm={24} md={15} lg={15} xl={15} >
                         <div style={{width: '100%', height: containerHeight}} ref={ref}>
                             {
@@ -175,12 +176,10 @@ export default function ReactionTest() {
                                 }
                             </a>
                             <Paragraph style={{color: 'white', fontSize: '1rem', textAlign: 'center', margin: '2rem 0'}} copyable={{ text: 'https://valop.gg/reaction' }}>친구에게 URL 공유</Paragraph>
+                            { window.innerWidth < 576 ? null : <Adfit adUnit="DAN-u7razu6r6nn5" adWidth="300" adHeight="250" /> }
                         </div>
                     </Col>
-                    {/* <AdfitWebComponent
-                    adUnit="DAN-qe74ylevqulf"
-                    /> */}
-                    <Adfit adUnit="DAN-qe74ylevqulf" />
+
                 </Row>
             </Col>
         </Row>

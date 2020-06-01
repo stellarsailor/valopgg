@@ -148,15 +148,6 @@ export default function Main(props) {
                     format="auto"
                     responsive="true"
                 />
-                <div style={{display: 'flex', justifyContent: 'center'}}>
-                    {/* <Adfit adUnit="DAN-u8ap0m0ade0n" adWidth = "320" adHeight  = "50" /> */}
-                    <Adfit adUnit="DAN-qe74ylevqulf" adWidth = "728" adHeight  = "90" />
-                    {/* <AdfitWebComponent
-                    key={Math.random()}
-                    adUnit="DAN-qe74ylevqulf"
-                    adHeight="100"
-                    /> */}
-                </div>
 
                 {/* <Collapse defaultActiveKey={['1']} >
                     <Panel header="0.49 패치노트" key="1">

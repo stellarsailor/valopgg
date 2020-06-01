@@ -2,6 +2,7 @@ import React, { useState, useEffect, useCallback } from 'react'
 import MetaTags from 'react-meta-tags';
 import { Row, Col, Select, Input, Typography } from 'antd';
 import styled from 'styled-components'
+import Adfit from './subcomponents/Adfit';
 
 const { Paragraph } = Typography
 
@@ -72,14 +73,15 @@ export default function Calculator() {
     
     return(
         <Row justify="center" style={{backgroundColor: 'rgba(19, 28, 46, 0.95)', minHeight: 800}} >
-            <Col xs={24} sm={22} md={20} lg={20} xl={15} style={{padding: '5%', backgroundColor: '#f5f5f5'}}>
+            <Col xs={24} sm={22} md={20} lg={20} xl={15} style={{padding: '4%', backgroundColor: '#f5f5f5'}}>
                 <MetaTags>
                     <title>발옵지지 감도계산기 타 FPS 에서 발로란트로의 감도</title>
                     <meta name="description" content={'오버워치, 배틀그라운드, 배틀필드, 카스 글옵(CS:GO), 레인보우 식스 등 게임에서 발로란트로의 감도 변환기 계산기를 제공합니다.'} />
                 </MetaTags>
-                <div style={{textAlign: 'center', color: 'black', fontSize: '1.4rem', marginBottom: '5%', fontWeight: 'bold'}}>
+                <div style={{textAlign: 'center', color: 'black', fontSize: '1.4rem', margin: '1rem 0', fontWeight: 'bold'}}>
                     Valop.gg 감도 계산기
                 </div>
+                {window.innerWidth < 576 ? <Adfit adUnit="DAN-skxug7w2pkjd" adWidth="320" adHeight="100" /> : <Adfit adUnit="DAN-qe74ylevqulf" adWidth="728" adHeight="90" /> }
                 <Paragraph style={{color: 'black', fontSize: '1rem', textAlign: 'right'}} copyable={{ text: 'https://valop.gg/calculator' }}>링크 복사</Paragraph>
 
                 <div style={{backgroundColor: 'white', border: '1px solid lightgray', padding: '5%'}}>

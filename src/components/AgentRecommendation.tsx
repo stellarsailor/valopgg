@@ -8,6 +8,7 @@ import capitalizeFirstLetter from '../logics/capitalizeFirstLetter'
 import { staticServer } from '../serverUrl'
 
 import { question } from '../datas/question'
+import Adfit from './subcomponents/Adfit';
 
 const { Paragraph } = Typography;
 
@@ -90,7 +91,7 @@ export default function AgentRecommendation() {
                             <div style={{display: 'flex', justifyContent: 'center', marginTop: 20, padding: '1rem'}}>
                                 <div style={{fontSize: '1.2rem'}}>True or False 질문에 답변을 고르고 나에게 맞는 요원을 찾아보세요!</div>
                             </div>
-                            <div style={{display: 'flex', justifyContent: 'center', marginTop: 20}}>
+                            <div style={{display: 'flex', justifyContent: 'center', margin: '1rem 0'}}>
                                 <Button type="primary" onClick={() => setPage(page+1)}>시작하기</Button>
                             </div>
                         </>
@@ -136,6 +137,7 @@ export default function AgentRecommendation() {
                             </Col>
                         </Row>
                 }
+                { window.innerWidth < 576 ? <Adfit adUnit="DAN-skxug7w2pkjd" adWidth="320" adHeight="100" /> : <Adfit adUnit="DAN-qe74ylevqulf" adWidth="728" adHeight="90" margin /> }
             </Col>
         </Row>
     )

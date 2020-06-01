@@ -11,6 +11,7 @@ import { staticServer } from '../serverUrl'
 import SkillCount from './subcomponents/SkillCount';
 import { agent } from '../datas/agent'
 import { strat } from '../datas/strat'
+import Adfit from './subcomponents/Adfit';
 
 export default function AgentDetail(props) {
 
@@ -70,9 +71,9 @@ export default function AgentDetail(props) {
                                 <img src={`${staticServer}/agents/${agent[agentSelection].name.toLowerCase()}-standing.png`} style={{width: '100%'}} alt="Valorant agent standing full shot" />
                             </div>
                         </Col>
-                        <Col xs={24} sm={24} md={12} lg={12} xl={16} style={{padding: 20}}>
+                        <Col xs={24} sm={24} md={12} lg={12} xl={16} style={{padding: '0 1rem'}}>
                             {/* <img src={`https://valop-static.s3.ap-northeast-2.amazonaws.com/abilities_gif/${agent[agentSelection].name.toLowerCase()}${abilitySelection}.gif`} style={{width: '100%', borderRadius: 10}} /> */}
-                            <div style={{fontSize: '1.6rem', textAlign: 'center', marginBottom: '2rem'}}>"{agent[agentSelection].quote}"</div>
+                            <div style={{fontSize: '1.6rem', textAlign: 'center', margin: '1rem 0'}}>"{agent[agentSelection].quote}"</div>
                             <Row style={{width: '100%', paddingLeft: '10%', paddingRight: '10%'}}>
                                 {arr.map(v => (
                                     <Col span={6} key={v} onClick={() => setAbilitySelection(v)} style={{padding: 10}}> 
@@ -97,7 +98,7 @@ export default function AgentDetail(props) {
                                 <div style={{color: '#ff324c', fontWeight: 'bold'}}>적군 {agent[agentSelection].skill[3].name} 대사 : <span style={{color: 'white'}}>"{agent[agentSelection].enemy_ult}"</span></div>
                             </div>
                             <Link to={`/strat?name=${agent[agentSelection].name.toLowerCase()}`} 
-                            style={{display: 'flex', flexDirection: 'row', padding: '1rem', alignItems: 'center', backgroundColor: '#202b43', marginTop: '1rem'}}>
+                            style={{display: 'flex', flexDirection: 'row', padding: '1rem', alignItems: 'center', backgroundColor: '#202b43', marginTop: '1rem', marginBottom: '1rem'}}>
                                 <img src={`${staticServer}/agents/${agent[agentSelection].name.toLowerCase()}-headshot.png`} style={{width: '3rem', borderRadius: '3rem', border: '1px solid white'}} alt='agent headshot' />
                                 <div style={{margin: '0 1rem'}}>
                                     <div style={{fontWeight: 'bold'}}>
@@ -111,6 +112,7 @@ export default function AgentDetail(props) {
                                     <ArrowRightOutlined style={{fontSize: '1.2rem', fontWeight: 'bold'}} />
                                 </div>
                             </Link>
+                            <Adfit adUnit="DAN-skxug7w2pkjd" adWidth="320" adHeight="100" />
                         </Col>
                     <div style={{backgroundColor: '#202b43', padding: '1rem', margin: '1rem'}}>
                         <div style={{fontWeight: 'bold', fontSize: '1.2rem', marginBottom: '0.5rem'}}>
