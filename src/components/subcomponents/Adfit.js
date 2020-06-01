@@ -31,7 +31,7 @@ export default class Adfit extends React.Component {
 
         return (
             <div key={Math.random} style={{display: 'flex', justifyContent: 'center', margin: this.props.margin, height: parseInt(this.props.adHeight)}}>
-                {/* <ins className={'kakao_ad_area'}
+                <ins className={'kakao_ad_area'}
                     style={{
                         display: 'block',
                         width: '100%'
@@ -43,7 +43,7 @@ export default class Adfit extends React.Component {
                     data-ad-param-channel={this.props.adParamChannel}
                     data-ad-param-cp={this.props.adParamCp}
                     >
-                </ins> */}
+                </ins>
             </div>
             )
     }

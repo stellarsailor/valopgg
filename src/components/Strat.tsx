@@ -47,11 +47,11 @@ export default function Strat(props) {
 
     useEffect(() => {
         window.scrollTo(0, 0)
-        axios.get(`http://54.180.152.66:8181/test`)
-        .then(res => {
-            const data = res.data;
-            console.log(data.stratData)
-        })
+        // axios.get(`http://54.180.152.66:8181/test`)
+        // .then(res => {
+        //     const data = res.data;
+        //     console.log(data.stratData)
+        // })
     },[])
 
     const mapArr = ["Bind", "Haven", "Split"]
