@@ -73,6 +73,7 @@ export default function Strat(props) {
         identifier: '',
         difficulty: '',
         type: '',
+        version:'',
         method: []
     });
 
@@ -98,6 +99,7 @@ export default function Strat(props) {
                                         identifier: '',
                                         difficulty: '',
                                         type: '',
+                                        version:'',
                                         method: []
                                     })
                                 }}>
@@ -117,6 +119,7 @@ export default function Strat(props) {
                                         identifier: '',
                                         difficulty: '',
                                         type: '',
+                                        version:'',
                                         method: []
                                     })
                                 }}>
@@ -206,11 +209,12 @@ export default function Strat(props) {
                                 identifier: '',
                                 difficulty: '',
                                 type: '',
+                                version:'',
                                 method: []
                             })} >
-                            <ArrowLeftOutlined style={{fontSize: '1.4rem', margin: '0 1rem'}} />
-                            <span style={{fontSize: '1.5rem'}}>
-                                <span style={{fontWeight: 'bold'}}> {detailView.title} </span>
+                            <ArrowLeftOutlined style={{fontSize: '1.2rem', marginRight: '1rem'}} />
+                            <span style={window.innerWidth < 576 ? {fontSize: '1.2rem'} : {fontSize: '1.5rem'}}>
+                                <span style={{fontWeight: 'bold'}}> {detailView.title} </span><span style={{fontSize: '0.8rem'}}>(버전 {detailView.version})</span>
                             </span>
                         </a>
                         {

@@ -58,6 +58,7 @@ type stratType = {
     identifier: string;
     difficulty: '쉬움' | '보통' | '어려움'
     type: 'image' | 'video' | 'youtube';
+    version: string;
     method: Array<number>;
 }
 
@@ -71,6 +72,7 @@ export const strat: agentType = {
                 identifier: 'asite-mid-defense-flash',
                 difficulty: '쉬움',
                 type: 'image',
+                version: '0.50',
                 method: [
                     1
                 ],
@@ -82,6 +84,7 @@ export const strat: agentType = {
                 identifier: 'asite-shower-defense-flash',
                 difficulty: '쉬움',
                 type: 'image',
+                version: '0.50',
                 method: [
                     1
                 ],
@@ -93,6 +96,7 @@ export const strat: agentType = {
                 identifier: 'blobby-hookah-offense-flash',
                 difficulty: '보통',
                 type: 'image',
+                version: '0.50',
                 method: [
                     1
                 ],
@@ -104,6 +108,7 @@ export const strat: agentType = {
                 identifier: 'bsite-blong-defense-flash',
                 difficulty: '보통',
                 type: 'image',
+                version: '0.50',
                 method: [
                     1,2
                 ],
@@ -115,6 +120,7 @@ export const strat: agentType = {
                 identifier: 'mid-asite-offense-flash',
                 difficulty: '보통',
                 type: 'image',
+                version: '0.50',
                 method: [
                     1
                 ],
@@ -128,6 +134,7 @@ export const strat: agentType = {
                 identifier: 'aconnector-flash',
                 difficulty: '보통',
                 type: 'image',
+                version: '0.50',
                 method: [
                     1,2
                 ],
@@ -139,6 +146,7 @@ export const strat: agentType = {
                 identifier: 'along-flash',
                 difficulty: '어려움',
                 type: 'image',
+                version: '0.50',
                 method: [
                     1,2
                 ],
@@ -150,6 +158,7 @@ export const strat: agentType = {
                 identifier: 'ashort-mid-defense-flash',
                 difficulty: '어려움',
                 type: 'image',
+                version: '0.50',
                 method: [
                     1,2
                 ],
@@ -161,6 +170,7 @@ export const strat: agentType = {
                 identifier: 'csite-garage-defense-flash',
                 difficulty: '보통',
                 type: 'image',
+                version: '0.50',
                 method: [
                     1,2
                 ],
@@ -174,6 +184,7 @@ export const strat: agentType = {
                 identifier: 'bheaven-garage-flash',
                 difficulty: '보통',
                 type: 'image',
+                version: '0.50',
                 method: [
                     1,2
                 ],
@@ -185,6 +196,7 @@ export const strat: agentType = {
                 identifier: 'mail-mid-flash',
                 difficulty: '보통',
                 type: 'image',
+                version: '0.50',
                 method: [
                     1,2
                 ],
@@ -196,6 +208,7 @@ export const strat: agentType = {
                 identifier: 'vent-ramps-flash',
                 difficulty: '보통',
                 type: 'image',
+                version: '0.50',
                 method: [
                     1
                 ],
@@ -211,6 +224,7 @@ export const strat: agentType = {
                     identifier: 'alink-heaven-molly',
                     difficulty: '보통',
                     type: 'image',
+                    version: '0.50',
                     method: [
                         1,2,3
                     ],
@@ -222,6 +236,7 @@ export const strat: agentType = {
                     identifier: 'ashort-asite-molly',
                     difficulty: '쉬움',
                     type: 'image',
+                    version: '0.50',
                     method: [
                         1,2
                     ]
@@ -233,6 +248,7 @@ export const strat: agentType = {
                     identifier: 'ashort-uhall-molly',
                     difficulty: '어려움',
                     type: 'image',
+                    version: '0.50',
                     method: [
                         1,2,3
                     ]
@@ -244,6 +260,7 @@ export const strat: agentType = {
                     identifier: 'asite-smoke',
                     difficulty: '쉬움',
                     type: 'image',
+                    version: '0.50',
                     method: [
                         1,2
                     ]
@@ -255,6 +272,7 @@ export const strat: agentType = {
                     identifier: 'bshort-hookah-molly',
                     difficulty: '보통',
                     type: 'image',
+                    version: '0.50',
                     method: [
                         1,2
                     ]
@@ -266,6 +284,7 @@ export const strat: agentType = {
                     identifier: 'bsite-molly',
                     difficulty: '쉬움',
                     type: 'image',
+                    version: '0.50',
                     method: [
                         1,2
                     ]
@@ -277,6 +296,7 @@ export const strat: agentType = {
                     identifier: 'bsite-smoke',
                     difficulty: '쉬움',
                     type: 'image',
+                    version: '0.50',
                     method: [
                         1,2
                     ]
@@ -288,6 +308,7 @@ export const strat: agentType = {
                     identifier: 'shower-acorner-molly',
                     difficulty: '어려움',
                     type: 'image',
+                    version: '0.50',
                     method: [
                         1,2,3
                     ]
@@ -299,6 +320,7 @@ export const strat: agentType = {
                     identifier: 'shower-bsite-molly',
                     difficulty: '보통',
                     type: 'image',
+                    version: '0.50',
                     method: [
                         1,2
                     ]
@@ -312,6 +334,7 @@ export const strat: agentType = {
                 identifier: 'ccorner-molly',
                 difficulty: '보통',
                 type: 'image',
+                version: '0.50',
                 method: [
                     1,2
                 ],
@@ -323,6 +346,7 @@ export const strat: agentType = {
                 identifier: 'alink-asite-molly',
                 difficulty: '보통',
                 type: 'image',
+                version: '0.50',
                 method: [
                     1,2
                 ],
@@ -334,6 +358,7 @@ export const strat: agentType = {
                 identifier: 'along-asite-molly',
                 difficulty: '어려움',
                 type: 'image',
+                version: '0.50',
                 method: [
                     1,2,3
                 ],
@@ -345,6 +370,7 @@ export const strat: agentType = {
                 identifier: 'bsite-window-molly',
                 difficulty: '어려움',
                 type: 'image',
+                version: '0.50',
                 method: [
                     1,2
                 ],
@@ -356,6 +382,7 @@ export const strat: agentType = {
                 identifier: 'spawn-csite-molly',
                 difficulty: '어려움',
                 type: 'image',
+                version: '0.50',
                 method: [
                     1,2,3
                 ],
@@ -367,6 +394,7 @@ export const strat: agentType = {
                 identifier: 'alink-acorner-molly',
                 difficulty: '보통',
                 type: 'image',
+                version: '0.50',
                 method: [
                     1,2,3
                 ],
@@ -378,6 +406,7 @@ export const strat: agentType = {
                 identifier: 'csite-smoke',
                 difficulty: '쉬움',
                 type: 'image',
+                version: '0.50',
                 method: [
                     1,2
                 ],
@@ -389,6 +418,7 @@ export const strat: agentType = {
                 identifier: 'bsite-smoke',
                 difficulty: '쉬움',
                 type: 'image',
+                version: '0.50',
                 method: [
                     1,2
                 ],
@@ -400,6 +430,7 @@ export const strat: agentType = {
                 identifier: 'bsite-smoke-2nd',
                 difficulty: '쉬움',
                 type: 'image',
+                version: '0.50',
                 method: [
                     1,2
                 ],
@@ -411,6 +442,7 @@ export const strat: agentType = {
                 identifier: 'along-asite-smoke',
                 difficulty: '쉬움',
                 type: 'image',
+                version: '0.50',
                 method: [
                     1,2
                 ],
@@ -422,6 +454,7 @@ export const strat: agentType = {
                 identifier: 'ashort-asite-smoke',
                 difficulty: '쉬움',
                 type: 'image',
+                version: '0.50',
                 method: [
                     1,2
                 ],
@@ -435,6 +468,7 @@ export const strat: agentType = {
                 identifier: 'sewer-vent-molly',
                 difficulty: '보통',
                 type: 'image',
+                version: '0.50',
                 method: [
                     1,2
                 ],
@@ -446,6 +480,7 @@ export const strat: agentType = {
                 identifier: 'midbot-midtop',
                 difficulty: '보통',
                 type: 'image',
+                version: '0.50',
                 method: [
                     1,2
                 ],
@@ -457,6 +492,7 @@ export const strat: agentType = {
                 identifier: 'bsite-molly',
                 difficulty: '보통',
                 type: 'image',
+                version: '0.50',
                 method: [
                     1,2
                 ],
@@ -468,6 +504,7 @@ export const strat: agentType = {
                 identifier: 'aheaven-molly',
                 difficulty: '보통',
                 type: 'image',
+                version: '0.50',
                 method: [
                     1,2,3
                 ],
@@ -479,6 +516,7 @@ export const strat: agentType = {
                 identifier: 'aheaven-asite-molly',
                 difficulty: '보통',
                 type: 'image',
+                version: '0.50',
                 method: [
                     1,2
                 ],
@@ -490,6 +528,7 @@ export const strat: agentType = {
                 identifier: 'acorner-molly',
                 difficulty: '보통',
                 type: 'image',
+                version: '0.50',
                 method: [
                     1,2,3
                 ],
@@ -501,6 +540,7 @@ export const strat: agentType = {
                 identifier: 'asite-smoke',
                 difficulty: '쉬움',
                 type: 'image',
+                version: '0.50',
                 method: [
                     1,2
                 ],
@@ -512,6 +552,7 @@ export const strat: agentType = {
                 identifier: 'asite-stair-molly',
                 difficulty: '어려움',
                 type: 'image',
+                version: '0.50',
                 method: [
                     1,2,3
                 ],
@@ -523,6 +564,7 @@ export const strat: agentType = {
                 identifier: 'asite-screen-molly',
                 difficulty: '보통',
                 type: 'image',
+                version: '0.50',
                 method: [
                     1,2,3
                 ],
@@ -534,6 +576,7 @@ export const strat: agentType = {
                 identifier: 'bheaven-bsite-molly',
                 difficulty: '보통',
                 type: 'image',
+                version: '0.50',
                 method: [
                     1,2
                 ],
@@ -545,6 +588,7 @@ export const strat: agentType = {
                 identifier: 'bsite-smoke',
                 difficulty: '쉬움',
                 type: 'image',
+                version: '0.50',
                 method: [
                     1,2,3
                 ],
@@ -556,6 +600,7 @@ export const strat: agentType = {
                 identifier: 'mid-asite-smoke',
                 difficulty: '쉬움',
                 type: 'image',
+                version: '0.50',
                 method: [
                     1,2,3
                 ],
@@ -567,6 +612,7 @@ export const strat: agentType = {
                 identifier: 'mid-bsite-smoke',
                 difficulty: '쉬움',
                 type: 'image',
+                version: '0.50',
                 method: [
                     1,2,3
                 ],
@@ -582,6 +628,7 @@ export const strat: agentType = {
                 identifier: 'ashort-spycam',
                 difficulty: '보통',
                 type: 'image',
+                version: '0.50',
                 method: [
                     1,2,3
                 ],
@@ -593,6 +640,7 @@ export const strat: agentType = {
                 identifier: 'ashort-spycam-2nd',
                 difficulty: '어려움',
                 type: 'image',
+                version: '0.50',
                 method: [
                     1,2,3,4
                 ],
@@ -604,6 +652,7 @@ export const strat: agentType = {
                 identifier: 'bsite-spycam',
                 difficulty: '보통',
                 type: 'image',
+                version: '0.50',
                 method: [
                     1,2,3
                 ],
@@ -615,6 +664,7 @@ export const strat: agentType = {
                 identifier: 'hookah-spycam',
                 difficulty: '어려움',
                 type: 'image',
+                version: '0.50',
                 method: [
                     1,2
                 ],
@@ -626,6 +676,7 @@ export const strat: agentType = {
                 identifier: 'hookah-spycam-2nd',
                 difficulty: '보통',
                 type: 'image',
+                version: '0.50',
                 method: [
                     1,2
                 ],
@@ -637,6 +688,7 @@ export const strat: agentType = {
                 identifier: 'shower-spycam',
                 difficulty: '보통',
                 type: 'image',
+                version: '0.50',
                 method: [
                     1,2,3,4
                 ],
@@ -650,6 +702,7 @@ export const strat: agentType = {
                 identifier: 'agarden-along-spycam',
                 difficulty: '어려움',
                 type: 'image',
+                version: '0.50',
                 method: [
                     1,2
                 ],
@@ -661,6 +714,7 @@ export const strat: agentType = {
                 identifier: 'asite-spycam',
                 difficulty: '어려움',
                 type: 'image',
+                version: '0.50',
                 method: [
                     1,2
                 ],
@@ -672,6 +726,7 @@ export const strat: agentType = {
                 identifier: 'csite-spycam',
                 difficulty: '보통',
                 type: 'image',
+                version: '0.50',
                 method: [
                     1,2,3
                 ],
@@ -683,6 +738,7 @@ export const strat: agentType = {
                 identifier: 'csite-spycam-2nd',
                 difficulty: '보통',
                 type: 'image',
+                version: '0.50',
                 method: [
                     1,2,3,4
                 ],
@@ -696,6 +752,7 @@ export const strat: agentType = {
                 identifier: 'alobby-spycam',
                 difficulty: '보통',
                 type: 'image',
+                version: '0.50',
                 method: [
                     1,2,3,4
                 ],
@@ -707,6 +764,7 @@ export const strat: agentType = {
                 identifier: 'aramps-spycam',
                 difficulty: '보통',
                 type: 'image',
+                version: '0.50',
                 method: [
                     1,2,3
                 ],
@@ -718,6 +776,7 @@ export const strat: agentType = {
                 identifier: 'bsite-spycam',
                 difficulty: '어려움',
                 type: 'image',
+                version: '0.50',
                 method: [
                     1,2,3
                 ],
@@ -729,6 +788,7 @@ export const strat: agentType = {
                 identifier: 'midbot-spycam',
                 difficulty: '보통',
                 type: 'image',
+                version: '0.50',
                 method: [
                     1,2
                 ],
@@ -740,6 +800,7 @@ export const strat: agentType = {
                 identifier: 'midmail-spycam',
                 difficulty: '어려움',
                 type: 'image',
+                version: '0.50',
                 method: [
                     1,2,3
                 ],
@@ -755,6 +816,7 @@ export const strat: agentType = {
                 identifier: 'ashort-heaven-smoke',
                 difficulty: '보통',
                 type: 'image',
+                version: '0.50',
                 method: [
                     1,2,3
                 ],
@@ -766,6 +828,7 @@ export const strat: agentType = {
                 identifier: 'ashort-smoke',
                 difficulty: '보통',
                 type: 'image',
+                version: '0.50',
                 method: [
                     1,2,3
                 ],
@@ -777,6 +840,7 @@ export const strat: agentType = {
                 identifier: 'bhall-hookah-smoke',
                 difficulty: '보통',
                 type: 'image',
+                version: '0.50',
                 method: [
                     1,2,3
                 ],
@@ -788,6 +852,7 @@ export const strat: agentType = {
                 identifier: 'hookah-bhall-smoke',
                 difficulty: '보통',
                 type: 'image',
+                version: '0.50',
                 method: [
                     1,2,3
                 ],
@@ -799,6 +864,7 @@ export const strat: agentType = {
                 identifier: 'shower-heaven-smoke',
                 difficulty: '어려움',
                 type: 'image',
+                version: '0.50',
                 method: [
                     1,2,3
                 ],
@@ -812,6 +878,7 @@ export const strat: agentType = {
                 identifier: 'clong-smoke',
                 difficulty: '쉬움',
                 type: 'image',
+                version: '0.50',
                 method: [
                     1,2
                 ],
@@ -823,6 +890,7 @@ export const strat: agentType = {
                 identifier: 'garage-smoke',
                 difficulty: '어려움',
                 type: 'image',
+                version: '0.50',
                 method: [
                     1,2
                 ],
@@ -834,6 +902,7 @@ export const strat: agentType = {
                 identifier: 'garage-smoke',
                 difficulty: '어려움',
                 type: 'image',
+                version: '0.50',
                 method: [
                     1,2,3
                 ],
@@ -845,6 +914,7 @@ export const strat: agentType = {
                 identifier: 'along-ult',
                 difficulty: '어려움',
                 type: 'image',
+                version: '0.50',
                 method: [
                     1
                 ],
@@ -856,6 +926,7 @@ export const strat: agentType = {
                 identifier: 'doubledoor-updraft',
                 difficulty: '어려움',
                 type: 'image',
+                version: '0.50',
                 method: [
                     1,2,3
                 ],
@@ -867,6 +938,7 @@ export const strat: agentType = {
                 identifier: 'mid-window-updraft',
                 difficulty: '어려움',
                 type: 'image',
+                version: '0.50',
                 method: [
                     1,2,3
                 ],
@@ -880,6 +952,7 @@ export const strat: agentType = {
                 identifier: 'heaven-amain-smoke',
                 difficulty: '쉬움',
                 type: 'image',
+                version: '0.50',
                 method: [
                     1,2
                 ],
@@ -891,6 +964,7 @@ export const strat: agentType = {
                 identifier: 'mid-smoke',
                 difficulty: '쉬움',
                 type: 'image',
+                version: '0.50',
                 method: [
                     1,2
                 ],
@@ -906,6 +980,7 @@ export const strat: agentType = {
                 identifier: 'asite-attack-smoke',
                 difficulty: '보통',
                 type: 'image',
+                version: '0.50',
                 method: [
                     1,2,3
                 ],
@@ -917,6 +992,7 @@ export const strat: agentType = {
                 identifier: 'bsite-attack-smoke',
                 difficulty: '보통',
                 type: 'image',
+                version: '0.50',
                 method: [
                     1,2,3
                 ],
@@ -930,6 +1006,7 @@ export const strat: agentType = {
                 identifier: 'asite-attack-smoke',
                 difficulty: '보통',
                 type: 'image',
+                version: '0.50',
                 method: [
                     1,2,3
                 ],
@@ -941,6 +1018,7 @@ export const strat: agentType = {
                 identifier: 'bsite-attack-smoke',
                 difficulty: '보통',
                 type: 'image',
+                version: '0.50',
                 method: [
                     1,2,3
                 ],
@@ -952,6 +1030,7 @@ export const strat: agentType = {
                 identifier: 'csite-attack-smoke',
                 difficulty: '보통',
                 type: 'image',
+                version: '0.50',
                 method: [
                     1,2,3
                 ],
@@ -965,6 +1044,7 @@ export const strat: agentType = {
                 identifier: 'asite-attack-smoke',
                 difficulty: '보통',
                 type: 'image',
+                version: '0.50',
                 method: [
                     1,2,3
                 ],
@@ -976,6 +1056,7 @@ export const strat: agentType = {
                 identifier: 'mid-attack-smoke',
                 difficulty: '보통',
                 type: 'image',
+                version: '0.50',
                 method: [
                     1,2
                 ],
@@ -987,6 +1068,7 @@ export const strat: agentType = {
                 identifier: 'asite-attack-smoke',
                 difficulty: '보통',
                 type: 'image',
+                version: '0.50',
                 method: [
                     1,2,3
                 ],
@@ -1002,6 +1084,7 @@ export const strat: agentType = {
                 identifier: 'ashort-corner-molly',
                 difficulty: '보통',
                 type: 'image',
+                version: '0.50',
                 method: [
                     1,2,3,4
                 ],
@@ -1013,6 +1096,7 @@ export const strat: agentType = {
                 identifier: 'ashort-molly',
                 difficulty: '보통',
                 type: 'image',
+                version: '0.50',
                 method: [
                     1,2
                 ],
@@ -1024,6 +1108,7 @@ export const strat: agentType = {
                 identifier: 'ashort-truck-molly',
                 difficulty: '보통',
                 type: 'image',
+                version: '0.50',
                 method: [
                     1,2,3
                 ],
@@ -1035,6 +1120,7 @@ export const strat: agentType = {
                 identifier: 'bshort-bcubby-molly',
                 difficulty: '어려움',
                 type: 'image',
+                version: '0.50',
                 method: [
                     1,2,3
                 ],
@@ -1046,6 +1132,7 @@ export const strat: agentType = {
                 identifier: 'bshort-hookah-molly',
                 difficulty: '보통',
                 type: 'image',
+                version: '0.50',
                 method: [
                     1,2,3,4
                 ],
@@ -1057,6 +1144,7 @@ export const strat: agentType = {
                 identifier: 'shower-acorner-molly',
                 difficulty: '보통',
                 type: 'image',
+                version: '0.50',
                 method: [
                     1,2,3,4
                 ],
@@ -1070,6 +1158,7 @@ export const strat: agentType = {
                 identifier: 'alink-asite-molly',
                 difficulty: '보통',
                 type: 'image',
+                version: '0.50',
                 method: [
                     1,2,3
                 ],
@@ -1081,6 +1170,7 @@ export const strat: agentType = {
                 identifier: 'along-ashort-molly',
                 difficulty: '보통',
                 type: 'image',
+                version: '0.50',
                 method: [
                     1,2,3
                 ],
@@ -1094,6 +1184,7 @@ export const strat: agentType = {
                 identifier: 'arafters-amain-molly',
                 difficulty: '보통',
                 type: 'image',
+                version: '0.50',
                 method: [
                     1,2,3,4
                 ],
@@ -1105,6 +1196,7 @@ export const strat: agentType = {
                 identifier: 'arafters-asite-molly',
                 difficulty: '보통',
                 type: 'image',
+                version: '0.50',
                 method: [
                     1,2,3
                 ],
@@ -1116,6 +1208,7 @@ export const strat: agentType = {
                 identifier: 'mail-midbot-molly',
                 difficulty: '보통',
                 type: 'image',
+                version: '0.50',
                 method: [
                     1,2
                 ],
@@ -1127,6 +1220,7 @@ export const strat: agentType = {
                 identifier: 'midbot-mail-molly',
                 difficulty: '보통',
                 type: 'image',
+                version: '0.50',
                 method: [
                     1,2,3
                 ],
@@ -1138,6 +1232,7 @@ export const strat: agentType = {
                 identifier: 'midtop-midbot-molly',
                 difficulty: '보통',
                 type: 'image',
+                version: '0.50',
                 method: [
                     1,2
                 ],
@@ -1153,6 +1248,7 @@ export const strat: agentType = {
                 identifier: 'bshort-defense-boombot',
                 difficulty: '보통',
                 type: 'image',
+                version: '0.50',
                 method: [
                     1,2,3
                 ],
@@ -1166,6 +1262,7 @@ export const strat: agentType = {
                 identifier: 'doubledoor-garage-boombot',
                 difficulty: '보통',
                 type: 'image',
+                version: '0.50',
                 method: [
                     1,2,3,4,5
                 ],
@@ -1177,6 +1274,7 @@ export const strat: agentType = {
                 identifier: 'mid-alink-boombot',
                 difficulty: '보통',
                 type: 'image',
+                version: '0.50',
                 method: [
                     1,2,3,4,5
                 ],
@@ -1188,6 +1286,7 @@ export const strat: agentType = {
                 identifier: 'mid-clink-boombot',
                 difficulty: '보통',
                 type: 'image',
+                version: '0.50',
                 method: [
                     1,2,3,4
                 ],
@@ -1201,6 +1300,7 @@ export const strat: agentType = {
                 identifier: 'amain-asite-boombot',
                 difficulty: '보통',
                 type: 'image',
+                version: '0.50',
                 method: [
                     1,2,3,4
                 ],
@@ -1212,6 +1312,7 @@ export const strat: agentType = {
                 identifier: 'mail-midbot-boombot',
                 difficulty: '어려움',
                 type: 'image',
+                version: '0.50',
                 method: [
                     1,2,3,4,5,6
                 ],
@@ -1223,6 +1324,7 @@ export const strat: agentType = {
                 identifier: 'midbot-midtop-boombot',
                 difficulty: '어려움',
                 type: 'image',
+                version: '0.50',
                 method: [
                     1,2,3,4,5,6
                 ],
@@ -1238,6 +1340,7 @@ export const strat: agentType = {
                 identifier: 'ashort-wall',
                 difficulty: '쉬움',
                 type: 'image',
+                version: '0.50',
                 method: [
                     1,2,3
                 ],
@@ -1249,6 +1352,7 @@ export const strat: agentType = {
                 identifier: 'bsite-wall',
                 difficulty: '쉬움',
                 type: 'image',
+                version: '0.50',
                 method: [
                     1,2
                 ],
@@ -1260,6 +1364,7 @@ export const strat: agentType = {
                 identifier: 'bwindow-wall',
                 difficulty: '어려움',
                 type: 'image',
+                version: '0.50',
                 method: [
                     1,2
                 ],
@@ -1273,6 +1378,7 @@ export const strat: agentType = {
                 identifier: 'asite-wall',
                 difficulty: '쉬움',
                 type: 'image',
+                version: '0.50',
                 method: [
                     1,2,3,4
                 ],
@@ -1284,6 +1390,7 @@ export const strat: agentType = {
                 identifier: 'bsite-wall',
                 difficulty: '쉬움',
                 type: 'image',
+                version: '0.50',
                 method: [
                     1,2,3
                 ],
@@ -1297,6 +1404,7 @@ export const strat: agentType = {
                 identifier: 'asite-wall',
                 difficulty: '보통',
                 type: 'image',
+                version: '0.50',
                 method: [
                     1,2,3,4
                 ],
@@ -1308,6 +1416,7 @@ export const strat: agentType = {
                 identifier: 'bsite-wall',
                 difficulty: '쉬움',
                 type: 'image',
+                version: '0.50',
                 method: [
                     1,2
                 ],
@@ -1319,6 +1428,7 @@ export const strat: agentType = {
                 identifier: 'mid-wall',
                 difficulty: '쉬움',
                 type: 'image',
+                version: '0.50',
                 method: [
                     1,2
                 ],
@@ -1334,6 +1444,7 @@ export const strat: agentType = {
                 identifier: 'ashort-asite-recon',
                 difficulty: '보통',
                 type: 'image',
+                version: '0.50',
                 method: [
                     1,2
                 ],
@@ -1345,6 +1456,7 @@ export const strat: agentType = {
                 identifier: 'ashort-bmid-recon',
                 difficulty: '보통',
                 type: 'image',
+                version: '0.50',
                 method: [
                     1,2,3,4,5
                 ],
@@ -1356,6 +1468,7 @@ export const strat: agentType = {
                 identifier: 'ashort-recon',
                 difficulty: '보통',
                 type: 'image',
+                version: '0.50',
                 method: [
                     1,2,3,4,5
                 ],
@@ -1367,6 +1480,7 @@ export const strat: agentType = {
                 identifier: 'bmid-bsite-recon',
                 difficulty: '보통',
                 type: 'image',
+                version: '0.50',
                 method: [
                     1,2,3,4
                 ],
@@ -1378,6 +1492,7 @@ export const strat: agentType = {
                 identifier: 'bshort-bsite-recon',
                 difficulty: '보통',
                 type: 'image',
+                version: '0.50',
                 method: [
                     1,2,3
                 ],
@@ -1389,6 +1504,7 @@ export const strat: agentType = {
                 identifier: 'hookah-bmid-recon',
                 difficulty: '보통',
                 type: 'image',
+                version: '0.50',
                 method: [
                     1,2,3
                 ],
@@ -1400,6 +1516,7 @@ export const strat: agentType = {
                 identifier: 'shower-ashort-recon',
                 difficulty: '보통',
                 type: 'image',
+                version: '0.50',
                 method: [
                     1,2,3,4
                 ],
@@ -1411,6 +1528,7 @@ export const strat: agentType = {
                 identifier: 'shower-asite-recon',
                 difficulty: '보통',
                 type: 'image',
+                version: '0.50',
                 method: [
                     1,2,3
                 ],
@@ -1422,6 +1540,7 @@ export const strat: agentType = {
                 identifier: 'truck-ashort-recon',
                 difficulty: '보통',
                 type: 'image',
+                version: '0.50',
                 method: [
                     1,2,3
                 ],
@@ -1435,6 +1554,7 @@ export const strat: agentType = {
                 identifier: 'alink-asite-recon',
                 difficulty: '쉬움',
                 type: 'image',
+                version: '0.50',
                 method: [
                     1,2,3
                 ],
@@ -1446,6 +1566,7 @@ export const strat: agentType = {
                 identifier: 'along-asite-recon',
                 difficulty: '보통',
                 type: 'image',
+                version: '0.50',
                 method: [
                     1,2,3,4
                 ],
@@ -1457,6 +1578,7 @@ export const strat: agentType = {
                 identifier: 'asite-garden-recon',
                 difficulty: '어려움',
                 type: 'image',
+                version: '0.50',
                 method: [
                     1,2,3,4,5
                 ],
@@ -1468,6 +1590,7 @@ export const strat: agentType = {
                 identifier: 'bsite-midwindow-recon',
                 difficulty: '어려움',
                 type: 'image',
+                version: '0.50',
                 method: [
                     1,2,3,4,5,6
                 ],
@@ -1479,6 +1602,7 @@ export const strat: agentType = {
                 identifier: 'bsite-recon',
                 difficulty: '보통',
                 type: 'image',
+                version: '0.50',
                 method: [
                     1,2,3,
                 ],
@@ -1490,6 +1614,7 @@ export const strat: agentType = {
                 identifier: 'clong-csite-recon',
                 difficulty: '보통',
                 type: 'image',
+                version: '0.50',
                 method: [
                     1,2,3,4,5
                 ],
@@ -1501,6 +1626,7 @@ export const strat: agentType = {
                 identifier: 'middoors-garage-recon',
                 difficulty: '보통',
                 type: 'image',
+                version: '0.50',
                 method: [
                     1,2,3
                 ],
@@ -1514,6 +1640,7 @@ export const strat: agentType = {
                 identifier: 'aheaven-tspawn-recon',
                 difficulty: '쉬움',
                 type: 'image',
+                version: '0.50',
                 method: [
                     1,2,3
                 ],
@@ -1525,6 +1652,7 @@ export const strat: agentType = {
                 identifier: 'aramp-tspawn-recon',
                 difficulty: '어려움',
                 type: 'image',
+                version: '0.50',
                 method: [
                     1,2,3
                 ],
@@ -1536,6 +1664,7 @@ export const strat: agentType = {
                 identifier: 'bheaven-bsite-recon',
                 difficulty: '보통',
                 type: 'image',
+                version: '0.50',
                 method: [
                     1,2
                 ],
@@ -1547,6 +1676,7 @@ export const strat: agentType = {
                 identifier: 'bsite-blobby-recon',
                 difficulty: '보통',
                 type: 'image',
+                version: '0.50',
                 method: [
                     1,2,3
                 ],
@@ -1558,6 +1688,7 @@ export const strat: agentType = {
                 identifier: 'mail-mid-recon',
                 difficulty: '보통',
                 type: 'image',
+                version: '0.50',
                 method: [
                     1,2
                 ],
@@ -1569,6 +1700,7 @@ export const strat: agentType = {
                 identifier: 'mid-recon',
                 difficulty: '보통',
                 type: 'image',
+                version: '0.50',
                 method: [
                     1,2,3
                 ],
@@ -1580,6 +1712,7 @@ export const strat: agentType = {
                 identifier: 'mid-recon-2nd',
                 difficulty: '보통',
                 type: 'image',
+                version: '0.50',
                 method: [
                     1,2
                 ],
@@ -1591,6 +1724,7 @@ export const strat: agentType = {
                 identifier: 'tspawn-aramp-recon',
                 difficulty: '보통',
                 type: 'image',
+                version: '0.50',
                 method: [
                     1,2,3,4
                 ],
@@ -1602,6 +1736,7 @@ export const strat: agentType = {
                 identifier: 'tspawn-asite-recon',
                 difficulty: '보통',
                 type: 'image',
+                version: '0.50',
                 method: [
                     1,2,3
                 ],
@@ -1613,6 +1748,7 @@ export const strat: agentType = {
                 identifier: 'tspawn-bsite-recon',
                 difficulty: '보통',
                 type: 'image',
+                version: '0.50',
                 method: [
                     1,2,3,4
                 ],
@@ -1624,6 +1760,7 @@ export const strat: agentType = {
                 identifier: 'aheaven-alobby-defense-recon',
                 difficulty: '보통',
                 type: 'image',
+                version: '0.50',
                 method: [
                     1,2,3
                 ],
@@ -1635,6 +1772,7 @@ export const strat: agentType = {
                 identifier: 'alobby-aramps-offense-recon',
                 difficulty: '어려움',
                 type: 'image',
+                version: '0.50',
                 method: [
                     1,2,3,4
                 ],
@@ -1646,6 +1784,7 @@ export const strat: agentType = {
                 identifier: 'bheaven-bsite-defense-recon',
                 difficulty: '보통',
                 type: 'image',
+                version: '0.50',
                 method: [
                     1,2,3,4
                 ],
@@ -1657,6 +1796,7 @@ export const strat: agentType = {
                 identifier: 'blobby-bsite-offense-recon',
                 difficulty: '보통',
                 type: 'image',
+                version: '0.50',
                 method: [
                     1,2,3
                 ],
@@ -1672,6 +1812,7 @@ export const strat: agentType = {
                 identifier: 'asite-short-smoke',
                 difficulty: '보통',
                 type: 'image',
+                version: '0.50',
                 method: [
                     1,2,3,4
                 ],
@@ -1683,6 +1824,7 @@ export const strat: agentType = {
                 identifier: 'asite-shower-smoke',
                 difficulty: '보통',
                 type: 'image',
+                version: '0.50',
                 method: [
                     1,2,3,4
                 ],
@@ -1694,6 +1836,7 @@ export const strat: agentType = {
                 identifier: 'blong-bsite-smoke',
                 difficulty: '어려움',
                 type: 'image',
+                version: '0.50',
                 method: [
                     1,2,3,4,5
                 ],
@@ -1705,6 +1848,7 @@ export const strat: agentType = {
                 identifier: 'bshort-bback-smoke',
                 difficulty: '어려움',
                 type: 'image',
+                version: '0.50',
                 method: [
                     1,2,3,4,5,6,7
                 ],
@@ -1716,6 +1860,7 @@ export const strat: agentType = {
                 identifier: 'bsite-blong-smoke',
                 difficulty: '어려움',
                 type: 'image',
+                version: '0.50',
                 method: [
                     1,2,3,4
                 ],
@@ -1727,6 +1872,7 @@ export const strat: agentType = {
                 identifier: 'mid-aheaven-smoke',
                 difficulty: '어려움',
                 type: 'image',
+                version: '0.50',
                 method: [
                     1,2,3,4
                 ],
@@ -1738,6 +1884,7 @@ export const strat: agentType = {
                 identifier: 'shower-heaven-smoke',
                 difficulty: '어려움',
                 type: 'image',
+                version: '0.50',
                 method: [
                     1,2,3,4
                 ],
@@ -1749,6 +1896,7 @@ export const strat: agentType = {
                 identifier: 'asite-bsite-defense-wall',
                 difficulty: '어려움',
                 type: 'image',
+                version: '0.50',
                 method: [
                     1,2,3
                 ],
@@ -1760,6 +1908,7 @@ export const strat: agentType = {
                 identifier: 'mid-asite-offense-wall',
                 difficulty: '보통',
                 type: 'image',
+                version: '0.50',
                 method: [
                     1,2,3
                 ],
@@ -1771,6 +1920,7 @@ export const strat: agentType = {
                 identifier: 'mid-bsite-offense-wall',
                 difficulty: '보통',
                 type: 'image',
+                version: '0.50',
                 method: [
                     1,2,3
                 ],
@@ -1782,6 +1932,7 @@ export const strat: agentType = {
                 identifier: 'shower-asite-offense-wall',
                 difficulty: '보통',
                 type: 'image',
+                version: '0.50',
                 method: [
                     1,2,3
                 ],
@@ -1795,6 +1946,7 @@ export const strat: agentType = {
                 identifier: 'agarden-bsite-smoke',
                 difficulty: '어려움',
                 type: 'image',
+                version: '0.50',
                 method: [
                     1,2,3,4
                 ],
@@ -1806,6 +1958,7 @@ export const strat: agentType = {
                 identifier: 'asite-along-smoke',
                 difficulty: '어려움',
                 type: 'image',
+                version: '0.50',
                 method: [
                     1,2,3
                 ],
@@ -1817,6 +1970,7 @@ export const strat: agentType = {
                 identifier: 'clong-csite-smoke',
                 difficulty: '어려움',
                 type: 'image',
+                version: '0.50',
                 method: [
                     1,2,3
                 ],
@@ -1828,6 +1982,7 @@ export const strat: agentType = {
                 identifier: 'along-asite-offense-wall',
                 difficulty: '보통',
                 type: 'image',
+                version: '0.50',
                 method: [
                     1,2,3
                 ],
@@ -1839,6 +1994,7 @@ export const strat: agentType = {
                 identifier: 'asite-bsite-defense-wall',
                 difficulty: '보통',
                 type: 'image',
+                version: '0.50',
                 method: [
                     1,2,3,4
                 ],
@@ -1850,6 +2006,7 @@ export const strat: agentType = {
                 identifier: 'clong-csite-wall',
                 difficulty: '보통',
                 type: 'image',
+                version: '0.50',
                 method: [
                     1,2,3
                 ],
@@ -1863,6 +2020,7 @@ export const strat: agentType = {
                 identifier: 'aramp-smoke',
                 difficulty: '보통',
                 type: 'image',
+                version: '0.50',
                 method: [
                     1,2,3
                 ],
@@ -1874,6 +2032,7 @@ export const strat: agentType = {
                 identifier: 'blobby-bheaven-smoke',
                 difficulty: '어려움',
                 type: 'image',
+                version: '0.50',
                 method: [
                     1,2,3,4,5
                 ],
@@ -1885,6 +2044,7 @@ export const strat: agentType = {
                 identifier: 'bsite-garage-smoke',
                 difficulty: '보통',
                 type: 'image',
+                version: '0.50',
                 method: [
                     1,2,3,4
                 ],
@@ -1896,6 +2056,7 @@ export const strat: agentType = {
                 identifier: 'mid-smoke',
                 difficulty: '어려움',
                 type: 'image',
+                version: '0.50',
                 method: [
                     1,2,3,4,5,6,7
                 ],
@@ -1907,6 +2068,7 @@ export const strat: agentType = {
                 identifier: 'alobby-mid-offense-wall',
                 difficulty: '보통',
                 type: 'image',
+                version: '0.50',
                 method: [
                     1,2,3
                 ],
@@ -1918,6 +2080,7 @@ export const strat: agentType = {
                 identifier: 'asite-defense-wall',
                 difficulty: '보통',
                 type: 'image',
+                version: '0.50',
                 method: [
                     1,2,3
                 ],
@@ -1929,6 +2092,7 @@ export const strat: agentType = {
                 identifier: 'asite-offense-wall',
                 difficulty: '어려움',
                 type: 'image',
+                version: '0.50',
                 method: [
                     1,2,3,4
                 ],
@@ -1940,6 +2104,7 @@ export const strat: agentType = {
                 identifier: 'blobby-mid-offense-wall',
                 difficulty: '보통',
                 type: 'image',
+                version: '0.50',
                 method: [
                     1,2,3,4,5
                 ],
@@ -1951,6 +2116,7 @@ export const strat: agentType = {
                 identifier: 'bsite-offense-wall',
                 difficulty: '보통',
                 type: 'image',
+                version: '0.50',
                 method: [
                     1,2,3,4,5,6
                 ],
