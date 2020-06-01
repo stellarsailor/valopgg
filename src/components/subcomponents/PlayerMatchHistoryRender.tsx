@@ -1,10 +1,14 @@
 import React, { useState, useCallback } from 'react'
 import styled from 'styled-components'
 import capitalizeFirstLetter from '../../logics/capitalizeFirstLetter'
+import { UpOutlined, DownOutlined } from '@ant-design/icons';
+import { Tooltip } from 'antd';
+
 
 export default function PlayerMatchHistoryRender(props){
-
+    
     const { type, result, kda, score, rounds, agentName, mapName } = props
+    const mapBackground = require(`../../images/map/${mapName}-illust.jpeg`)
 
     const [ openDetail, setOpenDetail ] = useState(false)
 
@@ -14,7 +18,8 @@ export default function PlayerMatchHistoryRender(props){
     },[openDetail])
 
     const victory = {
-        backgroundColor: '#5bb09f',
+        backgroundColor: 'rgb(24, 35, 56)',
+        borderLeft: '10px solid #5bb09f',
         marginBottom: '0.7rem',
         display: 'flex',
         flexDirection: 'row' as 'row',
@@ -22,35 +27,70 @@ export default function PlayerMatchHistoryRender(props){
     }
 
     const defeat = {
-        backgroundColor: '#e24c4e',
+        backgroundColor: 'rgb(24, 35, 56)',
+        borderLeft: '10px solid #e24c4e',
         marginBottom: '0.7rem',
         display: 'flex',
         flexDirection: 'row' as 'row',
         justifyContent: 'space-between'
     }
 
+    const centerAlign = {
+        display: 'flex', flexDirection: 'column' as 'column', justifyContent: 'center', alignItems: 'center'
+    }
+
     return (
         <>
             <div style={result === 'victory' ? victory : defeat} >
-                <div>
-                    {type === 'rank' ? "Rank" : "Normal"}
+                <div style={{display: 'flex', flexDirection: 'column', alignItems: 'center', justifyContent: 'center'}}>
+                    <div style={{fontWeight: 'bold'}}>
+                        {type === 'rank' ? "Rank" : "Normal"}
+                    </div>
+                    <div style={{fontSize: '0.7rem'}}>
+                        <Tooltip title="정확한시간">
+                            <div>
+                                10시간 전
+                            </div>
+                        </Tooltip>
+                    </div>
+                    {/* <div style={{fontSize: '0.7rem'}}>
+                        30분 28초
+                    </div> */}
                 </div>
-                <img src={require(`../../images/agents/${agentName}.png`)} style={{width: 150, height: 'auto', zIndex: 5, position: 'relative'}} alt="agent official" />
-                <div>
-                    <div>{kda}</div>
+                <div style={{width:100, backgroundImage: `url(${mapBackground})`, backgroundSize: 'cover', backgroundPosition: 'center'}}>
+                    <img src={require(`../../images/agents/${agentName}.png`)} style={{width: '100%', backgroundColor: 'rgb(24, 35, 56, 0.7)'}} alt="agent official" />
+                </div>
+                {
+                    window.innerWidth < 576 ?
+                    null
+                    :
+                    <div style={centerAlign}>
+                        <div>
+                            {agentName}
+                        </div>
+                        <div>
+                            {mapName}
+                        </div>
+                    </div>
+                }
+                <div style={centerAlign}>
+                    <div style={{fontWeight: 'bold'}}>{kda}</div>
                     <div>{score}</div>
-                    <div onClick={toggleDetail}>자세히 보기</div>
                 </div>
-                <div style={{display: 'flex', flexDirection: 'column', justifyContent: 'center', alignItems: 'center'}}>
-                    <div style={{color: 'gold'}}>{capitalizeFirstLetter(result)}</div>
-                    <div style={{fontWeight: 'bold', fontSize: '1.8rem'}}>{rounds}</div>
+                <div style={centerAlign}>
+                    <div style={result === 'victory' ? {color: 'gold'} : {color: 'gray'}}>{capitalizeFirstLetter(result)}</div>
+                    <div style={{fontWeight: 'bold', fontSize: '1.4rem'}}>{rounds}</div>
                 </div>
-                <img src={require(`../../images/map/${mapName}-illust.jpeg`)} style={{width: 150, height: 'auto', zIndex: 5, position: 'relative'}} alt="agent official" />
+                <div onClick={toggleDetail} style={{width: '1.5rem', backgroundColor: '#273552', display: 'flex', justifyContent: 'center', alignItems: 'flex-end'}}>
+                    { openDetail ? <UpOutlined style={{fontSize: '1rem', marginBottom: 10}} /> : <DownOutlined style={{fontSize: '1rem', marginBottom: 10}} />}
+                </div>
             </div>
             {
                 openDetail ?
-                <div style={{backgroundColor: '#f5f5f5', width: '100%', height: 400, marginBottom: '0.7rem' }}>
-
+                <div style={{backgroundColor: 'rgb(24, 35, 56)', width: '100%', height: 300, marginBottom: '0.7rem' }}>
+                    <div style={centerAlign}>
+                    상세 정보를 수집 중 입니다.
+                    </div>
                 </div>
                 :
                 null
