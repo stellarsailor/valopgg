@@ -48,11 +48,11 @@ export default function Main(props) {
                         {/* <div style={{fontWeight: 'bold', fontSize: '1.2rem'}}>
                             발로란트 정보의 모든 것, 발옵지지
                         </div> */}
-                        <Search 
+                        {/* <Search 
                         placeholder="유저 네임을 입력해주세요." 
                         size="large"
                         onSearch={value => props.history.push(`/player/${value}`)} 
-                        enterButton style={{width: '90%'}} />
+                        enterButton style={{width: '90%'}} /> */}
                         {/* <div>
                             <Link to={`/guide/0/0`}><Button type="primary">0.50 패치노트 바로가기</Button></Link>
                         </div> */}
@@ -64,12 +64,12 @@ export default function Main(props) {
                         <div>
                             발로란트 정보의 모든 것, 발옵지지
                         </div>
-                        <Search
+                        {/* <Search
                         placeholder="유저 네임을 입력해주세요."
                         enterButton="검색"
                         size="large"
                         onSearch={value => props.history.push(`/player/${value}`)}
-                        />
+                        /> */}
                         {/* <div style={{fontSize: '1.2rem'}}>
                             <Link to={`/guide/0/0`}><Button type="primary">0.50 패치노트 바로가기</Button></Link>
                         </div> */}
