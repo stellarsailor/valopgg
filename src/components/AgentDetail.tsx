@@ -52,7 +52,7 @@ export default function AgentDetail(props) {
                 <Row justify="center" style={{marginTop: 15, marginBottom: 15}}>
                     { agent.map((v, index) => (
                         <Tooltip title={v.name_ko} key={index}>
-                            <Link to ={`/agent/${v.name.toLowerCase()}`} style={{margin: '0 1rem'}} onClick={() => agentScroll()}>
+                            <Link to ={`/agent/${v.name.toLowerCase()}`} style={{margin: '0 0.7rem'}} onClick={() => agentScroll()}>
                                 <img src={require(`../images/agents/${v.name.toLowerCase()}-headshot.png`)} style={agentSelection === v.id ? {width: '4rem', borderRadius: '4rem', border: `2px solid ${v.signature_color}`} : {width: '4rem', borderRadius: '4rem', border: '2px solid #202b43'}} alt="Valorant agent select button" />
                             </Link>
                         </Tooltip>
