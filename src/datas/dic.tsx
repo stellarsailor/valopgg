@@ -36,7 +36,7 @@ export const dic: Array<dicType> = [
         letter: 'ㄹ',
         word_ko: '램프',
         word_en: 'Ramp',
-        desc: '경사가 있는 길, 경사로',
+        desc: '경사가 있는 길, 경사로. 바인드 맵의 A사이트 램프의 경우 램프 등(Lamp)이 있기에 램프(Lamp)라고 불림.',
         isImg: true
     },
     {
@@ -355,7 +355,15 @@ export const dic: Array<dicType> = [
         id: 48,
         letter: 'ㅇ',
         word_ko: '오픈설',
-        word_en: '사이트 내 개방된 지역에 스파이크를 설치 하자(혹은 했다)는 뜻. 설치 후 사각지대에 숨었다가 해체하는 적을 견제하기 위함.',
-        desc: '돌격 소총, 밴달과 팬텀.',
+        word_en: '',
+        desc: '사이트 내 개방된 지역에 스파이크를 설치 하자(혹은 했다)는 뜻. 설치 후 사각지대에 숨었다가 해체하는 적을 견제하기 위함.',
+    },
+    {
+        id: 48,
+        letter: 'ㅇ',
+        word_ko: '월샷',
+        word_en: 'Wall Shot',
+        desc: '발로란트는 일부 FPS 게임과 다르게 총알이 벽을 관통 가능한데, 이를 월샷 또는 월뱅(영어권)이라고 부름. 스크린샷 이미지 참조.',
+        isImg: true
     },
 ]
