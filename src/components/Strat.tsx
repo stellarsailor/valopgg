@@ -58,6 +58,7 @@ export default function Strat(props) {
     const agentArr = ['Breach', 'Brimstone', 'Cypher', 'Jett', 'Omen', 'Phoenix', 'Raze', 'Sage', 'Sova', 'Viper'] 
     const agent_koArr = ['브리치', '브림스톤', '사이퍼', '제트', '오멘', '피닉스', '레이즈', '세이지', '소바', '바이퍼']
     const difficultyArr = ['전체', '쉬움', '보통', '어려움'];
+    const abilitiesArr = [ 'C', 'Q', 'E', 'X']
 
     const [ agentSelection, setAgentSelection ] = useState<string>(initialAgentNumber)
     const [ mapSelection, setMapSelection ] = useState<null | number | string>('bind')
@@ -157,7 +158,7 @@ export default function Strat(props) {
                                                     delay: 0,
                                                     smooth: 'easeInOutQuart'
                                                 }) }} onMouseEnter={() => setHoverImage(v.identifier)} onMouseLeave={() => setHoverImage('')} style={{width: '100%', height: 'auto'}} key={v.id}>
-                                                    <img src={`${staticServer}/abilities/${agentSelection}${v.abilityIcon}.svg`} style={{width: '2rem', alignSelf: 'flex-start'}} alt={`${v.title}`} />
+                                                    <img src={`${staticServer}/abilities/${agentSelection}_${abilitiesArr[v.abilityIcon]}.png`} style={{width: '2rem', alignSelf: 'flex-start'}} alt={`${v.title}`} />
                                                     <div style={{marginLeft: 10}}>
                                                         <div style={{fontSize: '1rem', fontWeight: 'bold'}}>
                                                             {v.title}

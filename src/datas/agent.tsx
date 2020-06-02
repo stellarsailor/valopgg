@@ -471,7 +471,7 @@ export const agent: Array<agentType> = [
                 id: 2,
                 name: '무시',
                 count: 2,
-                cost: '라운드 당 1회, 회수하여 재사용 가능',
+                cost: '',
                 desc: '즉시 근처에 있는 영혼 구슬을 흡수하여 짧은 시간 동안 무형 상태가 됩니다. 여제 활성화 시 추가로 투명 상태가 됩니다.',
             },
             {
@@ -483,7 +483,7 @@ export const agent: Array<agentType> = [
             }
         ],
         inline_guide: agentMD[10],
-        ally_ult: '',
-        enemy_ult: '',
+        ally_ult: '벌벌 떨어라!',
+        enemy_ult: '사냥 시작이다!',
     },
 ]

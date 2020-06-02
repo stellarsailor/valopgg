@@ -78,11 +78,9 @@ export default function AgentDetail(props) {
                                 {arr.map(v => (
                                     <Col span={6} key={v} onClick={() => setAbilitySelection(v)} style={{padding: 10}}> 
                                         <div style={{backgroundColor: '#202b43', borderRadius: 5, width: '2rem', display: 'flex', justifyContent: 'center', fontWeight: 'bold'}}>{key[v]}</div>
-                                        <a>
-                                            <img src={`${staticServer}/abilities/${agentName + v}.svg`} style={{width: '4rem'}} alt='Valorant agent skill icon' />
-                                            <div style={{width: '100%'}}>
-                                                <SkillCount count={agent[agentSelection].skill[v].count} selected={ abilitySelection === v ? true : false } />
-                                            </div>
+                                        <a style={{display: 'flex', flexDirection: 'column', justifyContent: 'center', alignItems: 'center'}}>
+                                            <img src={`${staticServer}/abilities/${agentName}_${key[v]}.png`} style={{width: '3rem', margin: '0.5rem 0'}} alt='Valorant agent skill icon' />
+                                            <SkillCount count={agent[agentSelection].skill[v].count} selected={ abilitySelection === v ? true : false } />
                                         </a>
                                     </Col>
                                 ))}
