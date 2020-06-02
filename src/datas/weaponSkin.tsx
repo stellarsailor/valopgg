@@ -7,21 +7,21 @@ export const skin = [
         name_ko: '클래식',
         skins: [
             {
-                id: 1,
+                id: 0,
                 name_ko: '아발란체',
                 category: 'avalanche',
                 level: 0,
                 cost: '1275 VP',
             },
             {
-                id: 2,
-                name_ko: '세이지',
+                id: 1,
+                name_ko: '파이널 챔버',
                 category: 'sages',
                 level: 0,
-                cost: '계약 보상',
+                cost: '세이지 계약',
             },
             {
-                id: 3,
+                id: 2,
                 name_ko: '임페리엄',
                 category: 'imperium',
                 level: 0,
@@ -29,10 +29,52 @@ export const skin = [
             },
             {
                 id: 3,
-                name_ko: '레이즈',
+                name_ko: '피스톨',
                 category: 'razes',
                 level: 0,
-                cost: '계약 보상',
+                cost: '레이즈 계약',
+            },
+            {
+                id: 4,
+                name_ko: '갤러리아',
+                category: 'galleria',
+                level: 0,
+                cost: '875 VP',
+            },
+            {
+                id: 5,
+                name_ko: '킹덤',
+                category: 'kingdom',
+                level: 0,
+                cost: '확인 중',
+            },
+            {
+                id: 6,
+                name_ko: '프라임 1',
+                category: 'prime',
+                level: 1,
+                cost: '확인 중',
+            },
+            {
+                id: 7,
+                name_ko: '프라임 2',
+                category: 'prime',
+                level: 2,
+                cost: '확인 중',
+            },
+            {
+                id: 8,
+                name_ko: '프라임 3',
+                category: 'prime',
+                level: 3,
+                cost: '확인 중',
+            },
+            {
+                id: 9,
+                name_ko: '프라임 4',
+                category: 'prime',
+                level: 4,
+                cost: '확인 중',
             },
         ]
     },
@@ -43,10 +85,10 @@ export const skin = [
         skins: [
             {
                 id: 0,
-                name_ko: '바이퍼',
+                name_ko: '스네이크 바이트',
                 category: 'vipers',
                 level: 0,
-                cost: '계약 보상',
+                cost: '바이퍼 계약',
             },
         ]
     },
@@ -57,17 +99,31 @@ export const skin = [
         skins: [
             {
                 id: 0,
-                name_ko: '브리치',
+                name_ko: '라그나록커',
                 category: 'breachs',
                 level: 0,
-                cost: '계약 보상',
+                cost: '브리치 계약',
             },
             {
                 id: 1,
-                name_ko: '피닉스',
+                name_ko: '스핏파이어',
                 category: 'phoenixs',
                 level: 0,
-                cost: '계약 보상',
+                cost: '피닉스 계약',
+            },
+            {
+                id: 2,
+                name_ko: '러쉬',
+                category: 'rush',
+                level: 0,
+                cost: '확인 중',
+            },
+            {
+                id: 3,
+                name_ko: '쿠튀르',
+                category: 'couture',
+                level: 0,
+                cost: '확인 중',
             },
         ]
     },
@@ -78,17 +134,17 @@ export const skin = [
         skins: [
             {
                 id: 0,
-                name_ko: '오멘',
+                name_ko: '소울 사일런서',
                 category: 'omens',
                 level: 0,
-                cost: '계약 보상',
+                cost: '오멘 계약',
             },
             {
                 id: 1,
-                name_ko: '사이퍼',
+                name_ko: '허쉬',
                 category: 'cyphers',
                 level: 0,
-                cost: '계약 보상',
+                cost: '사이퍼 계약',
             },
             {
                 id: 2,
@@ -127,10 +183,17 @@ export const skin = [
             },
             {
                 id: 7,
-                name_ko: '토이',
-                category: 'toy',
+                name_ko: '벤데타',
+                category: 'reynas',
                 level: 0,
-                cost: '미정',
+                cost: '레이나 계약',
+            },
+            {
+                id: 8,
+                name_ko: 'DOT EXE',
+                category: 'dotexe',
+                level: 0,
+                cost: '확인 중',
             },
         ]
     },
@@ -141,24 +204,24 @@ export const skin = [
         skins: [
             {
                 id: 0,
-                name_ko: '브림스톤',
+                name_ko: '피스키퍼',
                 category: 'brimstones',
                 level: 0,
-                cost: '계약 보상',
+                cost: '브림스톤 계약',
             },
             {
                 id: 1,
-                name_ko: '제트',
+                name_ko: '게임 오버',
                 category: 'jetts',
                 level: 0,
-                cost: '계약 보상',
+                cost: '제트 계약',
             },
             {
                 id: 2,
-                name_ko: '소바',
+                name_ko: '프로텍터',
                 category: 'sovas',
                 level: 0,
-                cost: '계약 보상',
+                cost: '소바 계약',
             },
             {
                 id: 3,
@@ -176,10 +239,10 @@ export const skin = [
             },
             {
                 id: 5,
-                name_ko: '드립스',
-                category: 'drips',
+                name_ko: '아리스토크랫',
+                category: 'aristocrat',
                 level: 0,
-                cost: '미정',
+                cost: '1275 VP',
             },
         ]
     },
@@ -188,6 +251,20 @@ export const skin = [
         name: 'Stinger',
         name_ko: '스팅어',
         skins: [
+            {
+                id: 0,
+                name_ko: '아리스토크랫',
+                category: 'aristocrat',
+                level: 0,
+                cost: '1275 VP',
+            },
+            {
+                id: 1,
+                name_ko: '쿠튀르',
+                category: 'couture',
+                level: 0,
+                cost: '확인 중',
+            },
         ]
     },
     {
@@ -211,38 +288,66 @@ export const skin = [
             },
             {
                 id: 2,
-                name_ko: '토이',
-                category: 'toy',
-                level: 0,
-                cost: '미정',
-            },
-            {
-                id: 3,
                 name_ko: '럭스 레벨1',
                 category: 'luxe',
                 level: 1,
                 cost: '875 VP',
             },
             {
-                id: 4,
+                id: 3,
                 name_ko: '럭스 레벨2',
                 category: 'luxe',
                 level: 2,
                 cost: '875 VP',
             },
             {
-                id: 5,
+                id: 4,
                 name_ko: '럭스 레벨3',
                 category: 'luxe',
                 level: 3,
                 cost: '875 VP',
             },
             {
-                id: 6,
+                id: 5,
                 name_ko: '럭스 레벨4',
                 category: 'luxe',
                 level: 4,
                 cost: '875 VP',
+            },
+            {
+                id: 6,
+                name_ko: '킹덤',
+                category: 'kingdom',
+                level: 0,
+                cost: '확인 중',
+            },
+            {
+                id: 7,
+                name_ko: '프라임 1',
+                category: 'prime',
+                level: 1,
+                cost: '확인 중',
+            },
+            {
+                id: 8,
+                name_ko: '프라임 2',
+                category: 'prime',
+                level: 2,
+                cost: '확인 중',
+            },
+            {
+                id: 9,
+                name_ko: '프라임 3',
+                category: 'prime',
+                level: 3,
+                cost: '확인 중',
+            },
+            {
+                id: 10,
+                name_ko: '프라임 4',
+                category: 'prime',
+                level: 4,
+                cost: '확인 중',
             },
         ]
     },
@@ -253,10 +358,17 @@ export const skin = [
         skins: [
             {
                 id: 0,
-                name_ko: '토이',
-                category: 'toy',
+                name_ko: '갤러리아',
+                category: 'galleria',
                 level: 0,
-                cost: '미정',
+                cost: '875 VP',
+            },
+            {
+                id: 1,
+                name_ko: '킹덤',
+                category: 'kingdom',
+                level: 0,
+                cost: '확인 중',
             },
         ]
     },
@@ -271,6 +383,20 @@ export const skin = [
                 category: 'luxe',
                 level: 0,
                 cost: '875 VP',
+            },
+            {
+                id: 1,
+                name_ko: '러쉬',
+                category: 'rush',
+                level: 0,
+                cost: '확인 중',
+            },
+            {
+                id: 2,
+                name_ko: 'DOT EXE',
+                category: 'dotexe',
+                level: 0,
+                cost: '확인 중',
             },
         ]
     },
@@ -288,10 +414,24 @@ export const skin = [
             },
             {
                 id: 1,
-                name_ko: '드립스',
-                category: 'drips',
+                name_ko: '러쉬',
+                category: 'rush',
                 level: 0,
-                cost: '미정',
+                cost: '확인 중',
+            },
+            {
+                id: 2,
+                name_ko: '아리스토크랫',
+                category: 'aristocrat',
+                level: 0,
+                cost: '1275 VP',
+            },
+            {
+                id: 3,
+                name_ko: '쿠튀르',
+                category: 'couture',
+                level: 0,
+                cost: '확인 중',
             },
         ]
     },
@@ -300,6 +440,41 @@ export const skin = [
         name: 'Guardian',
         name_ko: '가디언',
         skins: [
+            {
+                id: 0,
+                name_ko: '갤러리아',
+                category: 'galleria',
+                level: 0,
+                cost: '875 VP',
+            },
+            {
+                id: 1,
+                name_ko: '프라임 1',
+                category: 'prime',
+                level: 1,
+                cost: '확인 중',
+            },
+            {
+                id: 2,
+                name_ko: '프라임 2',
+                category: 'prime',
+                level: 2,
+                cost: '확인 중',
+            },
+            {
+                id: 3,
+                name_ko: '프라임 3',
+                category: 'prime',
+                level: 3,
+                cost: '확인 중',
+            },
+            {
+                id: 4,
+                name_ko: '프라임 4',
+                category: 'prime',
+                level: 4,
+                cost: '확인 중',
+            },
         ]
     },
     {
@@ -320,6 +495,27 @@ export const skin = [
                 category: 'prism',
                 level: 0,
                 cost: '1275 VP',
+            },
+            {
+                id: 2,
+                name_ko: '갤러리아',
+                category: 'galleria',
+                level: 0,
+                cost: '875 VP',
+            },
+            {
+                id: 3,
+                name_ko: '러쉬',
+                category: 'rush',
+                level: 0,
+                cost: '확인 중',
+            },
+            {
+                id: 4,
+                name_ko: '킹덤',
+                category: 'kingdom',
+                level: 0,
+                cost: '확인 중',
             },
         ]
     },
@@ -370,6 +566,48 @@ export const skin = [
                 level: 4,
                 cost: '875 VP',
             },
+            {
+                id: 6,
+                name_ko: '아리스토크랫',
+                category: 'aristocrat',
+                level: 0,
+                cost: '1275 VP',
+            },
+            {
+                id: 7,
+                name_ko: 'DOT EXE',
+                category: 'dotexe',
+                level: 0,
+                cost: '확인 중',
+            },
+            {
+                id: 8,
+                name_ko: '프라임 1',
+                category: 'prime',
+                level: 1,
+                cost: '확인 중',
+            },
+            {
+                id: 9,
+                name_ko: '프라임 2',
+                category: 'prime',
+                level: 2,
+                cost: '확인 중',
+            },
+            {
+                id: 10,
+                name_ko: '프라임 3',
+                category: 'prime',
+                level: 3,
+                cost: '확인 중',
+            },
+            {
+                id: 11,
+                name_ko: '프라임 4',
+                category: 'prime',
+                level: 4,
+                cost: '확인 중',
+            },
         ]
     },
     {
@@ -383,6 +621,20 @@ export const skin = [
                 category: 'avalanche',
                 level: 0,
                 cost: '1275 VP',
+            },
+            {
+                id: 1,
+                name_ko: '갤러리아',
+                category: 'galleria',
+                level: 0,
+                cost: '875 VP',
+            },
+            {
+                id: 2,
+                name_ko: '쿠튀르',
+                category: 'couture',
+                level: 0,
+                cost: '확인 중',
             },
         ]
     },
@@ -447,13 +699,6 @@ export const skin = [
                 level: 5,
                 cost: '1775 VP',
             },
-            {
-                id: 8,
-                name_ko: '드립스',
-                category: 'drips',
-                level: 0,
-                cost: '미정',
-            },
         ]
     },
     {
@@ -468,6 +713,20 @@ export const skin = [
                 level: 0,
                 cost: '1275 VP',
             },
+            {
+                id: 1,
+                name_ko: '아리스토크랫',
+                category: 'aristocrat',
+                level: 0,
+                cost: '1275 VP',
+            },
+            {
+                id: 2,
+                name_ko: '러쉬',
+                category: 'rush',
+                level: 0,
+                cost: '확인 중',
+            },
         ]
     },
     {
@@ -475,6 +734,13 @@ export const skin = [
         name: 'Odin',
         name_ko: '오딘',
         skins: [
+            {
+                id: 0,
+                name_ko: 'DOT EXE',
+                category: 'dotexe',
+                level: 0,
+                cost: '확인 중',
+            },
         ]
     },
     {
@@ -509,6 +775,20 @@ export const skin = [
                 category: 'imperium',
                 level: 0,
                 cost: '2550 VP',
+            },
+            {
+                id: 4,
+                name_ko: '킹덤',
+                category: 'kingdom',
+                level: 0,
+                cost: '확인 중',
+            },
+            {
+                id: 5,
+                name_ko: '프라임',
+                category: 'prime',
+                level: 0,
+                cost: '확인 중',
             },
         ]
     },

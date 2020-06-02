@@ -5,6 +5,7 @@ import { Row, Col, Carousel, BackTop } from 'antd';
 import { weapon } from '../datas/weapon'
 import { skinCollection } from '../datas/weaponSkin'
 import WeaponRender from './subcomponents/WeaponRender';
+import Adfit from './subcomponents/Adfit';
 
 const WeaponCategory = styled.div`
     background-color: #273552;
@@ -25,7 +26,7 @@ export default function Weapon(){
                     <title>발로란트 무기 정보 및 스킨</title>
                     <meta name="description" content={`발로란트의 모든 무기에 대한 정보와 스킨 이미지를 확인가능합니다.`} />
                 </MetaTags>
-                <Carousel autoplay style={{width: '100%', height: 200, overflowY: 'hidden'}} dots={true}>
+                {/* <Carousel autoplay style={{width: '100%', height: 200, overflowY: 'hidden'}} dots={true}>
                     {
                         skinCollection.map((v, index) => 
                         <div style={{textAlign: 'center', width: '100%', height: '100%'}} key={index}>
@@ -33,7 +34,8 @@ export default function Weapon(){
                             <img src={v.image} style={{width: '100%'}} alt={`${v.name} skin collection jumbotron`} />
                         </div>)
                     }
-                </Carousel>
+                </Carousel> */}
+                <Adfit adUnit="DAN-skxug7w2pkjd" adWidth="320" adHeight="100" />
             </Col>
             <Col xs={24} sm={22} md={20} lg={20} xl={15} style={{marginBottom: '1rem'}}>
                 <Row style={{width: '100%', height: '100%', backgroundColor: '#202b43'}} justify="center">

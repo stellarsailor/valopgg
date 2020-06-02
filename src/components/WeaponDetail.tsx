@@ -9,6 +9,7 @@ import { skin } from '../datas/weaponSkin'
 import WeaponRender from './subcomponents/WeaponRender';
 import Adfit from './subcomponents/Adfit';
 import { staticServer } from '../serverUrl'
+import { dynamicSort } from '../logics/dynamicSort';
 
 const WeaponCategory = styled.div`
     background-color: #273552;
@@ -148,10 +149,10 @@ export default function WeaponDetail(props) {
                                 <TitleText>스킨 갤러리</TitleText>
                                 <Row>
                                     {
-                                        skin.filter(v => v.name.toLowerCase() === weaponName)[0].skins.map(v => (
+                                        skin.filter(v => v.name.toLowerCase() === weaponName)[0].skins.slice(0).sort(dynamicSort('name_ko')).map(v => (
                                             <Col xs={24} sm={24} md={12} lg={12} xl={12} style={{padding: 10}} key={v.id}>
                                                 <div><span style={{fontSize: '1.3rem'}}>{v.name_ko}</span> ({v.cost}{parseInt(v.cost) > 0 ? ` = 약 ${parseInt(v.cost) * 11}원` : null})</div>
-                                                <img src={(`${staticServer}/weaponskins/${v.category}-${weaponName.toLowerCase()}-${v.level === 0 ? '' : `level-${v.level}-`}skin.png`)} style={{backgroundColor: '#273552', width: '100%'}} alt={`${weaponName} 발로란트 무기 스킨`} />
+                                                <img src={(`${staticServer}/weaponskins/${v.category}-${weaponName.toLowerCase()}-skin${v.level === 0 ? '' : `-${v.level}`}.png`)} style={{backgroundColor: '#273552', width: '100%'}} alt={`${v.category} ${v.name_ko} 발로란트 무기 스킨`} />
                                             </Col>
                                         ))
                                     }
