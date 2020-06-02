@@ -25,6 +25,7 @@ export default function AgentRecommendation() {
         "sage": 0,
         "sova": 0,
         "viper": 0,
+        "reyna": 0,
     })
 
     const [ shuffledQuestion, setShuffledQuestion ] = useState<any>([]);
@@ -56,6 +57,7 @@ export default function AgentRecommendation() {
             "sage": 0,
             "sova": 0,
             "viper": 0,
+            "reyna": 0,
         };
         Object.assign(temp, point)
         agentName.map((v, index) => { 

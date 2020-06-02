@@ -1,7 +1,7 @@
 type questionType = {
     id: number;
     question: string;
-    action: Array<"brimstone" | "breach" | "cypher" | "jett" | "omen" | "phoenix" | "raze" | "sage" | "sova" | "viper">
+    action: Array<"brimstone" | "breach" | "cypher" | "jett" | "omen" | "phoenix" | "raze" | "sage" | "sova" | "viper" | "reyna">
     point: Array<number>;
 }
 
@@ -15,14 +15,14 @@ export const question = [
     {
         id: 1,
         question: "RPG 게임을 할때 주로 여자 캐릭터로 플레이하곤 했다.",
-        action: ["viper", "sage", "jett", "raze"], 
-        point: [2,2,2,1],
+        action: ["viper", "sage", "jett", "raze", "reyna"], 
+        point: [2,2,2,1,1],
     },
     {
         id: 2,
         question: "돌진하는 암살자 스타일의 캐릭터들을 좋아한다.",
         action: ['jett', 'phoenix', 'omen'],
-        point: [3,2,1],
+        point: [2,2,1],
     },
     {
         id: 3,
@@ -82,6 +82,12 @@ export const question = [
         id: 12,
         question: "만약 초능력을 하나 고를 수 있다면 순간이동을 고를 것이다.",
         action: ['omen'],
+        point: [3]
+    },
+    {
+        id: 13,
+        question: "쎈 누님/언니 스타일이 매력적이라고 생각한다.",
+        action: ['reyna'],
         point: [3]
     }
 ]
