@@ -535,8 +535,8 @@ export const skinCollection = [
     },
     {
         id: 3,
-        name: 'Hypebeast',
-        name_ko: '',
+        name: 'Prime',
+        name_ko: '프라임',
         image: `${staticServer}/weaponskins/hypebeast-skins-collection.png`
     },
 ]

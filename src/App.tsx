@@ -132,10 +132,10 @@ export default function App (props) {
                 <Content>
                     <div style={divStyle}>
                         <Switch>
-                            <Route path="/player/:userName/matches/:pageNum" component={Player} />
+                            {/* <Route path="/player/:userName/matches/:pageNum" component={Player} />
                             <Route path="/player/:userName/:subMenu" component={Player} />
                             <Route path="/player/:userName" component={Player} />
-                            <Route path="/player" component={Player} />
+                            <Route path="/player" component={Player} /> */}
                             <Route path="/guide/:groupId/:tabId" component={GuideDetail} />
                             <Route path="/guide" component={GuideDetail} />
                             <Route path="/agent/:agentName" component={AgentDetail} />

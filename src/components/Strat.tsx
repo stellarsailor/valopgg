@@ -85,7 +85,7 @@ export default function Strat(props) {
                     <title>발옵지지 발로란트 요원별 전략</title>
                     <meta name="description" content='발로란트 요원들의 공략 및 원웨이 스모크 등을 확인가능합니다.' />
                 </MetaTags>
-                <Adfit adUnit="DAN-qeexz0nlvvp2" adWidth="320" adHeight="50" />
+                <Adfit adUnit="DAN-u7xd8qtoidkl" adWidth="320" adHeight="100" />
                 <Row justify='center' style={{fontSize: '1.4rem', marginTop: 15, marginBottom: 15, backgroundColor: '#202b43', padding: 10}} >
                     <Col xs={22} sm={22} md={22} lg={22} xl={12}>
                         {agentArr.map((v, index) => (

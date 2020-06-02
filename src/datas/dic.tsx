@@ -351,4 +351,11 @@ export const dic: Array<dicType> = [
         word_en: 'Assault Rifle',
         desc: '돌격 소총, 밴달과 팬텀.',
     },
+    {
+        id: 48,
+        letter: 'ㅇ',
+        word_ko: '오픈설',
+        word_en: '사이트 내 개방된 지역에 스파이크를 설치 하자(혹은 했다)는 뜻. 설치 후 사각지대에 숨었다가 해체하는 적을 견제하기 위함.',
+        desc: '돌격 소총, 밴달과 팬텀.',
+    },
 ]

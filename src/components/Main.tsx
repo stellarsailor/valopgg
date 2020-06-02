@@ -1,7 +1,8 @@
-import React from 'react'
+import React, { useState, useCallback } from 'react'
 import MetaTags from 'react-meta-tags';
 import styled from 'styled-components'
 import { Row, Col, Button, Alert, Input } from 'antd';
+import { MessageOutlined, CloseOutlined} from '@ant-design/icons';
 import { Link } from 'react-router-dom'
 import Jumbotron from '../images/official-background.jpg'
 import AdSense from 'react-adsense';
@@ -33,12 +34,22 @@ const HR = styled.div`
 
 export default function Main(props) {
 
+    const [ openHelpdesk, setOpenHelpdesk ] = useState(false)
+
+    const toggleHelpdesk = useCallback(() => {
+        if(openHelpdesk) setOpenHelpdesk(false)
+        else setOpenHelpdesk(true)
+    },[openHelpdesk])
+
     return(
         <Row justify="center" style={{backgroundColor: 'rgba(236, 232, 225, 0.95)', height: 'auto'}} >
             <MetaTags>              
                 <title>발옵지지 - 발로란트 정보의 모든 것</title>
                 <meta name="description" content={`발옵지지에서 요원, 무기, 스킨, 맵, 요원 별 전략 등 다양하고 유용한 정보를 습득하세요!`} />
             </MetaTags>
+            {/* <a style={{width: '4rem', height: '4rem', borderRadius: '4rem', backgroundColor: 'rgb(22, 22, 22)', position: 'fixed', right: 50, bottom: 50, display: 'flex', justifyContent: 'center', alignItems: 'center'}} onClick={toggleHelpdesk}>
+                { openHelpdesk ? <CloseOutlined style={{fontSize: '1.8rem'}} /> : <MessageOutlined style={{fontSize: '1.8rem'}} /> }
+            </a> */}
             <Col xs={24} sm={24} md={0} lg={0} xl={0} style={{marginBottom: '1rem'}}>
                 {/* <div style={{display: 'flex', justifyContent: 'center', alignItems: 'center', width: '100%', height: 30, backgroundColor: 'orange'}}>
                     발로란트 정식출시! 패치노트 1.0 바로가기
