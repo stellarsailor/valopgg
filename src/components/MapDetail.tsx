@@ -11,6 +11,7 @@ const Images = [
     require('../images/map/bind-illust.jpeg'),
     require('../images/map/haven-illust.jpeg'),
     require('../images/map/split-illust.jpeg'),
+    require('../images/map/ascent-illust.jpeg'),
 ];
 
 const BottomText = styled.div`
@@ -29,7 +30,7 @@ export default function MapDetail(props) {
         window.scrollTo(0, 0)
     },[])
 
-    const mapArr = ["Bind", "Haven", "Split"]
+    const mapArr = ["Bind", "Haven", "Split", "Ascent"]
 
     const mapName = props.match.params.name;
     const [ side, setSide ] = useState("attacker")
@@ -43,7 +44,7 @@ export default function MapDetail(props) {
                 </MetaTags>
                 <Row>
                     {mapArr.map((v,index) => (
-                        <Col xs={8} sm={8} md={8} lg={8} xl={8} style={{width: '100%', padding: 10}} key={index}>
+                        <Col xs={12} sm={12} md={12} lg={12} xl={12} style={{width: '100%', padding: 10}} key={index}>
                             <Link to={`/map/${v.toLowerCase()}`}>
                                 <div style={ mapName === v.toLowerCase() ? {backgroundImage: `url(${Images[index]})`, width: "100%", height: '100%', backgroundSize: 'cover', backgroundPosition: 'center', borderRadius: 5, border: '1px solid lightgray'} : {backgroundImage: `url(${Images[index]})`, width: "100%", height: '100%', backgroundSize: 'cover', backgroundPosition: 'center', borderRadius: 5, border: '1px solid rgba(19, 28, 46, 1)', filter: 'grayscale(100%)'} }>
                                     <BottomText>{v}</BottomText>
@@ -77,7 +78,7 @@ export default function MapDetail(props) {
                                     <TransformComponent >
                                         <div style={{width: '100%', height: '100%'}}>
                                             <img src={require(`../images/map/${mapName}-labels-${side}-ko.png`)} style={{width: '100%', position: 'absolute', zIndex: 10}} alt="발로란트 맵 용어 콜아웃" />
-                                            <img src={require(`../images/map/${mapName}-layout-base.svg`)} style={side === "attacker" ? {width: '100%'} : {width: '100%', transform: 'rotate(180deg)'}} alt="Valorant map" />
+                                            <img src={require(`../images/map/${mapName}-layout-base.png`)} style={side === "attacker" ? {width: '100%'} : {width: '100%', transform: 'rotate(180deg)'}} alt={`Valorant map ${mapName}`} />
                                         </div>
                                     </TransformComponent>
                                 </div>
@@ -86,7 +87,7 @@ export default function MapDetail(props) {
                     :
                     <div>
                         <img src={require(`../images/map/${mapName}-labels-${side}-ko.png`)} style={{width: '100%', position: 'absolute', zIndex: 10}} alt="발로란트 맵 용어 콜아웃" />
-                        <img src={require(`../images/map/${mapName}-layout-base.svg`)} style={side === "attacker" ? {width: '100%'} : {width: '100%', transform: 'rotate(180deg)'}} alt="발로란트 맵 그래픽" />
+                        <img src={require(`../images/map/${mapName}-layout-base.png`)} style={side === "attacker" ? {width: '100%'} : {width: '100%', transform: 'rotate(180deg)'}}  alt={`Valorant map ${mapName}`} />
                     </div>
                 }
 

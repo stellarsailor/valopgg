@@ -7,7 +7,8 @@ import { Row, Col } from 'antd';
 const Images = [
     require('../images/map/bind-illust.jpeg'),
     require('../images/map/haven-illust.jpeg'),
-    require('../images/map/split-illust.jpeg')
+    require('../images/map/split-illust.jpeg'),
+    require('../images/map/ascent-illust.jpeg'),
 ];
 
 const BottomText = styled.div`
@@ -21,7 +22,7 @@ const BottomText = styled.div`
 
 export default function Map() {
 
-    const arr = ["Bind", "Haven", "Split"]
+    const arr = ["Bind", "Haven", "Split", "Ascent"]
 
     return(
         <Row justify="center" style={{backgroundColor: 'rgba(19, 28, 46, 0.95)', minHeight: 800}} >
@@ -32,7 +33,7 @@ export default function Map() {
                 </MetaTags>
                 <Row>
                     {arr.map((v,index) => (
-                        <Col xs={24} sm={24} md={12} lg={8} xl={8} style={{width: '100%', height: 300, backgroundColor: '#202b43', padding: 10, marginTop: 15}} key={index}>
+                        <Col xs={24} sm={24} md={12} lg={12} xl={12} style={{width: '100%', height: 300, backgroundColor: '#202b43', padding: 10, marginTop: 15}} key={index}>
                             <Link to={`/map/${v.toLowerCase()}`}>
                                 <div style={{backgroundImage: `url(${Images[index]})`, width: "100%", height: '100%', backgroundSize: 'cover', backgroundPosition: 'center', borderRadius: 5}}>
                                     <BottomText>{v}</BottomText>
