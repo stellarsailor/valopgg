@@ -83,7 +83,7 @@ export default function GuideDetail(props) {
                                     ))
                                 }
                             </SubMenu>
-                            <SubMenu key="sub3" title="기타">
+                            {/* <SubMenu key="sub3" title="기타">
                                 {
                                     guide[2].tabs.map((v) => (
                                         <Menu.Item key={v.id + guide[0].tabs.length + guide[1].tabs.length + 1}>
@@ -93,7 +93,7 @@ export default function GuideDetail(props) {
                                         </Menu.Item>
                                     ))
                                 }
-                            </SubMenu>
+                            </SubMenu> */}
                         </Menu>
                         {
                             window.innerWidth < 576 ?
