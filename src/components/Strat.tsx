@@ -15,6 +15,7 @@ import { agent } from '../datas/agent'
 import { dynamicSort } from '../logics/dynamicSort'
 import mainLogo from '../images/mainLogo.png'
 import Adfit from './subcomponents/Adfit';
+import numberOfStrats from '../logics/numberOfStrats';
 
 
 // const Images = [
@@ -37,10 +38,10 @@ const StratPane = styled.a`
 export default function Strat(props) {
 
     const qs: any = queryString.parse(props.location.search)
-    let initialAgentNumber: string = 'viper';
+    let initialAgentNumber: string = 'brimstone';
 
     if(Object.entries(qs).length === 0){
-        initialAgentNumber = 'viper'
+        initialAgentNumber = 'brimstone'
     } else {
         initialAgentNumber = qs.name
     }
@@ -54,9 +55,9 @@ export default function Strat(props) {
         // })
     },[])
 
-    const mapArr = ["Bind", "Haven", "Split"]
-    const agentArr = ['Breach', 'Brimstone', 'Cypher', 'Jett', 'Omen', 'Phoenix', 'Raze', 'Sage', 'Sova', 'Viper'] 
-    const agent_koArr = ['브리치', '브림스톤', '사이퍼', '제트', '오멘', '피닉스', '레이즈', '세이지', '소바', '바이퍼']
+    const mapArr = ["Bind", "Haven", "Split", "Ascent"]
+    const agentArr = ['Breach', 'Brimstone', 'Cypher', 'Jett', 'Omen', 'Phoenix', 'Raze', 'Sage', 'Sova', 'Viper', 'Reyna'] 
+    const agent_koArr = ['브리치', '브림스톤', '사이퍼', '제트', '오멘', '피닉스', '레이즈', '세이지', '소바', '바이퍼', '레이나']
     const difficultyArr = ['전체', '쉬움', '보통', '어려움'];
     const abilitiesArr = [ 'C', 'Q', 'E', 'X']
 
@@ -79,7 +80,7 @@ export default function Strat(props) {
     });
 
     return(
-        <Row justify="center" style={{backgroundColor: 'rgba(19, 28, 46, 0.95)', minHeight: 800}} >
+        <Row justify="center" style={{backgroundColor: 'rgba(19, 28, 46, 0.95)', minHeight: 1200}} >
             <Col xs={24} sm={22} md={20} lg={20} xl={15}>
                 <BackTop />
                 <MetaTags>
@@ -88,10 +89,10 @@ export default function Strat(props) {
                 </MetaTags>
                 { window.innerWidth < 576 ? <Adfit adUnit="DAN-u7xd8qtoidkl" adWidth="320" adHeight="100" /> : <Adfit adUnit="DAN-qe74ylevqulf" adWidth="728" adHeight="90" /> }
                 <Row justify='center' style={{fontSize: '1.4rem', marginTop: 15, marginBottom: 15, backgroundColor: '#202b43', padding: 10}} >
-                    <Col xs={22} sm={22} md={22} lg={22} xl={12}>
+                    <Col xs={22} sm={22} md={22} lg={22} xl={22}>
                         {agentArr.map((v, index) => (
                             <Tooltip title={agent_koArr[index]} key={index}>
-                                <a style={{marginRight: '0.5rem'}} onClick={() => {
+                                <a style={{marginRight: '0.8rem'}} onClick={() => {
                                     setAgentSelection(v.toLowerCase())
                                     setDetailView({ // 디테일뷰가 있었다면 초기화
                                         id: -1,
@@ -104,14 +105,17 @@ export default function Strat(props) {
                                         method: []
                                     })
                                 }}>
-                                    <img src={require(`../images/agents/${v.toLowerCase()}-headshot.png`)} style={agentSelection === v.toLowerCase() ? {width: '2.4rem', borderRadius: '2.4rem', border: `2px solid ${agent[index].signature_color}`} : {width: '2.4rem', borderRadius: '2.4rem', border: '2px solid #202b43'}} alt={`agent button for ${agentSelection}`} />
+                                    <img src={require(`../images/agents/${v.toLowerCase()}-headshot.png`)} style={agentSelection === v.toLowerCase() ? {width: '2.4rem', borderRadius: '2.4rem', border: `3px solid ${agent[index].signature_color}`} : {width: '2.4rem', borderRadius: '2.4rem', border: '3px solid #202b43'}} alt={`agent button for ${agentSelection}`} />
                                 </a>
                             </Tooltip>
                         ))}
+                        <span style={{fontSize: '1rem', marginLeft: '1.5rem'}}>
+                            총 {numberOfStrats(agent.filter(v => v.name.toLowerCase() === agentSelection)[0].id)}개의 팁
+                        </span>
                     </Col>
-                    <Col xs={22} sm={22} md={22} lg={22} xl={6}>
+                    <Col xs={22} sm={22} md={22} lg={22} xl={11}>
                         {mapArr.map((v, index) => (
-                            <a style={mapSelection === v.toLowerCase() ? {color: 'white', fontWeight: 'bold', marginRight: '1.8rem'} : {color: 'gray', marginRight: '1.8rem'} } key={index} onClick={() => {
+                            <a style={mapSelection === v.toLowerCase() ? {color: 'white', fontWeight: 'bold', marginRight: '1rem'} : {color: 'gray', marginRight: '1rem'} } key={index} onClick={() => {
                                     setMapSelection(v.toLowerCase())
                                     setDetailView({ // 디테일뷰가 있었다면 초기화
                                         id: -1,
@@ -128,7 +132,7 @@ export default function Strat(props) {
                             </a>
                         ))}
                     </Col>
-                    <Col xs={22} sm={22} md={22} lg={22} xl={6}>
+                    <Col xs={22} sm={22} md={22} lg={22} xl={11}>
                         {difficultyArr.map((v, index) => (
                             <a style={difficultySelection === v ? {fontSize: '1.2rem', color: 'white', fontWeight: 'bold', marginRight: '1rem'} : {fontSize: '1.2rem', color: 'gray', marginRight: '1rem'} } key={index} onClick={() => setDifficultySelection(v)}>
                                 {v}
@@ -192,7 +196,7 @@ export default function Strat(props) {
                                                 <div>
                                                     {/* <img src={require(`../images/minimap-preview.png`)} style={hoverImage === '' ? {display: 'none'} : {width: '100%', position: 'absolute', zIndex: 15}} /> */}
                                                     <img src={require(`../images/map/${mapSelection}-labels-${sideSelection}-ko.png`)} style={{width: '100%', position: 'absolute', zIndex: 10}} alt={`발로란트 맵 ${mapSelection} 그래픽`} />
-                                                    <img src={require(`../images/map/${mapSelection}-layout-base.svg`)} style={sideSelection === "attacker" ? {width: '100%'} : {width: '100%', transform: 'rotate(180deg)'}} alt={`발로란트 맵 ${mapSelection} 그래픽`} />
+                                                    <img src={require(`../images/map/${mapSelection}-layout-base.png`)} style={sideSelection === "attacker" ? {width: '100%'} : {width: '100%', transform: 'rotate(180deg)'}} alt={`발로란트 맵 ${mapSelection} 그래픽`} />
                                                 </div>
                                             </TransformComponent>
                                         </div>
@@ -220,7 +224,7 @@ export default function Strat(props) {
                         </a>
                         {
                             detailView.method.map((v, index) => (
-                                <TransformWrapper>
+                                <TransformWrapper key={index}>
                                 {({ zoomIn, zoomOut, resetTransform, ...rest }) => (
                                     <div style={{marginBottom: '4.5rem'}}>
                                         <div style={{position: 'absolute', zIndex: 20, margin: 10, right: 0}}>
@@ -232,6 +236,14 @@ export default function Strat(props) {
                                             <img src={`${staticServer}/strat/${agentSelection}/${mapSelection}/${detailView.identifier}${v}.png`} style={{width: '100%', alignSelf: 'flex-start'}} key={index} alt={`strategy ${detailView.identifier} of ${agentSelection} in ${mapSelection}`} />
                                         </TransformComponent>
                                         { index === 0 ? <Adfit adUnit="DAN-skxug7w2pkjd" adWidth="320" adHeight="100" /> : null }
+                                        { index === 2 ? 
+                                            window.innerWidth < 576 ?
+                                                <div style={{marginTop: '4.5rem'}}>
+                                                    <Adfit adUnit="DAN-skvldtbgy0xe" adWidth="300" adHeight="250" />
+                                                </div> 
+                                            :
+                                                <Adfit adUnit="DAN-sl14jpq0o8kl" adWidth="728" adHeight="90" />
+                                        : null }
                                     </div>
                                 )}
                                 </TransformWrapper>
@@ -240,8 +252,8 @@ export default function Strat(props) {
                     </Row>
                 }
                 </Element>
-                <div style={{marginTop: '4rem', marginBottom: '4rem'}}>
-                    문의 및 건의사항이 있을 경우 valop.gg@gmail.com 으로 메일 주시면 답변드리겠습니다!
+                <div style={{marginTop: '2rem', marginBottom: '8rem'}}>
+                    문의 및 건의사항이 있을 경우 메인화면의 헬프데스크 창구를 이용해주세요!(PC버전만 가능)
                 </div>
             </Col>
         </Row>

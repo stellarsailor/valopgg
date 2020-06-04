@@ -1,59 +1,15 @@
 type agentType = {
-    breach: {
-        bind: Array<stratType>;
-        haven: Array<stratType>;
-        split: Array<stratType>;
-    },
-    brimstone: {
-        bind: Array<stratType>;
-        haven: Array<stratType>;
-        split: Array<stratType>;
-    },
-    cypher: {
-        bind: Array<stratType>;
-        haven: Array<stratType>;
-        split: Array<stratType>;
-    },
-    jett: {
-        bind: Array<stratType>;
-        haven: Array<stratType>;
-        split: Array<stratType>;
-    },
-    omen: {
-        bind: Array<stratType>;
-        haven: Array<stratType>;
-        split: Array<stratType>;
-    },
-    phoenix: {
-        bind: Array<stratType>;
-        haven: Array<stratType>;
-        split: Array<stratType>;
-    },
-    raze: {
-        bind: Array<stratType>;
-        haven: Array<stratType>;
-        split: Array<stratType>;
-    },
-    sage: {
-        bind: Array<stratType>;
-        haven: Array<stratType>;
-        split: Array<stratType>;
-    },
-    sova: {
-        bind: Array<stratType>;
-        haven: Array<stratType>;
-        split: Array<stratType>;
-    },
-    viper: {
-        bind: Array<stratType>;
-        haven: Array<stratType>;
-        split: Array<stratType>;
-    },
-    reyna: {
-        bind: Array<stratType>;
-        haven: Array<stratType>;
-        split: Array<stratType>;
-    },
+    breach: mapType;
+    brimstone: mapType;
+    cypher: mapType;
+    jett: mapType;
+    omen: mapType;
+    phoenix: mapType;
+    raze: mapType;
+    sage: mapType;
+    sova: mapType;
+    viper: mapType;
+    reyna: mapType;
 }
 
 type stratType = {
@@ -65,6 +21,13 @@ type stratType = {
     type: 'image' | 'video' | 'youtube';
     version: string;
     method: Array<number>;
+}
+
+type mapType = {
+    bind: Array<stratType>;
+    haven: Array<stratType>;
+    split: Array<stratType>;
+    ascent: Array<stratType>;
 }
 
 export const strat: agentType = {
@@ -218,6 +181,9 @@ export const strat: agentType = {
                     1
                 ],
             },
+        ],
+        ascent: [
+
         ]
     },
     brimstone: {
@@ -261,7 +227,7 @@ export const strat: agentType = {
                 {
                     id: 3,
                     abilityIcon: 2,
-                    title: 'A사이트 진입 연막',
+                    title: '샤워 A사이트 진입 연막',
                     identifier: 'asite-smoke',
                     difficulty: '쉬움',
                     type: 'image',
@@ -297,7 +263,7 @@ export const strat: agentType = {
                 {
                     id: 6,
                     abilityIcon: 2,
-                    title: 'B사이트 진입 연막',
+                    title: 'B숏 B사이트 진입 연막',
                     identifier: 'bsite-smoke',
                     difficulty: '쉬움',
                     type: 'image',
@@ -328,6 +294,42 @@ export const strat: agentType = {
                     version: '0.50',
                     method: [
                         1,2
+                    ]
+                },
+                {
+                    id: 9,
+                    abilityIcon: 2,
+                    title: 'B롱 B사이트 진입 연막',
+                    identifier: 'blong-bsite-offense-smoke',
+                    difficulty: '보통',
+                    type: 'image',
+                    version: '1.0',
+                    method: [
+                        1,2,3,4
+                    ]
+                },
+                {
+                    id: 10,
+                    abilityIcon: 2,
+                    title: 'A롱 A사이트 진입 연막',
+                    identifier: 'ashort-asite-offense-smoke',
+                    difficulty: '보통',
+                    type: 'image',
+                    version: '1.0',
+                    method: [
+                        1,2
+                    ]
+                },
+                {
+                    id: 11,
+                    abilityIcon: 2,
+                    title: 'A사이트 수비 원웨이 연막',
+                    identifier: 'asite-defense-oneway-smoke',
+                    difficulty: '보통',
+                    type: 'image',
+                    version: '1.0',
+                    method: [
+                        1,2,3
                     ]
                 },
             ],
@@ -622,6 +624,44 @@ export const strat: agentType = {
                     1,2,3
                 ],
             },
+        ],
+        ascent: [
+            {
+                id: 0,
+                abilityIcon: 2,
+                title: 'A사이트 진입 연막',
+                identifier: 'asite-offense-smoke',
+                difficulty: '보통',
+                type: 'image',
+                version: '1.0',
+                method: [
+                    1,2
+                ],
+            },
+            {
+                id: 1,
+                abilityIcon: 2,
+                title: 'B사이트 진입 연막',
+                identifier: 'bsite-offense-smoke',
+                difficulty: '보통',
+                type: 'image',
+                version: '1.0',
+                method: [
+                    1,2
+                ],
+            },
+            {
+                id: 2,
+                abilityIcon: 2,
+                title: '미드 컨트롤 연막(공격 진영)',
+                identifier: 'mid-control-offense-smoke',
+                difficulty: '보통',
+                type: 'image',
+                version: '1.0',
+                method: [
+                    1,2,3,4
+                ],
+            },
         ]
     },
     cypher: {
@@ -810,6 +850,9 @@ export const strat: agentType = {
                     1,2,3
                 ],
             },
+        ],
+        ascent: [
+
         ]
     },
     jett: {
@@ -950,6 +993,9 @@ export const strat: agentType = {
                     1,2
                 ],
             },
+        ],
+        ascent: [
+
         ]
     },
     omen: {
@@ -1054,6 +1100,9 @@ export const strat: agentType = {
                     1,2,3
                 ],
             },
+        ],
+        ascent: [
+
         ]
     },
     phoenix: {
@@ -1218,6 +1267,9 @@ export const strat: agentType = {
                     1,2
                 ],
             },
+        ],
+        ascent: [
+
         ]
     },
     raze: {
@@ -1310,6 +1362,9 @@ export const strat: agentType = {
                     1,2,3,4,5,6
                 ],
             },
+        ],
+        ascent: [
+
         ]
     },
     sage: {
@@ -1412,6 +1467,44 @@ export const strat: agentType = {
                 version: '0.50',
                 method: [
                     1,2
+                ],
+            },
+        ],
+        ascent: [
+            {
+                id: 0,
+                abilityIcon: 0,
+                title: 'B메인 B사이트 진입 장벽',
+                identifier: 'bmain-bsite-offense-wall',
+                difficulty: '보통',
+                type: 'image',
+                version: '1.0',
+                method: [
+                    1,2,3,4,5
+                ],
+            },
+            {
+                id: 1,
+                abilityIcon: 0,
+                title: 'B사이트 수비 장벽',
+                identifier: 'bsite-defense-wall',
+                difficulty: '보통',
+                type: 'image',
+                version: '1.0',
+                method: [
+                    1,2,3,4,5
+                ],
+            },
+            {
+                id: 2,
+                abilityIcon: 0,
+                title: '미드 수비 장벽',
+                identifier: 'mid-defense-wall',
+                difficulty: '보통',
+                type: 'image',
+                version: '1.0',
+                method: [
+                    1,2,3,4,5
                 ],
             },
         ]
@@ -1782,6 +1875,9 @@ export const strat: agentType = {
                     1,2,3
                 ],
             },
+        ],
+        ascent: [
+
         ]
     },
     viper: {
@@ -2102,6 +2198,56 @@ export const strat: agentType = {
                     1,2,3,4,5,6
                 ],
             },
+        ],
+        ascent: [
+            {
+                id: 0,
+                abilityIcon: 2,
+                title: 'A사이트 진입 장막',
+                identifier: 'asite-offense-wall',
+                difficulty: '보통',
+                type: 'image',
+                version: '1.0',
+                method: [
+                    1,2,3,4
+                ],
+            },
+            {
+                id: 1,
+                abilityIcon: 2,
+                title: 'B사이트 진입 장막',
+                identifier: 'bsite-offense-wall',
+                difficulty: '보통',
+                type: 'image',
+                version: '1.0',
+                method: [
+                    1,2,3,4
+                ],
+            },
+            {
+                id: 2,
+                abilityIcon: 2,
+                title: '미드 A사이트 진입 장막',
+                identifier: 'mid-asite-offense-wall',
+                difficulty: '보통',
+                type: 'image',
+                version: '1.0',
+                method: [
+                    1,2,3,4,5
+                ],
+            },
+            {
+                id: 3,
+                abilityIcon: 2,
+                title: '미드 B사이트 진입 장막',
+                identifier: 'mid-bsite-offense-wall',
+                difficulty: '보통',
+                type: 'image',
+                version: '1.0',
+                method: [
+                    1,2,3,4,5
+                ],
+            },
         ]
     },
     reyna: {
@@ -2112,5 +2258,8 @@ export const strat: agentType = {
         ],
         split: [
         ],
+        ascent: [
+            
+        ]
     }
 }
