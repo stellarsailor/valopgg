@@ -64,10 +64,15 @@ export default function WeaponDetail(props) {
                     <span style={{color: 'white'}}>{data.name}</span>
                 </div>
                 <Row style={{backgroundColor: '#202b43'}}>
+                {
+                    window.innerWidth < 576 ? 
+                        null
+                    :
                     <Col xs={0} sm={8} md={8} lg={4} xl={4} style={{ padding: 10, display: 'flex', flexDirection: 'column'}}>
                         <WeaponCategory>{data.category}</WeaponCategory>
                         {weapon.filter((v) => v.category === data.category).map((v, index) => <WeaponRender key={index} name={v.name} name_kr={v.name_ko} cost={v.cost} resize={data.category === 'Sidearm' ? true : false } selectedWeapon={data.name} />)}
                     </Col>
+                }
                     <Col xs={24} sm={16} md={16} lg={20} xl={20}>
                         <Row style={{margin: 10, backgroundColor: 'rgb(24, 35, 56)'}} justify="center">
                             <Col xs={24} sm={24} md={18} lg={18} xl={18} style={{ padding: '1rem', marginBottom: '1rem'}}>
