@@ -124,7 +124,7 @@ export default function Prosetting() {
                     <div style={{fontSize: '1.1rem', marginLeft: '2rem'}}>미니맵 설정은 <Bold>회전:회전 / 플레이어 중앙에 고정:꺼짐 / 미니맵 크기:0.978 / 미니맵 확대:0.9 / 미니맵 시야 범위 표시:켜짐</Bold> 입니다.</div>
                     <div style={{fontSize: '1.1rem', marginLeft: '2rem'}}>조준선 설정은 <Bold>색상:녹색 / 1 / 4 / 2 / 2 / 화면 중앙 도트: 꺼짐 / 오류: 꺼짐</Bold> 입니다.</div>
                 </div>
-                <Adfit adUnit="DAN-skxug7w2pkjd" adWidth="320" adHeight="100" />
+                { window.innerWidth < 576 ? <Adfit adUnit="DAN-skxug7w2pkjd" adWidth="320" adHeight="100" /> : <Adfit adUnit="DAN-qe74ylevqulf" adWidth="728" adHeight="90" /> }
 
                 <div style={{backgroundColor: '#fafafa'}}>
                     {

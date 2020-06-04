@@ -35,7 +35,7 @@ export default function Weapon(){
                         </div>)
                     }
                 </Carousel> */}
-                <Adfit adUnit="DAN-skxug7w2pkjd" adWidth="320" adHeight="100" />
+                { window.innerWidth < 576 ? <Adfit adUnit="DAN-skxug7w2pkjd" adWidth="320" adHeight="100" /> : <Adfit adUnit="DAN-qe74ylevqulf" adWidth="728" adHeight="90" /> }
             </Col>
             <Col xs={24} sm={22} md={20} lg={20} xl={15} style={{marginBottom: '1rem'}}>
                 <Row style={{width: '100%', height: '100%', backgroundColor: '#202b43'}} justify="center">
