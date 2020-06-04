@@ -43,7 +43,7 @@ export default function AgentDetail(props) {
     }
 
     return(
-        <Row justify="center" style={{backgroundColor: 'rgba(19, 28, 46, 0.95)', minHeight: 800}} >
+        <Row justify="center" style={{backgroundColor: 'rgba(19, 28, 46, 0.95)', minHeight: 1200}} >
             <Col xs={24} sm={22} md={20} lg={20} xl={15}>
                 <BackTop/>
                 <MetaTags>
