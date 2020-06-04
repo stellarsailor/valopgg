@@ -1,7 +1,7 @@
 import React, { useState, useCallback } from 'react'
 import MetaTags from 'react-meta-tags';
 import styled from 'styled-components'
-import { Row, Col, Button, Alert, Input } from 'antd';
+import { Row, Col, Button, Alert, Input, message } from 'antd';
 import { MessageOutlined, CloseOutlined} from '@ant-design/icons';
 import { Link } from 'react-router-dom'
 import Jumbotron from '../images/official-background.jpg'
@@ -13,6 +13,10 @@ import TextArea from 'antd/lib/input/TextArea';
 import axios from 'axios';
 
 const { Search } = Input;
+
+message.config({
+    top: 250,
+});   
 
 const MainTextTitle = styled.div`
     color: black;
@@ -64,11 +68,13 @@ export default function Main(props) {
             })
             .then(res => {
                 if(res.data.affectedRows === 1){
-                    console.log('Message sent')
+                    message.success(<span style={{color: 'black'}}>의견이 접수되었습니다. 최대한 신속하게 해당 이메일로 답변드리겠습니다.</span>);
+                } else {
+                    message.error(<span style={{color: 'black'}}>접수 중 에러가 발생했습니다. 나중에 다시 시도해주세요.</span>);
                 }
             })
             .catch(function (error) {
-                console.log(error);
+                message.error(<span style={{color: 'black'}}>접수 중 에러가 발생했습니다. 나중에 다시 시도해주세요.</span>);
             });
         } else {
             setEmailError(true)
