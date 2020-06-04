@@ -9,6 +9,8 @@ import AdSense from 'react-adsense';
 import { TwitterTimelineEmbed } from 'react-twitter-embed';
 import Adfit from './subcomponents/Adfit';
 import { patchNotePhrase } from '../datas/guide'
+import TextArea from 'antd/lib/input/TextArea';
+import axios from 'axios';
 
 const { Search } = Input;
 
@@ -36,10 +38,42 @@ export default function Main(props) {
 
     const [ openHelpdesk, setOpenHelpdesk ] = useState(false)
 
+    const [ inputEmail, setInputEmail ] = useState('')
+    const [ inputDesc, setInputDesc ] = useState('')
+    const [ emailError, setEmailError ] = useState(false)
+
     const toggleHelpdesk = useCallback(() => {
         if(openHelpdesk) setOpenHelpdesk(false)
         else setOpenHelpdesk(true)
     },[openHelpdesk])
+
+    const sendHelpdesk = useCallback((email, desc) => {
+        const pattern = /[a-zA-Z0-9]+[\.]?([a-zA-Z0-9]+)?[\@][a-z]{3,9}[\.][a-z]{2,5}/g;
+        const result = pattern.test(email)
+
+        if(result){
+            setOpenHelpdesk(false)
+            setInputEmail('')
+            setInputDesc('')
+            setEmailError(false)
+            axios.post(`https://api.valop.gg/helpdesk`, {
+                data: {
+                    email: email,
+                    description: desc
+                }
+            })
+            .then(res => {
+                if(res.data.affectedRows === 1){
+                    console.log('Message sent')
+                }
+            })
+            .catch(function (error) {
+                console.log(error);
+            });
+        } else {
+            setEmailError(true)
+        }
+    },[])
 
     return(
         <Row justify="center" style={{backgroundColor: 'rgba(236, 232, 225, 0.95)', height: 'auto'}} >
@@ -47,9 +81,35 @@ export default function Main(props) {
                 <title>발옵지지 - 발로란트 정보의 모든 것</title>
                 <meta name="description" content={`발옵지지에서 요원, 무기, 스킨, 맵, 요원 별 전략 등 다양하고 유용한 정보를 습득하세요!`} />
             </MetaTags>
-            {/* <a style={{width: '4rem', height: '4rem', borderRadius: '4rem', backgroundColor: 'rgb(22, 22, 22)', position: 'fixed', right: 50, bottom: 50, display: 'flex', justifyContent: 'center', alignItems: 'center'}} onClick={toggleHelpdesk}>
-                { openHelpdesk ? <CloseOutlined style={{fontSize: '1.8rem'}} /> : <MessageOutlined style={{fontSize: '1.8rem'}} /> }
-            </a> */}
+            {
+                openHelpdesk ?
+                <div style={{width: 320, backgroundColor: '#f5f5f5', position: 'fixed', right: '5%', bottom: 120, zIndex: 20, borderRadius: 4, boxShadow: 'rgba(0, 0, 0, 0.05) 0px 0px 0px 1px, rgba(0, 0, 0, 0.15) 0px 5px 30px 0px, rgba(0, 0, 0, 0.05) 0px 3px 3px 0px'}}>
+                    <div style={{backgroundColor: 'rgba(19, 28, 46, 0.95)', width: '100%', height: '20%', display: 'flex', flexDirection: 'column' , justifyContent: 'center', alignItems: 'center', padding: '2rem 0'}}>
+                        <div style={{fontWeight: 'bold', fontSize: '1.2rem'}}>
+                            무엇을 도와드릴까요?
+                        </div>
+                        <div>
+                            문의, 건의, 버그 제보 등 각종 의견을 보내주세요.
+                        </div>
+                    </div>
+                    <div style={{padding: '1rem'}}>
+                        <Input placeholder="이메일 주소" value={inputEmail} onChange={e => setInputEmail(e.target.value)} />
+                        { emailError ? <div style={{color: 'red'}}>유효한 이메일을 입력해주세요.</div> : null}
+                        <TextArea rows={6} placeholder="내용을 입력해주세요." value={inputDesc} onChange={e => setInputDesc(e.target.value)} maxLength={400} style={{margin: '1rem 0'}} />
+                        <Button type="primary" style={{margin: '1rem 0', width: '100%'}} onClick={() => sendHelpdesk(inputEmail, inputDesc)}>보내기</Button>
+                    </div>
+                </div>
+                :
+                null
+            }
+            {
+                window.innerWidth < 576 ?
+                null
+                :
+                <a style={{width: '4rem', height: '4rem', borderRadius: '4rem', backgroundColor: 'gray', position: 'fixed', right: '5%', bottom: 30, zIndex: 20, display: 'flex', justifyContent: 'center', alignItems: 'center', opacity: 0.8}} onClick={toggleHelpdesk}>
+                    { openHelpdesk ? <CloseOutlined style={{fontSize: '1.8rem'}} /> : <MessageOutlined style={{fontSize: '1.8rem'}} /> }
+                </a>
+            }
             <Col xs={24} sm={24} md={0} lg={0} xl={0} style={{marginBottom: '1rem'}}>
                 {/* <div style={{display: 'flex', justifyContent: 'center', alignItems: 'center', width: '100%', height: 30, backgroundColor: 'orange'}}>
                     발로란트 정식출시! 패치노트 1.0 바로가기
