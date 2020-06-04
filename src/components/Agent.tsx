@@ -27,11 +27,12 @@ export default function Agent(props) {
                 <Row justify="center" style={{marginTop: 15, marginBottom: 15}}>
                     { agent.slice(0).sort(dynamicSort('name')).map((v, index) => (
                         <Col xs={24} sm={24} md={12} lg={8} xl={8} key={v.id}>
-                            <div style={{position: 'relative', backgroundImage: 'linear-gradient(rgb(32, 43, 67), rgb(5,15,30))', borderRadius: 10, margin: '1rem', overflow: 'hidden'}}>
+                            <div style={{position: 'relative', backgroundImage: `linear-gradient(rgb(32, 43, 67), rgb(0,5,20))`, borderRadius: 5, margin: '1rem', overflow: 'hidden'}}>
                                 <Link to={`/agent/${v.name.toLowerCase()}`}>
-                                    <div style={{fontSize: '1.8rem', fontWeight: 'bold', position: 'absolute', right: '5%', bottom: '5%', zIndex: 10}}>{v.name_ko}</div>
+                                    <div style={{width: '100%', height: '100%', backgroundColor: v.signature_color, position: 'absolute', zIndex: 3, opacity: 0.1}} />
+                                    <div style={{fontSize: '2rem', fontWeight: 'bold', position: 'absolute', right: '5%', bottom: '5%', zIndex: 10}}>{v.name_ko}</div>
                                     <img src={require(`../images/agents/${v.name.toLowerCase()}.png`)} style={{width: '100%', height: 'auto', zIndex: 5, position: 'relative'}} alt="agent official" />
-                                    <div style={{fontSize: '4rem', fontWeight: 'bold', position: 'absolute', left: '5%', top: '-5%', zIndex: 0, opacity: 0.4, color: 'white'}}>{v.name}</div>
+                                    <div style={{fontSize: '4rem', fontWeight: 'bold', position: 'absolute', left: '5%', top: '-5%', zIndex: 0, opacity: 0.4, color: v.signature_color, textShadow: '3px 3px 4px #000000'}}>{v.name}</div>
                                 </Link>
                             </div>
                         </Col>  

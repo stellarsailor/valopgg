@@ -788,7 +788,7 @@ export const skin = [
                 name_ko: '프라임',
                 category: 'prime',
                 level: 0,
-                cost: '1775 VP',
+                cost: '3550 VP',
             },
         ]
     },
