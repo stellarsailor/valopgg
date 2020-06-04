@@ -218,9 +218,9 @@ export const prosetting: Array<proType> = [
     
         mouse: 'RAZER VIPER ULTIMATE',
         dpi: 800,
-        sensitivity: 0.44,
+        sensitivity: 0.485,
         hz: 1000,
-        scopedSensitivity: 1,
+        scopedSensitivity: 0.875,
         windowSensitivity: 6,
     
         keyboard: 'HyperX Alloy FPS RGB',
@@ -424,7 +424,7 @@ export const prosetting: Array<proType> = [
         mouse: 'LOGITECH G PRO WIRELESS PIXEL',
         dpi: 800,
         sensitivity: 0.48,
-        hz: 1000,
+        hz: 500,
         scopedSensitivity: 1,
         windowSensitivity: 6,
     
