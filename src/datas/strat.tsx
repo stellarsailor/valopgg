@@ -924,30 +924,6 @@ export const strat: agentType = {
                     1
                 ],
             },
-            {
-                id: 4,
-                abilityIcon: 1,
-                title: '이중문 상승 기류',
-                identifier: 'doubledoor-updraft',
-                difficulty: '어려움',
-                type: 'image',
-                version: '0.50',
-                method: [
-                    1,2,3
-                ],
-            },
-            {
-                id: 5,
-                abilityIcon: 1,
-                title: '윈도우 방 문틀 상승 기류',
-                identifier: 'mid-window-updraft',
-                difficulty: '어려움',
-                type: 'image',
-                version: '0.50',
-                method: [
-                    1,2,3
-                ],
-            },
         ],
         split: [
             {
