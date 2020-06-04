@@ -20,9 +20,9 @@ export const question = [
     },
     {
         id: 2,
-        question: "돌진하는 암살자 스타일의 캐릭터들을 좋아한다.",
-        action: ['jett', 'phoenix', 'omen'],
-        point: [2,2,1],
+        question: "돌진하거나 은신을 쓰는 암살자 스타일의 캐릭터들을 좋아한다.",
+        action: ['jett', 'reyna', 'phoenix', 'omen'],
+        point: [2,2,1,1],
     },
     {
         id: 3,
@@ -74,7 +74,7 @@ export const question = [
     },
     {
         id: 11,
-        question: "평소에 옷 매무새를 자주 고친다.",
+        question: "평소에 옷 스타일에 신경을 많이 쓴다.",
         action: ["phoenix"],
         point: [2]
     },
