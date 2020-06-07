@@ -161,7 +161,7 @@ export default function WeaponDetail(props) {
                         </Row>
                     </Col>
                 </Row>
-                { window.innerWidth < 576 ? <Adfit adUnit="DAN-u7xd8qtoidkl" adWidth="320" adHeight="100" /> : <Adfit adUnit="DAN-sl14jpq0o8kl" adWidth="728" adHeight="90" /> }
+                {/* { window.innerWidth < 576 ? <Adfit adUnit="DAN-u7xd8qtoidkl" adWidth="320" adHeight="100" /> : <Adfit adUnit="DAN-sl14jpq0o8kl" adWidth="728" adHeight="90" /> } */}
             </Col>
         </Row>
     )
