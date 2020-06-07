@@ -74,7 +74,7 @@ export const question = [
     },
     {
         id: 11,
-        question: "평소에 옷 스타일에 신경을 많이 쓴다.",
+        question: "타노스의 핑거스냅처럼 손가락을 맛깔나게 튕길 수 있다.",
         action: ["phoenix"],
         point: [2]
     },
