@@ -256,6 +256,9 @@ export default function ReactionTest() {
                                 </>
                                 :
                                 <>
+                                <div style={{margin: '1rem 0'}}>
+                                    <Adfit adUnit="DAN-u7razu6r6nn5" adWidth="300" adHeight="250" />
+                                </div>
                                 <a 
                                 style={styles.fireButton} 
                                 onMouseDown={
@@ -276,7 +279,6 @@ export default function ReactionTest() {
                                     }
                                 </a>
                                 <Paragraph style={{color: 'white', fontSize: '1rem', textAlign: 'center', margin: '2rem 0'}} copyable={{ text: 'https://valop.gg/reaction' }}>친구에게 URL 공유</Paragraph>
-                                <Adfit adUnit="DAN-u7razu6r6nn5" adWidth="300" adHeight="250" />
                                 </>
                             }
                             
