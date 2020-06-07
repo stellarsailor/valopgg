@@ -20,7 +20,7 @@ const styles = {
         alignItems: 'center', justifyContent: 'center', 
         borderRadius: 10, 
         borderWidth: 1, borderColor: 'gray',
-        marginTop: 20,
+        marginTop: 5,
         touchAction: 'manipulation'
     },
     fireButtonDisabled: {
@@ -31,7 +31,7 @@ const styles = {
         alignItems: 'center', justifyContent: 'center', 
         borderRadius: 10, 
         borderWidth: 1, borderColor: 'gray',
-        marginTop: 20,
+        marginTop: 5,
     },
 }
 
