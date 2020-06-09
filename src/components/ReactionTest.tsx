@@ -198,8 +198,8 @@ export default function ReactionTest() {
                                                 { reactionTime > 10000 ? null :
                                                     reactionTime < 150 ? "발로란트 프로에 도전하시는게 어때요?" 
                                                     : reactionTime < 200 ? "굉장히 빠른 반응 속도를 가지셨군요!" 
-                                                    : reactionTime < 270 ? "평균 이상의 반응 속도를 가지셨군요!" 
-                                                    : reactionTime < 360 ? "평균입니다."
+                                                    : reactionTime < 250 ? "평균 이상의 반응 속도를 가지셨군요!" 
+                                                    : reactionTime < 350 ? "평균입니다."
                                                     : reactionTime < 500 ? "평균보다 느린 편이에요..." 
                                                     : "일부러 늦게 누르셨나요...? 조금만 더 분발해보세요!"}
                                             </div>
