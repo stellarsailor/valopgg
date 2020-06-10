@@ -311,7 +311,7 @@ export const strat: agentType = {
                 {
                     id: 10,
                     abilityIcon: 2,
-                    title: 'A롱 A사이트 진입 연막',
+                    title: 'A숏 A사이트 진입 연막',
                     identifier: 'ashort-asite-offense-smoke',
                     difficulty: '보통',
                     type: 'image',
