@@ -52,11 +52,11 @@ export default function ProsettingDetail(props) {
                                 </span>
                             </Link>
                         </Col>
-                        <Col xs={24} sm={24} md={6} lg={6} xl={6}>
+                        {/* <Col xs={24} sm={24} md={6} lg={6} xl={6}>
                             {v.photo !== true ? <div style={{backgroundColor: 'white', width: '100%', height: 300}}></div> : <img src={`${staticServer}/prosetting/${v.name.toLowerCase()}-profile-picture.jpg`} style={{width: '100%'}} alt="발로란트 프로 프로필 이미지" /> }
-                        </Col>
+                        </Col> */}
 
-                        <Col xs={24} sm={24} md={18} lg={18} xl={18} style={{paddingLeft: '1rem', paddingRight: '1rem', paddingBottom: '1rem', backgroundColor: '#273552'}}>
+                        <Col xs={24} sm={24} md={24} lg={24} xl={24} style={{paddingLeft: '1rem', paddingRight: '1rem', paddingBottom: '1rem', backgroundColor: '#273552'}}>
                             <Divider orientation="left" style={{color: 'white', fontWeight: 'bold'}}>마우스 설정</Divider>
                             <Row>
                                 <Col xs={24} sm={24} md={24} lg={24} xl={24}>
