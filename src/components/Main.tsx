@@ -165,7 +165,7 @@ export default function Main(props) {
                         {/* <img src={require('../images/mainImages0.jpg')} style={{width: '100%'}} /> */}
                         <TwitterTimelineEmbed
                         sourceType="profile"
-                        screenName="valopgg"
+                        screenName="valoggg"
                         theme="light"
                         noHeader
                         noFooter
