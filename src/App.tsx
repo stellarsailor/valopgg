@@ -61,6 +61,9 @@ export default function App (props) {
         <Router>
             <Layout className="layout">
                 <HeaderContainer>
+                    <div style={{width: '100%', height: 35, backgroundColor: 'rgb(22, 22, 22)', display: 'flex', alignItems: 'center' , justifyContent: 'center'}}>
+                        발옵지지가 발로그(Valog.gg)로 새롭게 태어났습니다!
+                    </div>
                     <Row>
                         <Col xs={24} sm={24} md={0} lg={0} xl={0} >
                             <Row style={{height: 80, display: 'flex', alignItems: 'center', backgroundImage: `url(${Banner})`, backgroundSize: 'cover', backgroundPosition: 'center'}}>
@@ -169,7 +172,7 @@ export default function App (props) {
                 </Row>
                 <Footer style={{ backgroundColor: '#121212'}}>
                     <Row justify="center">
-                    © 2020 Valop.gg all rights reserved. 
+                    © 2020 Valog.gg all rights reserved. 
                     </Row>
                     <Row justify="center" style={{margin: '1rem 0'}}>
                         <Link to="/contact" style={{marginLeft: 10}}>Contact</Link> 
@@ -177,7 +180,7 @@ export default function App (props) {
                     </Row>
                     <Row justify="center" >
                         <Col xs={24} sm={22} md={20} lg={20} xl={15} style={{marginTop: '1rem', marginBottom: '1rem'}}>
-                            Valop.gg isn't endorsed by Riot Games and doesn't reflect the views or opinions of Riot Games or anyone officially involved in producing or managing Riot Games properties. Riot Games, and all associated properties are trademarks or registered trademarks of Riot Games, Inc.
+                            Valog.gg isn't endorsed by Riot Games and doesn't reflect the views or opinions of Riot Games or anyone officially involved in producing or managing Riot Games properties. Riot Games, and all associated properties are trademarks or registered trademarks of Riot Games, Inc.
                         </Col>
                         {/* <Col xs={24} sm={22} md={20} lg={20} xl={15} style={{marginTop: '1rem', marginBottom: '1rem', textAlign: 'right'}}> */}
                         {/* <a href="https://twitter.com/valopgg">Twitter</a> */}
