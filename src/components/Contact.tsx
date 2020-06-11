@@ -13,8 +13,8 @@ export default function Contact() {
         <Row justify="center" style={{backgroundColor: 'rgba(19, 28, 46, 0.95)', minHeight: 800}} >
             <Col xs={24} sm={22} md={20} lg={20} xl={15}>
                 <MetaTags>
-                    <title>발옵지지 Contact</title>
-                    <meta name="description" content={`발옵지지 관련 문의는 여기로 해주세요.`} />
+                    <title>발로그 Contact</title>
+                    <meta name="description" content={`발로그 관련 문의는 여기로 해주세요.`} />
                 </MetaTags>
                 <div style={{fontSize: '1.5rem', height: 500}}>
                     <div style={{display: 'flex', justifyContent: 'center', marginTop: '3rem'}}>

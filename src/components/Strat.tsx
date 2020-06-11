@@ -84,7 +84,7 @@ export default function Strat(props) {
             <Col xs={24} sm={22} md={20} lg={20} xl={15}>
                 <BackTop />
                 <MetaTags>
-                    <title>발옵지지 발로란트 요원별 전략</title>
+                    <title>발로그 발로란트 요원별 전략</title>
                     <meta name="description" content='발로란트 요원들의 공략 및 원웨이 스모크 등을 확인가능합니다.' />
                 </MetaTags>
                 { window.innerWidth < 576 ? <Adfit adUnit="DAN-u7xd8qtoidkl" adWidth="320" adHeight="100" /> : <Adfit adUnit="DAN-qe74ylevqulf" adWidth="728" adHeight="90" /> }
@@ -232,7 +232,7 @@ export default function Strat(props) {
                                             <MinusOutlined style={{backgroundColor: 'rgb(32, 43, 67)', color: 'white', fontSize: '1.4rem', padding: 5}} onClick={zoomOut} />
                                         </div>
                                         <TransformComponent>
-                                            <img src={mainLogo} style={{position: 'absolute', bottom: '10%', left: '3%', width: '30%'}} alt="valop.gg main logo" />
+                                            <img src={mainLogo} style={{position: 'absolute', bottom: '10%', left: '3%', width: '30%'}} alt="valog.gg main logo" />
                                             <img src={`${staticServer}/strat/${agentSelection}/${mapSelection}/${detailView.identifier}${v}.png`} style={{width: '100%', alignSelf: 'flex-start'}} key={index} alt={`strategy ${detailView.identifier} of ${agentSelection} in ${mapSelection}`} />
                                         </TransformComponent>
                                         { index === 0 ? <Adfit adUnit="DAN-skxug7w2pkjd" adWidth="320" adHeight="100" /> : null }

@@ -80,7 +80,7 @@ export default function App (props) {
                                         <Col span={16}>
                                             <Link to="/">
                                                 {/* <div style={{fontSize: '2rem', color: 'white', fontWeight: 'bold'}}>
-                                                    Valop <span style={{fontSize: '1.4rem'}}>발옵지지</span>
+                                                    Valop <span style={{fontSize: '1.4rem'}}>발로그</span>
                                                 </div> */}
                                                 <img src={require('./images/mainLogo.png')} style={{width: '20%'}} alt="valopgg main logo" />
                                             </Link>
@@ -161,7 +161,7 @@ export default function App (props) {
                 </Content>
                 <Row justify="center" style={{width: '100%', backgroundColor: '#f0f0f0', display: 'flex', justifyContent: 'center', alignItems: 'center'}}>
                     <span style={{fontWeight: 'bold', color: 'black', margin: '1rem'}}>
-                        VALOP.GG 모바일 앱을 만나보세요!
+                        VALOG.GG 모바일 앱을 만나보세요!
                     </span>
                     <a target='_blank' href="https://play.google.com/store/apps/details?id=com.mobile_valopgg" >
                         <img src={require('./images/googleplay.png')} style={{width: 120, margin: '1rem 0'}} />

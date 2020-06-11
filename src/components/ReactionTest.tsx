@@ -156,7 +156,7 @@ export default function ReactionTest() {
             <Col xs={24} sm={22} md={20} lg={20} xl={15}>
                 <BackTop />
                 <MetaTags>              
-                    <title>발옵지지 발로란트 FPS 반응속도 측정 테스트</title>
+                    <title>발로그 발로란트 FPS 반응속도 측정 테스트</title>
                     <meta name="description" content={`발로란트 게임을 옮겨놓은듯한 시뮬레이터로 본인의 FPS 반응속도 재능을 측정해보세요!`} />
                 </MetaTags>
                 <Row justify='center'>
@@ -176,7 +176,7 @@ export default function ReactionTest() {
                             <img src={require('../images/reaction/reaction-3-wall.png')} style={styles.layers} alt="Covering Wall" />
                             <img src={require('../images/reaction/reaction-4-crosshair.png')} style={styles.layers} alt="Covering Corsshair" />
 
-                            <img src={require('../images/mainLogo.png')} style={{width: '33%', alignSelf: 'flex-start', position: 'absolute', bottom: '15%', left: '10%', zIndex: 7 }} alt='valop.gg main logo' />
+                            <img src={require('../images/mainLogo.png')} style={{width: '33%', alignSelf: 'flex-start', position: 'absolute', bottom: '15%', left: '10%', zIndex: 7 }} alt='valog.gg main logo' />
 
                             <div style={{width: '100%', height: containerHeight, position: 'absolute', zIndex: 15}}>
                                 <div style={{position: 'absolute', left: '3%', top: '7%'}}>
@@ -252,7 +252,7 @@ export default function ReactionTest() {
                                                 <div style={{color: 'white', fontSize: '1.4rem', fontWeight: 'bold'}}>시작하기 - 모바일</div>
                                     }
                                 </a>
-                                <Paragraph style={{color: 'white', fontSize: '1rem', textAlign: 'center', margin: '2rem 0'}} copyable={{ text: 'https://valop.gg/reaction' }}>친구에게 URL 공유</Paragraph>
+                                <Paragraph style={{color: 'white', fontSize: '1rem', textAlign: 'center', margin: '2rem 0'}} copyable={{ text: 'https://valog.gg/reaction' }}>친구에게 URL 공유</Paragraph>
                                 </>
                                 :
                                 <>
@@ -278,7 +278,7 @@ export default function ReactionTest() {
                                                 <div style={{color: 'white', fontSize: '1.4rem', fontWeight: 'bold'}}>시작하기</div>
                                     }
                                 </a>
-                                <Paragraph style={{color: 'white', fontSize: '1rem', textAlign: 'center', margin: '2rem 0'}} copyable={{ text: 'https://valop.gg/reaction' }}>친구에게 URL 공유</Paragraph>
+                                <Paragraph style={{color: 'white', fontSize: '1rem', textAlign: 'center', margin: '2rem 0'}} copyable={{ text: 'https://valog.gg/reaction' }}>친구에게 URL 공유</Paragraph>
                                 </>
                             }
                             

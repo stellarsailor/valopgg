@@ -84,8 +84,8 @@ export default function Main(props) {
     return(
         <Row justify="center" style={{backgroundColor: 'rgba(236, 232, 225, 0.95)', height: 'auto'}} >
             <MetaTags>              
-                <title>발옵지지 - 발로란트 정보의 모든 것</title>
-                <meta name="description" content={`발옵지지에서 요원, 무기, 스킨, 맵, 요원 별 전략 등 다양하고 유용한 정보를 습득하세요!`} />
+                <title>발로그 - 발로란트 정보의 모든 것</title>
+                <meta name="description" content={`발로그에서 요원, 무기, 스킨, 맵, 요원 별 전략 등 다양하고 유용한 정보를 습득하세요!`} />
             </MetaTags>
             {
                 openHelpdesk ?
@@ -123,7 +123,7 @@ export default function Main(props) {
                 <Alert type="warning" message={<Link to="/guide" style={{color: 'black'}}>{patchNotePhrase}</Link>} showIcon={false} banner closable />
                 <div style={{display: 'flex', width: '100%', height: 200, backgroundImage: `url(${Jumbotron})`, backgroundSize: 'cover', backgroundPosition: 'center', justifyContent: 'center', alignItems: 'center', flexDirection: 'column'}}>
                         {/* <div style={{fontWeight: 'bold', fontSize: '1.2rem'}}>
-                            발로란트 정보의 모든 것, 발옵지지
+                            발로란트 정보의 모든 것, 발로그
                         </div> */}
                         {/* <Search 
                         placeholder="유저 네임을 입력해주세요." 
@@ -139,7 +139,7 @@ export default function Main(props) {
                 <div style={{display: 'flex', justifyContent: 'center'}} >
                     <div style={{position: 'absolute', fontSize: '2rem', top: '30%', textAlign: 'center'}}>
                         <div>
-                            발로란트 정보의 모든 것, 발옵지지
+                            발로란트 정보의 모든 것, 발로그
                         </div>
                         {/* <Search
                         placeholder="유저 네임을 입력해주세요."
@@ -158,7 +158,7 @@ export default function Main(props) {
             </Col>
             <Col xs={24} sm={22} md={20} lg={20} xl={15}>
                 {/* <a target='_blank' href="https://play.google.com/store/apps/details?id=com.mobile_valopgg" style={{display: 'flex', justifyContent: 'center', marginTop: '1rem', marginLeft: '1rem', marginRight: '1rem'}}>
-                    <Alert message="발옵지지 안드로이드 앱이 출시되었습니다! 바로가기" type="success" showIcon closable />
+                    <Alert message="발로그 안드로이드 앱이 출시되었습니다! 바로가기" type="success" showIcon closable />
                 </a> */}
                 <Row style={{padding: '1rem'}}>
                     <Col xs={24} sm={12} md={12} lg={12} xl={12} style={{padding: '5%'}}>
@@ -178,7 +178,7 @@ export default function Main(props) {
                             FPS 입문자들부터 고인물까지 모두 환영하는 사이트, Valop.gg
                         </MainTextTitle>
                         <MainTextDesc>
-                            발로란트를 처음 하시나요? 발옵지지에서 자신에게 맞는 캐릭터를 찾아보고 주 캐릭터로 삼아보세요! 
+                            발로란트를 처음 하시나요? 발로그에서 자신에게 맞는 캐릭터를 찾아보고 주 캐릭터로 삼아보세요! 
                         </MainTextDesc>
                         
                         <Button style={{marginTop: 10}}><Link to="/agentrecom">바로가기</Link></Button>
@@ -191,7 +191,7 @@ export default function Main(props) {
                             발로란트 관련 정보 모음
                         </MainTextTitle>
                         <MainTextDesc>
-                            발옵지지에서 요원, 무기, 스킨, 맵, 요원 별 전략 등 다양하고 유용한 정보를 습득하세요!
+                            발로그에서 요원, 무기, 스킨, 맵, 요원 별 전략 등 다양하고 유용한 정보를 습득하세요!
                         </MainTextDesc>
                         
                         <Button style={{marginTop: 10}}><Link to="/strat">바로가기</Link></Button>
@@ -210,7 +210,7 @@ export default function Main(props) {
                             중급자 이상을 위한 다양한 정보들
                         </MainTextTitle>
                         <MainTextDesc>
-                            각종 프로들과 스트리머들의 마우스 감도 설정, 키보드 설정, 그래픽 설정, 감도 계산기 등을 발옵지지에서 확인하실 수 있습니다!
+                            각종 프로들과 스트리머들의 마우스 감도 설정, 키보드 설정, 그래픽 설정, 감도 계산기 등을 발로그에서 확인하실 수 있습니다!
                         </MainTextDesc>
                         
                         <Button style={{marginTop: 10}}><Link to="/prosetting">바로가기</Link></Button>

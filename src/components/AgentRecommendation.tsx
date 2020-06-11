@@ -112,7 +112,7 @@ export default function AgentRecommendation() {
                                     <div style={{fontSize: '1rem'}}>
                                         결과는 재미로만 봐주세요..!
                                     </div>
-                                    <Paragraph style={{color: 'white', fontSize: '1.2rem', textAlign: 'right'}} copyable={{ text: 'https://valop.gg/agentrecom' }}>친구에게 URL 공유하기</Paragraph>
+                                    <Paragraph style={{color: 'white', fontSize: '1.2rem', textAlign: 'right'}} copyable={{ text: 'https://valog.gg/agentrecom' }}>친구에게 URL 공유하기</Paragraph>
                                 </div>
                                 <div style={{display: 'flex', justifyContent: 'center', marginTop: 10}}>
                                     <Link to={`/agent/${result}`}><Button type="primary" icon={<SearchOutlined />}>정보 보기</Button></Link>
@@ -123,7 +123,7 @@ export default function AgentRecommendation() {
                     :
                         <Row justify="center" style={{fontSize: '1.5rem', padding: '1rem', backgroundColor: '#202b43'}}>
                             <div style={{display: 'flex', justifyContent: 'center'}}>
-                                <img src={require('../images/mainLogo.png')} style={{width: '30%', alignSelf: 'flex-start'}} alt="valop.gg main logo" />
+                                <img src={require('../images/mainLogo.png')} style={{width: '30%', alignSelf: 'flex-start'}} alt="valog.gg main logo" />
                             </div>
                             <Col xs={24} sm={22} md={20} lg={20} xl={15} >
                                 <div style={{marginTop: '2rem', marginBottom: '2rem'}}>

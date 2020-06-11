@@ -14,7 +14,7 @@ export default function Dic() {
             <Col xs={24} sm={22} md={20} lg={20} xl={15} style={{padding: '1rem 0'}}>
                 <BackTop/>
                 <MetaTags>
-                    <title>발옵지지 발로란트 용어 사전</title>
+                    <title>발로그 발로란트 용어 사전</title>
                     <meta name="description" content={`발로란트에서 사용하는 모든 용어 사전`} />
                 </MetaTags>
                 { window.innerWidth < 576 ? <Adfit adUnit="DAN-skxug7w2pkjd" adWidth="320" adHeight="100" /> : <Adfit adUnit="DAN-qe74ylevqulf" adWidth="728" adHeight="90" /> }
