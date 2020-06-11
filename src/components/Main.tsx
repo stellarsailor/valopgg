@@ -175,7 +175,7 @@ export default function Main(props) {
                     </Col>
                     <Col xs={24} sm={12} md={12} lg={12} xl={12} style={{padding: '5%'}}>
                         <MainTextTitle>
-                            FPS 입문자들부터 고인물까지 모두 환영하는 사이트, Valop.gg
+                            FPS 입문자들부터 고인물까지 모두 환영하는 사이트, Valog.gg
                         </MainTextTitle>
                         <MainTextDesc>
                             발로란트를 처음 하시나요? 발로그에서 자신에게 맞는 캐릭터를 찾아보고 주 캐릭터로 삼아보세요! 

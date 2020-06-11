@@ -79,7 +79,7 @@ export default function Calculator() {
                     <meta name="description" content={'오버워치, 배틀그라운드, 배틀필드, 카스 글옵(CS:GO), 레인보우 식스 등 게임에서 발로란트로의 감도 변환기 계산기를 제공합니다.'} />
                 </MetaTags>
                 <div style={{textAlign: 'center', color: 'black', fontSize: '1.4rem', margin: '1rem 0', fontWeight: 'bold'}}>
-                    Valop.gg 감도 계산기
+                    Valog.gg 감도 계산기
                 </div>
                 {/* {window.innerWidth < 576 ? <Adfit adUnit="DAN-skxug7w2pkjd" adWidth="320" adHeight="100" /> : <Adfit adUnit="DAN-qe74ylevqulf" adWidth="728" adHeight="90" /> } */}
                 <Paragraph style={{color: 'black', fontSize: '1rem', textAlign: 'right'}} copyable={{ text: 'https://valog.gg/calculator' }}>링크 복사</Paragraph>
