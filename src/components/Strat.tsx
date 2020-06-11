@@ -87,7 +87,7 @@ export default function Strat(props) {
                     <title>발로그 발로란트 요원별 전략</title>
                     <meta name="description" content='발로란트 요원들의 공략 및 원웨이 스모크 등을 확인가능합니다.' />
                 </MetaTags>
-                { window.innerWidth < 576 ? <Adfit adUnit="DAN-u7xd8qtoidkl" adWidth="320" adHeight="100" /> : <Adfit adUnit="DAN-qe74ylevqulf" adWidth="728" adHeight="90" /> }
+                {/* { window.innerWidth < 576 ? <Adfit adUnit="DAN-u7xd8qtoidkl" adWidth="320" adHeight="100" /> : <Adfit adUnit="DAN-qe74ylevqulf" adWidth="728" adHeight="90" /> } */}
                 <Row justify='center' style={{fontSize: '1.4rem', marginTop: 15, marginBottom: 15, backgroundColor: '#202b43', padding: 10}} >
                     <Col xs={22} sm={22} md={22} lg={22} xl={22}>
                         {agentArr.map((v, index) => (
@@ -235,15 +235,15 @@ export default function Strat(props) {
                                             <img src={mainLogo} style={{position: 'absolute', bottom: '10%', left: '3%', width: '30%'}} alt="valog.gg main logo" />
                                             <img src={`${staticServer}/strat/${agentSelection}/${mapSelection}/${detailView.identifier}${v}.png`} style={{width: '100%', alignSelf: 'flex-start'}} key={index} alt={`strategy ${detailView.identifier} of ${agentSelection} in ${mapSelection}`} />
                                         </TransformComponent>
-                                        { index === 0 ? <Adfit adUnit="DAN-skxug7w2pkjd" adWidth="320" adHeight="100" /> : null }
-                                        { index === 2 ? 
+                                        {/* { index === 0 ? <Adfit adUnit="DAN-skxug7w2pkjd" adWidth="320" adHeight="100" /> : null } */}
+                                        {/* { index === 2 ? 
                                             window.innerWidth < 576 ?
                                                 <div style={{marginTop: '4.5rem'}}>
                                                     <Adfit adUnit="DAN-skvldtbgy0xe" adWidth="300" adHeight="250" />
                                                 </div> 
                                             :
                                                 <Adfit adUnit="DAN-sl14jpq0o8kl" adWidth="728" adHeight="90" />
-                                        : null }
+                                        : null } */}
                                     </div>
                                 )}
                                 </TransformWrapper>

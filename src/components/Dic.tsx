@@ -17,7 +17,7 @@ export default function Dic() {
                     <title>발로그 발로란트 용어 사전</title>
                     <meta name="description" content={`발로란트에서 사용하는 모든 용어 사전`} />
                 </MetaTags>
-                { window.innerWidth < 576 ? <Adfit adUnit="DAN-skxug7w2pkjd" adWidth="320" adHeight="100" /> : <Adfit adUnit="DAN-qe74ylevqulf" adWidth="728" adHeight="90" /> }
+                {/* { window.innerWidth < 576 ? <Adfit adUnit="DAN-skxug7w2pkjd" adWidth="320" adHeight="100" /> : <Adfit adUnit="DAN-qe74ylevqulf" adWidth="728" adHeight="90" /> } */}
                 <div style={{backgroundColor: '#202b43', padding: '5%'}}>
                     {/* 전체 ㄱㄴㄷㄹㅁㅂㅅㅇㅈㅊㅋㅌㅍㅎ A-Z 0-9 */}
                     {dic.slice(0).sort(dynamicSort('word_ko')).map((v) => (

@@ -232,7 +232,7 @@ export default function ReactionTest() {
                             {
                                 isMobile ?
                                 <>
-                                <Adfit adUnit="DAN-qeexz0nlvvp2" adWidth="320" adHeight="50" />
+                                {/* <Adfit adUnit="DAN-qeexz0nlvvp2" adWidth="320" adHeight="50" /> */}
                                 <a 
                                 style={styles.fireButton} 
                                 onTouchStart={
@@ -257,7 +257,7 @@ export default function ReactionTest() {
                                 :
                                 <>
                                 <div style={{margin: '1rem 0'}}>
-                                    <Adfit adUnit="DAN-u7razu6r6nn5" adWidth="300" adHeight="250" />
+                                    {/* <Adfit adUnit="DAN-u7razu6r6nn5" adWidth="300" adHeight="250" /> */}
                                 </div>
                                 <a 
                                 style={styles.fireButton} 

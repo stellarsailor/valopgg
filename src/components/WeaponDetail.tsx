@@ -51,7 +51,7 @@ export default function WeaponDetail(props) {
                     <meta name="description" content={`${data.name_ko} 탄창, 관통력, 주 공격모드, 보조 공격모드, 연사 횟수, 데미지, 무기 스킨 등 자세한 정보를 확인하세요.`} />
                 </MetaTags>
                 <BackTop />
-                { window.innerWidth < 576 ? <Adfit adUnit="DAN-skxug7w2pkjd" adWidth="320" adHeight="100" /> : <Adfit adUnit="DAN-qe74ylevqulf" adWidth="728" adHeight="90" /> }
+                {/* { window.innerWidth < 576 ? <Adfit adUnit="DAN-skxug7w2pkjd" adWidth="320" adHeight="100" /> : <Adfit adUnit="DAN-qe74ylevqulf" adWidth="728" adHeight="90" /> } */}
                 <div style={{fontSize: '1.1rem', color: 'gray', margin: 10}}>
                     <Link to="/weapon"><AppstoreOutlined /></Link> <span style={{marginLeft: 10, marginRight: 10}}>></span>
                     {

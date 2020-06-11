@@ -81,7 +81,7 @@ export default function Calculator() {
                 <div style={{textAlign: 'center', color: 'black', fontSize: '1.4rem', margin: '1rem 0', fontWeight: 'bold'}}>
                     Valop.gg 감도 계산기
                 </div>
-                {window.innerWidth < 576 ? <Adfit adUnit="DAN-skxug7w2pkjd" adWidth="320" adHeight="100" /> : <Adfit adUnit="DAN-qe74ylevqulf" adWidth="728" adHeight="90" /> }
+                {/* {window.innerWidth < 576 ? <Adfit adUnit="DAN-skxug7w2pkjd" adWidth="320" adHeight="100" /> : <Adfit adUnit="DAN-qe74ylevqulf" adWidth="728" adHeight="90" /> } */}
                 <Paragraph style={{color: 'black', fontSize: '1rem', textAlign: 'right'}} copyable={{ text: 'https://valog.gg/calculator' }}>링크 복사</Paragraph>
 
                 <div style={{backgroundColor: 'white', border: '1px solid lightgray', padding: '5%'}}>
