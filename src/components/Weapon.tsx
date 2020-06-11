@@ -6,6 +6,8 @@ import { weapon } from '../datas/weapon'
 import { skinCollection } from '../datas/weaponSkin'
 import WeaponRender from './subcomponents/WeaponRender';
 import Adfit from './subcomponents/Adfit';
+import { staticServer } from '../serverUrl'
+import Countdown from 'react-countdown';
 
 const WeaponCategory = styled.div`
     background-color: #273552;
@@ -36,6 +38,8 @@ export default function Weapon(){
                     }
                 </Carousel> */}
                 {/* { window.innerWidth < 576 ? <Adfit adUnit="DAN-skxug7w2pkjd" adWidth="320" adHeight="100" /> : <Adfit adUnit="DAN-qe74ylevqulf" adWidth="728" adHeight="90" /> } */}
+            <Countdown date={'2020-06-12T17:00:00'} renderer={({ days, hours, minutes, seconds}) => <span style={{fontWeight: 'bold', position: 'absolute', bottom: 10, left: 10, fontSize: '1.6rem'}}>{days}:{hours}:{minutes}:{seconds}</span>} />
+                <img src={`${staticServer}/weaponcollections/prime.png`} style={{width: '100%', alignSelf: 'flex-start',}} />
             </Col>
             <Col xs={24} sm={22} md={20} lg={20} xl={15} style={{marginBottom: '1rem'}}>
                 <Row style={{width: '100%', height: '100%', backgroundColor: '#202b43'}} justify="center">
