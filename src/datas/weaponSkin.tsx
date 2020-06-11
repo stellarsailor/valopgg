@@ -902,6 +902,13 @@ export const skin = [
                 level: 0,
                 cost: '3550 VP',
             },
+            {
+                id: 6,
+                name_ko: '소버린',
+                category: 'sovereign',
+                level: 0,
+                cost: '확인 중',
+            },
         ]
     },
 ]
