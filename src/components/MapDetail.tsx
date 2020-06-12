@@ -90,7 +90,9 @@ export default function MapDetail(props) {
                         <img src={require(`../images/map/${mapName}-layout-base.png`)} style={side === "attacker" ? {width: '100%'} : {width: '100%', transform: 'rotate(180deg)'}}  alt={`Valorant map ${mapName}`} />
                     </div>
                 }
-
+                <div style={{display: 'flex', justifyContent: 'center', alignItems: 'center'}}>
+                    <img src={require('../images/mainLogo.png')} style={{width: '30%', margin: '1rem 0'}} />
+                </div>
             </Col>
         </Row>
     )
