@@ -93,6 +93,7 @@ export default function MapDetail(props) {
                 }
                 <div style={{display: 'flex', justifyContent: 'center', alignItems: 'center', flexDirection: 'column'}}>
                     <div style={{fontWeight: 'bold', fontSize: '1.6rem'}}>{capitalizeFirstLetter(mapName)}</div>
+                    <div>해당 콜아웃(용어)은 발로그에서 붙인 용어이며 발로란트의 공식 용어가 아닙니다.</div>
                     <img src={require('../images/mainLogo.png')} style={{width: '30%', margin: '1rem 0'}} />
                 </div>
             </Col>

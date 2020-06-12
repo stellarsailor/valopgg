@@ -11,6 +11,7 @@ import Adfit from './subcomponents/Adfit';
 import { patchNotePhrase } from '../datas/guide'
 import TextArea from 'antd/lib/input/TextArea';
 import axios from 'axios';
+import { apiServer } from '../serverUrl';
 
 const { Search } = Input;
 
@@ -60,7 +61,7 @@ export default function Main(props) {
             setInputEmail('')
             setInputDesc('')
             setEmailError(false)
-            axios.post(`https://api.valop.gg/helpdesk`, {
+            axios.post(`${apiServer}/helpdesk`, {
                 data: {
                     email: email,
                     description: desc
@@ -227,7 +228,7 @@ export default function Main(props) {
                 /> */}
 
                 { window.innerWidth < 576 ? null : <Adfit adUnit="DAN-qecnqcrgj3n6" adWidth="728" adHeight="90" /> }
-                
+
                 {/* <Collapse defaultActiveKey={['1']} >
                     <Panel header="0.49 패치노트" key="1">
                         <div style={{color: 'black', width: '100%'}}>
