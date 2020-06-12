@@ -46,7 +46,7 @@ export const skin = [
                 name_ko: '킹덤',
                 category: 'kingdom',
                 level: 0,
-                cost: '확인 중',
+                cost: '배틀패스 제 1막',
             },
             {
                 id: 6,
@@ -123,7 +123,7 @@ export const skin = [
                 name_ko: '쿠튀르',
                 category: 'couture',
                 level: 0,
-                cost: '확인 중',
+                cost: '배틀패스 제 1막 티어16',
             },
         ]
     },
@@ -193,7 +193,7 @@ export const skin = [
                 name_ko: 'DOT EXE',
                 category: 'dotexe',
                 level: 0,
-                cost: '확인 중',
+                cost: '배틀패스 제 1막 티어35',
             },
             {
                 id: 9,
@@ -291,7 +291,7 @@ export const skin = [
                 name_ko: '쿠튀르',
                 category: 'couture',
                 level: 0,
-                cost: '확인 중',
+                cost: '배틀패스 제 1막 티어15',
             },
             {
                 id: 2,
@@ -375,7 +375,7 @@ export const skin = [
                 name_ko: '킹덤',
                 category: 'kingdom',
                 level: 0,
-                cost: '확인 중',
+                cost: '배틀패스 제 1막 티어5',
             },
             {
                 id: 7,
@@ -424,7 +424,7 @@ export const skin = [
                 name_ko: '킹덤',
                 category: 'kingdom',
                 level: 0,
-                cost: '확인 중',
+                cost: '배틀패스 제 1막 티어1',
             },
         ]
     },
@@ -452,7 +452,7 @@ export const skin = [
                 name_ko: 'DOT EXE',
                 category: 'dotexe',
                 level: 0,
-                cost: '확인 중',
+                cost: '배틀패스 제 1막 티어40',
             },
         ]
     },
@@ -487,7 +487,7 @@ export const skin = [
                 name_ko: '쿠튀르',
                 category: 'couture',
                 level: 0,
-                cost: '확인 중',
+                cost: '배틀패스 제 1막 티어10',
             },
         ]
     },
@@ -599,7 +599,7 @@ export const skin = [
                 name_ko: '킹덤',
                 category: 'kingdom',
                 level: 0,
-                cost: '확인 중',
+                cost: '배틀패스 제 1막 티어25',
             },
         ]
     },
@@ -662,7 +662,7 @@ export const skin = [
                 name_ko: 'DOT EXE',
                 category: 'dotexe',
                 level: 0,
-                cost: '확인 중',
+                cost: '배틀패스 제 1막 티어45',
             },
             {
                 id: 8,
@@ -718,7 +718,7 @@ export const skin = [
                 name_ko: '쿠튀르',
                 category: 'couture',
                 level: 0,
-                cost: '확인 중',
+                cost: '배틀패스 제 1막 티어20',
             },
             {
                 id: 3,
@@ -851,7 +851,7 @@ export const skin = [
                 name_ko: 'DOT EXE',
                 category: 'dotexe',
                 level: 0,
-                cost: '확인 중',
+                cost: '배틀패스 제 1막 티어30',
             },
         ]
     },
@@ -893,7 +893,7 @@ export const skin = [
                 name_ko: '킹덤',
                 category: 'kingdom',
                 level: 0,
-                cost: '확인 중',
+                cost: '배틀패스 제 1막 티어50',
             },
             {
                 id: 5,
