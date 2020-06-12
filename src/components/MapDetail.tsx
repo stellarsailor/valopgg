@@ -6,6 +6,7 @@ import { Row, Col, Radio } from 'antd';
 import { PlusOutlined, MinusOutlined } from '@ant-design/icons';
 import { TransformWrapper, TransformComponent } from "react-zoom-pan-pinch";
 import Adfit from './subcomponents/Adfit';
+import capitalizeFirstLetter from '../logics/capitalizeFirstLetter';
 
 const Images = [
     require('../images/map/bind-illust.jpeg'),
@@ -90,7 +91,8 @@ export default function MapDetail(props) {
                         <img src={require(`../images/map/${mapName}-layout-base.png`)} style={side === "attacker" ? {width: '100%'} : {width: '100%', transform: 'rotate(180deg)'}}  alt={`Valorant map ${mapName}`} />
                     </div>
                 }
-                <div style={{display: 'flex', justifyContent: 'center', alignItems: 'center'}}>
+                <div style={{display: 'flex', justifyContent: 'center', alignItems: 'center', flexDirection: 'column'}}>
+                    <div style={{fontWeight: 'bold', fontSize: '1.6rem'}}>{capitalizeFirstLetter(mapName)}</div>
                     <img src={require('../images/mainLogo.png')} style={{width: '30%', margin: '1rem 0'}} />
                 </div>
             </Col>
