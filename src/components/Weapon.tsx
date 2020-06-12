@@ -38,7 +38,7 @@ export default function Weapon(){
                     }
                 </Carousel> */}
                 {/* { window.innerWidth < 576 ? <Adfit adUnit="DAN-skxug7w2pkjd" adWidth="320" adHeight="100" /> : <Adfit adUnit="DAN-qe74ylevqulf" adWidth="728" adHeight="90" /> } */}
-            <Countdown date={'2020-06-12T17:00:00'} renderer={({ days, hours, minutes, seconds}) => <span style={{fontWeight: 'bold', position: 'absolute', bottom: 10, left: 10, fontSize: '1.6rem'}}>{days}:{hours}:{minutes}:{seconds}</span>} />
+            <Countdown date={'2020-06-13T06:00:00.000+09:00'} renderer={({ days, hours, minutes, seconds}) => <span style={{fontWeight: 'bold', position: 'absolute', bottom: 10, left: 10, fontSize: '1.6rem'}}>{days}:{hours}:{minutes}:{seconds}</span>} />
                 <img src={`${staticServer}/weaponcollections/prime.png`} style={{width: '100%', alignSelf: 'flex-start',}} />
             </Col>
             <Col xs={24} sm={22} md={20} lg={20} xl={15} style={{marginBottom: '1rem'}}>
