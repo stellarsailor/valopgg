@@ -13,6 +13,7 @@ import { agent } from '../datas/agent'
 import { strat } from '../datas/strat'
 import Adfit from './subcomponents/Adfit';
 import numberOfStrats from '../logics/numberOfStrats';
+import { dynamicSort } from '../logics/dynamicSort';
 
 export default function AgentDetail(props) {
 
@@ -51,7 +52,7 @@ export default function AgentDetail(props) {
                     <meta name="description" content={`${selectedAgent[0].name_ko} 요원의 스킬 및 정보, 플레이 가이드, 맵 별 공략, 궁극기 대사 등을 확인가능합니다.`} />
                 </MetaTags>
                 <Row justify="center" style={{marginTop: 15, marginBottom: 15}}>
-                    { agent.map((v, index) => (
+                    { agent.slice(0).sort(dynamicSort('name')).map((v, index) => (
                         <Tooltip title={v.name_ko} key={index}>
                             <Link to ={`/agent/${v.name.toLowerCase()}`} style={{margin: '0 0.7rem'}} onClick={() => agentScroll()}>
                                 <img src={require(`../images/agents/${v.name.toLowerCase()}-headshot.png`)} style={agentSelection === v.id ? {width: '4rem', borderRadius: '4rem', border: `3px solid ${v.signature_color}`} : {width: '4rem', borderRadius: '4rem', border: '3px solid #202b43'}} alt="Valorant agent select button" />
