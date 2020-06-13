@@ -17,13 +17,6 @@ import mainLogo from '../images/mainLogo.png'
 import Adfit from './subcomponents/Adfit';
 import numberOfStrats from '../logics/numberOfStrats';
 
-
-// const Images = [
-//     require('../images/map/bind-illust.jpeg'),
-//     require('../images/map/haven-illust.jpeg'),
-//     require('../images/map/split-illust.jpeg')
-// ];
-
 const StratPane = styled.a`
     background-color: rgb(24, 35, 56); 
     padding: 1rem; 
@@ -195,8 +188,8 @@ export default function Strat(props) {
                                             <TransformComponent>
                                                 <div>
                                                     {/* <img src={require(`../images/minimap-preview.png`)} style={hoverImage === '' ? {display: 'none'} : {width: '100%', position: 'absolute', zIndex: 15}} /> */}
-                                                    <img src={require(`../images/map/${mapSelection}-labels-${sideSelection}-ko.png`)} style={{width: '100%', position: 'absolute', zIndex: 10}} alt={`발로란트 맵 ${mapSelection} 그래픽`} />
-                                                    <img src={require(`../images/map/${mapSelection}-layout-base.png`)} style={sideSelection === "attacker" ? {width: '100%'} : {width: '100%', transform: 'rotate(180deg)'}} alt={`발로란트 맵 ${mapSelection} 그래픽`} />
+                                                    <img src={`${staticServer}/map/${mapSelection}-labels-${sideSelection}-ko.png`} style={{width: '100%', position: 'absolute', zIndex: 10}} alt={`발로란트 맵 ${mapSelection} 그래픽`} />
+                                                    <img src={`${staticServer}/map/${mapSelection}-layout-base.png`} style={sideSelection === "attacker" ? {width: '100%'} : {width: '100%', transform: 'rotate(180deg)'}} alt={`발로란트 맵 ${mapSelection} 그래픽`} />
                                                 </div>
                                             </TransformComponent>
                                         </div>

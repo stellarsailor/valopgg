@@ -3,12 +3,13 @@ import styled from 'styled-components'
 import capitalizeFirstLetter from '../../logics/capitalizeFirstLetter'
 import { UpOutlined, DownOutlined } from '@ant-design/icons';
 import { Tooltip } from 'antd';
+import { staticServer } from '../../serverUrl';
 
 
 export default function PlayerMatchHistoryRender(props){
     
     const { type, result, kda, score, rounds, agentName, mapName } = props
-    const mapBackground = require(`../../images/map/${mapName}-illust.jpeg`)
+    const mapBackground = `${staticServer}/map/${mapName}-illust.jpeg`
 
     const [ openDetail, setOpenDetail ] = useState(false)
 

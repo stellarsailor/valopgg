@@ -7,12 +7,13 @@ import { PlusOutlined, MinusOutlined } from '@ant-design/icons';
 import { TransformWrapper, TransformComponent } from "react-zoom-pan-pinch";
 import Adfit from './subcomponents/Adfit';
 import capitalizeFirstLetter from '../logics/capitalizeFirstLetter';
+import { staticServer } from '../serverUrl'
 
 const Images = [
-    require('../images/map/bind-illust.jpeg'),
-    require('../images/map/haven-illust.jpeg'),
-    require('../images/map/split-illust.jpeg'),
-    require('../images/map/ascent-illust.jpeg'),
+    `${staticServer}/map/bind-illust.jpeg`,
+    `${staticServer}/map/haven-illust.jpeg`,
+    `${staticServer}/map/split-illust.jpeg`,
+    `${staticServer}/map/ascent-illust.jpeg`,
 ];
 
 const BottomText = styled.div`
@@ -78,8 +79,8 @@ export default function MapDetail(props) {
                                     </div>
                                     <TransformComponent >
                                         <div style={{width: '100%', height: '100%'}}>
-                                            <img src={require(`../images/map/${mapName}-labels-${side}-ko.png`)} style={{width: '100%', position: 'absolute', zIndex: 10}} alt="발로란트 맵 용어 콜아웃" />
-                                            <img src={require(`../images/map/${mapName}-layout-base.png`)} style={side === "attacker" ? {width: '100%'} : {width: '100%', transform: 'rotate(180deg)'}} alt={`Valorant map ${mapName}`} />
+                                            <img src={`${staticServer}/map/${mapName}-labels-${side}-ko.png`} style={{width: '100%', position: 'absolute', zIndex: 10}} alt="발로란트 맵 용어 콜아웃" />
+                                            <img src={`${staticServer}/map/${mapName}-layout-base.png`} style={side === "attacker" ? {width: '100%'} : {width: '100%', transform: 'rotate(180deg)'}} alt={`Valorant map ${mapName}`} />
                                         </div>
                                     </TransformComponent>
                                 </div>
@@ -87,13 +88,15 @@ export default function MapDetail(props) {
                         </TransformWrapper>
                     :
                     <div>
-                        <img src={require(`../images/map/${mapName}-labels-${side}-ko.png`)} style={{width: '100%', position: 'absolute', zIndex: 10}} alt="발로란트 맵 용어 콜아웃" />
-                        <img src={require(`../images/map/${mapName}-layout-base.png`)} style={side === "attacker" ? {width: '100%'} : {width: '100%', transform: 'rotate(180deg)'}}  alt={`Valorant map ${mapName}`} />
+                        <img src={`${staticServer}/map/${mapName}-labels-${side}-ko.png`} style={{width: '100%', position: 'absolute', zIndex: 10}} alt="발로란트 맵 용어 콜아웃" />
+                        <img src={`${staticServer}/map/${mapName}-layout-base.png`} style={side === "attacker" ? {width: '100%'} : {width: '100%', transform: 'rotate(180deg)'}}  alt={`Valorant map ${mapName}`} />
                     </div>
                 }
                 <div style={{display: 'flex', justifyContent: 'center', alignItems: 'center', flexDirection: 'column'}}>
                     <div style={{fontWeight: 'bold', fontSize: '1.6rem'}}>{capitalizeFirstLetter(mapName)}</div>
-                    <div>해당 콜아웃(용어)은 발로그에서 붙인 용어이며 발로란트의 공식 용어가 아닙니다.</div>
+                    <div style={{margin: '2rem 0', fontSize: '1.4rem'}}>
+                        해당 콜아웃(용어)은 발로그에서 임의로 붙인 용어이며, 발로란트의 공식 용어가 아닙니다.
+                    </div>
                     <img src={require('../images/mainLogo.png')} style={{width: '30%', margin: '1rem 0'}} />
                 </div>
             </Col>

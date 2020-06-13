@@ -3,12 +3,13 @@ import MetaTags from 'react-meta-tags';
 import styled from 'styled-components'
 import { Link } from "react-router-dom";
 import { Row, Col } from 'antd';
+import { staticServer } from '../serverUrl'
 
 const Images = [
-    require('../images/map/bind-illust.jpeg'),
-    require('../images/map/haven-illust.jpeg'),
-    require('../images/map/split-illust.jpeg'),
-    require('../images/map/ascent-illust.jpeg'),
+    `${staticServer}/map/bind-illust.jpeg`,
+    `${staticServer}/map/haven-illust.jpeg`,
+    `${staticServer}/map/split-illust.jpeg`,
+    `${staticServer}/map/ascent-illust.jpeg`,
 ];
 
 const BottomText = styled.div`
