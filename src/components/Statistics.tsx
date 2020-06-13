@@ -3,9 +3,8 @@ import MetaTags from 'react-meta-tags';
 import styled from 'styled-components'
 import axios from 'axios'
 import { Row, Col, Table, BackTop } from 'antd';
-import { weapon } from '../datas/weapon'
 import Adfit from './subcomponents/Adfit';
-import { apiServer } from '../serverUrl'
+import { apiServer, staticServer } from '../serverUrl'
 import { agent } from '../datas/agent'
 import { dynamicSort } from '../logics/dynamicSort';
 import { Link } from 'react-router-dom';
@@ -42,7 +41,7 @@ export default function Statistics(){
             dataIndex: 'id',
             render: (v) => 
                 <Link to={`/agent/${agent[v].name.toLowerCase()}`} key={v} style={{display: 'flex', flexDirection: 'row', alignItems: 'center'}}>
-                    <img src={require(`../images/agents/${agent[v].name.toLowerCase()}-headshot.png`)} style={{width: '3rem', borderRadius: '3rem', border: `3px solid ${agent[v].signature_color}`}} alt="Valorant agent select button" />
+                    <img src={(`${staticServer}/agents/${agent[v].name.toLowerCase()}-headshot.png`)} style={{width: '3rem', borderRadius: '3rem', border: `3px solid ${agent[v].signature_color}`}} alt="Valorant agent select button" />
                     {
                         window.innerWidth < 576 ? null : 
                         <span style={{fontWeight: 'bold', fontSize: '1.2rem', margin: '0 1rem'}}>
