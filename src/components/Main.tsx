@@ -154,7 +154,7 @@ export default function Main(props) {
                     </div>
                 </div>
                 <div >
-                    <img src={require('../images/official-image.png')} style={{width: '100%'}} alt="background cut 20 degree" />   
+                    <img src={require('../images/official-main-image.png')} style={{width: '100%'}} alt="background cut 20 degree" />   
                 </div>
             </Col>
             <Col xs={24} sm={22} md={20} lg={20} xl={15}>
