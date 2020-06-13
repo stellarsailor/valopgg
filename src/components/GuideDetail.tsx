@@ -95,12 +95,6 @@ export default function GuideDetail(props) {
                                 }
                             </SubMenu> */}
                         </Menu>
-                        {
-                            window.innerWidth < 576 ?
-                                null
-                            :
-                                <img src={require('../images/official-jett.png')} style={{width: '100%'}} alt="official jett standing back" />
-                        }
                     </Col>
                     <Col xs={24} sm={22} md={16} lg={16} xl={18} >
                         <div style={{backgroundColor: '#202b43', padding: '5%', marginTop: '1rem', marginBottom: '1rem'}}>
