@@ -33,7 +33,7 @@ export default function Prosetting() {
         {
           title: '이름',
           dataIndex: 'name',
-          render: (v) => <Link to={`/prosetting/${v.toLowerCase()}`} style={{color: '#ff324c'}}>{v} <SearchOutlined style={{color: 'gray'}} /> </Link>,
+          render: (v) => <Link to={`/prosetting/${v.toLowerCase()}`} style={{color: '#ff324c', fontWeight: 'bold'}}>{v} <SearchOutlined style={{color: 'white'}} /> </Link>,
         },
         {
           title: 'DPI',
@@ -65,7 +65,7 @@ export default function Prosetting() {
         {
           title: '이름',
           dataIndex: 'name',
-          render: (v) => <Link to={`/prosetting/${v.toLowerCase()}`} style={{color: '#ff324c'}}>{v} <SearchOutlined style={{color: 'gray'}} /> </Link>,
+          render: (v) => <Link to={`/prosetting/${v.toLowerCase()}`} style={{color: '#ff324c', fontWeight: 'bold'}}>{v} <SearchOutlined style={{color: 'white'}} /> </Link>,
           width: '20%',
         },
         {
