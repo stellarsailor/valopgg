@@ -29,6 +29,7 @@ import ReactionTest from './components/ReactionTest';
 import { patchNotePhrase } from './datas/guide'
 
 import SearchInput from './components/subcomponents/SearchInput'
+import Statistics from './components/Statistics';
 const { Content, Footer } = Layout;
 
 const HeaderContainer = styled.div`
@@ -105,6 +106,7 @@ export default function App (props) {
                             <Link to="/agent" style={mobileMenuTab}>요원</Link>
                             <Link to="/agentrecom" style={mobileMenuTab}>맞는 요원 찾기</Link>
                             {/* <Link to="/tier" style={mobileMenuTab}>티어</Link> */}
+                            <Link to="/statistics" style={mobileMenuTab}>통계</Link>
                             <Link to="/weapon" style={mobileMenuTab}>무기/스킨</Link>
                             <Link to="/map" style={mobileMenuTab}>맵</Link>
                             <Link to="/strat" style={mobileMenuTab}>요원별 전략</Link>
@@ -121,6 +123,7 @@ export default function App (props) {
                             <MenuTabHover><Link to="/agent">요원</Link></MenuTabHover>
                             <MenuTabHover><Link to="/agentrecom">맞는 요원 찾기</Link></MenuTabHover>
                             {/* <MenuTabHover><Link to="/tier">티어</Link></MenuTabHover> */}
+                            <MenuTabHover><Link to="/statistics">통계</Link></MenuTabHover>
                             <MenuTabHover><Link to="/weapon">무기/스킨</Link></MenuTabHover>
                             <MenuTabHover><Link to="/map">맵</Link></MenuTabHover>
                             <MenuTabHover><Link to="/strat">요원별 전략</Link></MenuTabHover>
@@ -145,6 +148,7 @@ export default function App (props) {
                             <Route path="/agent" component={Agent} />
                             <Route path="/agentrecom" component={AgentRecommendation} />
                             {/* <Route path="/tier" component={Tier} /> */}
+                            <Route path="/statistics" component={Statistics} />
                             <Route path="/weapon/:name" component={WeaponDetail} />
                             <Route path="/weapon" component={Weapon} />
                             <Route path="/map/:name" component={MapDetail} />
