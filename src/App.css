@@ -35,7 +35,7 @@ h1, h2, h3, h4, h5, h6 {
   transition-timing-function: ease-in-out;
   transition-delay: 0s;
 }
-/* 
+
 .ant-select-selection-item {
   color: rgba(0, 0, 0, 0.65);
 }
@@ -44,6 +44,7 @@ h1, h2, h3, h4, h5, h6 {
   color: rgba(0, 0, 0, 0.65);
 }
 
+/*
 .ant-table-row .ant-table-row-level-0 :hover{
   background-color: red !important;
 }
