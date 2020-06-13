@@ -703,25 +703,13 @@ export const strat: agentType = {
                 ],
             },
             {
-                id: 3,
-                abilityIcon: 2,
-                title: '후카 스파이캠 1',
-                identifier: 'hookah-spycam',
-                difficulty: '어려움',
-                type: 'image',
-                version: '0.50',
-                method: [
-                    1,2
-                ],
-            },
-            {
                 id: 4,
                 abilityIcon: 2,
-                title: '후카 스파이캠 2',
+                title: '후카 스파이캠',
                 identifier: 'hookah-spycam-2nd',
                 difficulty: '보통',
                 type: 'image',
-                version: '0.50',
+                version: '1.01',
                 method: [
                     1,2
                 ],
@@ -733,9 +721,33 @@ export const strat: agentType = {
                 identifier: 'shower-spycam',
                 difficulty: '보통',
                 type: 'image',
-                version: '0.50',
+                version: '1.01',
                 method: [
                     1,2,3,4
+                ],
+            },
+            {
+                id: 6,
+                abilityIcon: 0,
+                title: 'A숏 수비 셋업',
+                identifier: 'ashort-defense-setup',
+                difficulty: '보통',
+                type: 'image',
+                version: '1.01',
+                method: [
+                    1,2,3,4,5
+                ],
+            },
+            {
+                id: 7,
+                abilityIcon: 0,
+                title: '후카 수비 셋업',
+                identifier: 'hookah-defense-setup',
+                difficulty: '보통',
+                type: 'image',
+                version: '1.01',
+                method: [
+                    1,2,3,4,5,6,7
                 ],
             },
         ],
@@ -786,6 +798,30 @@ export const strat: agentType = {
                 version: '0.50',
                 method: [
                     1,2,3,4
+                ],
+            },
+            {
+                id: 4,
+                abilityIcon: 0,
+                title: 'A사이트 수비 셋업',
+                identifier: 'asite-defense-setup',
+                difficulty: '쉬움',
+                type: 'image',
+                version: '1.01',
+                method: [
+                    1,2,3,4,5
+                ],
+            },
+            {
+                id: 5,
+                abilityIcon: 0,
+                title: 'C사이트 수비 셋업',
+                identifier: 'csite-defense-setup',
+                difficulty: '쉬움',
+                type: 'image',
+                version: '1.01',
+                method: [
+                    1,2
                 ],
             },
         ],
@@ -850,9 +886,200 @@ export const strat: agentType = {
                     1,2,3
                 ],
             },
+            {
+                id: 5,
+                abilityIcon: 0,
+                title: 'A메인 수비 셋업',
+                identifier: 'amain-defense-setup',
+                difficulty: '보통',
+                type: 'image',
+                version: '1.01',
+                method: [
+                    1,2,3,4,5,6,7
+                ],
+            },
+            {
+                id: 6,
+                abilityIcon: 0,
+                title: 'A경사로 수비 함정',
+                identifier: 'aramps-defense-setup',
+                difficulty: '보통',
+                type: 'image',
+                version: '1.01',
+                method: [
+                    1,2,3
+                ],
+            },
+            {
+                id: 7,
+                abilityIcon: 1,
+                title: 'A경사로 진입 사이버 장막',
+                identifier: 'aramps-offense-smoke',
+                difficulty: '보통',
+                type: 'image',
+                version: '1.01',
+                method: [
+                    1,2
+                ],
+            },
+            {
+                id: 8,
+                abilityIcon: 1,
+                title: 'B사이트 수비 셋업',
+                identifier: 'bsite-defense-setup',
+                difficulty: '어려움',
+                type: 'image',
+                version: '1.01',
+                method: [
+                    1,2,3,4,5,6
+                ],
+            },
         ],
         ascent: [
-
+            {
+                id: 0,
+                abilityIcon: 2,
+                title: 'A숏 수비 스파이캠',
+                identifier: 'ashort-defense-spycam',
+                difficulty: '보통',
+                type: 'image',
+                version: '1.01',
+                method: [
+                    1,2,3,4
+                ],
+            },
+            {
+                id: 1,
+                abilityIcon: 0,
+                title: 'A숏 수비 함정',
+                identifier: 'ashort-defense-spycam',
+                difficulty: '보통',
+                type: 'image',
+                version: '1.01',
+                method: [
+                    1,2,3,4
+                ],
+            },
+            {
+                id: 2,
+                abilityIcon: 1,
+                title: 'A사이트 수비 원웨이 스모크',
+                identifier: 'asite-defense-oneway-smoke',
+                difficulty: '어려움',
+                type: 'image',
+                version: '1.01',
+                method: [
+                    1,2,3,4,5,6
+                ],
+            },
+            {
+                id: 3,
+                abilityIcon: 2,
+                title: 'A사이트 수비 스파이캠',
+                identifier: 'asite-defense-spycam',
+                difficulty: '쉬움',
+                type: 'image',
+                version: '1.01',
+                method: [
+                    1,2,3
+                ],
+            },
+            {
+                id: 4,
+                abilityIcon: 0,
+                title: 'A사이트 수비 함정',
+                identifier: 'asite-defense-trap',
+                difficulty: '보통',
+                type: 'image',
+                version: '1.01',
+                method: [
+                    1,2,3,4
+                ],
+            },
+            {
+                id: 5,
+                abilityIcon: 1,
+                title: 'B사이트 수비 원웨이 스모크',
+                identifier: 'bsite-defense-oneway-smoke',
+                difficulty: '어려움',
+                type: 'image',
+                version: '1.01',
+                method: [
+                    1,2,3,4
+                ],
+            },
+            {
+                id: 6,
+                abilityIcon: 2,
+                title: 'B사이트 수비 스파이캠',
+                identifier: 'bsite-defense-spycam',
+                difficulty: '쉬움',
+                type: 'image',
+                version: '1.01',
+                method: [
+                    1,2
+                ],
+            },
+            {
+                id: 7,
+                abilityIcon: 2,
+                title: 'B사이트 수비 스파이캠',
+                identifier: 'bsite-defense-spycam-2nd',
+                difficulty: '쉬움',
+                type: 'image',
+                version: '1.01',
+                method: [
+                    1,2
+                ],
+            },
+            {
+                id: 8,
+                abilityIcon: 2,
+                title: 'B사이트 진입 스파이캠',
+                identifier: 'bsite-offense-spycam',
+                difficulty: '어려움',
+                type: 'image',
+                version: '1.01',
+                method: [
+                    1,2,3,4,5,6,7,8,9
+                ],
+            },
+            {
+                id: 9,
+                abilityIcon: 1,
+                title: '미드 수비 원웨이 스모크',
+                identifier: 'mid-defense-oneway-smoke',
+                difficulty: '어려움',
+                type: 'image',
+                version: '1.01',
+                method: [
+                    1,2,3,4
+                ],
+            },
+            {
+                id: 10,
+                abilityIcon: 1,
+                title: '미드 수비 스파이캠 1',
+                identifier: 'mid-defense-spycam',
+                difficulty: '쉬움',
+                type: 'image',
+                version: '1.01',
+                method: [
+                    1,2
+                ],
+            },
+            {
+                id: 11,
+                abilityIcon: 1,
+                title: '미드 수비 스파이캠 2',
+                identifier: 'mid-defense-spycam-2nd',
+                difficulty: '쉬움',
+                type: 'image',
+                version: '1.01',
+                method: [
+                    1,2
+                ],
+            },
         ]
     },
     jett: {
