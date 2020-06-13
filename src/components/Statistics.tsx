@@ -76,7 +76,7 @@ export default function Statistics(){
             <Col xs={24} sm={22} md={20} lg={20} xl={15} >
                 <BackTop/>
                 <MetaTags>
-                    <title>발로란트 무기 정보 및 스킨</title>
+                    <title>발로란트 통계</title>
                     <meta name="description" content={`발로란트의 모든 무기에 대한 정보와 스킨 이미지를 확인가능합니다.`} />
                 </MetaTags>
                 <Row style={{width: '100%', height: '100%', backgroundColor: '#202b43'}} justify="center">
