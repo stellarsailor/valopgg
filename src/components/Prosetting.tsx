@@ -33,7 +33,7 @@ export default function Prosetting() {
         {
           title: '이름',
           dataIndex: 'name',
-          render: (v) => <Link to={`/prosetting/${v.toLowerCase()}`} style={{color: '#ff324c', fontWeight: 'bold'}}>{v} <SearchOutlined style={{color: 'white'}} /> </Link>,
+          render: (v) => <Link to={`/prosetting/${v.toLowerCase()}`} style={{color: '#ff324c', fontWeight: 'bold'}} key={v}>{v} <SearchOutlined style={{color: 'white'}} /> </Link>,
         },
         {
           title: 'DPI',
@@ -65,7 +65,7 @@ export default function Prosetting() {
         {
           title: '이름',
           dataIndex: 'name',
-          render: (v) => <Link to={`/prosetting/${v.toLowerCase()}`} style={{color: '#ff324c', fontWeight: 'bold'}}>{v} <SearchOutlined style={{color: 'white'}} /> </Link>,
+          render: (v) => <Link to={`/prosetting/${v.toLowerCase()}`} style={{color: '#ff324c', fontWeight: 'bold', fontSize: '1.15rem'}} key={v}>{v} <SearchOutlined style={{color: 'white'}} /> </Link>,
           width: '20%',
         },
         {
@@ -129,9 +129,9 @@ export default function Prosetting() {
                 <div style={{backgroundColor: '#fafafa'}}>
                     {
                         window.innerWidth < 576 ?
-                        <Table columns={columns_mobile} dataSource={dataSource.slice(0).sort(dynamicSort('name'))} style={{width: '100%'}} pagination={{ position: ['bottomCenter'] }} />
+                        <Table columns={columns_mobile} dataSource={dataSource.slice(0).sort(dynamicSort('name'))} style={{width: '100%'}} pagination={false} />
                         :
-                        <Table columns={columns} dataSource={dataSource.slice(0).sort(dynamicSort('name'))} style={{width: '100%'}} pagination={{ position: ['bottomCenter'] }} />
+                        <Table columns={columns} dataSource={dataSource.slice(0).sort(dynamicSort('name'))} style={{width: '100%'}} pagination={false} />
                     }
                 </div>
             </Col>
