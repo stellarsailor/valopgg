@@ -1,4 +1,4 @@
-import React, { useEffect } from 'react'
+import React, { useEffect, useState } from 'react'
 import MetaTags from 'react-meta-tags';
 import styled from 'styled-components'
 import { Row, Col, Table, BackTop } from 'antd';
@@ -6,7 +6,9 @@ import { SearchOutlined } from '@ant-design/icons';
 import { Link } from 'react-router-dom'
 import { prosetting } from '../datas/prosetting'
 import { dynamicSort } from '../logics/dynamicSort'
+import axios from 'axios'
 import Adfit from './subcomponents/Adfit';
+import { apiServer } from '../serverUrl';
 
 const Bold = styled.span`
     color: lightgreen;
@@ -14,19 +16,42 @@ const Bold = styled.span`
 
 export default function Prosetting() {
 
-    const dataSource = prosetting.map(v => {
-        let pair = { eDpi: Math.round(v.dpi * v.sensitivity) }
-        return { ...v, ...pair}
-    })
+    // const dataSource = prosetting.map(v => {
+    //     let pair = { eDpi: Math.round(v.dpi * v.sensitivity) }
+    //     return { ...v, ...pair}
+    // })
 
-    let sum = 0;
-    for(let i = 0; i < dataSource.length; i++ ){
-        sum += dataSource[i].eDpi
-    }
-    let avgEDpi = Math.round(sum / dataSource.length);
+    // let sum = 0;
+    // for(let i = 0; i < dataSource.length; i++ ){
+    //     sum += dataSource[i].eDpi
+    // }
+    // let avgEDpi = Math.round(sum / dataSource.length);
+
+    const [ prosetting, setProsetting ] = useState([])
+    const [ prosettingLoading, setProsettingLoading ] = useState(true)
+
+    const [ avgEDpi, setAvgEDpi ] = useState(0)
 
     useEffect(() => {
-        window.scrollTo(0, 0)
+      window.scrollTo(0, 0)
+      axios.get(`${apiServer}/prosetting`)
+      .then(res => {
+        const data = res.data.prosetting;
+
+        let eDpiCalculated = data.map(v => {
+          let pair = { eDpi: Math.round(v.dpi * v.sensitivity) }
+          return { ...v, ...pair}
+        })
+
+        let sum = 0;
+        for(let i = 0; i < eDpiCalculated.length; i++ ){
+          sum += eDpiCalculated[i].eDpi
+        }
+        setAvgEDpi(Math.round(sum / eDpiCalculated.length))
+        
+        setProsetting(eDpiCalculated)
+        setProsettingLoading(false)
+      })
     },[])
 
     const columns_mobile = [
@@ -129,9 +154,9 @@ export default function Prosetting() {
                 <div style={{backgroundColor: '#fafafa'}}>
                     {
                         window.innerWidth < 576 ?
-                        <Table columns={columns_mobile} dataSource={dataSource.slice(0).sort(dynamicSort('name'))} style={{width: '100%'}} pagination={false} />
+                        <Table columns={columns_mobile} dataSource={prosetting.slice(0).sort(dynamicSort('name'))} style={{width: '100%'}} pagination={false} loading={prosettingLoading} />
                         :
-                        <Table columns={columns} dataSource={dataSource.slice(0).sort(dynamicSort('name'))} style={{width: '100%'}} pagination={false} />
+                        <Table columns={columns} dataSource={prosetting.slice(0).sort(dynamicSort('name'))} style={{width: '100%'}} pagination={false} loading={prosettingLoading} />
                     }
                 </div>
             </Col>
