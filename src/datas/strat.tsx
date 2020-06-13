@@ -1058,7 +1058,7 @@ export const strat: agentType = {
             },
             {
                 id: 10,
-                abilityIcon: 1,
+                abilityIcon: 2,
                 title: '미드 수비 스파이캠 1',
                 identifier: 'mid-defense-spycam',
                 difficulty: '쉬움',
@@ -1070,7 +1070,7 @@ export const strat: agentType = {
             },
             {
                 id: 11,
-                abilityIcon: 1,
+                abilityIcon: 2,
                 title: '미드 수비 스파이캠 2',
                 identifier: 'mid-defense-spycam-2nd',
                 difficulty: '쉬움',
