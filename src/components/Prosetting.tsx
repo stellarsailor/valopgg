@@ -16,109 +16,113 @@ const Bold = styled.span`
 
 export default function Prosetting() {
 
-    // const dataSource = prosetting.map(v => {
-    //     let pair = { eDpi: Math.round(v.dpi * v.sensitivity) }
-    //     return { ...v, ...pair}
-    // })
+    const dataSource = prosetting.map(v => {
+        let pair = { eDpi: Math.round(v.dpi * v.sensitivity) }
+        return { ...v, ...pair}
+    })
 
-    // let sum = 0;
-    // for(let i = 0; i < dataSource.length; i++ ){
-    //     sum += dataSource[i].eDpi
-    // }
-    // let avgEDpi = Math.round(sum / dataSource.length);
+    let sum = 0;
+    for(let i = 0; i < dataSource.length; i++ ){
+        sum += dataSource[i].eDpi
+    }
+    let avgEDpi = Math.round(sum / dataSource.length);
 
-    const [ prosetting, setProsetting ] = useState([])
-    const [ prosettingLoading, setProsettingLoading ] = useState(true)
+    // const [ prosetting, setProsetting ] = useState([])
+    // const [ prosettingLoading, setProsettingLoading ] = useState(true)
 
-    const [ avgEDpi, setAvgEDpi ] = useState(0)
+    // const [ avgEDpi, setAvgEDpi ] = useState(0)
+
+    // useEffect(() => {
+    //     window.scrollTo(0, 0)
+    //     axios.get(`${apiServer}/prosetting`)
+    //     .then(res => {
+    //         const data = res.data.prosetting;
+
+    //         let eDpiCalculated = data.map(v => {
+    //         let pair = { eDpi: Math.round(v.dpi * v.sensitivity) }
+    //             return { ...v, ...pair}
+    //         })
+
+    //         let sum = 0;
+    //         for(let i = 0; i < eDpiCalculated.length; i++ ){
+    //             sum += eDpiCalculated[i].eDpi
+    //         }
+    //         setAvgEDpi(Math.round(sum / eDpiCalculated.length))
+            
+    //         setProsetting(eDpiCalculated)
+    //         setProsettingLoading(false)
+    //     })
+    // },[])
 
     useEffect(() => {
-      window.scrollTo(0, 0)
-      axios.get(`${apiServer}/prosetting`)
-      .then(res => {
-        const data = res.data.prosetting;
-
-        let eDpiCalculated = data.map(v => {
-          let pair = { eDpi: Math.round(v.dpi * v.sensitivity) }
-          return { ...v, ...pair}
-        })
-
-        let sum = 0;
-        for(let i = 0; i < eDpiCalculated.length; i++ ){
-          sum += eDpiCalculated[i].eDpi
-        }
-        setAvgEDpi(Math.round(sum / eDpiCalculated.length))
-        
-        setProsetting(eDpiCalculated)
-        setProsettingLoading(false)
-      })
+        window.scrollTo(0, 0)
     },[])
 
     const columns_mobile = [
         {
-          title: '이름',
-          dataIndex: 'name',
-          render: (v) => <Link to={`/prosetting/${v.toLowerCase()}`} style={{color: '#ff324c', fontWeight: 'bold'}} key={v}>{v} <SearchOutlined style={{color: 'white'}} /> </Link>,
+            title: '이름',
+            dataIndex: 'name',
+            render: (v) => <Link to={`/prosetting/${v.toLowerCase()}`} style={{color: '#ff324c', fontWeight: 'bold'}} key={v}>{v} <SearchOutlined style={{color: 'white'}} /> </Link>,
         },
         {
-          title: 'DPI',
-          dataIndex: 'dpi',
-          sorter: {
-            compare: (a, b) => a.dpi - b.dpi,
-            multiple: 1,
-          },
+            title: 'DPI',
+            dataIndex: 'dpi',
+            sorter: {
+                compare: (a, b) => a.dpi - b.dpi,
+                multiple: 1,
+            },
         },
         {
-          title: '감도',
-          dataIndex: 'sensitivity',
-          sorter: {
-            compare: (a, b) => a.sensitivity - b.sensitivity,
-            multiple: 1,
-          },
+            title: '감도',
+            dataIndex: 'sensitivity',
+            sorter: {
+                compare: (a, b) => a.sensitivity - b.sensitivity,
+                multiple: 1,
+            },
         },
         {
             title: 'eDPI',
             dataIndex: 'eDpi',
             sorter: {
-              compare: (a, b) => a.sensitivity - b.sensitivity,
-              multiple: 1,
+                compare: (a, b) => a.sensitivity - b.sensitivity,
+                multiple: 1,
             },
         },
     ];
 
     const columns = [
         {
-          title: '이름',
-          dataIndex: 'name',
-          render: (v) => <Link to={`/prosetting/${v.toLowerCase()}`} style={{color: '#ff324c', fontWeight: 'bold', fontSize: '1.15rem'}} key={v}>{v} <SearchOutlined style={{color: 'white'}} /> </Link>,
-          width: '20%',
+            title: '이름',
+            dataIndex: 'name',
+            render: (v) => <Link to={`/prosetting/${v.toLowerCase()}`} style={{color: '#ff324c', fontWeight: 'bold', fontSize: '1.15rem'}} key={v}>{v} <SearchOutlined style={{color: 'white'}} /> </Link>,
+            width: '20%',
         },
         {
-          title: '마우스',
-          dataIndex: 'mouse',
+            title: '마우스',
+            dataIndex: 'mouse',
         },
         {
-          title: 'DPI',
-          dataIndex: 'dpi',
-          sorter: {
-            compare: (a, b) => a.dpi - b.dpi,
-            multiple: 3,
-          },
+            title: 'DPI',
+            dataIndex: 'dpi',
+            sorter: {
+                compare: (a, b) => a.dpi - b.dpi,
+                multiple: 3,
+            },
         },
         {
-          title: '감도',
-          dataIndex: 'sensitivity',
-          sorter: {
-            compare: (a, b) => a.sensitivity - b.sensitivity,
-            multiple: 3,
-          },
+            title: '감도',
+            dataIndex: 'sensitivity',
+            sorter: {
+                compare: (a, b) => a.sensitivity - b.sensitivity,
+                multiple: 3,
+            },
         },
         {
             title: 'eDPI',
             dataIndex: 'eDpi',
             sorter: {
-              compare: (a, b) => a.eDpi - b.eDpi,
-              multiple: 3,
+            compare: (a, b) => a.eDpi - b.eDpi,
+                multiple: 3,
             },
         },
         {
@@ -154,9 +158,9 @@ export default function Prosetting() {
                 <div style={{backgroundColor: '#fafafa'}}>
                     {
                         window.innerWidth < 576 ?
-                        <Table columns={columns_mobile} dataSource={prosetting.slice(0).sort(dynamicSort('name'))} style={{width: '100%'}} pagination={false} loading={prosettingLoading} />
+                        <Table columns={columns_mobile} dataSource={prosetting.slice(0).sort(dynamicSort('name'))} style={{width: '100%'}} pagination={false} />
                         :
-                        <Table columns={columns} dataSource={prosetting.slice(0).sort(dynamicSort('name'))} style={{width: '100%'}} pagination={false} loading={prosettingLoading} />
+                        <Table columns={columns} dataSource={prosetting.slice(0).sort(dynamicSort('name'))} style={{width: '100%'}} pagination={false} />
                     }
                 </div>
             </Col>
