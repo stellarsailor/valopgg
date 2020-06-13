@@ -158,9 +158,9 @@ export default function Prosetting() {
                 <div style={{backgroundColor: '#fafafa'}}>
                     {
                         window.innerWidth < 576 ?
-                        <Table columns={columns_mobile} dataSource={prosetting.slice(0).sort(dynamicSort('name'))} style={{width: '100%'}} pagination={false} />
+                        <Table columns={columns_mobile} dataSource={dataSource.slice(0).sort(dynamicSort('name'))} style={{width: '100%'}} pagination={false} />
                         :
-                        <Table columns={columns} dataSource={prosetting.slice(0).sort(dynamicSort('name'))} style={{width: '100%'}} pagination={false} />
+                        <Table columns={columns} dataSource={dataSource.slice(0).sort(dynamicSort('name'))} style={{width: '100%'}} pagination={false} />
                     }
                 </div>
             </Col>
