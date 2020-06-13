@@ -23,6 +23,9 @@ export default function Dic() {
                     {dic.slice(0).sort(dynamicSort('word_ko')).map((v) => (
                         <DicWordRender id={v.id} word_ko={v.word_ko} word_en={v.word_en} desc={v.desc} isImg={v.isImg} key={v.id} />
                     ))}
+                    <div style={{margin: '2rem 0', fontSize: '1.4rem'}}>
+                        해당 용어 사전은 발로그에서 임의로 선정하여 뜻을 붙인 용어들로 구성되었으며, 발로란트의 공식 용어가 아닙니다.
+                    </div>
                 </div>
             </Col>
         </Row>
