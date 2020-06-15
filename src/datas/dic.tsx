@@ -271,7 +271,7 @@ export const dic: Array<dicType> = [
         letter: 'ㅂ',
         word_ko: '버니 합',
         word_en: 'Bunny Hop',
-        desc: '토끼뜀이라는 뜻으로 FPS내 일종의 무빙 테크닉.'
+        desc: '토끼뜀이라는 뜻으로 하프라이프 기반 게임 한정으로 점프 시 가속이 붙는 것을 이용한 무한 가속 글리치(일종의 버그). 발로란트 내에서는 가속이 붙지 않음.'
     },
     {
         id: 37,
@@ -379,5 +379,19 @@ export const dic: Array<dicType> = [
         word_ko: '원탭',
         word_en: 'Onetap',
         desc: '헤드샷 한방으로 상대를 처치하는 것.',
-    }
+    },
+    {
+        id: 52,
+        letter: 'ㅇ',
+        word_ko: '에임펀치',
+        word_en: 'Aim Punch',
+        desc: '상대방에게 헤드샷을 피격당했을때 내 에임이 위로 튀는 현상.',
+    },
+    {
+        id: 53,
+        letter: 'ㄹ',
+        word_ko: '리테이크',
+        word_en: 'Retake',
+        desc: '상대방(공격진)이 아군의 사이트에 스파이크를 설치한 뒤 그 스파이크를 해체하는(해체하러 가는) 행위.',
+    },
 ]
