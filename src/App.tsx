@@ -162,7 +162,7 @@ export default function App (props) {
                             <Route path="/prosetting" component={Prosetting} />
                             <Route path="/calculator" component={Calculator} />
                             <Route path="/reaction" component={ReactionTest} />
-                            {/* <Route path="/party" component={Party} /> */}
+                            <Route path="/party" component={Party} />
                             <Route path="/contact" component={Contact} />
                             <Route path="/prove" component={Contact} />
                             <Route path="/privacy" component={Privacy} />

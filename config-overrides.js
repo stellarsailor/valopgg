@@ -45,6 +45,12 @@ module.exports = override(
             // '@table-expand-icon-bg': @component-background,
             // '@table-selection-column-width': 60px,
             // '@table-selection-extra-right': 0,
+
+            // '@input-placeholder-color': 'lightgray',
+            // '@input-color': 'white',
+            // '@input-icon-color': 'white',
+            // '@input-border-color': 'gray',
+            // '@input-bg': 'rgba(19, 28, 46, 0.95)',
         },
     }),
 );
