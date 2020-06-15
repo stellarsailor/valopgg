@@ -112,7 +112,7 @@ export default function AgentDetail(props) {
                                     <ArrowRightOutlined style={{fontSize: '1.2rem', fontWeight: 'bold'}} />
                                 </div>
                             </Link>
-                            {/* <Adfit adUnit="DAN-skxug7w2pkjd" adWidth="320" adHeight="100" /> */}
+                            <Adfit adUnit="DAN-qhq3i0n8v392" adWidth="320" adHeight="100" />
                         </Col>
                     <div style={{backgroundColor: '#202b43', padding: '1rem', margin: '1rem'}}>
                         <div style={{fontWeight: 'bold', fontSize: '1.2rem', marginBottom: '0.5rem'}}>

@@ -227,7 +227,7 @@ export default function Main(props) {
                     responsive="true"
                 /> */}
 
-                { window.innerWidth < 576 ? null : <Adfit adUnit="DAN-qecnqcrgj3n6" adWidth="728" adHeight="90" /> }
+                {/* { window.innerWidth < 576 ? null : <Adfit adUnit="DAN-qecnqcrgj3n6" adWidth="728" adHeight="90" /> } */}
 
                 {/* <Collapse defaultActiveKey={['1']} >
                     <Panel header="0.49 패치노트" key="1">
