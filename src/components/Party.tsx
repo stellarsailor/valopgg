@@ -4,6 +4,7 @@ import styled from 'styled-components'
 import axios from 'axios'
 import { Row, Col, Spin, BackTop, Input, Select, Rate, Checkbox, Button, message, Tag, Empty, Typography } from 'antd';
 import { EditOutlined, FileSearchOutlined, ReloadOutlined, AudioOutlined, AudioMutedOutlined, EllipsisOutlined, UserOutlined } from '@ant-design/icons';
+import { Element , scroller } from 'react-scroll'
 import { apiServer } from '../serverUrl';
 import PartyRenderer from './subcomponents/PartyRenderer';
 import PartyWrite from './subcomponents/PartyWrite';
@@ -38,7 +39,14 @@ export default function Party() {
 
     const toggleWriteTab = useCallback(() => {
         if(writeTab) setWriteTab(false)
-        else setWriteTab(true)
+        else { 
+            scroller.scrollTo('scroll-to-element', {
+                duration: 800,
+                delay: 0,
+                smooth: 'easeInOutQuart'
+            })
+            setWriteTab(true) 
+        }
     },[writeTab])
 
     const toggleFilterTab = useCallback(() => {
@@ -67,11 +75,13 @@ export default function Party() {
                         {window.innerWidth < 576 ? <Adfit adUnit="DAN-qhq3i0n8v392" adWidth="320" adHeight="100" /> : <Adfit adUnit="DAN-skk0fg3no8c7" adWidth="728" adHeight="90" /> }
                     </div>
                     {/* <Paragraph style={{color: 'white', fontSize: '1rem', textAlign: 'right', margin: '1rem'}} copyable={{ text: 'https://valog.gg/party' }}>링크 공유</Paragraph> */}
-                    <div style={{padding: '1rem'}}>
-                        {
-                            writeTab ? <PartyWrite fetchParties={fetchParties} setWriteTab={setWriteTab} /> : null
-                        }
-                    </div>
+                    <Element name="scroll-to-element">
+                        <div style={{padding: '1rem'}}>
+                            {
+                                writeTab ? <PartyWrite fetchParties={fetchParties} setWriteTab={setWriteTab} /> : null
+                            }
+                        </div>
+                    </Element>
                     {
                         filterTab ? <div style={{width: '100%', textAlign: 'center'}}>빠른 시일 내에 필터 모드가 추가 될 예정입니다. 조금만 기다려주세요.</div> : null
                     }
