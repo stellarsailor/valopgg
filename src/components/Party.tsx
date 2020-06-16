@@ -7,6 +7,7 @@ import { EditOutlined, FileSearchOutlined, ReloadOutlined, AudioOutlined, AudioM
 import { apiServer } from '../serverUrl';
 import PartyRenderer from './subcomponents/PartyRenderer';
 import PartyWrite from './subcomponents/PartyWrite';
+import Adfit from './subcomponents/Adfit';
 const { Paragraph } = Typography
 
 message.config({
@@ -61,6 +62,9 @@ export default function Party() {
                             <FileSearchOutlined onClick={toggleFilterTab} style={{fontSize: '2rem', marginRight: '1rem'}} />
                             <ReloadOutlined onClick={fetchParties} style={{fontSize: '2rem', marginRight: '1rem'}} />
                         </div>
+                    </div>
+                    <div style={{width: '100%'}}>
+                        {window.innerWidth < 576 ? <Adfit adUnit="DAN-qhq3i0n8v392" adWidth="320" adHeight="100" /> : <Adfit adUnit="DAN-skk0fg3no8c7" adWidth="728" adHeight="90" /> }
                     </div>
                     {/* <Paragraph style={{color: 'white', fontSize: '1rem', textAlign: 'right', margin: '1rem'}} copyable={{ text: 'https://valog.gg/party' }}>링크 공유</Paragraph> */}
                     <div style={{padding: '1rem'}}>
