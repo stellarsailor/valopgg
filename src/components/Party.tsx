@@ -101,7 +101,6 @@ export default function Party() {
                     </Row>
                     <div style={{margin: '1.5rem', textAlign: 'center'}}>
                         유효한 파티만 노출시키기위해 파티 모집 등록 후 30분 이내의 파티만 표시하고 있으며, 무분별한 재등록을 막기위한 필터가 적용되어 있습니다.
-                        또한 타인을 사칭하거나 모욕하는 일은 법률에 의해 제재를 받을 수 있습니다.
                     </div>
                 </Row>
             </Col>
