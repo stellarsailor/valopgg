@@ -88,7 +88,7 @@ export default function PartyWrite(props){
     },[writeMode, writeTier, writeCurrentMember, writeMicNeed, writePlaytime, preferredAgent, writeUsername, writeUsertag, writeDescription, writePassword])
 
     return (
-        <Row style={{backgroundColor: 'rgb(24, 35, 56)', width: '100%', padding: '3%'}}>
+        <Row style={{backgroundColor: 'rgb(24, 35, 56)', width: '100%', padding: '3%', border: '1px solid gray'}}>
             <div style={{fontWeight: 'bold', color: 'white', fontSize: '1.2rem', marginBottom: '1rem'}}> 파티 모집 신규 등록 </div>
 
             <Col span={24} style={eachColumn}>
