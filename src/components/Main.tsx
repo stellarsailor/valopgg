@@ -5,6 +5,7 @@ import { Row, Col, Button, Alert, Input, message, Spin, Empty, Badge } from 'ant
 import { MessageOutlined, CloseOutlined} from '@ant-design/icons';
 import { Link } from 'react-router-dom'
 import Jumbotron from '../images/official-background.jpg'
+import mainImage from '../images/official-main-image.png'
 import AdSense from 'react-adsense';
 import { TwitterTimelineEmbed } from 'react-twitter-embed';
 import Adfit from './subcomponents/Adfit';
@@ -166,10 +167,12 @@ export default function Main(props) {
                     <img src={require('../images/official-main-image.png')} style={{width: '100%'}} alt="background cut 20 degree" />   
                 </div>
             </Col> */}
-            <Row style={{width: '100%', backgroundColor: 'rgb(32, 43, 67)'}} justify="center">
+            <Row style={window. innerWidth < 576 ? {width: '100%', backgroundColor: 'rgb(32, 43, 67)'} : {width: '100%', backgroundImage: `url(${mainImage})`, backgroundSize: 'cover', backgroundPosition: 'left'}} justify="center">
                 <Col xs={24} sm={22} md={20} lg={20} xl={15} style={{ width: '100%'}}>
-                    <span style={{fontWeight: 'bold', fontSize: '1.2rem', margin: '0 1rem'}}>현재 모집 중인 파티 목록</span>
-                    <Link to="/party" style={{marginLeft: '0rem'}}>더 보기</Link>
+                    <div style={{display: 'flex', justifyContent: 'flex-end', alignItems: 'center'}}>
+                        <span style={{fontWeight: 'bold', fontSize: '1.2rem', margin: '0 1rem'}}>현재 모집 중인 파티 목록</span>
+                        <Link to="/party" style={{marginLeft: '0rem'}}>더 보기</Link>
+                    </div>
                     <Row gutter={[8, 8]} justify="center" style={{padding: '1rem', width: '100%'}}>
                         {
                             asyncLoading ?
