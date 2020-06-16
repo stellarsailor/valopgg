@@ -5,6 +5,7 @@ import { AudioOutlined, AudioMutedOutlined, EllipsisOutlined, UserOutlined } fro
 import axios from 'axios'
 import { apiServer } from '../../serverUrl';
 import { agent } from '../../datas/agent'
+import { badWords } from '../../datas/badWords'
 
 const { Option } = Select;
 const { CheckableTag } = Tag;
@@ -57,33 +58,39 @@ export default function PartyWrite(props){
         if( writeMode === null || writeTier === null || writeUsername === '' ||  writeUsertag === '' || writeDescription === '' || writePlaytime === '' || writePassword === ''){
             message.error(<span style={{color: 'black'}}>빠뜨린 부분은 없는지 다시 확인해주세요.</span>);
         } else {
-            axios.post( `${apiServer}/party/write`, { //'http://192.168.0.106:8181/party/write' ,{ //
-                data: {
-                    mode: writeMode,
-                    tier: writeTier,
-                    current_member: writeCurrentMember,
-                    mic_need: writeMicNeed === true ? '1' : '0',
-                    playtime: writePlaytime,
-                    preferred_agent: preferredAgent,
-    
-                    username: writeUsername,
-                    usertag: writeUsertag,
-                    description: writeDescription,
-                    password: writePassword
-                }
-            })
-            .then(res => {
-                if(res.data.affectedRows === 1){
-                    setWriteTab(false)
-                    message.success(<span style={{color: 'black'}}>성공적으로 등록 되었습니다.</span>);
-                    fetchParties()
-                } else {
+            let filteringString = writeDescription + ' ' + writeUsername + ' ' + writeUsertag //연결해서 셋 다 검사
+            if(badWords.some( v => filteringString.includes(v))){
+                window.location.reload()
+            } else {
+                // console.log('금지어 없음')
+                axios.post( `${apiServer}/party/write`, { //'http://192.168.0.106:8181/party/write' ,{ //
+                    data: {
+                        mode: writeMode,
+                        tier: writeTier,
+                        current_member: writeCurrentMember,
+                        mic_need: writeMicNeed === true ? '1' : '0',
+                        playtime: writePlaytime,
+                        preferred_agent: preferredAgent,
+        
+                        username: writeUsername,
+                        usertag: writeUsertag,
+                        description: writeDescription,
+                        password: writePassword
+                    }
+                })
+                .then(res => {
+                    if(res.data.affectedRows === 1){
+                        setWriteTab(false)
+                        message.success(<span style={{color: 'black'}}>성공적으로 등록 되었습니다.</span>);
+                        fetchParties()
+                    } else {
+                        message.error(<span style={{color: 'black'}}>잠시후 다시 시도해주세요.</span>);
+                    }
+                })
+                .catch(function (error) {
                     message.error(<span style={{color: 'black'}}>잠시후 다시 시도해주세요.</span>);
-                }
-            })
-            .catch(function (error) {
-                message.error(<span style={{color: 'black'}}>잠시후 다시 시도해주세요.</span>);
-            });
+                });
+            }
         }
     },[writeMode, writeTier, writeCurrentMember, writeMicNeed, writePlaytime, preferredAgent, writeUsername, writeUsertag, writeDescription, writePassword])
 
@@ -177,6 +184,7 @@ export default function PartyWrite(props){
                 <WriteEachTitle>비밀번호</WriteEachTitle>
                 <Input.Password onChange={v => setWritePassword(v.target.value)} placeholder="비밀번호" maxLength={16} style={{width: 150}} />
                 <div style={{color: 'gray', margin: '1rem 0'}}>비밀번호는 암호화되어 저장되며, 파티 모집 갱신/삭제 시 이용됩니다. 영어와 숫자 이용을 권장드립니다.</div>
+                타인을 사칭하거나 모욕하는 일은 법률에 의해 제재를 받을 수 있습니다.
             </Col>
 
             <div style={{display: 'flex', justifyContent:'center', alignItems: 'center', width: '100%', margin: '1rem 0'}}>
