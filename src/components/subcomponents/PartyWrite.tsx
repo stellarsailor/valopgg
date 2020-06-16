@@ -151,7 +151,7 @@ export default function PartyWrite(props){
 
             <Col span={24} style={eachColumn}>
                 <div>
-                    <WriteEachTitle>선호 요원</WriteEachTitle>
+                    <WriteEachTitle>나 혹은 파티 멤버가 플레이를 선호하는 요원</WriteEachTitle>
                 </div>
                 <div style={{margin: 10, width: '100%'}}>
                     {agent.map(v =>
@@ -171,7 +171,7 @@ export default function PartyWrite(props){
                 <div>
                     <WriteEachTitle>유저네임</WriteEachTitle>
                 </div>
-                <Input onChange={v => setWriteUsername(v.target.value)} placeholder="닉네임" style={{width: 100}} />
+                <Input onChange={v => setWriteUsername(v.target.value)} placeholder="닉네임" style={{width: 150}} />
                 <span style={{fontWeight: 'bold', fontSize: '1.4rem', margin: '0 0.5rem'}}>#</span> <Input onChange={v => setWriteUsertag(v.target.value)} placeholder="태그" style={{width: 100}} />
             </Col>
 
@@ -184,7 +184,7 @@ export default function PartyWrite(props){
                 <WriteEachTitle>비밀번호</WriteEachTitle>
                 <Input.Password onChange={v => setWritePassword(v.target.value)} placeholder="비밀번호" maxLength={16} style={{width: 150}} />
                 <div style={{color: 'gray', margin: '1rem 0'}}>비밀번호는 암호화되어 저장되며, 파티 모집 갱신/삭제 시 이용됩니다. 영어와 숫자 이용을 권장드립니다.</div>
-                타인을 사칭하거나 모욕하는 일은 법률에 의해 제재를 받을 수 있습니다.
+                타인을 사칭하거나 악의적인 도배는 법률에 의해 제재를 받을 수 있으며 해당 ip는 수집되어 웹사이트 이용에 제한이 있을 수 있습니다.
             </Col>
 
             <div style={{display: 'flex', justifyContent:'center', alignItems: 'center', width: '100%', margin: '1rem 0'}}>

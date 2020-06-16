@@ -155,7 +155,7 @@ export default function PartyEdit(props){
 
             <Col span={24} style={eachColumn}>
                 <div>
-                    <WriteEachTitle>선호 요원</WriteEachTitle>
+                    <WriteEachTitle>나 혹은 파티 멤버가 플레이를 선호하는 요원</WriteEachTitle>
                 </div>
                 <div style={{margin: 10, width: '100%'}}>
                     {agent.map(v =>
@@ -175,7 +175,7 @@ export default function PartyEdit(props){
                 <div>
                     <WriteEachTitle>유저네임</WriteEachTitle>
                 </div>
-                <Input onChange={v => setWriteUsername(v.target.value)} placeholder="닉네임" style={{width: 100}} value={writeUsername} />
+                <Input onChange={v => setWriteUsername(v.target.value)} placeholder="닉네임" style={{width: 150}} value={writeUsername} />
                 <span style={{fontWeight: 'bold', fontSize: '1.4rem', margin: '0 0.5rem'}}>#</span> 
                 <Input onChange={v => setWriteUsertag(v.target.value)} placeholder="태그" style={{width: 100}} value={writeUsertag} />
             </Col>
@@ -191,7 +191,7 @@ export default function PartyEdit(props){
             </Col>
 
             <div style={{display: 'flex', justifyContent:'space-evenly', alignItems: 'center', width: '100%', margin: '1rem 0'}}>
-                <Button type="primary" onClick={submitEdit} style={{width: '40%'}}> 수정 </Button>
+                <Button type="primary" onClick={submitEdit} style={{width: '40%'}}> 수정/갱신 </Button>
                 <Button type="default" onClick={deleteParty} style={{width: '40%'}} icon={<DeleteOutlined />}> 삭제 </Button>
             </div>
         </Row>

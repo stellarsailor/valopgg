@@ -87,7 +87,7 @@ export default function PartyRenderer (props){
                         </Col>
                         <Col span={6}> {micNeed === 1 ? <span ><AudioOutlined style={{color: '#ff324c'}} /> 필수</span> : <span>자유</span> }</Col>
                     </Row>
-                    <div style={{color: 'gray', marginTop: 10}}>선호 요원</div>
+                    <div style={{color: 'gray', marginTop: 10}}>파티멤버가 플레이를 선호하는 요원</div>
                     <div style={{minHeight: 70}}>
                         {
                             selectedAgent[0] === '' ? <span>전체</span>
