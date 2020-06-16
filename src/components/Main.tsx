@@ -1,7 +1,7 @@
-import React, { useState, useCallback } from 'react'
+import React, { useState, useCallback, useEffect } from 'react'
 import MetaTags from 'react-meta-tags';
 import styled from 'styled-components'
-import { Row, Col, Button, Alert, Input, message } from 'antd';
+import { Row, Col, Button, Alert, Input, message, Spin, Empty, Badge } from 'antd';
 import { MessageOutlined, CloseOutlined} from '@ant-design/icons';
 import { Link } from 'react-router-dom'
 import Jumbotron from '../images/official-background.jpg'
@@ -12,6 +12,7 @@ import { patchNotePhrase } from '../datas/guide'
 import TextArea from 'antd/lib/input/TextArea';
 import axios from 'axios';
 import { apiServer } from '../serverUrl';
+import PartyRenderer from './subcomponents/PartyRenderer';
 
 const { Search } = Input;
 
@@ -46,6 +47,23 @@ export default function Main(props) {
     const [ inputEmail, setInputEmail ] = useState('')
     const [ inputDesc, setInputDesc ] = useState('')
     const [ emailError, setEmailError ] = useState(false)
+
+    const [ partyList, setPartyList ] = useState<Array<any>>([])
+    const [ asyncLoading, setAsyncLoading ] = useState(true)
+
+    useEffect(() => {
+        fetchParties()
+    },[])
+
+    const fetchParties = useCallback(() => {
+        setAsyncLoading(true)
+        axios.get(`${apiServer}/party/select/all`)
+        .then(res => {
+            // console.log(res.data)
+            setPartyList(res.data)
+            setAsyncLoading(false)
+        })
+    },[])
 
     const toggleHelpdesk = useCallback(() => {
         if(openHelpdesk) setOpenHelpdesk(false)
@@ -117,50 +135,65 @@ export default function Main(props) {
                     { openHelpdesk ? <CloseOutlined style={{fontSize: '1.8rem'}} /> : <MessageOutlined style={{fontSize: '1.8rem'}} /> }
                 </a>
             }
-            <Col xs={24} sm={24} md={0} lg={0} xl={0} style={{marginBottom: '1rem'}}>
-                {/* <div style={{display: 'flex', justifyContent: 'center', alignItems: 'center', width: '100%', height: 30, backgroundColor: 'orange'}}>
-                    발로란트 정식출시! 패치노트 1.0 바로가기
-                </div> */}
+            {/* <Col xs={24} sm={24} md={0} lg={0} xl={0} style={{ }}>
                 <Alert type="warning" message={<Link to="/guide" style={{color: 'black'}}>{patchNotePhrase}</Link>} showIcon={false} banner closable />
                 <div style={{display: 'flex', width: '100%', height: 200, backgroundImage: `url(${Jumbotron})`, backgroundSize: 'cover', backgroundPosition: 'center', justifyContent: 'center', alignItems: 'center', flexDirection: 'column'}}>
-                        {/* <div style={{fontWeight: 'bold', fontSize: '1.2rem'}}>
+                        <div style={{fontWeight: 'bold', fontSize: '1.2rem'}}>
                             발로란트 정보의 모든 것, 발로그
-                        </div> */}
-                        {/* <Search 
+                        </div>
+                        <Search 
                         placeholder="유저 네임을 입력해주세요." 
                         size="large"
                         onSearch={value => props.history.push(`/player/${value}`)} 
-                        enterButton style={{width: '90%'}} /> */}
-                        {/* <div>
-                            <Link to={`/guide/0/0`}><Button type="primary">0.50 패치노트 바로가기</Button></Link>
-                        </div> */}
+                        enterButton style={{width: '90%'}} />
                 </div>
             </Col>
-            <Col xs={0} sm={0} md={24} lg={24} xl={24} style={{marginBottom: '1rem'}}>
+            <Col xs={0} sm={0} md={24} lg={24} xl={24} style={{ }}>
                 <div style={{display: 'flex', justifyContent: 'center'}} >
                     <div style={{position: 'absolute', fontSize: '2rem', top: '30%', textAlign: 'center'}}>
                         <div>
                             발로란트 정보의 모든 것, 발로그
                         </div>
-                        {/* <Search
-                        placeholder="유저 네임을 입력해주세요."
+                        <Search
+                        placeholder="발로란트 정보의 모든 것, 발로그"
                         enterButton="검색"
                         size="large"
-                        onSearch={value => props.history.push(`/player/${value}`)}
-                        /> */}
-                        {/* <div style={{fontSize: '1.2rem'}}>
-                            <Link to={`/guide/0/0`}><Button type="primary">0.50 패치노트 바로가기</Button></Link>
-                        </div> */}
+                        // onSearch={value => props.history.push(`/player/${value}`)}
+                        />
                     </div>
                 </div>
                 <div >
                     <img src={require('../images/official-main-image.png')} style={{width: '100%'}} alt="background cut 20 degree" />   
                 </div>
-            </Col>
+            </Col> */}
+            <Row style={{width: '100%', backgroundColor: 'rgb(32, 43, 67)'}} justify="center">
+                <Col xs={24} sm={22} md={20} lg={20} xl={15} style={{ width: '100%'}}>
+                    <span style={{fontWeight: 'bold', fontSize: '1.2rem', margin: '0 1rem'}}>현재 모집 중인 파티 목록</span>
+                    <Link to="/party" style={{marginLeft: '0rem'}}>더 보기</Link>
+                    <Row gutter={[8, 8]} justify="center" style={{padding: '1rem', width: '100%'}}>
+                        {
+                            asyncLoading ?
+                            <div style={{width: '100%', height: 250, display: 'flex', justifyContent: 'center', alignItems: 'center'}}>
+                                <Spin />
+                            </div>
+                            :
+                                partyList.length === 0 ?    
+                                <div style={{margin: '2rem 0', width: '100%', height: 250, display: 'flex', flexDirection: 'column', justifyContent: 'center', alignItems: 'center'}}>
+                                    <Empty description={false} />
+                                    <div style={{margin: '1rem', textAlign: 'center'}}>현재 모집 중인 파티가 없어요 ㅠ.ㅠ 파티를 직접 모집 해보시는건 어때요?</div>
+                                    <Link to="/party"><Button type="primary" style={{margin: '1rem 0'}} >파티 모집</Button></Link>
+                                </div>
+                                :
+                                partyList.map( (v, index) => index < 3 ? <PartyRenderer key={v.id} iconDisabled={true}
+                                fetchParties={fetchParties}
+                                id={v.id} mode={v.mode} tier={v.tier} currentMember={v.current_member} micNeed={v.mic_need} 
+                                playtime={v.playtime} preferredAgent={v.preferred_agent}
+                                username={v.username} description={v.description} ipAddress={v.ipAddress} updatedAt={v.updatedAt} /> : null)
+                        }
+                    </Row>
+                </Col>
+            </Row>
             <Col xs={24} sm={22} md={20} lg={20} xl={15}>
-                {/* <a target='_blank' href="https://play.google.com/store/apps/details?id=com.mobile_valopgg" style={{display: 'flex', justifyContent: 'center', marginTop: '1rem', marginLeft: '1rem', marginRight: '1rem'}}>
-                    <Alert message="발로그 안드로이드 앱이 출시되었습니다! 바로가기" type="success" showIcon closable />
-                </a> */}
                 <Row style={{padding: '1rem'}}>
                     <Col xs={24} sm={12} md={12} lg={12} xl={12} style={{padding: '5%'}}>
                         {/* <img src={require('../images/mainImages0.jpg')} style={{width: '100%'}} /> */}

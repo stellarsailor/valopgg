@@ -63,9 +63,9 @@ export default function App (props) {
         <Router>
             <Layout className="layout">
                 <HeaderContainer>
-                    <div style={{width: '100%', height: 35, backgroundColor: 'rgb(22, 22, 22)', display: 'flex', alignItems: 'center' , justifyContent: 'center'}}>
-                        발옵지지가 발로그(Valog.gg)로 새롭게 태어났습니다!
-                    </div>
+                    <Link to="/party" style={{width: '100%', height: 35, backgroundColor: 'rgb(22, 22, 22)', display: 'flex', alignItems: 'center' , justifyContent: 'center'}}>
+                        새롭게 추가된 파티모집 탭을 이용해보세요! 바로가기
+                    </Link>
                     <Row>
                         <Col xs={24} sm={24} md={0} lg={0} xl={0} >
                             <Row style={{height: 80, display: 'flex', alignItems: 'center', backgroundImage: `url(${Banner})`, backgroundSize: 'cover', backgroundPosition: 'center'}}>
@@ -115,7 +115,7 @@ export default function App (props) {
                             <Link to="/prosetting" style={mobileMenuTab}>프로 세팅</Link>
                             <Link to="/calculator" style={mobileMenuTab}>감도 계산기</Link>
                             <Link to="/reaction" style={mobileMenuTab}>반응속도 측정</Link>
-                            {/* <Link to="/party" style={mobileMenuTab}>파티 모집</Link> */}
+                            <Link to="/party" style={mobileMenuTab}>파티 모집</Link>
                             {/* <Link to="/simulator" style={mobileMenuTab}>전략 시뮬레이터</Link> */}
                         </div>
                     </Col>
@@ -133,7 +133,7 @@ export default function App (props) {
                             <MenuTabHover><Link to="/prosetting">프로 세팅</Link></MenuTabHover>
                             <MenuTabHover><Link to="/calculator">감도 계산기</Link></MenuTabHover>
                             <MenuTabHover><Link to="/reaction">반응속도 측정</Link></MenuTabHover>
-                            {/* <MenuTabHover><Link to="/party">파티 모집</Link></MenuTabHover> */}
+                            <MenuTabHover><Link to="/party">파티 모집</Link></MenuTabHover>
                             {/* <MenuTabHover><Link to="/simulator">전략 시뮬레이터</Link></MenuTabHover> */}
                         </div>
                     </Col>
