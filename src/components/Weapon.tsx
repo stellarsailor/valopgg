@@ -84,7 +84,7 @@ export default function Weapon(){
                     <Col xs={24} sm={12} md={12} lg={7} xl={7} style={{ padding: 10, display: 'flex', flexDirection: 'column', justifyContent: 'space-between'}}>
                         <WeaponCategory>저격소총</WeaponCategory>
                         {weapon.filter((v) => v.category === 'Sniper').map((v, index) => <WeaponRender key={index} name={v.name} name_kr={v.name_ko} cost={v.cost} />)}
-                        <WeaponCategory>중형</WeaponCategory>
+                        <WeaponCategory>중기관총</WeaponCategory>
                         {weapon.filter((v) => v.category === 'Heavy').map((v, index) => <WeaponRender key={index} name={v.name} name_kr={v.name_ko} cost={v.cost} />)}
                     </Col>
                     <Col xs={24} sm={12} md={12} lg={7} xl={7} style={{ padding: 10, display: 'flex', flexDirection: 'column', justifyContent: 'space-between'}}>
