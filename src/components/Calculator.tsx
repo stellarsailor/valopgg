@@ -40,8 +40,8 @@ export default function Calculator(props) {
                         <TabMenu isMobile={isMobile} selected={calcType === 'sens' ? true : false}>감도 계산기</TabMenu>
                     </Link>
                 </div>
-                {window.innerWidth < 576 ? <Adfit adUnit="DAN-qhq3i0n8v392" adWidth="320" adHeight="100" /> : <Adfit adUnit="DAN-skk0fg3no8c7" adWidth="728" adHeight="90" /> }
                 <Paragraph style={{color: 'white', fontSize: '1rem', textAlign: 'right'}} copyable={{ text: `https://valog.gg/calculator/${calcType}` }}>링크 복사</Paragraph>
+                {window.innerWidth < 576 ? <Adfit adUnit="DAN-qhq3i0n8v392" adWidth="320" adHeight="100" /> : <Adfit adUnit="DAN-skk0fg3no8c7" adWidth="728" adHeight="90" /> }
                 {
                     calcType === 'battlepass' ?
                     <CalculatorBattlepass />

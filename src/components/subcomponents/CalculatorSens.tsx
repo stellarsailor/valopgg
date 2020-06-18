@@ -67,7 +67,7 @@ export default function CalculatorSens () {
     
 
     return (
-        <Row>
+        <Row style={{marginTop: '1rem'}}>
             <Col xs={24} sm={24} md={24} lg={12} xl={12} style={{backgroundColor: '#dcdbdc', border: '1px solid gray', width: '100%'}}>
                 <div style={{fontSize: '1.2rem', fontWeight: 'bold', color: 'black', backgroundColor: '#434343', textAlign: 'right', padding: '1rem'}}>
                     <div style={{color: 'white'}}>발로란트에서 설정할 감도</div>

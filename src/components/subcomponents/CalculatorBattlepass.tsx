@@ -2,6 +2,8 @@ import React, { useState, useEffect, useCallback } from 'react'
 import { Row, Col, Select, Input, Typography, Radio, Button, Checkbox } from 'antd';
 import styled from 'styled-components'
 import { battlepass } from '../../datas/battlepass'
+import { strat } from '../../datas/strat';
+import { start } from 'repl';
 
 const RenderEachTier = styled.div`
     background-color: ${ props => props.selected ? '#00ffae' : null };
@@ -96,6 +98,18 @@ export default function CalculatorBattlepass () {
                 </BigText>
                 <BigText>
                     소요 시간(평균 10분) : { Math.floor(Math.ceil(sumExp / (1000 * pcBangScailing)) * 10 / 60) } 시간 { Math.ceil(sumExp / (1000 * pcBangScailing)) * 10 % 60 } 분
+                </BigText>
+                
+                <BigText>
+                    현질로 뚫는다면?
+                    {
+                    goalTier - startTier > 0 ?
+                        <div>
+                            { (goalTier - startTier) * 300 } VP = 약 {(goalTier - startTier) * 300 * 11} 원
+                        </div>
+                    :
+                        null
+                    }
                 </BigText>
                 <div>
                     해당 판수와 소요 시간은 주간/일일 퀘스트를 제외한 수치이므로 일부 차이가 있을 수 있습니다.
