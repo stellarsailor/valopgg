@@ -21,9 +21,9 @@ export default function WeaponRender(props){
         <Link to={`/weapon/${name.toLowerCase()}`} style={selectedWeapon === name ? {...selectedBorder} : {...unselectedBorder} } >
             <div style={{display: 'flex', justifyContent: 'center', paddingTop: 20}}>
                 { resize ? 
-                    <img src={(`${staticServer}/weaponskins/normal-${name.toLowerCase()}-skin.png`)} style={{width: '40%', alignSelf: 'flex-start'}} alt={`${name} rendering for mobile`} /> 
+                    <img src={(`${staticServer}/weaponskins/normal-${name.toLowerCase()}.png`)} style={{width: '40%', alignSelf: 'flex-start'}} alt={`${name} rendering for mobile`} /> 
                 : 
-                    <img src={(`${staticServer}/weaponskins/normal-${name.toLowerCase()}-skin.png`)} style={{width: '70%', alignSelf: 'flex-start'}} alt={`${name} rendering`} />
+                    <img src={(`${staticServer}/weaponskins/normal-${name.toLowerCase()}.png`)} style={{width: '70%', alignSelf: 'flex-start'}} alt={`${name} rendering`} />
                 }
             </div>
             <div style={{fontSize: '0.8rem', marginLeft: 10, display: 'flex', alignItems: 'center'}}>

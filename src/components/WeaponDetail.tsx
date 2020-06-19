@@ -78,7 +78,7 @@ export default function WeaponDetail(props) {
                             <Col xs={24} sm={24} md={18} lg={18} xl={18} style={{ padding: '1rem', marginBottom: '1rem'}}>
                                 <TitleText>{data.name_ko}</TitleText>
                                 <div style={{display: 'flex', justifyContent: 'center'}}>
-                                    <img src={(`${staticServer}/weaponskins/normal-${data.name.toLowerCase()}-skin.png`)} style={{width: '80%', alignSelf: 'flex-start'}} alt="발로란트 무기 스킨" />
+                                    <img src={(`${staticServer}/weaponskins/normal-${data.name.toLowerCase()}.png`)} style={{width: '80%', alignSelf: 'flex-start'}} alt="발로란트 무기 스킨" />
                                 </div>
                                 <div style={{marginLeft: '1rem', color: 'lightgray'}}>탄창 : <WhiteBoldText>{data.capacity}</WhiteBoldText></div>
                                 <div style={{marginLeft: '1rem', color: 'lightgray'}}>관통력 : <WhiteBoldText>{data.penetration}</WhiteBoldText></div>
@@ -151,8 +151,13 @@ export default function WeaponDetail(props) {
                                     {
                                         skin.filter(v => v.name.toLowerCase() === weaponName)[0].skins.slice(0).sort(dynamicSort('name_ko')).map(v => (
                                             <Col xs={24} sm={24} md={12} lg={12} xl={12} style={{padding: 10}} key={v.id}>
-                                                <div><span style={{fontSize: '1.3rem'}}>{v.name_ko}</span> ({v.cost}{parseInt(v.cost) > 0 ? ` = 약 ${parseInt(v.cost) * 11}원` : null})</div>
-                                                <img src={(`${staticServer}/weaponskins/${v.category}-${weaponName.toLowerCase()}-skin${v.level === 0 ? '' : `-${v.level}`}.png`)} style={{backgroundColor: '#273552', width: '100%'}} alt={`${v.category} ${v.name_ko} 발로란트 무기 스킨`} />
+                                                <div>
+                                                    <span style={{fontSize: '1.3rem'}}>{v.name_ko}</span> 
+                                                    ({v.cost}{parseInt(v.cost) > 0 ? ` = 약 ${parseInt(v.cost) * 11}원` : null})
+                                                </div>
+                                                <div style={{backgroundColor: '#273552', minHeight: 200, display: 'flex', justifyContent: 'center', alignItems: 'center', padding: '1rem'}}>
+                                                    <img src={(`${staticServer}/weaponskins/${v.category}-${weaponName.toLowerCase()}${v.level === 0 ? '' : `-${v.level}`}.png`)} style={{width: '100%'}} alt={`${v.category} ${v.name_ko} 발로란트 무기 스킨`} />
+                                                </div>
                                             </Col>
                                         ))
                                     }
