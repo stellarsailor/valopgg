@@ -42,7 +42,7 @@ export default function Weapon(){
                 <BackTop/>
                 <MetaTags>
                     <title>발로란트 무기 정보 및 스킨</title>
-                    <meta name="description" content={`발로란트의 모든 무기에 대한 정보와 스킨 이미지를 확인가능합니다.`} />
+                    <meta name="description" content={`발로란트의 모든 무기에 대한 정보와 스킨 이미지를 확인가능합니다. 현재 특별 판매중인 발로란트 번들 세트 카운트다운도 확인해보세요!`} />
                 </MetaTags>
                 {/* <Carousel autoplay style={{width: '100%', height: 200, overflowY: 'hidden'}} dots={true}>
                     {
