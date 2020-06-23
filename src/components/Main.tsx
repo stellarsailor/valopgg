@@ -136,7 +136,7 @@ export default function Main(props) {
                     { openHelpdesk ? <CloseOutlined style={{fontSize: '1.8rem'}} /> : <MessageOutlined style={{fontSize: '1.8rem'}} /> }
                 </a>
             }
-            <Col xs={24} sm={24} md={0} lg={0} xl={0} style={{backgroundColor: 'green' }}>
+            <Col xs={24} sm={24} md={0} lg={0} xl={0} style={{backgroundColor: 'lightgray' }}>
                 <Alert type="warning" message={<Link to="/guide" style={{color: 'black'}}>{patchNotePhrase}</Link>} showIcon={false} banner closable />
                 <div style={{display: 'flex', width: '100%', height: 200, backgroundImage: `url(${mainImage})`, backgroundSize: 'cover', backgroundPosition: 'left', justifyContent: 'center', alignItems: 'center', flexDirection: 'column'}}>
                         {/* <div style={{fontWeight: 'bold', fontSize: '1.2rem'}}>
