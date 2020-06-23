@@ -62,7 +62,7 @@ export default function Party() {
                     <title>발로그 발로란트 파티 모집</title>
                     <meta name="description" content={`발로란트 같이 하실분? 여기 다 모여있다! 발로란트 파티모집 발로그. 게임모드, 적정티어, 현재인원, 마이크 필수 여부, 선호 요원 등 상세한 조건에 맞추어 찾아보세요!`} />
                 </MetaTags>
-                <Row style={{width: '100%', height: '100%', backgroundColor: '#202b43'}}>
+                <Row style={{width: '100%', backgroundColor: '#202b43', margin: '1rem 0'}}>
                     <div style={{width: '100%', padding: '1rem', display: 'flex', justifyContent: 'space-between', alignItems: 'center'}}> 
                         <div style={{fontWeight: 'bold', fontSize: '1.6rem'}}>파티 모집(Beta) </div>
                         <div>
@@ -110,7 +110,7 @@ export default function Party() {
                         }
                     </Row>
                     <div style={{margin: '1.5rem', textAlign: 'center'}}>
-                        유효한 파티만 노출시키기위해 파티 모집 등록 후 30분 이내의 파티만 표시하고 있으며, 무분별한 재등록을 막기위한 필터가 적용되어 있습니다.
+                        유효한 파티만 노출시키기위해 파티 모집 등록 후 1시간 이내의 파티만 표시하고 있으며, 무분별한 재등록을 막기위한 필터가 적용되어 있습니다.
                     </div>
                 </Row>
             </Col>
