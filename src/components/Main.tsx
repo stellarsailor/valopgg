@@ -104,8 +104,8 @@ export default function Main(props) {
     return(
         <Row justify="center" style={{backgroundColor: 'rgba(236, 232, 225, 0.95)', height: 'auto'}} >
             <MetaTags>              
-                <title>발로그 - 발로란트 정보의 모든 것</title>
-                <meta name="description" content={`발로그에서 요원, 무기, 스킨, 맵, 요원 별 전략 등 다양하고 유용한 정보를 습득하세요!`} />
+                <title>발로그 지지 - 발로란트 정보의 모든 것</title>
+                <meta name="description" content={`발로그 지지에서 요원 정보, 요원 별 전략 및 가이드, 무기 정보 및 총기 스킨, 맵 용어, 맵 콜아웃, 반응속도 측정 테스트, 배틀패스 계산기, 감도 변환기, 발로란트 파티 모집 등 등 다양하고 유용한 정보를 습득하세요!`} />
             </MetaTags>
             {
                 openHelpdesk ?
@@ -136,16 +136,16 @@ export default function Main(props) {
                     { openHelpdesk ? <CloseOutlined style={{fontSize: '1.8rem'}} /> : <MessageOutlined style={{fontSize: '1.8rem'}} /> }
                 </a>
             }
-            {/* <Col xs={24} sm={24} md={0} lg={0} xl={0} style={{ }}>
+            <Col xs={24} sm={24} md={0} lg={0} xl={0} style={{backgroundColor: 'green' }}>
                 <Alert type="warning" message={<Link to="/guide" style={{color: 'black'}}>{patchNotePhrase}</Link>} showIcon={false} banner closable />
-                <div style={{display: 'flex', width: '100%', height: 200, backgroundImage: `url(${Jumbotron})`, backgroundSize: 'cover', backgroundPosition: 'center', justifyContent: 'center', alignItems: 'center', flexDirection: 'column'}}>
-                        <div style={{fontWeight: 'bold', fontSize: '1.2rem'}}>
+                <div style={{display: 'flex', width: '100%', height: 200, backgroundImage: `url(${mainImage})`, backgroundSize: 'cover', backgroundPosition: 'left', justifyContent: 'center', alignItems: 'center', flexDirection: 'column'}}>
+                        {/* <div style={{fontWeight: 'bold', fontSize: '1.2rem'}}>
                             발로란트 정보의 모든 것, 발로그
-                        </div>
+                        </div> */}
                         <Search 
-                        placeholder="유저 네임을 입력해주세요." 
+                        placeholder="발로란트 정보의 모든 것, 발로그" 
                         size="large"
-                        onSearch={value => props.history.push(`/player/${value}`)} 
+                        // onSearch={value => props.history.push(`/player/${value}`)} 
                         enterButton style={{width: '90%'}} />
                 </div>
             </Col>
@@ -166,14 +166,14 @@ export default function Main(props) {
                 <div >
                     <img src={require('../images/official-main-image.png')} style={{width: '100%'}} alt="background cut 20 degree" />   
                 </div>
-            </Col> */}
-            <Row style={window. innerWidth < 576 ? {width: '100%', backgroundColor: 'rgb(32, 43, 67)'} : {width: '100%', backgroundImage: `url(${mainImage})`, backgroundSize: 'cover', backgroundPosition: 'left'}} justify="center">
+            </Col>
+            <Row style={{width: '100%', backgroundColor: 'rgb(32, 43, 67, 0.3)'}} justify="center">
                 <Col xs={24} sm={22} md={20} lg={20} xl={15} style={{ width: '100%'}}>
-                    <div style={{display: 'flex', justifyContent: 'flex-end', alignItems: 'center'}}>
-                        <span style={{fontWeight: 'bold', fontSize: '1.2rem', margin: '0 1rem'}}>현재 모집 중인 파티 목록</span>
-                        <Link to="/party" style={{marginLeft: '0rem'}}>더 보기</Link>
+                    <div style={{display: 'flex', justifyContent: 'flex-start', alignItems: 'center'}}>
+                        <span style={{fontWeight: 'bold', fontSize: '1.2rem', margin: '0 1rem', color: 'white'}}>현재 모집 중인 파티 목록</span>
+                        <Link to="/party" style={{marginLeft: '0rem', color: 'white'}}>더 보기</Link>
                     </div>
-                    <Row gutter={[8, 8]} justify="center" style={{padding: '1rem', width: '100%'}}>
+                    <Row gutter={[8, 8]} style={{padding: '1rem', width: '100%'}}>
                         {
                             asyncLoading ?
                             <div style={{width: '100%', height: 250, display: 'flex', justifyContent: 'center', alignItems: 'center'}}>
