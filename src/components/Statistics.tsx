@@ -92,7 +92,7 @@ export default function Statistics(){
                             </Row>
                         ))}
                     </div> */}
-                    <div style={{margin: '1rem'}}>해당 데이터는 발로란트의 공식 데이터가 아니며, 발로란트 북미 서버에서 수집된 45932건의 경기를 종합한 데이터 입니다.</div>
+                    <div style={{margin: '1rem'}}>해당 데이터는 발로란트의 공식 데이터가 아니며, 발로란트 북미 서버에서 수집된 경기를 종합한 데이터 입니다.</div>
                 </Row>
             </Col>
         </Row>
