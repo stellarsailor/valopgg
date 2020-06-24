@@ -272,6 +272,13 @@ export const skin = [
                 level: 0,
                 cost: '1275 VP',
             },
+            {
+                id: 6,
+                name_ko: '콘벡스',
+                category: 'convex',
+                level: 0,
+                cost: '확인 중',
+            },
         ]
     },
     {
@@ -405,6 +412,13 @@ export const skin = [
                 level: 4,
                 cost: '1775 VP',
             },
+            {
+                id: 11,
+                name_ko: '콘벡스',
+                category: 'convex',
+                level: 0,
+                cost: '확인 중',
+            },
         ]
     },
     {
@@ -454,6 +468,13 @@ export const skin = [
                 level: 0,
                 cost: '배틀패스 제 1막 티어40',
             },
+            {
+                id: 3,
+                name_ko: '콘벡스',
+                category: 'convex',
+                level: 0,
+                cost: '확인 중',
+            },
         ]
     },
     {
@@ -488,6 +509,13 @@ export const skin = [
                 category: 'couture',
                 level: 0,
                 cost: '배틀패스 제 1막 티어10',
+            },
+            {
+                id: 4,
+                name_ko: '콘벡스',
+                category: 'convex',
+                level: 0,
+                cost: '확인 중',
             },
         ]
     },
@@ -810,6 +838,13 @@ export const skin = [
                 category: 'reaver',
                 level: 5,
                 cost: '1775 VP',
+            },
+            {
+                id: 8,
+                name_ko: '콘벡스',
+                category: 'convex',
+                level: 0,
+                cost: '확인 중',
             },
         ]
     },

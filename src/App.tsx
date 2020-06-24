@@ -63,8 +63,8 @@ export default function App (props) {
         <Router>
             <Layout className="layout">
                 <HeaderContainer>
-                    <Link to="/party" style={{width: '100%', height: 35, backgroundColor: 'rgb(22, 22, 22)', display: 'flex', alignItems: 'center' , justifyContent: 'center'}}>
-                        새롭게 추가된 파티모집 탭을 이용해보세요! 바로가기
+                    <Link to="/calculator/battlepass" style={{width: '100%', height: 35, backgroundColor: 'rgb(22, 22, 22)', display: 'flex', alignItems: 'center' , justifyContent: 'center'}}>
+                        배틀패스 정보 및 경험치 계산기는 여기로! 바로가기
                     </Link>
                     <Row>
                         <Col xs={24} sm={24} md={0} lg={0} xl={0} >
@@ -110,7 +110,7 @@ export default function App (props) {
                             <Link to="/statistics" style={mobileMenuTab}>통계</Link>
                             <Link to="/weapon" style={mobileMenuTab}>무기/스킨</Link>
                             <Link to="/map" style={mobileMenuTab}>맵</Link>
-                            <Link to="/strat" style={mobileMenuTab}>요원별 전략</Link>
+                            {/* <Link to="/strat" style={mobileMenuTab}>요원별 전략</Link> */}
                             <Link to="/dic" style={mobileMenuTab}>용어사전</Link>
                             <Link to="/prosetting" style={mobileMenuTab}>프로 세팅</Link>
                             <Link to="/calculator/battlepass" style={mobileMenuTab}>계산기</Link>
@@ -128,7 +128,7 @@ export default function App (props) {
                             <MenuTabHover><Link to="/statistics">통계</Link></MenuTabHover>
                             <MenuTabHover><Link to="/weapon">무기/스킨</Link></MenuTabHover>
                             <MenuTabHover><Link to="/map">맵</Link></MenuTabHover>
-                            <MenuTabHover><Link to="/strat">요원별 전략</Link></MenuTabHover>
+                            {/* <MenuTabHover><Link to="/strat">요원별 전략</Link></MenuTabHover> */}
                             <MenuTabHover><Link to="/dic">용어사전</Link></MenuTabHover>
                             <MenuTabHover><Link to="/prosetting">프로 세팅</Link></MenuTabHover>
                             <MenuTabHover><Link to="/calculator/battlepass">계산기</Link></MenuTabHover>
