@@ -7,8 +7,8 @@ import { skinCollection } from '../datas/weaponSkin'
 import WeaponRender from './subcomponents/WeaponRender';
 import Adfit from './subcomponents/Adfit';
 import { staticServer, apiServer } from '../serverUrl'
-import Countdown from 'react-countdown';
 import Axios from 'axios';
+import WeaponCollection from './subcomponents/WeaponCollection';
 
 const WeaponCategory = styled.div`
     background-color: #273552;
@@ -20,21 +20,6 @@ const WeaponCategory = styled.div`
 `
 
 export default function Weapon(){
-
-    const [ rotation, setRotation ] = useState({
-        date: '',
-        collection: '',
-    })
-    const [ asyncLoading, setAsyncLoading ] = useState(true)
-
-    useEffect(() => {
-        Axios.get(`${apiServer}/weapon/rotation`)
-        .then(res => {
-            const data = res.data;
-            setRotation(data)
-            setAsyncLoading(false)
-        })
-    },[])
 
     return (
         <Row justify="center" style={{backgroundColor: 'rgba(19, 28, 46, 0.95)'}} >
@@ -54,16 +39,7 @@ export default function Weapon(){
                     }
                 </Carousel> */}
                 {/* { window.innerWidth < 576 ? <Adfit adUnit="DAN-skxug7w2pkjd" adWidth="320" adHeight="100" /> : <Adfit adUnit="DAN-qe74ylevqulf" adWidth="728" adHeight="90" /> } */}
-            {asyncLoading ? 
-                <div style={{width: '100%', height: 100, display: 'flex', justifyContent: 'center', alignItems: 'center'}}>
-                    <Spin />
-                </div>
-            :
-                <div>
-                    <Countdown date={rotation.date} renderer={({ days, hours, minutes, seconds}) => <span style={{fontWeight: 'bold', position: 'absolute', bottom: 10, left: 10, fontSize: '1.6rem'}}>{days}:{hours}:{minutes}:{seconds}</span>} />
-                    <img src={`${staticServer}/weaponcollections/${rotation.collection}.png`} style={{width: '100%', alignSelf: 'flex-start',}} />
-                </div>
-            }
+                <WeaponCollection />
             </Col>
             <Col xs={24} sm={22} md={20} lg={20} xl={15} style={{marginBottom: '1rem'}}>
                 <Row style={{width: '100%', height: '100%', backgroundColor: '#202b43'}} justify="center">

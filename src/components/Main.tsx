@@ -12,8 +12,9 @@ import Adfit from './subcomponents/Adfit';
 import { patchNotePhrase } from '../datas/guide'
 import TextArea from 'antd/lib/input/TextArea';
 import axios from 'axios';
-import { apiServer } from '../serverUrl';
+import { apiServer, staticServer } from '../serverUrl';
 import PartyRenderer from './subcomponents/PartyRenderer';
+import WeaponCollection from './subcomponents/WeaponCollection';
 
 const { Search } = Input;
 
@@ -155,19 +156,19 @@ export default function Main(props) {
                         <div>
                             발로란트 정보의 모든 것, 발로그
                         </div>
-                        <Search
+                        {/* <Search
                         placeholder="발로란트 정보의 모든 것, 발로그"
                         enterButton="검색"
                         size="large"
                         // onSearch={value => props.history.push(`/player/${value}`)}
-                        />
+                        /> */}
                     </div>
                 </div>
                 <div >
                     <img src={require('../images/official-main-image.png')} style={{width: '100%'}} alt="background cut 20 degree" />   
                 </div>
             </Col>
-            <Row style={{width: '100%', backgroundColor: 'rgb(32, 43, 67, 0.3)'}} justify="center">
+            <Row style={{width: '100%', backgroundColor: 'rgb(32, 43, 67, 0.4)' }} justify="center">
                 <Col xs={24} sm={22} md={20} lg={20} xl={15} style={{ width: '100%'}}>
                     <div style={{display: 'flex', justifyContent: 'flex-start', alignItems: 'center'}}>
                         <span style={{fontWeight: 'bold', fontSize: '1.2rem', margin: '0 1rem', color: 'white'}}>현재 모집 중인 파티 목록</span>
@@ -231,14 +232,17 @@ export default function Main(props) {
                             발로그에서 요원, 무기, 스킨, 맵, 요원 별 전략 등 다양하고 유용한 정보를 습득하세요!
                         </MainTextDesc>
                         
-                        <Button style={{marginTop: 10}}><Link to="/strat">바로가기</Link></Button>
+                        <Button style={{marginTop: 10}}><Link to="/weapon">바로가기</Link></Button>
                     </Col>
                     <Col xs={24} sm={12} md={12} lg={12} xl={12} style={{padding: '5%'}}>
                         <img src={require('../images/mainImages1.jpg')} style={{width: '100%'}} alt="helper to explain website" />
                     </Col>
-                    <HR />
+                    {/* <HR /> */}
                 </Row>
-                <Row style={{padding: '1rem'}}>
+                <Row style={{marginBottom: '1rem', padding: '5%'}}>
+                    <WeaponCollection />
+                </Row>
+                {/* <Row style={{padding: '1rem'}}>
                     <Col xs={24} sm={12} md={12} lg={12} xl={12} style={{padding: '5%'}}>
                         <img src={require('../images/mainImages2.jpg')} style={{width: '100%'}} alt="helper to explain website" />
                     </Col>
@@ -252,7 +256,7 @@ export default function Main(props) {
                         
                         <Button style={{marginTop: 10}}><Link to="/prosetting">바로가기</Link></Button>
                     </Col>
-                </Row>
+                </Row> */}
 
                 {/* <AdSense.Google
                     key={Math.random()}
