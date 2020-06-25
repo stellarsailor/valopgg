@@ -63,14 +63,15 @@ export default function AgentDetail(props) {
                 <Element name="scroll-to-element">
                     <Row style={{backgroundColor: '#182338', borderRadius: 10, width: '100%'}} justify="center">
                         <Col xs={24} sm={24} md={12} lg={12} xl={8} style={{width: '100%'}}>
-                            <div style={{width: '100%', height: '100%', display: 'flex', justifyContent: 'center', alignItems: 'center'}}>
-                                <div style={{position: 'absolute', fontSize: '2.5rem', fontWeight: 'bold', bottom: '4rem', textAlign: 'center', marginRight: 10}}>
+                            <div style={{width: '100%', height: '100%', display: 'flex', justifyContent: 'center'}}>
+                                <div style={{position: 'absolute', zIndex: 20, fontSize: '2.5rem', fontWeight: 'bold', bottom: '3rem', textAlign: 'center', marginRight: 10}}>
                                     {agent[agentSelection].name} <span style={{fontSize: '1rem'}}> / {agent[agentSelection].origin}</span>
                                     <div style={{fontSize: '1rem'}}>
                                         {agent[agentSelection].type}
                                     </div>
                                 </div>
-                                <img src={`${staticServer}/agents/${agentName}-standing.png`} style={{width: '100%'}} alt="Valorant agent standing full shot" />
+                                <img src={`${staticServer}/agents/${agentName}-standing.png`} style={{width: '80%', position: 'absolute', bottom: '1rem'}} alt="Valorant agent standing full shot" />
+                                <img src={require('../images/agent-stage.png')} style={{width: '100%', }} />
                             </div>
                         </Col>
                         <Col xs={24} sm={24} md={12} lg={12} xl={16} style={{padding: '0 1rem'}}>
@@ -93,11 +94,14 @@ export default function AgentDetail(props) {
                                 <div style={{fontWeight: 'bold', fontSize: '1.1rem'}}>비용 : {agent[agentSelection].skill[abilitySelection].cost}</div>
                                 <div>{agent[agentSelection].skill[abilitySelection].desc}</div>
                             </div>
-                            <div style={{backgroundColor: '#202b43', marginBottom: '1rem', padding: '1rem'}}>
-                                <div style={{color: '#00ffae', fontWeight: 'bold'}}>아군 {agent[agentSelection].skill[3].name} 대사 : <span style={{color: 'white'}}>"{agent[agentSelection].ally_ult}"</span></div>
-                                <div style={{color: '#ff324c', fontWeight: 'bold'}}>적군 {agent[agentSelection].skill[3].name} 대사 : <span style={{color: 'white'}}>"{agent[agentSelection].enemy_ult}"</span></div>
+                            <div style={{backgroundColor: '#202b43', marginBottom: '1rem', padding: '1rem', display: 'flex', flexDirection: 'row'}}>
+                                <img src={require(`../images/agents/${agentName}-headshot.png`)} style={{width: '3rem', height: '3rem', borderRadius: '3rem', border: `3px solid ${agent[agentSelection].signature_color}`}} alt='agent headshot' />
+                                <div style={{margin: '0 1rem'}}>
+                                    <div style={{color: '#00ffae', fontWeight: 'bold'}}>아군 {agent[agentSelection].skill[3].name} 대사 : <span style={{color: 'white'}}>"{agent[agentSelection].ally_ult}"</span></div>
+                                    <div style={{color: '#ff324c', fontWeight: 'bold'}}>적군 {agent[agentSelection].skill[3].name} 대사 : <span style={{color: 'white'}}>"{agent[agentSelection].enemy_ult}"</span></div>
+                                </div>
                             </div>
-                            <Link to={`/strat?name=${agent[agentSelection].name.toLowerCase()}`} 
+                            {/* <Link to={`/strat?name=${agent[agentSelection].name.toLowerCase()}`} 
                             style={{display: 'flex', flexDirection: 'row', padding: '1rem', alignItems: 'center', backgroundColor: '#202b43', marginTop: '1rem', marginBottom: '1rem'}}>
                                 <img src={require(`../images/agents/${agentName}-headshot.png`)} style={{width: '3rem', borderRadius: '3rem', border: `3px solid ${agent[agentSelection].signature_color}`}} alt='agent headshot' />
                                 <div style={{margin: '0 1rem'}}>
@@ -111,7 +115,7 @@ export default function AgentDetail(props) {
                                 <div style={{position: 'absolute', right: '10%'}}>
                                     <ArrowRightOutlined style={{fontSize: '1.2rem', fontWeight: 'bold'}} />
                                 </div>
-                            </Link>
+                            </Link> */}
                             <Adfit adUnit="DAN-qhq3i0n8v392" adWidth="320" adHeight="100" />
                         </Col>
                     <div style={{backgroundColor: '#202b43', padding: '1rem', margin: '1rem'}}>
