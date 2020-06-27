@@ -87,7 +87,7 @@ export const prosetting: Array<proType> = [
     {
         id: 1,
         name: "Skadoodle",
-        team: "Twitch Streamer",
+        team: "T1",
         photo: true,
     
         mouse: 'LOGITECH G PRO WIRELESS GHOST',
@@ -541,7 +541,7 @@ export const prosetting: Array<proType> = [
     {
         id: 12,
         name: "stax",
-        team: "前 CS:GO Pro Player",
+        team: "Vision Strikers",
         photo: true,
     
         mouse: 'BenQ Zowie EC2',
@@ -623,7 +623,7 @@ export const prosetting: Array<proType> = [
     {
         id: 14,
         name: "Hiko",
-        team: "Twitch Streamer",
+        team: "100T",
         photo: true,
     
         mouse: 'LOGITECH G PRO WIRELESS GHOST',
