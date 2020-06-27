@@ -3,6 +3,8 @@ import { Row, Col, BackTop, Typography } from 'antd';
 import MetaTags from 'react-meta-tags';
 import Adfit from './subcomponents/Adfit';
 import { isMobile } from 'react-device-detect';
+import axios from 'axios';
+import { apiServer } from '../serverUrl';
  
 const { Paragraph } = Typography
 
@@ -113,7 +115,7 @@ export default function ReactionTest() {
         setReactionTime(0)
         setTestEnded(false)
 
-        if(stage === 6){
+        if(stage === 6){ //7회측정시 6, 5회 측정시 4
             setTestEnded(true)
         } else {
             startTargetAppear()
@@ -131,7 +133,14 @@ export default function ReactionTest() {
             if(invalidShots === 3){
                 // console.log('test failed')
             } else {
-                setReactionTime(Math.round(arrAvg(scores)))
+                let result = Math.round(arrAvg(scores))
+                setReactionTime(result)
+                if(result < 1000){
+                    axios.get(`${apiServer}/reaction/${isMobile ? "mobile" : "desktop" }?time=${result}`)
+                    .then(res => {
+                        // console.log(res.data) // {fieldCount: 0, affectedRows: 1, insertId: 4, info: "", serverStatus: 2, …}
+                    })
+                }
             }
         } 
     },[testEnded, scores, invalidShots])
@@ -189,7 +198,7 @@ export default function ReactionTest() {
                                             종료
                                         </div>
                                         {
-                                            invalidShots === 3 ? <div style={{fontSize: '1.2rem'}}>무효 샷 3개로 테스트 실패...</div> :
+                                            invalidShots === 3 ? <div style={{fontSize: '1.2rem'}}>무효 샷 누적으로 테스트 실패...</div> :
                                             <>
                                             <div style={{color: 'white', fontWeight: 'bold', fontSize: '1.4rem'}}>
                                                 평균 반응 속도 : {reactionTime} ms
@@ -285,10 +294,11 @@ export default function ReactionTest() {
                         </Row>
                     </Col>
                     <div style={{margin: '1rem 0', padding: '1rem', backgroundColor: 'rgb(32, 43, 67)'}}>
-                        <div style={{marginTop: '1rem'}}>본 측정은 데스크톱을 기준으로 맞추어져 있으며 모니터의 성능, 모바일의 경우 기기 성능에 따라 일부 차이가 날 수 있습니다.</div>
+                        <div style={{marginTop: '1rem'}}>본 측정은 데스크톱을 기준으로 맞추어져 있으며 모니터의 성능, 모바일의 경우 기기 성능에 따라 일부 차이가 날 수 있습니다. 정확한 측정을 위해서는 데스크톱 이용을 적극 권장드립니다. 또한 일명 '예측샷'을 방지하기 위해 여러번의 측정을 시행하며 최대값/최소값을 제외한 기록의 평균을 측정합니다.</div>
                         {isMobile ? <div style={{margin: '1rem 0'}}>모바일의 경우 발사 버튼을 '터치'하는 순간 측정하므로 스크롤할때 발사 버튼을 터치하지않도록 주의해주세요.</div> : null}
                         <div style={{fontWeight: 'bold', margin: '1rem 0'}}>타 반응속도 측정 사이트와 차이가 존재 하는 이유? </div>
                         <div>빨간 전면 배경색이 초록 전면 배경색으로 바뀌는 것과 같이 크나큰 대조를 주는 것이 아니라 본 시뮬레이터는 비교적 작고 좁은 편의 시각적 차이를 얼마나 빨리 인식할 수 있는지를 테스트 하는것이기 때문에 어느정도 차이가 존재할 수 있습니다.</div>
+                        <div style={{marginTop: '1rem'}}>현재 데스크톱/모바일 별도의 지표 통계 자료를 준비하고 있습니다.</div>
                     </div>
                 </Row>
             </Col>
