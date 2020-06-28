@@ -1,10 +1,13 @@
 import React, { useState, useRef, useEffect, useCallback } from 'react'
-import { Row, Col, BackTop, Typography } from 'antd';
+import { Row, Col, BackTop, Typography, Spin } from 'antd';
+import { StarFilled } from '@ant-design/icons';
 import MetaTags from 'react-meta-tags';
 import Adfit from './subcomponents/Adfit';
 import { isMobile } from 'react-device-detect';
 import axios from 'axios';
-import { apiServer } from '../serverUrl';
+import { apiServer, staticServer } from '../serverUrl';
+import roundToTwo from '../logics/roundToTwo';
+import capitalizeFirstLetter from '../logics/capitalizeFirstLetter';
  
 const { Paragraph } = Typography
 
@@ -43,8 +46,21 @@ export default function ReactionTest() {
     const [ containerHeight, setContainerHeight ] = useState(0)
 
     useEffect(() => {
+        axios.get(`${apiServer}/reaction/today`)
+        .then(res => {
+            if(res.data.length !== 0){
+                setTodaysMinimum(res.data[0].todaymin)
+            } else {
+                setTodaysMinimum(0)
+            }
+        })
+    },[])
+
+    useEffect(() => {
         setContainerHeight(ref.current ? ref.current.offsetWidth : 0)
     }, [ref.current]);
+
+    const [ todaysMinimum, setTodaysMinimum ] = useState(0)
 
     const [ stage, setStage ] = useState(0)
     const [ scores, setScores ] = useState<Array<number>>([])
@@ -58,6 +74,9 @@ export default function ReactionTest() {
     
     const [ testEnded, setTestEnded ] = useState(false)
     const [ reactionTime, setReactionTime ] = useState(0)
+
+    const [ percentageLoading, setPercentageLoading ] = useState(false)
+    const [ resultPercentage, setResultPercentage ] = useState(0)
     
     const arrAvg = (arr) => {
         const filtered = arr.filter(item => item !== 0);
@@ -89,8 +108,9 @@ export default function ReactionTest() {
         clearTimeout(targetAppearObject)
         
         let diff = fire - targetAppearDate
+        // console.log(diff)
 
-        if(diff > 10000) {
+        if( diff < 100 || 10000 < diff) {
             diff = 0; 
             // console.log('현재 오류 샷 갯수 ' + invalidShots)
             if(invalidShots === 2){
@@ -135,10 +155,12 @@ export default function ReactionTest() {
             } else {
                 let result = Math.round(arrAvg(scores))
                 setReactionTime(result)
+                setPercentageLoading(true)
                 if(result < 1000){
                     axios.get(`${apiServer}/reaction/${isMobile ? "mobile" : "desktop" }?time=${result}`)
                     .then(res => {
-                        // console.log(res.data) // {fieldCount: 0, affectedRows: 1, insertId: 4, info: "", serverStatus: 2, …}
+                        setResultPercentage(roundToTwo(res.data[0].percentage * 100))
+                        setPercentageLoading(false)
                     })
                 }
             }
@@ -160,6 +182,33 @@ export default function ReactionTest() {
 
     },[stage, scores, targetAppearObject])
 
+    const getTier = (percentage) => {
+        let tier = percentage <= 0.03 ? "radiant" :
+        percentage <= 0.05 ? "immortal3" :
+        percentage <= 0.11 ? "immortal2" :
+        percentage <= 0.2  ? "immortal1" :
+        percentage <= 0.5  ? "diamond3" :
+        percentage <= 1    ? "diamond2" :
+        percentage <= 2    ? "diamond1" :
+        percentage <= 3    ? "platinum3" :
+        percentage <= 6    ? "platinum2" :
+        percentage <= 10   ? "platinum1" :
+        percentage <= 15   ? "gold3" :
+        percentage <= 23   ? "gold2" :
+        percentage <= 35   ? "gold1" :
+        percentage <= 46   ? "silver3" :
+        percentage <= 56   ? "silver2" :
+        percentage <= 70   ? "silver1" :
+        percentage <= 77   ? "bronze3" :
+        percentage <= 84   ? "bronze2" :
+        percentage <= 90   ? "bronze1" :
+        percentage <= 95   ? "iron3" :
+        percentage <= 98   ? "iron2" :
+        "iron1"
+
+        return tier
+    }
+
     return(
         <Row justify="center" style={{backgroundColor: 'rgba(19, 28, 46, 0.95)', minHeight: 800}} >
             <Col xs={24} sm={22} md={20} lg={20} xl={15}>
@@ -169,6 +218,13 @@ export default function ReactionTest() {
                     <meta name="description" content={`발로란트 게임을 옮겨놓은듯한 시뮬레이터로 본인의 FPS 반응속도 재능을 측정해보세요!`} />
                 </MetaTags>
                 <Row justify='center'>
+                    { todaysMinimum === 0 ? null : 
+                        <Col span={24} style={{ width: '100%'}}>
+                            <div style={{margin: 10}}>
+                                <StarFilled style={{color: 'gold', marginRight: '10px'}} />오늘의 베스트 기록 : {todaysMinimum}ms
+                            </div>
+                        </Col>
+                    }
                     <Col xs={24} sm={24} md={15} lg={15} xl={15} >
                         <div style={{width: '100%', height: containerHeight}} ref={ref}>
                             {
@@ -199,24 +255,25 @@ export default function ReactionTest() {
                                         </div>
                                         {
                                             invalidShots === 3 ? <div style={{fontSize: '1.2rem'}}>무효 샷 누적으로 테스트 실패...</div> :
-                                            <>
-                                            <div style={{color: 'white', fontWeight: 'bold', fontSize: '1.4rem'}}>
-                                                평균 반응 속도 : {reactionTime} ms
-                                            </div>
+                                            percentageLoading ? <Spin style={{margin: '1rem'}} /> :
                                             <div style={{color: 'white', fontSize: '1.1rem', textAlign: 'center'}}>
-                                                { reactionTime > 10000 ? null :
-                                                    reactionTime < 150 ? "발로란트 프로에 도전하시는게 어때요?" 
-                                                    : reactionTime < 200 ? "굉장히 빠른 반응 속도를 가지셨군요!" 
-                                                    : reactionTime < 250 ? "평균 이상의 반응 속도를 가지셨군요!" 
-                                                    : reactionTime < 350 ? "평균입니다."
-                                                    : reactionTime < 500 ? "평균보다 느린 편이에요..." 
-                                                    : "일부러 늦게 누르셨나요...? 조금만 더 분발해보세요!"}
+                                                <div>
+                                                    반응속도 티어
+                                                </div>
+                                                <img src={`${staticServer}/icons/${
+                                                    getTier(resultPercentage)
+                                                }.png`} style={{width: 80, height: 80}} />
+                                                <div>
+                                                    {capitalizeFirstLetter(getTier(resultPercentage))}
+                                                </div>
+                                                <div style={{color: 'white', fontWeight: 'bold', fontSize: '1.4rem'}}>
+                                                    평균 반응 속도 : {reactionTime} ms
+                                                </div>
+                                                <div>
+                                                    {isMobile ? "모바일 " : "데스크톱 " } 기준 상위 {resultPercentage}%
+                                                </div>
                                             </div>
-                                            </>
                                         }
-                                        {/* <div style={{color: 'white', fontSize: '1.1rem'}}>
-                                            {targetAppear === false ? "다시 시작하기 위해선 잠시만 기다려주세요." : null}
-                                        </div> */}
                                     </div>
                                     :
                                     testStarted ? 
@@ -294,11 +351,13 @@ export default function ReactionTest() {
                         </Row>
                     </Col>
                     <div style={{margin: '1rem 0', padding: '1rem', backgroundColor: 'rgb(32, 43, 67)'}}>
-                        <div style={{marginTop: '1rem'}}>본 측정은 데스크톱을 기준으로 맞추어져 있으며 모니터의 성능, 모바일의 경우 기기 성능에 따라 일부 차이가 날 수 있습니다. 정확한 측정을 위해서는 데스크톱 이용을 적극 권장드립니다. 또한 일명 '예측샷'을 방지하기 위해 여러번의 측정을 시행하며 최대값/최소값을 제외한 기록의 평균을 측정합니다.</div>
-                        {isMobile ? <div style={{margin: '1rem 0'}}>모바일의 경우 발사 버튼을 '터치'하는 순간 측정하므로 스크롤할때 발사 버튼을 터치하지않도록 주의해주세요.</div> : null}
+                        <div>
+                            본 측정은 일명 '예측샷'을 방지하기 위해 여러번의 측정을 시행하며 최대값/최소값을 제외한 기록의 평균을 측정합니다. <span style={{fontWeight: 'bold', textDecorationLine: 'underline'}}>또한 100ms 이하의 샷은 예측샷으로 간주하여 무효샷 처리가 됩니다</span>(올림픽에서 규정하는 인간의 한계 반응속도).
+                        </div>
+                        <div style={{margin: '1rem 0'}}>데스크톱을 기준으로 맞추어져 있으며 모니터의 주사율, 모바일의 경우 기기 성능에 따라 일부 차이가 날 수 있습니다. 따라서 정확한 측정을 위해서는 데스크톱 이용을 권장드립니다(현재 누적된 데이터 통계 상 모바일 반응속도 - 100ms = 데스크톱 반응속도의 평균을 보여주고 있습니다. 표시되는 티어와 상위 퍼센티지는 데스크톱과 모바일이 분리되어 계산됩니다). </div>
+                        {isMobile ? <div style={{margin: '1rem 0'}}>모바일의 경우 발사 버튼을 '터치'하는 순간 측정하므로 스크롤할때 발사 버튼을 터치하지않도록 주의해주세요!</div> : null}
                         <div style={{fontWeight: 'bold', margin: '1rem 0'}}>타 반응속도 측정 사이트와 차이가 존재 하는 이유? </div>
                         <div>빨간 전면 배경색이 초록 전면 배경색으로 바뀌는 것과 같이 크나큰 대조를 주는 것이 아니라 본 시뮬레이터는 비교적 작고 좁은 편의 시각적 차이를 얼마나 빨리 인식할 수 있는지를 테스트 하는것이기 때문에 어느정도 차이가 존재할 수 있습니다.</div>
-                        <div style={{marginTop: '1rem'}}>현재 데스크톱/모바일 별도의 지표 통계 자료를 준비하고 있습니다.</div>
                     </div>
                 </Row>
             </Col>
