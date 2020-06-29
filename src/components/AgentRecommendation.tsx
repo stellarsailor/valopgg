@@ -1,6 +1,7 @@
 import React, { useState, useCallback, useEffect } from 'react'
 import MetaTags from 'react-meta-tags';
 // import styled from 'styled-components'
+import AdSense from 'react-adsense';
 import { Link } from 'react-router-dom'
 import { Row, Col, Button, Progress, Typography } from 'antd';
 import { SearchOutlined } from '@ant-design/icons';
@@ -139,7 +140,13 @@ export default function AgentRecommendation() {
                             </Col>
                         </Row>
                 }
-                { window.innerWidth < 576 ? <Adfit adUnit="DAN-qhq3i0n8v392" adWidth="320" adHeight="100" /> : <Adfit adUnit="DAN-qecnqcrgj3n6" adWidth="728" adHeight="90" /> }
+                {/* { window.innerWidth < 576 ? <Adfit adUnit="DAN-qhq3i0n8v392" adWidth="320" adHeight="100" /> : <Adfit adUnit="DAN-qecnqcrgj3n6" adWidth="728" adHeight="90" /> } */}
+                <AdSense.Google
+                client='ca-pub-1635386604461382'
+                slot='1654741413'
+                style={{ width: 500, height: 300, float: 'left' }}
+                format=''
+                />
             </Col>
         </Row>
     )
