@@ -8,6 +8,7 @@ import { apiServer, staticServer } from '../serverUrl'
 import { agent } from '../datas/agent'
 import { dynamicSort } from '../logics/dynamicSort';
 import { Link } from 'react-router-dom';
+import SideAds from './subcomponents/SideAds';
 
 type agentStatType = {
     id: number;
@@ -73,11 +74,12 @@ export default function Statistics(){
 
     return (
         <Row justify="center" style={{backgroundColor: 'rgba(19, 28, 46, 0.95)'}} >
+            <SideAds thicc={true} />
             <Col xs={24} sm={22} md={20} lg={20} xl={15} >
                 <BackTop/>
                 <MetaTags>
                     <title>발로란트 통계</title>
-                    <meta name="description" content={`발로란트의 모든 무기에 대한 정보와 스킨 이미지를 확인가능합니다.`} />
+                    <meta name="description" content={`발로란트의 요원들의 픽률, 승률, 킬 데스 통계 정보를 확인가능합니다.`} />
                 </MetaTags>
                 <Row style={{width: '100%', height: '100%', backgroundColor: '#202b43'}} justify="center">
                     <div style={{fontWeight: 'bold', fontSize: '1.4rem', margin: '1.5rem'}}>요원별 통계(Beta)</div>
@@ -95,6 +97,7 @@ export default function Statistics(){
                     <div style={{margin: '1rem'}}>해당 데이터는 발로란트의 공식 데이터가 아니며, 발로란트 북미 서버에서 수집된 경기를 종합한 데이터 입니다.</div>
                 </Row>
             </Col>
+            <SideAds />
         </Row>
     )
 }

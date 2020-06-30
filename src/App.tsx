@@ -32,6 +32,7 @@ import SearchInput from './components/subcomponents/SearchInput'
 import Statistics from './components/Statistics';
 import Party from './components/Party';
 import { isMobile } from 'react-device-detect';
+import Battlepass from './components/Battlepass';
 const { Content, Footer } = Layout;
 
 const HeaderContainer = styled.div`
@@ -69,7 +70,7 @@ export default function App (props) {
         <Router>
             <Layout className="layout">
                 <HeaderContainer>
-                    <Link to="/calculator/battlepass" style={{width: '100%', height: 35, backgroundColor: 'rgb(22, 22, 22)', display: 'flex', alignItems: 'center' , justifyContent: 'center'}}>
+                    <Link to="/battlepass" style={{width: '100%', height: 35, backgroundColor: 'rgb(22, 22, 22)', display: 'flex', alignItems: 'center' , justifyContent: 'center'}}>
                         배틀패스 정보 및 경험치 계산기는 여기로! 바로가기
                     </Link>
                     <Row>
@@ -115,12 +116,13 @@ export default function App (props) {
                             {/* <Link to="/tier" style={mobileMenuTab}>티어</Link> */}
                             <Link to="/statistics" style={mobileMenuTab}>통계</Link>
                             <Link to="/weapon" style={mobileMenuTab}>무기/스킨</Link>
+                            <Link to="/battlepass" style={mobileMenuTab}>배틀패스</Link>
                             <Link to="/map" style={mobileMenuTab}>맵</Link>
                             {/* <Link to="/strat" style={mobileMenuTab}>요원별 전략</Link> */}
                             <Link to="/dic" style={mobileMenuTab}>용어사전</Link>
                             <MenuDivider isMobile={isMobile}>|</MenuDivider>
                             <Link to="/prosetting" style={mobileMenuTab}>프로 세팅</Link>
-                            <Link to="/calculator/battlepass" style={mobileMenuTab}>계산기</Link>
+                            <Link to="/calculator" style={mobileMenuTab}>감도 계산기</Link>
                             <Link to="/reaction" style={mobileMenuTab}>반응속도 측정</Link>
                             <MenuDivider isMobile={isMobile}>|</MenuDivider>
                             <Link to="/party" style={mobileMenuTab}>파티 모집</Link>
@@ -135,12 +137,13 @@ export default function App (props) {
                             {/* <MenuTabHover><Link to="/tier">티어</Link></MenuTabHover> */}
                             <MenuTabHover><Link to="/statistics">통계</Link></MenuTabHover>
                             <MenuTabHover><Link to="/weapon">무기/스킨</Link></MenuTabHover>
+                            <MenuTabHover><Link to="/battlepass">배틀패스</Link></MenuTabHover>
                             <MenuTabHover><Link to="/map">맵</Link></MenuTabHover>
                             {/* <MenuTabHover><Link to="/strat">요원별 전략</Link></MenuTabHover> */}
                             <MenuTabHover><Link to="/dic">용어사전</Link></MenuTabHover>
                             <MenuDivider isMobile={isMobile}>|</MenuDivider>
                             <MenuTabHover><Link to="/prosetting">프로 세팅</Link></MenuTabHover>
-                            <MenuTabHover><Link to="/calculator/battlepass">계산기</Link></MenuTabHover>
+                            <MenuTabHover><Link to="/calculator">감도 계산기</Link></MenuTabHover>
                             <MenuTabHover><Link to="/reaction">반응속도 측정</Link></MenuTabHover>
                             <MenuDivider isMobile={isMobile}>|</MenuDivider>
                             <MenuTabHover><Link to="/party">파티 모집</Link></MenuTabHover>
@@ -164,13 +167,14 @@ export default function App (props) {
                             <Route path="/statistics" component={Statistics} />
                             <Route path="/weapon/:name" component={WeaponDetail} />
                             <Route path="/weapon" component={Weapon} />
+                            <Route path="/battlepass" component={Battlepass} />
                             <Route path="/map/:name" component={MapDetail} />
                             <Route path="/map" component={Map} />
                             <Route path="/strat" component={Strat} />
                             <Route path="/dic" component={Dic} />
                             <Route path="/prosetting/:proName" component={ProsettingDetail} />
                             <Route path="/prosetting" component={Prosetting} />
-                            <Route path="/calculator/:calcName" component={Calculator} />
+                            <Route path="/calculator" component={Calculator} />
                             <Route path="/reaction" component={ReactionTest} />
                             <Route path="/party" component={Party} />
                             <Route path="/contact" component={Contact} />

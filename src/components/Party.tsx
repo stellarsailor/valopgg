@@ -9,6 +9,8 @@ import { apiServer } from '../serverUrl';
 import PartyRenderer from './subcomponents/PartyRenderer';
 import PartyWrite from './subcomponents/PartyWrite';
 import Adfit from './subcomponents/Adfit';
+import SideAds from './subcomponents/SideAds';
+import Adsense from './subcomponents/Adsense';
 const { Paragraph } = Typography
 
 message.config({
@@ -56,6 +58,7 @@ export default function Party() {
     
     return (
         <Row justify="center" style={{backgroundColor: 'rgba(19, 28, 46, 0.95)', minHeight: 600}} >
+            <SideAds thicc={true} />
             <Col xs={24} sm={22} md={20} lg={20} xl={15} >
                 <BackTop/>
                 <MetaTags>
@@ -72,7 +75,8 @@ export default function Party() {
                         </div>
                     </div>
                     <div style={{width: '100%'}}>
-                        {window.innerWidth < 576 ? <Adfit adUnit="DAN-qhq3i0n8v392" adWidth="320" adHeight="100" /> : <Adfit adUnit="DAN-skk0fg3no8c7" adWidth="728" adHeight="90" /> }
+                        <Adsense type="pcwide" />
+                        {/* {window.innerWidth < 576 ? <Adfit adUnit="DAN-qhq3i0n8v392" adWidth="320" adHeight="100" /> : <Adfit adUnit="DAN-skk0fg3no8c7" adWidth="728" adHeight="90" /> } */}
                     </div>
                     {/* <Paragraph style={{color: 'white', fontSize: '1rem', textAlign: 'right', margin: '1rem'}} copyable={{ text: 'https://valog.gg/party' }}>링크 공유</Paragraph> */}
                     <Element name="scroll-to-element">
@@ -114,6 +118,7 @@ export default function Party() {
                     </div>
                 </Row>
             </Col>
+            <SideAds />
         </Row>
     )
 }

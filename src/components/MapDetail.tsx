@@ -8,6 +8,7 @@ import { TransformWrapper, TransformComponent } from "react-zoom-pan-pinch";
 import Adfit from './subcomponents/Adfit';
 import capitalizeFirstLetter from '../logics/capitalizeFirstLetter';
 import { staticServer } from '../serverUrl'
+import SideAds from './subcomponents/SideAds';
 
 const Images = [
     `${staticServer}/map/bind-illust.jpeg`,
@@ -40,6 +41,7 @@ export default function MapDetail(props) {
     
     return (
         <Row justify="center" style={{backgroundColor: 'rgba(19, 28, 46, 1)', minHeight: 800}} >
+            <SideAds thicc={true} />
             <Col xs={24} sm={22} md={20} lg={20} xl={15}>
                 <MetaTags>
                     <title>{mapName} - 발로란트 맵 정보, 용어</title>
@@ -114,6 +116,7 @@ export default function MapDetail(props) {
                     <img src={require('../images/mainLogo.png')} style={{width: '30%', margin: '1rem 0'}} />
                 </div>
             </Col>
+            <SideAds />
         </Row>
     )
 }

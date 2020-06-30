@@ -11,9 +11,13 @@ import { staticServer } from '../serverUrl'
 import SkillCount from './subcomponents/SkillCount';
 import { agent } from '../datas/agent'
 import { strat } from '../datas/strat'
+import AdSense from 'react-adsense';
 import Adfit from './subcomponents/Adfit';
 import numberOfStrats from '../logics/numberOfStrats';
 import { dynamicSort } from '../logics/dynamicSort';
+import SideAds from './subcomponents/SideAds';
+import Adsense from './subcomponents/Adsense';
+import { isMobile } from 'react-device-detect';
 
 export default function AgentDetail(props) {
 
@@ -45,6 +49,7 @@ export default function AgentDetail(props) {
 
     return(
         <Row justify="center" style={{backgroundColor: 'rgba(19, 28, 46, 0.95)', minHeight: 1200}} >
+            <SideAds thicc={true} />
             <Col xs={24} sm={22} md={20} lg={20} xl={15}>
                 <BackTop/>
                 <MetaTags>
@@ -117,6 +122,7 @@ export default function AgentDetail(props) {
                                 </div>
                             </Link> */}
                             <Adfit adUnit="DAN-qhq3i0n8v392" adWidth="320" adHeight="100" />
+                            {/* { isMobile ? <Adsense type="mobilewide" /> : <Adsense type="pcwide" />} */}
                         </Col>
                     <div style={{backgroundColor: '#202b43', padding: '1rem', margin: '1rem'}}>
                         <div style={{fontWeight: 'bold', fontSize: '1.2rem', marginBottom: '0.5rem'}}>
@@ -129,6 +135,7 @@ export default function AgentDetail(props) {
                     </Row>
                 </Element>
             </Col>
+            <SideAds />
         </Row>
     )
 }

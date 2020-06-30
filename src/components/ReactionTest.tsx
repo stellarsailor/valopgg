@@ -1,6 +1,6 @@
 import React, { useState, useRef, useEffect, useCallback } from 'react'
 import { Row, Col, BackTop, Typography, Spin } from 'antd';
-import { StarFilled } from '@ant-design/icons';
+import { StarFilled, CrownFilled } from '@ant-design/icons';
 import MetaTags from 'react-meta-tags';
 import Adfit from './subcomponents/Adfit';
 import { isMobile } from 'react-device-detect';
@@ -8,6 +8,8 @@ import axios from 'axios';
 import { apiServer, staticServer } from '../serverUrl';
 import roundToTwo from '../logics/roundToTwo';
 import capitalizeFirstLetter from '../logics/capitalizeFirstLetter';
+import SideAds from './subcomponents/SideAds';
+import Adsense from './subcomponents/Adsense';
  
 const { Paragraph } = Typography
 
@@ -49,9 +51,11 @@ export default function ReactionTest() {
         axios.get(`${apiServer}/reaction/today`)
         .then(res => {
             if(res.data.length !== 0){
-                setTodaysMinimum(res.data[0].todaymin)
+                setTodaysMinimumDesktop(res.data[0].todaymin)
+                setTodaysMinimumMobile(res.data[1].todaymin)
             } else {
-                setTodaysMinimum(0)
+                setTodaysMinimumDesktop(0)
+                setTodaysMinimumMobile(0)
             }
         })
     },[])
@@ -60,7 +64,8 @@ export default function ReactionTest() {
         setContainerHeight(ref.current ? ref.current.offsetWidth : 0)
     }, [ref.current]);
 
-    const [ todaysMinimum, setTodaysMinimum ] = useState(0)
+    const [ todaysMinimumDesktop, setTodaysMinimumDesktop ] = useState(0)
+    const [ todaysMinimumMobile, setTodaysMinimumMobile ] = useState(0)
 
     const [ stage, setStage ] = useState(0)
     const [ scores, setScores ] = useState<Array<number>>([])
@@ -211,6 +216,7 @@ export default function ReactionTest() {
 
     return(
         <Row justify="center" style={{backgroundColor: 'rgba(19, 28, 46, 0.95)', minHeight: 800}} >
+            <SideAds thicc={true} />
             <Col xs={24} sm={22} md={20} lg={20} xl={15}>
                 <BackTop />
                 <MetaTags>              
@@ -218,11 +224,14 @@ export default function ReactionTest() {
                     <meta name="description" content={`발로란트 게임을 옮겨놓은듯한 시뮬레이터로 본인의 FPS 반응속도 재능을 측정해보세요!`} />
                 </MetaTags>
                 <Row justify='center'>
-                    { todaysMinimum === 0 ? null : 
+                    { todaysMinimumDesktop === 0 || todaysMinimumMobile === 0 ? null : 
                         <Col span={24} style={{ width: '100%'}}>
                             <div style={{margin: 10}}>
-                                <StarFilled style={{color: 'gold', marginRight: '10px'}} />오늘의 베스트 기록 : {todaysMinimum}ms
+                                <StarFilled style={{color: 'gold', marginRight: 10}} />오늘의 1등 : 데스크톱 {todaysMinimumDesktop}ms / 모바일 {todaysMinimumMobile}ms 
                             </div>
+                            <span>
+                                <CrownFilled style={{color: 'gold', marginRight: 10}} />통계보기
+                            </span>
                         </Col>
                     }
                     <Col xs={24} sm={24} md={15} lg={15} xl={15} >
@@ -298,7 +307,8 @@ export default function ReactionTest() {
                             {
                                 isMobile ?
                                 <>
-                                <Adfit adUnit="DAN-1ibbgv1qub1pi" adWidth="320" adHeight="50" />
+                                {/* <Adfit adUnit="DAN-1ibbgv1qub1pi" adWidth="320" adHeight="50" /> */}
+                                <Adsense type="mobilewide" />
                                 <a 
                                 style={styles.fireButton} 
                                 onTouchStart={
@@ -323,7 +333,8 @@ export default function ReactionTest() {
                                 :
                                 <>
                                 <div style={{margin: '1rem 0'}}>
-                                    <Adfit adUnit="DAN-rh893p7owr52" adWidth="300" adHeight="250" />
+                                    {/* <Adfit adUnit="DAN-rh893p7owr52" adWidth="300" adHeight="250" /> */}
+                                    <Adsense type="square" />
                                 </div>
                                 <a 
                                 style={styles.fireButton} 
@@ -361,6 +372,7 @@ export default function ReactionTest() {
                     </div>
                 </Row>
             </Col>
+            <SideAds />
         </Row>
     )
 }

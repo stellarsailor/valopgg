@@ -2,6 +2,7 @@ import React, { useEffect } from 'react'
 import MetaTags from 'react-meta-tags';
 import { Row, Col } from 'antd';
 import { ExclamationCircleTwoTone } from '@ant-design/icons'
+import Adsense from './subcomponents/Adsense';
 
 export default function Contact() {
 

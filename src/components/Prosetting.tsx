@@ -9,6 +9,7 @@ import { dynamicSort } from '../logics/dynamicSort'
 import axios from 'axios'
 import Adfit from './subcomponents/Adfit';
 import { apiServer } from '../serverUrl';
+import SideAds from './subcomponents/SideAds';
 
 const Bold = styled.span`
     color: lightgreen;
@@ -137,6 +138,7 @@ export default function Prosetting() {
     
     return(
         <Row justify="center" style={{backgroundColor: 'rgba(19, 28, 46, 0.95)', minHeight: 800}} >
+            <SideAds thicc={true} />
             <Col xs={24} sm={22} md={20} lg={20} xl={15} style={{padding: '1rem 0'}}>
                 <BackTop />
                 <MetaTags>
@@ -164,6 +166,7 @@ export default function Prosetting() {
                     }
                 </div>
             </Col>
+            <SideAds />
         </Row>
     )
 }

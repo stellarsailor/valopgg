@@ -6,11 +6,13 @@ import { dic } from '../datas/dic'
 import { dynamicSort } from '../logics/dynamicSort'
 import DicWordRender from './subcomponents/DicWordRender';
 import Adfit from './subcomponents/Adfit';
+import SideAds from './subcomponents/SideAds';
 
 export default function Dic() {
 
     return(
         <Row justify="center" style={{backgroundColor: 'rgba(19, 28, 46, 0.95)', minHeight: 800}} >
+            <SideAds thicc={true} />
             <Col xs={24} sm={22} md={20} lg={20} xl={15} style={{padding: '1rem 0'}}>
                 <BackTop/>
                 <MetaTags>
@@ -28,6 +30,7 @@ export default function Dic() {
                     </div>
                 </div>
             </Col>
+            <SideAds />
         </Row>
     )
 }

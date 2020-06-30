@@ -10,6 +10,7 @@ import WeaponRender from './subcomponents/WeaponRender';
 import Adfit from './subcomponents/Adfit';
 import { staticServer } from '../serverUrl'
 import { dynamicSort } from '../logics/dynamicSort';
+import SideAds from './subcomponents/SideAds';
 
 const WeaponCategory = styled.div`
     background-color: #273552;
@@ -45,6 +46,7 @@ export default function WeaponDetail(props) {
     
     return (
         <Row justify="center" style={{backgroundColor: 'rgba(19, 28, 46, 0.95)', minHeight: 800}} >
+            <SideAds thicc={true} />
             <Col xs={24} sm={22} md={20} lg={20} xl={15}>
                 <MetaTags>
                     <title>{data.name_ko} - 무기 정보 및 스킨</title>
@@ -168,6 +170,7 @@ export default function WeaponDetail(props) {
                 </Row>
                 {/* { window.innerWidth < 576 ? <Adfit adUnit="DAN-u7xd8qtoidkl" adWidth="320" adHeight="100" /> : <Adfit adUnit="DAN-sl14jpq0o8kl" adWidth="728" adHeight="90" /> } */}
             </Col>
+            <SideAds />
         </Row>
     )
 }

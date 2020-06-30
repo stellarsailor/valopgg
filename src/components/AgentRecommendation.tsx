@@ -10,6 +10,9 @@ import { staticServer } from '../serverUrl'
 
 import { question } from '../datas/question'
 import Adfit from './subcomponents/Adfit';
+import Adsense from './subcomponents/Adsense';
+import { isMobile } from 'react-device-detect';
+import SideAds from './subcomponents/SideAds';
 
 const { Paragraph } = Typography;
 
@@ -77,7 +80,8 @@ export default function AgentRecommendation() {
     const result = Object.keys(point).reduce((a, b) => point[a] > point[b] ? a : b)
 
     return(
-        <Row justify="center" style={{backgroundColor: 'rgba(19, 28, 46, 0.95)', minHeight: 800}} >
+        <Row justify="center" style={{backgroundColor: 'rgba(19, 28, 46, 0.95)'}} >
+            <SideAds thicc={true} />
             <Col xs={24} sm={22} md={20} lg={20} xl={15}>
                 <MetaTags>
                     <title>발로란트 요원 추천 / 나에게 맞는 요원 찾기</title>
@@ -123,9 +127,15 @@ export default function AgentRecommendation() {
                         </Row>
                     :
                         <Row justify="center" style={{fontSize: '1.5rem', padding: '1rem', backgroundColor: '#202b43'}}>
-                            <div style={{display: 'flex', justifyContent: 'center'}}>
+                            {/* <div style={{display: 'flex', justifyContent: 'center'}}>
                                 <img src={require('../images/mainLogo.png')} style={{width: '30%', alignSelf: 'flex-start'}} alt="valog.gg main logo" />
-                            </div>
+                            </div> */}
+                            <AdSense.Google
+                            client='ca-pub-1635386604461382'
+                            slot='2823633647'
+                            style={{ width: 728, height: 90, float: 'center' }}
+                            format=''
+                            />
                             <Col xs={24} sm={22} md={20} lg={20} xl={15} >
                                 <div style={{marginTop: '2rem', marginBottom: '2rem'}}>
                                     {page+1}. {shuffledQuestion[page].question}
@@ -141,13 +151,8 @@ export default function AgentRecommendation() {
                         </Row>
                 }
                 {/* { window.innerWidth < 576 ? <Adfit adUnit="DAN-qhq3i0n8v392" adWidth="320" adHeight="100" /> : <Adfit adUnit="DAN-qecnqcrgj3n6" adWidth="728" adHeight="90" /> } */}
-                <AdSense.Google
-                client='ca-pub-1635386604461382'
-                slot='1654741413'
-                style={{ width: 500, height: 300, float: 'left' }}
-                format=''
-                />
             </Col>
+            <SideAds />
         </Row>
     )
 }

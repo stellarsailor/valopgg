@@ -9,6 +9,7 @@ import Adfit from './subcomponents/Adfit';
 import { staticServer, apiServer } from '../serverUrl'
 import Axios from 'axios';
 import WeaponCollection from './subcomponents/WeaponCollection';
+import SideAds from './subcomponents/SideAds';
 
 const WeaponCategory = styled.div`
     background-color: #273552;
@@ -23,7 +24,7 @@ export default function Weapon(){
 
     return (
         <Row justify="center" style={{backgroundColor: 'rgba(19, 28, 46, 0.95)'}} >
-            <Col xs={24} sm={22} md={20} lg={20} xl={15} >
+            <Col xs={24} sm={24} md={24} lg={24} xl={24} >
                 <BackTop/>
                 <MetaTags>
                     <title>발로란트 무기 정보 및 스킨</title>
@@ -39,10 +40,11 @@ export default function Weapon(){
                     }
                 </Carousel> */}
                 {/* { window.innerWidth < 576 ? <Adfit adUnit="DAN-skxug7w2pkjd" adWidth="320" adHeight="100" /> : <Adfit adUnit="DAN-qe74ylevqulf" adWidth="728" adHeight="90" /> } */}
-                <WeaponCollection />
             </Col>
+            <SideAds thicc={true} />
             <Col xs={24} sm={22} md={20} lg={20} xl={15} style={{marginBottom: '1rem'}}>
-                <Row style={{width: '100%', height: '100%', backgroundColor: '#202b43'}} justify="center">
+                <Row style={{width: '100%', backgroundColor: '#202b43'}} justify="center">
+                <WeaponCollection />
                     <Col xs={24} sm={12} md={12} lg={4} xl={4} style={{ padding: 10, display: 'flex', flexDirection: 'column', justifyContent: 'space-between'}}>
                         <WeaponCategory>보조 무기</WeaponCategory>
                         {weapon.filter((v) => v.category === 'Sidearm').map((v, index) => <WeaponRender key={index} name={v.name} name_kr={v.name_ko} cost={v.cost} resize={true} />)}
@@ -69,6 +71,7 @@ export default function Weapon(){
                     </Col>
                 </Row>
             </Col>
+            <SideAds />
         </Row>
     )
 }
