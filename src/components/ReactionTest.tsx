@@ -258,7 +258,7 @@ export default function ReactionTest() {
                                             percentageLoading ? <Spin style={{margin: '1rem'}} /> :
                                             <div style={{color: 'white', fontSize: '1.1rem', textAlign: 'center'}}>
                                                 <div>
-                                                    반응속도 티어
+                                                    티어 {isMobile ? "(모바일)" : "(데스크톱)"}
                                                 </div>
                                                 <img src={`${staticServer}/icons/${
                                                     getTier(resultPercentage)
@@ -352,7 +352,7 @@ export default function ReactionTest() {
                     </Col>
                     <div style={{margin: '1rem 0', padding: '1rem', backgroundColor: 'rgb(32, 43, 67)'}}>
                         <div>
-                            본 측정은 일명 '예측샷'을 방지하기 위해 여러번의 측정을 시행하며 최대값/최소값을 제외한 기록의 평균을 측정합니다. <span style={{fontWeight: 'bold', textDecorationLine: 'underline'}}>또한 100ms 이하의 샷은 예측샷으로 간주하여 무효샷 처리가 됩니다</span>(올림픽에서 규정하는 인간의 한계 반응속도).
+                            본 측정은 일명 '예측샷'을 방지하기 위해 여러번의 측정을 시행하며 최대값/최소값을 제외한 기록의 평균을 측정합니다. <span style={{fontWeight: 'bold', textDecorationLine: 'underline'}}>또한 100ms 미만의 샷은 예측샷으로 간주하여 무효샷 처리가 됩니다</span>(올림픽에서 규정하는 인간의 한계 반응속도).
                         </div>
                         <div style={{margin: '1rem 0'}}>데스크톱을 기준으로 맞추어져 있으며 모니터의 주사율, 모바일의 경우 기기 성능에 따라 일부 차이가 날 수 있습니다. 따라서 정확한 측정을 위해서는 데스크톱 이용을 권장드립니다(현재 누적된 데이터 통계 상 모바일 반응속도 - 100ms = 데스크톱 반응속도의 평균을 보여주고 있습니다. 표시되는 티어와 상위 퍼센티지는 데스크톱과 모바일이 분리되어 계산됩니다). </div>
                         {isMobile ? <div style={{margin: '1rem 0'}}>모바일의 경우 발사 버튼을 '터치'하는 순간 측정하므로 스크롤할때 발사 버튼을 터치하지않도록 주의해주세요!</div> : null}
