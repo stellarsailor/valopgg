@@ -1,6 +1,6 @@
 import React, { useState, useRef, useEffect, useCallback } from 'react'
-import { Row, Col, BackTop, Typography, Spin } from 'antd';
-import { StarFilled, CrownFilled } from '@ant-design/icons';
+import { Row, Col, BackTop, Typography, Spin, Button } from 'antd';
+import { BarChartOutlined, DesktopOutlined, MobileOutlined, CrownFilled } from '@ant-design/icons';
 import MetaTags from 'react-meta-tags';
 import Adfit from './subcomponents/Adfit';
 import { isMobile } from 'react-device-detect';
@@ -225,13 +225,12 @@ export default function ReactionTest() {
                 </MetaTags>
                 <Row justify='center'>
                     { todaysMinimumDesktop === 0 || todaysMinimumMobile === 0 ? null : 
-                        <Col span={24} style={{ width: '100%'}}>
-                            <div style={{margin: 10}}>
-                                <StarFilled style={{color: 'gold', marginRight: 10}} />오늘의 1등 : 데스크톱 {todaysMinimumDesktop}ms / 모바일 {todaysMinimumMobile}ms 
+                        <Col span={24} style={{width: '100%'}}>
+                            <div style={{margin: 10, fontSize: '1rem'}}>
+                                <CrownFilled style={{color: 'gold', marginRight: 10}} />오늘의 1등 :
+                                <DesktopOutlined style={{color: 'lightgray', marginLeft: '1rem', marginRight: '5px'}} /> <span style={{color: 'white'}}>{todaysMinimumDesktop}</span>ms 
+                                <MobileOutlined style={{color: 'lightgray', marginLeft: '1rem', marginRight: '5px'}} /> <span style={{color: 'white'}}>{todaysMinimumMobile}</span>ms 
                             </div>
-                            <span>
-                                <CrownFilled style={{color: 'gold', marginRight: 10}} />통계보기
-                            </span>
                         </Col>
                     }
                     <Col xs={24} sm={24} md={15} lg={15} xl={15} >
@@ -328,7 +327,6 @@ export default function ReactionTest() {
                                                 <div style={{color: 'white', fontSize: '1.4rem', fontWeight: 'bold'}}>시작하기 - 모바일</div>
                                     }
                                 </a>
-                                <Paragraph style={{color: 'white', fontSize: '1rem', textAlign: 'center', margin: '2rem 0'}} copyable={{ text: 'https://valog.gg/reaction' }}>친구에게 URL 공유</Paragraph>
                                 </>
                                 :
                                 <>
@@ -355,11 +353,11 @@ export default function ReactionTest() {
                                                 <div style={{color: 'white', fontSize: '1.4rem', fontWeight: 'bold'}}>시작하기</div>
                                     }
                                 </a>
-                                <Paragraph style={{color: 'white', fontSize: '1rem', textAlign: 'center', margin: '2rem 0'}} copyable={{ text: 'https://valog.gg/reaction' }}>친구에게 URL 공유</Paragraph>
                                 </>
                             }
-                            
                         </Row>
+                        {/* <div style={{fontSize: '1.3rem', textAlign: 'center', marginTop: '1rem'}}> 티어 커트라인 <BarChartOutlined style={{color: '#ff324c'}} /></div> */}
+                        <Paragraph style={{color: 'white', fontSize: '1rem', textAlign: 'center', margin: '1rem 0'}} copyable={{ text: 'https://valog.gg/reaction' }}>친구에게 URL 공유</Paragraph>
                     </Col>
                     <div style={{margin: '1rem 0', padding: '1rem', backgroundColor: 'rgb(32, 43, 67)'}}>
                         <div>
