@@ -277,7 +277,7 @@ export const skin = [
                 name_ko: '콘벡스',
                 category: 'convex',
                 level: 0,
-                cost: '확인 중',
+                cost: '875 VP',
             },
         ]
     },
@@ -417,7 +417,7 @@ export const skin = [
                 name_ko: '콘벡스',
                 category: 'convex',
                 level: 0,
-                cost: '확인 중',
+                cost: '875 VP',
             },
         ]
     },
@@ -473,7 +473,7 @@ export const skin = [
                 name_ko: '콘벡스',
                 category: 'convex',
                 level: 0,
-                cost: '확인 중',
+                cost: '875 VP',
             },
         ]
     },
@@ -515,7 +515,7 @@ export const skin = [
                 name_ko: '콘벡스',
                 category: 'convex',
                 level: 0,
-                cost: '확인 중',
+                cost: '875 VP',
             },
         ]
     },
@@ -844,7 +844,7 @@ export const skin = [
                 name_ko: '콘벡스',
                 category: 'convex',
                 level: 0,
-                cost: '확인 중',
+                cost: '875 VP',
             },
         ]
     },
