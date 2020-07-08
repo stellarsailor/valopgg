@@ -275,7 +275,7 @@ export const weapon: Array<weaponType> = [
         category_ko: "소총",
         name: "Guardian",
         name_ko: "가디언",
-        cost: 2700,
+        cost: 2500,
         damage: [
             {
                 distance: "0-50",
@@ -283,11 +283,11 @@ export const weapon: Array<weaponType> = [
             },
         ],
         primaryMode: "반자동",
-        primaryRate: "초당 6.5발",
+        primaryRate: "초당 4.75발",
         altMode: "1.5배율, 탄퍼짐 감소",
-        altRate: "초당 6.5발",
+        altRate: "초당 4.75발",
         capacity: 12,
-        penetration: "보통"
+        penetration: "높음"
     },
     {
         category: "Rifle",

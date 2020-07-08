@@ -62,7 +62,7 @@ export default function GuideDetail(props) {
                         >
                             <SubMenu key="sub1" title="패치노트">
                                 {
-                                    guide[0].tabs.map((v) => (
+                                    guide[0].tabs.slice(0).reverse().map((v) => (
                                         <Menu.Item key={v.id + 1}>
                                             <Link to={`/guide/${0}/${v.id}`} >
                                             {v.tabName}

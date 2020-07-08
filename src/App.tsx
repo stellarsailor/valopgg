@@ -26,7 +26,7 @@ import Privacy from './components/Privacy';
 import GuideDetail from './components/GuideDetail';
 import ReactionTest from './components/ReactionTest';
 
-import { patchNotePhrase } from './datas/guide'
+import { patchNotePhrase, guide } from './datas/guide'
 
 import SearchInput from './components/subcomponents/SearchInput'
 import Statistics from './components/Statistics';
@@ -101,7 +101,7 @@ export default function App (props) {
                                             {/* <SearchInput /> */}
                                         </Col>
                                     </Row>
-                                <Link to="/guide" style={{position: 'absolute', bottom: -40, color: 'white', fontSize: '0.8rem', backgroundColor: 'rgb(32, 43, 67)', padding: '3px 10px', borderRadius: 5}}>{patchNotePhrase}</Link>
+                                <Link to={`/guide/0/${guide[0].tabs.length - 1}`} style={{position: 'absolute', bottom: -40, color: 'white', fontSize: '0.8rem', backgroundColor: 'rgb(32, 43, 67)', padding: '3px 10px', borderRadius: 5}}>{patchNotePhrase}</Link>
                                 </Col>
                             </Row>
                         </Col>
@@ -110,7 +110,7 @@ export default function App (props) {
                 <Row justify="center" style={{height: 50, backgroundColor: '#161616'}}>
                     <Col xs={24} sm={0} md={0} lg={0} xl={0} >
                         <div style={{display: 'flex', justifyContent: 'space-between', alignItems: 'center', height: '100%', fontSize: '1.2em', overflowX: 'scroll', overflowY: 'hidden', whiteSpace: 'nowrap'}}>
-                            <Link to={`/guide/0/0`} style={mobileMenuTab}>가이드</Link>
+                            <Link to={`/guide/0/${guide[0].tabs.length - 1}`} style={mobileMenuTab}>가이드</Link>
                             <Link to="/agent" style={mobileMenuTab}>요원</Link>
                             <Link to="/agentrecom" style={mobileMenuTab}>맞는 요원 찾기</Link>
                             {/* <Link to="/tier" style={mobileMenuTab}>티어</Link> */}
@@ -131,7 +131,7 @@ export default function App (props) {
                     </Col>
                     <Col xs={0} sm={22} md={20} lg={20} xl={15} >
                         <div style={{display: 'flex', justifyContent: 'space-between', alignItems: 'center', height: '100%', fontSize: '1.2em'}}>
-                            <MenuTabHover><Link to={`/guide/0/0`}>가이드</Link></MenuTabHover>
+                            <MenuTabHover><Link to={`/guide/0/${guide[0].tabs.length - 1}`}>가이드</Link></MenuTabHover>
                             <MenuTabHover><Link to="/agent">요원</Link></MenuTabHover>
                             <MenuTabHover><Link to="/agentrecom">맞는 요원 찾기</Link></MenuTabHover>
                             {/* <MenuTabHover><Link to="/tier">티어</Link></MenuTabHover> */}
