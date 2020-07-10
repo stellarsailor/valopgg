@@ -125,6 +125,34 @@ export const skin = [
                 level: 0,
                 cost: '배틀패스 제 1막 티어16',
             },
+            {
+                id: 4,
+                name_ko: '엘더플레임 1',
+                category: 'elderflame',
+                level: 1,
+                cost: '2475 VP',
+            },
+            {
+                id: 5,
+                name_ko: '엘더플레임 2',
+                category: 'elderflame',
+                level: 2,
+                cost: '2475 VP',
+            },
+            {
+                id: 6,
+                name_ko: '엘더플레임 3',
+                category: 'elderflame',
+                level: 3,
+                cost: '2475 VP',
+            },
+            {
+                id: 7,
+                name_ko: '엘더플레임 4',
+                category: 'elderflame',
+                level: 4,
+                cost: '2475 VP',
+            },
         ]
     },
     {
@@ -475,6 +503,34 @@ export const skin = [
                 level: 0,
                 cost: '875 VP',
             },
+            {
+                id: 4,
+                name_ko: '엘더플레임 1',
+                category: 'elderflame',
+                level: 1,
+                cost: '2475 VP',
+            },
+            {
+                id: 5,
+                name_ko: '엘더플레임 2',
+                category: 'elderflame',
+                level: 2,
+                cost: '2475 VP',
+            },
+            {
+                id: 6,
+                name_ko: '엘더플레임 3',
+                category: 'elderflame',
+                level: 3,
+                cost: '2475 VP',
+            },
+            {
+                id: 7,
+                name_ko: '엘더플레임 4',
+                category: 'elderflame',
+                level: 4,
+                cost: '2475 VP',
+            },
         ]
     },
     {
@@ -720,6 +776,34 @@ export const skin = [
                 level: 4,
                 cost: '1775 VP',
             },
+            {
+                id: 12,
+                name_ko: '엘더플레임 1',
+                category: 'elderflame',
+                level: 1,
+                cost: '2475 VP',
+            },
+            {
+                id: 13,
+                name_ko: '엘더플레임 2',
+                category: 'elderflame',
+                level: 2,
+                cost: '2475 VP',
+            },
+            {
+                id: 14,
+                name_ko: '엘더플레임 3',
+                category: 'elderflame',
+                level: 3,
+                cost: '2475 VP',
+            },
+            {
+                id: 15,
+                name_ko: '엘더플레임 4',
+                category: 'elderflame',
+                level: 4,
+                cost: '2475 VP',
+            },
         ]
     },
     {
@@ -846,6 +930,34 @@ export const skin = [
                 level: 0,
                 cost: '875 VP',
             },
+            {
+                id: 9,
+                name_ko: '엘더플레임 1',
+                category: 'elderflame',
+                level: 1,
+                cost: '2475 VP',
+            },
+            {
+                id: 10,
+                name_ko: '엘더플레임 2',
+                category: 'elderflame',
+                level: 2,
+                cost: '2475 VP',
+            },
+            {
+                id: 11,
+                name_ko: '엘더플레임 3',
+                category: 'elderflame',
+                level: 3,
+                cost: '2475 VP',
+            },
+            {
+                id: 12,
+                name_ko: '엘더플레임 4',
+                category: 'elderflame',
+                level: 4,
+                cost: '2475 VP',
+            },
         ]
     },
     {
@@ -943,6 +1055,13 @@ export const skin = [
                 category: 'sovereign',
                 level: 0,
                 cost: '3550 VP',
+            },
+            {
+                id: 7,
+                name_ko: '엘더플레임',
+                category: 'elderflame',
+                level: 0,
+                cost: '4950 VP',
             },
         ]
     },
