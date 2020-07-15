@@ -208,7 +208,7 @@ export default function ReactionTest() {
         percentage <= 91   ? "bronze2" :
         percentage <= 95   ? "bronze1" :
         percentage <= 97   ? "iron3" :
-        percentage <= 98   ? "iron2" :
+        percentage <= 99   ? "iron2" :
         "iron1"
 
         return tier
