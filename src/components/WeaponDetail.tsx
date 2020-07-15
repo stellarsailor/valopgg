@@ -80,7 +80,7 @@ export default function WeaponDetail(props) {
                 smooth: 'easeInOutQuart'
             })
         } else {
-            window.scrollTo(0, 0)
+
         }
     }
 
@@ -124,11 +124,12 @@ export default function WeaponDetail(props) {
                                         src={(`${staticServer}/weaponskins/${selectedSkinElement.category}-${selectedWeapon.name.toLowerCase()}${selectedSkinElement.level === 0 ? '' : `-${selectedSkinElement.level}`}.png`)} 
                                         style={{width: '90%'}} alt="발로란트 무기 스킨" />
                                     </div>
+                                    { isMobile ? <Adsense type="mobilewide" /> : null }
                                     {selectedSkinElement.level !== 0 ? 
-                                        <div style={{textAlign: 'center'}}>
+                                        <div style={{textAlign: 'center', marginTop: 10}}>
                                             {selectedWeaponSkins.filter(v => v.category === selectedSkinElement.category).map(bundle => 
                                                 <a key={bundle.level} 
-                                                style={{fontSize: '1rem', fontWeight: 'bold', margin: '0px 10px', color: 'lightgray'}} 
+                                                style={{fontSize: '1rem', fontWeight: 'bold', margin: '10px', color: 'lightgray'}} 
                                                 onClick={() => {
                                                     setSelectedSkinElement(selectedWeaponSkins.filter(f => f.id === bundle.id)[0])
                                                     weaponScroll()
@@ -138,7 +139,6 @@ export default function WeaponDetail(props) {
                                             )}
                                         </div>
                                     : null}
-                                    <Adsense type="mobilewide" /> 
                                     <SkinText>{selectedSkinElement.name_ko} 
                                         <span style={{fontSize: '1rem', color: 'lightgray', marginLeft: 10}}>{selectedSkinElement.cost} {parseInt(selectedSkinElement.cost) > 0 ? ` (= 약 ${parseInt(selectedSkinElement.cost) * 11}원)` : null}
                                         </span>
