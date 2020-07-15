@@ -7,6 +7,13 @@ export const skin = [
         name_ko: '클래식',
         skins: [
             {
+                id: -1,
+                name_ko: '기본 스킨',
+                category: 'normal',
+                level: 0,
+                cost: ''
+            },
+            {
                 id: 0,
                 name_ko: '아발란체',
                 category: 'avalanche',
@@ -84,6 +91,13 @@ export const skin = [
         name_ko: '쇼티',
         skins: [
             {
+                id: -1,
+                name_ko: '기본 스킨',
+                category: 'normal',
+                level: 0,
+                cost: ''
+            },
+            {
                 id: 0,
                 name_ko: '스네이크 바이트',
                 category: 'vipers',
@@ -97,6 +111,13 @@ export const skin = [
         name: 'Frenzy',
         name_ko: '프렌지',
         skins: [
+            {
+                id: -1,
+                name_ko: '기본 스킨',
+                category: 'normal',
+                level: 0,
+                cost: ''
+            },
             {
                 id: 0,
                 name_ko: '라그나록커',
@@ -160,6 +181,13 @@ export const skin = [
         name: 'Ghost',
         name_ko: '고스트',
         skins: [
+            {
+                id: -1,
+                name_ko: '기본 스킨',
+                category: 'normal',
+                level: 0,
+                cost: ''
+            },
             {
                 id: 0,
                 name_ko: '소울 사일런서',
@@ -259,6 +287,13 @@ export const skin = [
         name_ko: '셰리프',
         skins: [
             {
+                id: -1,
+                name_ko: '기본 스킨',
+                category: 'normal',
+                level: 0,
+                cost: ''
+            },
+            {
                 id: 0,
                 name_ko: '피스키퍼',
                 category: 'brimstones',
@@ -315,6 +350,13 @@ export const skin = [
         name_ko: '스팅어',
         skins: [
             {
+                id: -1,
+                name_ko: '기본 스킨',
+                category: 'normal',
+                level: 0,
+                cost: ''
+            },
+            {
                 id: 0,
                 name_ko: '아리스토크랫',
                 category: 'aristocrat',
@@ -363,6 +405,13 @@ export const skin = [
         name: 'Spectre',
         name_ko: '스펙터',
         skins: [
+            {
+                id: -1,
+                name_ko: '기본 스킨',
+                category: 'normal',
+                level: 0,
+                cost: ''
+            },
             {
                 id: 0,
                 name_ko: '프리즘',
@@ -455,6 +504,13 @@ export const skin = [
         name_ko: '버키',
         skins: [
             {
+                id: -1,
+                name_ko: '기본 스킨',
+                category: 'normal',
+                level: 0,
+                cost: ''
+            },
+            {
                 id: 0,
                 name_ko: '갤러리아',
                 category: 'galleria',
@@ -475,6 +531,13 @@ export const skin = [
         name: 'Judge',
         name_ko: '저지',
         skins: [
+            {
+                id: -1,
+                name_ko: '기본 스킨',
+                category: 'normal',
+                level: 0,
+                cost: ''
+            },
             {
                 id: 0,
                 name_ko: '럭스',
@@ -539,6 +602,13 @@ export const skin = [
         name_ko: '불독',
         skins: [
             {
+                id: -1,
+                name_ko: '기본 스킨',
+                category: 'normal',
+                level: 0,
+                cost: ''
+            },
+            {
                 id: 0,
                 name_ko: '무사',
                 category: 'ronin',
@@ -580,6 +650,13 @@ export const skin = [
         name: 'Guardian',
         name_ko: '가디언',
         skins: [
+            {
+                id: -1,
+                name_ko: '기본 스킨',
+                category: 'normal',
+                level: 0,
+                cost: ''
+            },
             {
                 id: 0,
                 name_ko: '갤러리아',
@@ -651,6 +728,13 @@ export const skin = [
         name_ko: '팬텀',
         skins: [
             {
+                id: -1,
+                name_ko: '기본 스킨',
+                category: 'normal',
+                level: 0,
+                cost: ''
+            },
+            {
                 id: 0,
                 name_ko: '아발란체',
                 category: 'avalanche',
@@ -692,6 +776,13 @@ export const skin = [
         name: 'Vandal',
         name_ko: '밴달',
         skins: [
+            {
+                id: -1,
+                name_ko: '기본 스킨',
+                category: 'normal',
+                level: 0,
+                cost: ''
+            },
             {
                 id: 0,
                 name_ko: '아발란체',
@@ -812,6 +903,13 @@ export const skin = [
         name_ko: '마샬',
         skins: [
             {
+                id: -1,
+                name_ko: '기본 스킨',
+                category: 'normal',
+                level: 0,
+                cost: ''
+            },
+            {
                 id: 0,
                 name_ko: '아발란체',
                 category: 'avalanche',
@@ -867,6 +965,13 @@ export const skin = [
         name: 'Operator',
         name_ko: '오퍼레이터',
         skins: [
+            {
+                id: -1,
+                name_ko: '기본 스킨',
+                category: 'normal',
+                level: 0,
+                cost: ''
+            },
             {
                 id: 0,
                 name_ko: '프리즘',
@@ -966,6 +1071,13 @@ export const skin = [
         name_ko: '아레스',
         skins: [
             {
+                id: -1,
+                name_ko: '기본 스킨',
+                category: 'normal',
+                level: 0,
+                cost: ''
+            },
+            {
                 id: 0,
                 name_ko: '프리즘',
                 category: 'prism',
@@ -994,6 +1106,13 @@ export const skin = [
         name_ko: '오딘',
         skins: [
             {
+                id: -1,
+                name_ko: '기본 스킨',
+                category: 'normal',
+                level: 0,
+                cost: ''
+            },
+            {
                 id: 0,
                 name_ko: 'DOT EXE',
                 category: 'dotexe',
@@ -1004,9 +1123,16 @@ export const skin = [
     },
     {
         id: 16,
-        name: 'knife',
+        name: 'Knife',
         name_ko: '전술용 나이프',
         skins: [
+            {
+                id: -1,
+                name_ko: '기본 스킨',
+                category: 'normal',
+                level: 0,
+                cost: ''
+            },
             {
                 id: 0,
                 name_ko: '프리즘',

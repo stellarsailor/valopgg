@@ -10,6 +10,8 @@ type weaponType = {
     altMode?: string;
     altRate?: string;
     capacity: number;
+    equipTime: number;
+    reloadTime: number;
     penetration: "없음" | "낮음" | "보통" | "높음";
 }
 
@@ -40,6 +42,8 @@ export const weapon: Array<weaponType> = [
         altMode: "찍기(베기 데미지의 1.5배)",
         altRate: "초당 1회",
         capacity: 0,
+        equipTime: 0,
+        reloadTime: 0,
         penetration: "없음"
     },
     {
@@ -63,6 +67,8 @@ export const weapon: Array<weaponType> = [
         altMode: "3점사, 탄 퍼짐 증가",
         altRate: "초당 2.22발",
         capacity: 12,
+        equipTime: 0.75,
+        reloadTime: 1.75,
         penetration: "낮음"
     },
     {
@@ -88,6 +94,8 @@ export const weapon: Array<weaponType> = [
         primaryMode: "반자동",
         primaryRate: "초당 3.3발",
         capacity: 2,
+        equipTime: 0.75,
+        reloadTime: 1.75,
         penetration: "낮음"
     },
     {
@@ -109,6 +117,8 @@ export const weapon: Array<weaponType> = [
         primaryMode: "자동",
         primaryRate: "초당 10발",
         capacity: 13,
+        equipTime: 1,
+        reloadTime: 1.5,
         penetration: "낮음"
     },
     {
@@ -130,6 +140,8 @@ export const weapon: Array<weaponType> = [
         primaryMode: "반자동",
         primaryRate: "초당 6.75발",
         capacity: 15,
+        equipTime: 0.75,
+        reloadTime: 1.5,
         penetration: "보통"
     },
     {
@@ -151,6 +163,8 @@ export const weapon: Array<weaponType> = [
         primaryMode: "반자동",
         primaryRate: "초당 4발",
         capacity: 6,
+        equipTime: 1,
+        reloadTime: 2.25,
         penetration: "높음"
     },
     {
@@ -174,6 +188,8 @@ export const weapon: Array<weaponType> = [
         altMode: "1.15배율 4점사, 탄퍼짐 감소",
         altRate: "초당 4발",
         capacity: 20,
+        equipTime: 0.75,
+        reloadTime: 2.25,
         penetration: "낮음"
     },
     {
@@ -197,6 +213,8 @@ export const weapon: Array<weaponType> = [
         altMode: "1.15배율, 탄퍼짐 감소",
         altRate: "초당 12발",
         capacity: 30,
+        equipTime: 0.75,
+        reloadTime: 2.25,
         penetration: "보통"
     },
     {
@@ -224,6 +242,8 @@ export const weapon: Array<weaponType> = [
         altMode: "반자동(주 공격보다 확장된 거리)",
         altRate: "초당 1.1발",
         capacity: 5,
+        equipTime: 1,
+        reloadTime: 2.5,
         penetration: "낮음"
     },
     {
@@ -249,6 +269,8 @@ export const weapon: Array<weaponType> = [
         primaryMode: "반자동",
         primaryRate: "초당 3.5발",
         capacity: 7,
+        equipTime: 1,
+        reloadTime: 2.2,
         penetration: "보통"
     },
     {
@@ -268,6 +290,8 @@ export const weapon: Array<weaponType> = [
         altMode: "1.25배율 3점사",
         altRate: "초당 3발",
         capacity: 24,
+        equipTime: 1,
+        reloadTime: 2.5,
         penetration: "보통"
     },
     {
@@ -287,6 +311,8 @@ export const weapon: Array<weaponType> = [
         altMode: "1.5배율, 탄퍼짐 감소",
         altRate: "초당 4.75발",
         capacity: 12,
+        equipTime: 1,
+        reloadTime: 2.5,
         penetration: "높음"
     },
     {
@@ -306,6 +332,8 @@ export const weapon: Array<weaponType> = [
         altMode: "1.25배율, 탄퍼짐 감소",
         altRate: "초당 8.32발",
         capacity: 25,
+        equipTime: 1,
+        reloadTime: 2.5,
         penetration: "보통"
     },
     {
@@ -333,6 +361,8 @@ export const weapon: Array<weaponType> = [
         altMode: "1.25배율, 탄퍼짐 감소",
         altRate: "초당 9.9발",
         capacity: 30,
+        equipTime: 1,
+        reloadTime: 2.5,
         penetration: "보통"
     },
     {
@@ -352,6 +382,8 @@ export const weapon: Array<weaponType> = [
         altMode: "2.5배율, 탄퍼짐 감소",
         altRate: "초당 1.2발",
         capacity: 5,
+        equipTime: 1.25,
+        reloadTime: 2.5,
         penetration: "보통"
     },
     {
@@ -371,6 +403,8 @@ export const weapon: Array<weaponType> = [
         altMode: "2.5, 5배율, 탄퍼짐 감소",
         altRate: "초당 0.75발",
         capacity: 5,
+        equipTime: 1.5,
+        reloadTime: 3.7,
         penetration: "높음"
     },
     {
@@ -394,6 +428,8 @@ export const weapon: Array<weaponType> = [
         altMode: "1.25배율, 탄퍼짐 감소",
         altRate: "초당 10발에서 13발(발사 중 증가)",
         capacity: 50,
+        equipTime: 1.25,
+        reloadTime: 3.25,
         penetration: "높음"
     },
     {
@@ -417,6 +453,8 @@ export const weapon: Array<weaponType> = [
         altMode: "1.25배율, 탄퍼짐 감소",
         altRate: "초당 15.6발",
         capacity: 100,
+        equipTime: 1.25,
+        reloadTime: 5,
         penetration: "높음"
     },
 ]
