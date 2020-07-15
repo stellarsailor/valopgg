@@ -188,26 +188,26 @@ export default function ReactionTest() {
     },[stage, scores, targetAppearObject])
 
     const getTier = (percentage) => {
-        let tier = percentage <= 0.03 ? "radiant" :
-        percentage <= 0.05 ? "immortal3" :
-        percentage <= 0.11 ? "immortal2" :
-        percentage <= 0.2  ? "immortal1" :
-        percentage <= 0.5  ? "diamond3" :
-        percentage <= 1    ? "diamond2" :
-        percentage <= 2    ? "diamond1" :
-        percentage <= 3    ? "platinum3" :
-        percentage <= 6    ? "platinum2" :
-        percentage <= 10   ? "platinum1" :
-        percentage <= 15   ? "gold3" :
-        percentage <= 23   ? "gold2" :
-        percentage <= 35   ? "gold1" :
-        percentage <= 46   ? "silver3" :
-        percentage <= 56   ? "silver2" :
-        percentage <= 70   ? "silver1" :
-        percentage <= 77   ? "bronze3" :
-        percentage <= 84   ? "bronze2" :
-        percentage <= 90   ? "bronze1" :
-        percentage <= 95   ? "iron3" :
+        let tier = percentage <= 0.05 ? "radiant" :
+        percentage <= 0.1  ? "immortal3" :
+        percentage <= 0.2  ? "immortal2" :
+        percentage <= 0.5  ? "immortal1" :
+        percentage <= 1    ? "diamond3" :
+        percentage <= 2    ? "diamond2" :
+        percentage <= 4    ? "diamond1" :
+        percentage <= 7    ? "platinum3" :
+        percentage <= 12   ? "platinum2" :
+        percentage <= 20   ? "platinum1" :
+        percentage <= 29   ? "gold3" :
+        percentage <= 40   ? "gold2" :
+        percentage <= 50   ? "gold1" :
+        percentage <= 62   ? "silver3" :
+        percentage <= 71   ? "silver2" :
+        percentage <= 80   ? "silver1" :
+        percentage <= 86   ? "bronze3" :
+        percentage <= 91   ? "bronze2" :
+        percentage <= 95   ? "bronze1" :
+        percentage <= 97   ? "iron3" :
         percentage <= 98   ? "iron2" :
         "iron1"
 
