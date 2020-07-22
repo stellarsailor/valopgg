@@ -70,9 +70,9 @@ export default function App (props) {
         <Router>
             <Layout className="layout">
                 <HeaderContainer>
-                    <Link to="/battlepass" style={{width: '100%', height: 35, backgroundColor: 'rgb(22, 22, 22)', display: 'flex', alignItems: 'center' , justifyContent: 'center'}}>
+                    {/* <Link to="/battlepass" style={{width: '100%', height: 35, backgroundColor: 'rgb(22, 22, 22)', display: 'flex', alignItems: 'center' , justifyContent: 'center'}}>
                         배틀패스 정보 및 경험치 계산기는 여기로! 바로가기
-                    </Link>
+                    </Link> */}
                     <Row>
                         <Col xs={24} sm={24} md={0} lg={0} xl={0} >
                             <Row style={{height: 80, display: 'flex', alignItems: 'center', backgroundImage: `url(${Banner})`, backgroundSize: 'cover', backgroundPosition: 'center'}}>

@@ -15,6 +15,7 @@ import axios from 'axios';
 import { apiServer, staticServer } from '../serverUrl';
 import PartyRenderer from './subcomponents/PartyRenderer';
 import WeaponCollection from './subcomponents/WeaponCollection';
+import { isMobile } from 'react-device-detect';
 
 const { Search } = Input;
 
@@ -139,16 +140,13 @@ export default function Main(props) {
             }
             <Col xs={24} sm={24} md={0} lg={0} xl={0} style={{backgroundColor: 'lightgray' }}>
                 <Alert type="warning" message={<Link to={`/guide/0/${guide[0].tabs.length - 1}`} style={{color: 'black'}}>{patchNotePhrase}</Link>} showIcon={false} banner closable />
-                <div style={{display: 'flex', width: '100%', height: 200, backgroundImage: `url(${mainImage})`, backgroundSize: 'cover', backgroundPosition: 'left', justifyContent: 'center', alignItems: 'center', flexDirection: 'column'}}>
-                        {/* <div style={{fontWeight: 'bold', fontSize: '1.2rem'}}>
-                            발로란트 정보의 모든 것, 발로그
-                        </div> */}
+                {/* <div style={{display: 'flex', width: '100%', height: 200, backgroundImage: `url(${mainImage})`, backgroundSize: 'cover', backgroundPosition: 'left', justifyContent: 'center', alignItems: 'center', flexDirection: 'column'}}>
                         <Search 
                         placeholder="발로란트 정보의 모든 것, 발로그" 
                         size="large"
                         // onSearch={value => props.history.push(`/player/${value}`)} 
                         enterButton style={{width: '90%'}} />
-                </div>
+                </div> */}
             </Col>
             <Col xs={0} sm={0} md={24} lg={24} xl={24} style={{ }}>
                 <div style={{display: 'flex', justifyContent: 'center'}} >
@@ -156,21 +154,60 @@ export default function Main(props) {
                         <div>
                             발로란트 정보의 모든 것, 발로그
                         </div>
-                        {/* <Search
-                        placeholder="발로란트 정보의 모든 것, 발로그"
-                        enterButton="검색"
-                        size="large"
-                        // onSearch={value => props.history.push(`/player/${value}`)}
-                        /> */}
                     </div>
                 </div>
                 <div >
                     <img src={require('../images/official-main-image.png')} style={{width: '100%'}} alt="background cut 20 degree" />   
                 </div>
             </Col>
-            <Row style={{width: '100%', backgroundColor: 'rgb(32, 43, 67, 0.4)' }} justify="center">
+            <Row style={{width: '100%', backgroundColor: 'rgb(32, 43, 67, 0.0)', margin: '1rem 0' }} justify="center">
+                <Col xs={24} sm={22} md={20} lg={20} xl={15}  style={{display: 'flex', flexDirection: 'column', justifyContent: 'center', alignItems: 'center'}}>
+                    {/* <div style={{textAlign: 'left', width: '100%', padding: '1rem', fontSize: '1.4rem', fontWeight: 'bold', color: 'black'}}>
+                        주요 기능 바로가기
+                    </div> */}
+                    <Row style={{width: '100%'}}>
+                        <Col span={isMobile ? 24 : 12} style={{width: '100%', padding: '1rem'}}>
+                            <Link to="/reaction" onClick={() => window.scrollTo(0,0)}>
+                                <Row style={{width: '100%', height: '100%', border: '1px solid black'}}>
+                                    <Col span={24}>
+                                        <div style={{position: 'absolute', zIndex: 6, bottom: '1rem', left: '1rem', fontSize: '1.4rem', fontWeight: 'bold'}}>
+                                            반응 속도 측정 {`${isMobile ? '(모바일)' : '(데스크톱)'}`}
+                                        </div>
+                                        <div style={{background: 'linear-gradient(rgba(0,0,0,0) 0%, rgba(0,0,0,0) 30% ,rgba(0,0,0,0.8) 100%)', zIndex: 5, position: 'absolute', width: '100%', height: '100%'}} />
+                                        <img src={require('../images/main01.png')} style={{ width: '100%', height: '100%', zIndex: -1}} />  
+                                    </Col>
+                                </Row>
+                            </Link>
+                        </Col>
+                        <Col span={isMobile ? 24 : 12} style={{width: '100%', padding: '1rem'}}>
+                            <Row>
+                                <Col span={24} style={{marginBottom: '2rem', border: '1px solid black'}}>
+                                    <Link to="/weapon" onClick={() => window.scrollTo(0,0)}>
+                                        <div style={{backgroundColor: 'black', fontSize: '1.4rem', fontWeight: 'bold', paddingLeft: 10}}>
+                                            무기 스킨 및 번들 할인
+                                        </div>
+                                        <div>
+                                            <WeaponCollection />
+                                        </div>
+                                    </Link>
+                                </Col>
+                                <Col span={24} style={{border: '1px solid black'}}>
+                                    <Link to="/battlepass" onClick={() => window.scrollTo(0,0)}>
+                                        <div style={{position: 'absolute', zIndex: 6, bottom: '1rem', left: '1rem', fontSize: '1.4rem', fontWeight: 'bold'}}>
+                                            배틀패스 계산기
+                                        </div>
+                                        <div style={{background: 'linear-gradient(rgba(0,0,0,0) 0%, rgba(0,0,0,0) 30% ,rgba(0,0,0,1) 100%)', zIndex: 5, position: 'absolute', width: '100%', height: '100%'}} />
+                                        <img src={require('../images/main02.png')} style={{ width: '100%', zIndex: -1}} />  
+                                    </Link>
+                                </Col>
+                            </Row>
+                        </Col>
+                    </Row>
+                </Col>
+            </Row>
+            <Row style={{width: '100%', backgroundColor: 'rgb(32, 43, 67, 0.5)' }} justify="center">
                 <Col xs={24} sm={22} md={20} lg={20} xl={15} style={{ width: '100%'}}>
-                    <div style={{display: 'flex', justifyContent: 'flex-start', alignItems: 'center'}}>
+                    <div style={{display: 'flex', justifyContent: 'flex-start', alignItems: 'center', margin: '10px 0'}}>
                         <span style={{fontWeight: 'bold', fontSize: '1.2rem', margin: '0 1rem', color: 'white'}}>현재 모집 중인 파티 목록</span>
                         <Link to="/party" style={{marginLeft: '0rem', color: 'white'}}>더 보기</Link>
                     </div>
@@ -197,10 +234,9 @@ export default function Main(props) {
                     </Row>
                 </Col>
             </Row>
-            <Col xs={24} sm={22} md={20} lg={20} xl={15}>
+            {/* <Col xs={24} sm={22} md={20} lg={20} xl={15}>
                 <Row style={{padding: '1rem'}}>
                     <Col xs={24} sm={12} md={12} lg={12} xl={12} style={{padding: '5%'}}>
-                        {/* <img src={require('../images/mainImages0.jpg')} style={{width: '100%'}} /> */}
                         <TwitterTimelineEmbed
                         sourceType="profile"
                         screenName="valoggg"
@@ -237,12 +273,11 @@ export default function Main(props) {
                     <Col xs={24} sm={12} md={12} lg={12} xl={12} style={{padding: '5%'}}>
                         <img src={require('../images/mainImages1.jpg')} style={{width: '100%'}} alt="helper to explain website" />
                     </Col>
-                    {/* <HR /> */}
                 </Row>
                 <Row style={{marginBottom: '1rem', padding: '5%'}}>
                     <WeaponCollection />
                 </Row>
-                {/* <Row style={{padding: '1rem'}}>
+                <Row style={{padding: '1rem'}}>
                     <Col xs={24} sm={12} md={12} lg={12} xl={12} style={{padding: '5%'}}>
                         <img src={require('../images/mainImages2.jpg')} style={{width: '100%'}} alt="helper to explain website" />
                     </Col>
@@ -256,17 +291,9 @@ export default function Main(props) {
                         
                         <Button style={{marginTop: 10}}><Link to="/prosetting">바로가기</Link></Button>
                     </Col>
-                </Row> */}
+                </Row>
 
-                {/* <Collapse defaultActiveKey={['1']} >
-                    <Panel header="0.49 패치노트" key="1">
-                        <div style={{color: 'black', width: '100%'}}>
-                            <ReactMarkdown source={input} />
-                            탑 10 랭킹
-                        </div>
-                    </Panel>
-                </Collapse> */}
-            </Col>
+            </Col> */}
         </Row>
     )
 }

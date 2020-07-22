@@ -220,8 +220,8 @@ export default function ReactionTest() {
             <Col xs={24} sm={22} md={20} lg={20} xl={15}>
                 <BackTop />
                 <MetaTags>              
-                    <title>발로그 발로란트 FPS 반응속도 측정 테스트</title>
-                    <meta name="description" content={`발로란트 게임을 옮겨놓은듯한 시뮬레이터로 본인의 FPS 반응속도 재능을 측정해보세요!`} />
+                    <title>발로그 발로란트 FPS 반응속도 측정 테스트 Valorant Reaction Test</title>
+                    <meta name="description" content={`발로란트 게임을 옮겨놓은듯한 시뮬레이터로 본인의 FPS 반응속도 재능을 측정해보세요! You can check your reaction time in Valorant!`} />
                 </MetaTags>
                 <Row justify='center'>
                     { todaysMinimumDesktop === 0 || todaysMinimumMobile === 0 ? null : 
