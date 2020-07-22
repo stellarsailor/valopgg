@@ -54,6 +54,11 @@ export const guide: Array<groupType> = [
                 id: 5,
                 tabName: 'v1.03',
                 markdown: patchMD[5],
+            },
+            {
+                id: 6,
+                tabName: 'v1.04',
+                markdown: patchMD[6],
             }
         ]
     },

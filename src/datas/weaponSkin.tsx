@@ -83,6 +83,13 @@ export const skin = [
                 level: 4,
                 cost: '1775 VP',
             },
+            {
+                id: 10,
+                name_ko: '벚꽃',
+                category: 'sakura',
+                level: 0,
+                cost: '가격 확인 중',
+            },
         ]
     },
     {
@@ -103,6 +110,34 @@ export const skin = [
                 category: 'vipers',
                 level: 0,
                 cost: '바이퍼 계약',
+            },
+            {
+                id: 1,
+                name_ko: '도깨비 1',
+                category: 'oni',
+                level: 1,
+                cost: '1775 VP',
+            },
+            {
+                id: 2,
+                name_ko: '도깨비 2',
+                category: 'oni',
+                level: 2,
+                cost: '1775 VP',
+            },
+            {
+                id: 3,
+                name_ko: '도깨비 3',
+                category: 'oni',
+                level: 3,
+                cost: '1775 VP',
+            },
+            {
+                id: 4,
+                name_ko: '도깨비 4',
+                category: 'oni',
+                level: 4,
+                cost: '1775 VP',
             },
         ]
     },
@@ -342,6 +377,13 @@ export const skin = [
                 level: 0,
                 cost: '875 VP',
             },
+            {
+                id: 7,
+                name_ko: '벚꽃',
+                category: 'sakura',
+                level: 0,
+                cost: '가격 확인 중',
+            },
         ]
     },
     {
@@ -397,6 +439,13 @@ export const skin = [
                 category: 'sovereign',
                 level: 4,
                 cost: '1775 VP',
+            },
+            {
+                id: 6,
+                name_ko: '벚꽃',
+                category: 'sakura',
+                level: 0,
+                cost: '가격 확인 중',
             },
         ]
     },
@@ -523,6 +572,34 @@ export const skin = [
                 category: 'kingdom',
                 level: 0,
                 cost: '배틀패스 제 1막 티어1',
+            },
+            {
+                id: 2,
+                name_ko: '도깨비 1',
+                category: 'oni',
+                level: 1,
+                cost: '1775 VP',
+            },
+            {
+                id: 3,
+                name_ko: '도깨비 2',
+                category: 'oni',
+                level: 2,
+                cost: '1775 VP',
+            },
+            {
+                id: 4,
+                name_ko: '도깨비 3',
+                category: 'oni',
+                level: 3,
+                cost: '1775 VP',
+            },
+            {
+                id: 5,
+                name_ko: '도깨비 4',
+                category: 'oni',
+                level: 4,
+                cost: '1775 VP',
             },
         ]
     },
@@ -720,6 +797,34 @@ export const skin = [
                 level: 4,
                 cost: '1775 VP',
             },
+            {
+                id: 9,
+                name_ko: '도깨비 1',
+                category: 'oni',
+                level: 1,
+                cost: '1775 VP',
+            },
+            {
+                id: 10,
+                name_ko: '도깨비 2',
+                category: 'oni',
+                level: 2,
+                cost: '1775 VP',
+            },
+            {
+                id: 11,
+                name_ko: '도깨비 3',
+                category: 'oni',
+                level: 3,
+                cost: '1775 VP',
+            },
+            {
+                id: 12,
+                name_ko: '도깨비 4',
+                category: 'oni',
+                level: 4,
+                cost: '1775 VP',
+            },
         ]
     },
     {
@@ -768,6 +873,34 @@ export const skin = [
                 category: 'kingdom',
                 level: 0,
                 cost: '배틀패스 제 1막 티어25',
+            },
+            {
+                id: 5,
+                name_ko: '도깨비 1',
+                category: 'oni',
+                level: 1,
+                cost: '1775 VP',
+            },
+            {
+                id: 6,
+                name_ko: '도깨비 2',
+                category: 'oni',
+                level: 2,
+                cost: '1775 VP',
+            },
+            {
+                id: 7,
+                name_ko: '도깨비 3',
+                category: 'oni',
+                level: 3,
+                cost: '1775 VP',
+            },
+            {
+                id: 8,
+                name_ko: '도깨비 4',
+                category: 'oni',
+                level: 4,
+                cost: '1775 VP',
             },
         ]
     },
@@ -894,6 +1027,13 @@ export const skin = [
                 category: 'elderflame',
                 level: 4,
                 cost: '2475 VP',
+            },
+            {
+                id: 16,
+                name_ko: '벚꽃',
+                category: 'sakura',
+                level: 0,
+                cost: '가격 확인 중',
             },
         ]
     },
@@ -1098,6 +1238,13 @@ export const skin = [
                 level: 0,
                 cost: '875 VP',
             },
+            {
+                id: 3,
+                name_ko: '벚꽃',
+                category: 'sakura',
+                level: 0,
+                cost: '가격 확인 중',
+            },
         ]
     },
     {
@@ -1188,6 +1335,13 @@ export const skin = [
                 category: 'elderflame',
                 level: 0,
                 cost: '4950 VP',
+            },
+            {
+                id: 8,
+                name_ko: '도깨비',
+                category: 'oni',
+                level: 0,
+                cost: '3550 VP',
             },
         ]
     },
