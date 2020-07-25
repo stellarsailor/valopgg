@@ -49,7 +49,7 @@ export default function CalculatorBattlepass () {
         <Row>
             <Col xs={24} sm={24} md={24} lg={24} xl={24}>
                 <div style={{fontSize: '1.4rem', margin: '1rem'}}>
-                    이그니션 : 제 1막(~ 7/24)
+                    이그니션 : 제 1막(~ 8/5 06:00)
                 </div>
             </Col>
             <Col xs={24} sm={24} md={24} lg={12} xl={12} style={{backgroundColor: 'rgb(24, 35, 56)', border: '0px solid gray', width: '100%'}}>
