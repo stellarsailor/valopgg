@@ -18,7 +18,7 @@ type subTabType = {
 
 }
 
-export const patchNotePhrase = '바이퍼 일부 상향 1.04 패치노트 바로가기'
+export const patchNotePhrase = '킬조이 추가 1.05 패치노트 바로가기'
 
 export const guide: Array<groupType> = [
     {
@@ -59,6 +59,11 @@ export const guide: Array<groupType> = [
                 id: 6,
                 tabName: 'v1.04',
                 markdown: patchMD[6],
+            },
+            {
+                id: 7,
+                tabName: 'v1.05',
+                markdown: patchMD[7],
             }
         ]
     },

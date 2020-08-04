@@ -88,7 +88,7 @@ export const skin = [
                 name_ko: '벚꽃',
                 category: 'sakura',
                 level: 0,
-                cost: '가격 확인 중',
+                cost: '1275 VP',
             },
         ]
     },
@@ -382,7 +382,7 @@ export const skin = [
                 name_ko: '벚꽃',
                 category: 'sakura',
                 level: 0,
-                cost: '가격 확인 중',
+                cost: '1275 VP',
             },
         ]
     },
@@ -445,7 +445,7 @@ export const skin = [
                 name_ko: '벚꽃',
                 category: 'sakura',
                 level: 0,
-                cost: '가격 확인 중',
+                cost: '1275 VP',
             },
         ]
     },
@@ -1033,7 +1033,7 @@ export const skin = [
                 name_ko: '벚꽃',
                 category: 'sakura',
                 level: 0,
-                cost: '가격 확인 중',
+                cost: '1275 VP',
             },
         ]
     },
@@ -1243,7 +1243,7 @@ export const skin = [
                 name_ko: '벚꽃',
                 category: 'sakura',
                 level: 0,
-                cost: '가격 확인 중',
+                cost: '1275 VP',
             },
         ]
     },

@@ -122,7 +122,7 @@ export default function CalculatorSens () {
                 <div>
                 </div>
                 <div>
-                    CS:GO 스트레치 감도 변환은 현재 준비 중입니다.
+                    통상적으로 edpi(dpi * 인게임 감도)기준 250 미만의 경우 저감도, 250이상 500 미만의 경우 중감도, 500 이상의 경우 고감도로 인식되어지고 있습니다.
                 </div>
             </Col>
         </Row>
