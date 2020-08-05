@@ -16,6 +16,7 @@ import { apiServer, staticServer } from '../serverUrl';
 import PartyRenderer from './subcomponents/PartyRenderer';
 import WeaponCollection from './subcomponents/WeaponCollection';
 import { isMobile } from 'react-device-detect';
+import { battlepass } from '../datas/battlepass';
 
 const { Search } = Input;
 
@@ -104,7 +105,7 @@ export default function Main(props) {
     },[])
 
     return(
-        <Row justify="center" style={{backgroundColor: 'rgba(236, 232, 225, 0.95)', height: 'auto'}} >
+        <Row justify="center" style={{backgroundColor: 'rgba(19, 28, 46, 0.95)', height: 'auto'}} >
             <MetaTags>              
                 <title>발로그 지지 - 발로란트 정보의 모든 것</title>
                 <meta name="description" content={`발로그 지지에서 요원 정보, 요원 별 전략 및 가이드, 무기 정보 및 총기 스킨, 맵 용어, 맵 콜아웃, 반응속도 측정 테스트, 배틀패스 계산기, 감도 변환기, 발로란트 파티 모집 등 등 다양하고 유용한 정보를 습득하세요!`} />
@@ -149,7 +150,7 @@ export default function Main(props) {
                 </div> */}
             </Col>
             <Col xs={0} sm={0} md={24} lg={24} xl={24} style={{ }}>
-                <div style={{display: 'flex', justifyContent: 'center'}} >
+                {/* <div style={{display: 'flex', justifyContent: 'center'}} >
                     <div style={{position: 'absolute', fontSize: '2rem', top: '30%', textAlign: 'center'}}>
                         <div>
                             발로란트 정보의 모든 것, 발로그
@@ -158,7 +159,7 @@ export default function Main(props) {
                 </div>
                 <div >
                     <img src={require('../images/official-main-image.png')} style={{width: '100%'}} alt="background cut 20 degree" />   
-                </div>
+                </div> */}
             </Col>
             <Row style={{width: '100%', backgroundColor: 'rgb(32, 43, 67, 0.0)', margin: '1rem 0' }} justify="center">
                 <Col xs={24} sm={22} md={20} lg={20} xl={15}  style={{display: 'flex', flexDirection: 'column', justifyContent: 'center', alignItems: 'center'}}>
@@ -194,7 +195,7 @@ export default function Main(props) {
                                 <Col span={24} style={{border: '1px solid black'}}>
                                     <Link to="/battlepass" onClick={() => window.scrollTo(0,0)}>
                                         <div style={{position: 'absolute', zIndex: 6, bottom: '1rem', left: '1rem', fontSize: '1.4rem', fontWeight: 'bold'}}>
-                                            배틀패스 계산기
+                                            배틀패스 계산기 ({battlepass[battlepass.length - 1].title})
                                         </div>
                                         <div style={{background: 'linear-gradient(rgba(0,0,0,0) 0%, rgba(0,0,0,0) 30% ,rgba(0,0,0,1) 100%)', zIndex: 5, position: 'absolute', width: '100%', height: '100%'}} />
                                         <img src={require('../images/main02.png')} style={{ width: '100%', zIndex: -1}} />  
