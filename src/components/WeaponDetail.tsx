@@ -3,8 +3,9 @@ import MetaTags from 'react-meta-tags';
 import styled from 'styled-components'
 import { Link } from "react-router-dom";
 import { Row, Col, Divider, BackTop } from 'antd';
-import { AppstoreOutlined } from '@ant-design/icons';
+import { AppstoreOutlined, PlusOutlined, MinusOutlined } from '@ant-design/icons';
 import { Element , scroller } from 'react-scroll'
+import { TransformWrapper, TransformComponent } from "react-zoom-pan-pinch";
 import ScrollContainer from 'react-indiana-drag-scroll'
 import WeaponRender from './subcomponents/WeaponRender';
 import Adfit from './subcomponents/Adfit';
@@ -119,11 +120,23 @@ export default function WeaponDetail(props) {
                             <Col xs={24} sm={24} md={18} lg={18} xl={16} style={{ padding: '1rem'}}>
                                 <Element name="scroll-to-element">
                                     <TitleText>{selectedWeapon.name_ko}</TitleText>
-                                    <div style={{display: 'flex', backgroundColor: '#273552', minHeight: 300, justifyContent: 'center', alignItems: 'center', padding: '1rem', border: '1px solid gray'}}>
-                                        <img 
-                                        src={(`${staticServer}/weaponskins/${selectedSkinElement.category}-${selectedWeapon.name.toLowerCase()}${selectedSkinElement.level === 0 ? '' : `-${selectedSkinElement.level}`}.png`)} 
-                                        style={{width: '90%'}} alt="발로란트 무기 스킨" />
-                                    </div>
+                                    <TransformWrapper>
+                                    {({ zoomIn, zoomOut, resetTransform, ...rest }) => (
+                                        <div style={{border: '1px solid gray', backgroundColor: '#273552', }}>
+                                            <div style={{padding: 10, position: 'absolute', right: '1rem', zIndex: 5}}>
+                                                <PlusOutlined style={{backgroundColor: 'rgb(32, 43, 67)', color: 'white', fontSize: '1.4rem', padding: 5}} onClick={zoomIn} />
+                                                <MinusOutlined style={{backgroundColor: 'rgb(32, 43, 67)', color: 'white', fontSize: '1.4rem', padding: 5}} onClick={zoomOut} />
+                                            </div>
+                                            <TransformComponent>
+                                                <div style={{display: 'flex', minHeight: 300, justifyContent: 'center', alignItems: 'center', padding: '1rem', }}>
+                                                    <img 
+                                                    src={(`${staticServer}/weaponskins/${selectedSkinElement.category}-${selectedWeapon.name.toLowerCase()}${selectedSkinElement.level === 0 ? '' : `-${selectedSkinElement.level}`}.png`)} 
+                                                    style={{width: '90%'}} alt="발로란트 무기 스킨" />
+                                                </div>
+                                            </TransformComponent>
+                                        </div>
+                                    )}
+                                </TransformWrapper>
                                     { isMobile ? <Adsense type="mobilewide" /> : null }
                                     {selectedSkinElement.level !== 0 ? 
                                         <div style={{textAlign: 'center', marginTop: 10}}>
