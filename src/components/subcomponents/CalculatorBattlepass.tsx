@@ -4,6 +4,8 @@ import styled from 'styled-components'
 import { battlepass } from '../../datas/battlepass'
 import { strat } from '../../datas/strat';
 import { start } from 'repl';
+import { inherits } from 'util';
+import { Link } from 'react-router-dom';
 
 const RenderEachTier = styled.div`
     background-color: ${ props => props.selected ? '#00ffae' : null };
@@ -92,7 +94,13 @@ export default function CalculatorBattlepass () {
                         <>
                             <RenderEachTier selected={ startTier <= v.tier && v.tier <= goalTier ? true : false }>
                                 <div style={startTier <= v.tier && v.tier <= goalTier ? {color: 'black'} : {color: 'white'}}>
-                                    Tier {v.tier} - {v.reward}
+                                    {
+                                        v.isWeapon !== false ? 
+                                            <Link to={`/weapon/${v.isWeapon}`} style={startTier <= v.tier && v.tier <= goalTier ? {color: 'black'} : {color: 'orange'}}
+                                            > Tier {v.tier} - {v.reward}</Link>
+                                        :
+                                            <span> Tier {v.tier} - {v.reward}</span>
+                                    }
                                 </div> 
                                 <div>
                                     <a onClick={() => setStartTier(v.tier)} style={startTier <= v.tier && v.tier <= goalTier ? {color: 'black'} : {color: 'white'}}> 
