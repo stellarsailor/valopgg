@@ -53,7 +53,7 @@ export const skin = [
                 name_ko: '킹덤',
                 category: 'kingdom',
                 level: 0,
-                cost: '배틀패스 제 1막',
+                cost: '배틀패스 액트1',
             },
             {
                 id: 6,
@@ -89,6 +89,13 @@ export const skin = [
                 category: 'sakura',
                 level: 0,
                 cost: '1275 VP',
+            },
+            {
+                id: 11,
+                name_ko: '적색경보',
+                category: 'redalert',
+                level: 0,
+                cost: '배틀패스 액트2 티어40',
             },
         ]
     },
@@ -139,6 +146,13 @@ export const skin = [
                 level: 4,
                 cost: '1775 VP',
             },
+            {
+                id: 5,
+                name_ko: '천재 요원',
+                category: 'killjoys',
+                level: 0,
+                cost: '킬조이 계약',
+            },
         ]
     },
     {
@@ -179,7 +193,7 @@ export const skin = [
                 name_ko: '쿠튀르',
                 category: 'couture',
                 level: 0,
-                cost: '배틀패스 제 1막 티어16',
+                cost: '배틀패스 액트1 티어16',
             },
             {
                 id: 4,
@@ -208,6 +222,34 @@ export const skin = [
                 category: 'elderflame',
                 level: 4,
                 cost: '2475 VP',
+            },
+            {
+                id: 8,
+                name_ko: '글리치팝 1',
+                category: 'glitchpop',
+                level: 1,
+                cost: '2175 VP',
+            },
+            {
+                id: 9,
+                name_ko: '글리치팝 2',
+                category: 'glitchpop',
+                level: 2,
+                cost: '2175 VP',
+            },
+            {
+                id: 10,
+                name_ko: '글리치팝 3',
+                category: 'glitchpop',
+                level: 3,
+                cost: '2175 VP',
+            },
+            {
+                id: 11,
+                name_ko: '글리치팝 4',
+                category: 'glitchpop',
+                level: 4,
+                cost: '2175 VP',
             },
         ]
     },
@@ -284,7 +326,7 @@ export const skin = [
                 name_ko: 'DOT EXE',
                 category: 'dotexe',
                 level: 0,
-                cost: '배틀패스 제 1막 티어35',
+                cost: '배틀패스 액트1 티어35',
             },
             {
                 id: 9,
@@ -384,6 +426,13 @@ export const skin = [
                 level: 0,
                 cost: '1275 VP',
             },
+            {
+                id: 8,
+                name_ko: '폴리폭스',
+                category: 'polyfox',
+                level: 0,
+                cost: '배틀패스 액트2 티어16',
+            },
         ]
     },
     {
@@ -410,7 +459,7 @@ export const skin = [
                 name_ko: '쿠튀르',
                 category: 'couture',
                 level: 0,
-                cost: '배틀패스 제 1막 티어15',
+                cost: '배틀패스 액트1 티어15',
             },
             {
                 id: 2,
@@ -446,6 +495,13 @@ export const skin = [
                 category: 'sakura',
                 level: 0,
                 cost: '1275 VP',
+            },
+            {
+                id: 6,
+                name_ko: '적색경보',
+                category: 'redalert',
+                level: 0,
+                cost: '배틀패스 액트2 티어35',
             },
         ]
     },
@@ -508,7 +564,7 @@ export const skin = [
                 name_ko: '킹덤',
                 category: 'kingdom',
                 level: 0,
-                cost: '배틀패스 제 1막 티어5',
+                cost: '배틀패스 액트1 티어5',
             },
             {
                 id: 7,
@@ -545,6 +601,13 @@ export const skin = [
                 level: 0,
                 cost: '875 VP',
             },
+            {
+                id: 12,
+                name_ko: '하이브마인드',
+                category: 'hivemind',
+                level: 0,
+                cost: '배틀패스 액트2 티어5',
+            },
         ]
     },
     {
@@ -571,7 +634,7 @@ export const skin = [
                 name_ko: '킹덤',
                 category: 'kingdom',
                 level: 0,
-                cost: '배틀패스 제 1막 티어1',
+                cost: '배틀패스 액트1 티어1',
             },
             {
                 id: 2,
@@ -600,6 +663,13 @@ export const skin = [
                 category: 'oni',
                 level: 4,
                 cost: '1775 VP',
+            },
+            {
+                id: 6,
+                name_ko: '적색경보',
+                category: 'redalert',
+                level: 0,
+                cost: '배틀패스 액트2 티어30',
             },
         ]
     },
@@ -634,7 +704,7 @@ export const skin = [
                 name_ko: 'DOT EXE',
                 category: 'dotexe',
                 level: 0,
-                cost: '배틀패스 제 1막 티어40',
+                cost: '배틀패스 액트1 티어40',
             },
             {
                 id: 3,
@@ -670,6 +740,41 @@ export const skin = [
                 category: 'elderflame',
                 level: 4,
                 cost: '2475 VP',
+            },
+            {
+                id: 8,
+                name_ko: '폴리폭스',
+                category: 'polyfox',
+                level: 0,
+                cost: '배틀패스 액트2 티어10',
+            },
+            {
+                id: 9,
+                name_ko: '글리치팝 1',
+                category: 'glitchpop',
+                level: 1,
+                cost: '2175 VP',
+            },
+            {
+                id: 10,
+                name_ko: '글리치팝 2',
+                category: 'glitchpop',
+                level: 2,
+                cost: '2175 VP',
+            },
+            {
+                id: 11,
+                name_ko: '글리치팝 3',
+                category: 'glitchpop',
+                level: 3,
+                cost: '2175 VP',
+            },
+            {
+                id: 12,
+                name_ko: '글리치팝 4',
+                category: 'glitchpop',
+                level: 4,
+                cost: '2175 VP',
             },
         ]
     },
@@ -711,7 +816,7 @@ export const skin = [
                 name_ko: '쿠튀르',
                 category: 'couture',
                 level: 0,
-                cost: '배틀패스 제 1막 티어10',
+                cost: '배틀패스 액트1 티어10',
             },
             {
                 id: 4,
@@ -719,6 +824,41 @@ export const skin = [
                 category: 'convex',
                 level: 0,
                 cost: '875 VP',
+            },
+            {
+                id: 5,
+                name_ko: '폴리폭스',
+                category: 'polyfox',
+                level: 0,
+                cost: '배틀패스 액트2 티어15',
+            },
+            {
+                id: 8,
+                name_ko: '글리치팝 1',
+                category: 'glitchpop',
+                level: 1,
+                cost: '2175 VP',
+            },
+            {
+                id: 9,
+                name_ko: '글리치팝 2',
+                category: 'glitchpop',
+                level: 2,
+                cost: '2175 VP',
+            },
+            {
+                id: 10,
+                name_ko: '글리치팝 3',
+                category: 'glitchpop',
+                level: 3,
+                cost: '2175 VP',
+            },
+            {
+                id: 11,
+                name_ko: '글리치팝 4',
+                category: 'glitchpop',
+                level: 4,
+                cost: '2175 VP',
             },
         ]
     },
@@ -825,6 +965,13 @@ export const skin = [
                 level: 4,
                 cost: '1775 VP',
             },
+            {
+                id: 13,
+                name_ko: '폴리폭스',
+                category: 'polyfox',
+                level: 0,
+                cost: '배틀패스 액트2 티어20',
+            },
         ]
     },
     {
@@ -872,7 +1019,7 @@ export const skin = [
                 name_ko: '킹덤',
                 category: 'kingdom',
                 level: 0,
-                cost: '배틀패스 제 1막 티어25',
+                cost: '배틀패스 액트1 티어25',
             },
             {
                 id: 5,
@@ -970,7 +1117,7 @@ export const skin = [
                 name_ko: 'DOT EXE',
                 category: 'dotexe',
                 level: 0,
-                cost: '배틀패스 제 1막 티어45',
+                cost: '배틀패스 액트1 티어45',
             },
             {
                 id: 8,
@@ -1035,6 +1182,13 @@ export const skin = [
                 level: 0,
                 cost: '1275 VP',
             },
+            {
+                id: 17,
+                name_ko: '하이브마인드',
+                category: 'hivemind',
+                level: 0,
+                cost: '배틀패스 액트2 티어25',
+            },
         ]
     },
     {
@@ -1068,7 +1222,7 @@ export const skin = [
                 name_ko: '쿠튀르',
                 category: 'couture',
                 level: 0,
-                cost: '배틀패스 제 1막 티어20',
+                cost: '배틀패스 액트1 티어20',
             },
             {
                 id: 3,
@@ -1203,6 +1357,13 @@ export const skin = [
                 level: 4,
                 cost: '2475 VP',
             },
+            {
+                id: 13,
+                name_ko: '적색경보',
+                category: 'redalert',
+                level: 0,
+                cost: '배틀패스 액트2 티어45',
+            },
         ]
     },
     {
@@ -1245,6 +1406,13 @@ export const skin = [
                 level: 0,
                 cost: '1275 VP',
             },
+            {
+                id: 4,
+                name_ko: '하이브마인드',
+                category: 'hivemind',
+                level: 0,
+                cost: '배틀패스 액트2 티어1',
+            }
         ]
     },
     {
@@ -1264,7 +1432,35 @@ export const skin = [
                 name_ko: 'DOT EXE',
                 category: 'dotexe',
                 level: 0,
-                cost: '배틀패스 제 1막 티어30',
+                cost: '배틀패스 액트1 티어30',
+            },
+            {
+                id: 1,
+                name_ko: '글리치팝 1',
+                category: 'glitchpop',
+                level: 1,
+                cost: '2175 VP',
+            },
+            {
+                id: 2,
+                name_ko: '글리치팝 2',
+                category: 'glitchpop',
+                level: 2,
+                cost: '2175 VP',
+            },
+            {
+                id: 3,
+                name_ko: '글리치팝 3',
+                category: 'glitchpop',
+                level: 3,
+                cost: '2175 VP',
+            },
+            {
+                id: 4,
+                name_ko: '글리치팝 4',
+                category: 'glitchpop',
+                level: 4,
+                cost: '2175 VP',
             },
         ]
     },
@@ -1313,7 +1509,7 @@ export const skin = [
                 name_ko: '킹덤',
                 category: 'kingdom',
                 level: 0,
-                cost: '배틀패스 제 1막 티어50',
+                cost: '배틀패스 액트1 티어50',
             },
             {
                 id: 5,
@@ -1342,6 +1538,20 @@ export const skin = [
                 category: 'oni',
                 level: 0,
                 cost: '3550 VP',
+            },
+            {
+                id: 9,
+                name_ko: '하이브마인드',
+                category: 'hivemind',
+                level: 0,
+                cost: '배틀패스 액트2 티어50',
+            },
+            {
+                id: 10,
+                name_ko: '글리치팝',
+                category: 'glitchpop',
+                level: 0,
+                cost: '4350 VP',
             },
         ]
     },
