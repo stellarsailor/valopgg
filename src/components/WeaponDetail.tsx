@@ -8,6 +8,7 @@ import { Element , scroller } from 'react-scroll'
 import { TransformWrapper, TransformComponent } from "react-zoom-pan-pinch";
 import ScrollContainer from 'react-indiana-drag-scroll'
 import WeaponRender from './subcomponents/WeaponRender';
+import queryString from 'query-string'
 import Adfit from './subcomponents/Adfit';
 import SideAds from './subcomponents/SideAds';
 
@@ -62,14 +63,23 @@ export default function WeaponDetail(props) {
     // window.scrollTo(0, 0);
 
     const weaponName = props.match.params.name;
+    let initialWeaponSkin = '';
+
+    const qs: any = queryString.parse(props.location.search)
+
+    if(Object.entries(qs).length === 0){
+        initialWeaponSkin = 'normal'
+    } else {
+        initialWeaponSkin = qs.skin
+    }
     
     const selectedWeapon = weapon.filter(v => v.name.toLowerCase() === weaponName)[0]
     const selectedWeaponSkins = skin.filter(v => v.name === selectedWeapon.name)[0].skins
+    console.log(selectedWeaponSkins.filter(v => v.category === initialWeaponSkin)[0])
     
-    const [ selectedSkinElement, setSelectedSkinElement ] = useState(selectedWeaponSkins[0])
+    const [ selectedSkinElement, setSelectedSkinElement ] = useState(selectedWeaponSkins.filter(v => v.category === initialWeaponSkin)[0])
     
     useEffect(() => {
-        setSelectedSkinElement(selectedWeaponSkins[0])
         weaponScroll()
     },[weaponName])
 

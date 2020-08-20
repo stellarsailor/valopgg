@@ -96,7 +96,7 @@ export default function CalculatorBattlepass () {
                                 <div style={startTier <= v.tier && v.tier <= goalTier ? {color: 'black'} : {color: 'white'}}>
                                     {
                                         v.isWeapon !== false ? 
-                                            <Link to={`/weapon/${v.isWeapon}`} style={startTier <= v.tier && v.tier <= goalTier ? {color: 'black'} : {color: 'orange'}}
+                                            <Link to={`/weapon/${v.isWeapon}?skin=${v.isSkin}`} style={startTier <= v.tier && v.tier <= goalTier ? {color: 'black'} : {color: 'orange'}}
                                             > Tier {v.tier} - {v.reward}</Link>
                                         :
                                             <span> Tier {v.tier} - {v.reward}</span>

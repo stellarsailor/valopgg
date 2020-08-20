@@ -433,6 +433,13 @@ export const skin = [
                 level: 0,
                 cost: '배틀패스 액트2 티어16',
             },
+            {
+                id: 9,
+                name_ko: '네뷸라',
+                category: 'nebula',
+                level: 0,
+                cost: '1775 VP',
+            },
         ]
     },
     {
@@ -972,6 +979,13 @@ export const skin = [
                 level: 0,
                 cost: '배틀패스 액트2 티어20',
             },
+            {
+                id: 14,
+                name_ko: '네뷸라',
+                category: 'nebula',
+                level: 0,
+                cost: '1775 VP',
+            },
         ]
     },
     {
@@ -1047,6 +1061,13 @@ export const skin = [
                 name_ko: '도깨비 4',
                 category: 'oni',
                 level: 4,
+                cost: '1775 VP',
+            },
+            {
+                id: 9,
+                name_ko: '네뷸라',
+                category: 'nebula',
+                level: 0,
                 cost: '1775 VP',
             },
         ]
@@ -1412,7 +1433,14 @@ export const skin = [
                 category: 'hivemind',
                 level: 0,
                 cost: '배틀패스 액트2 티어1',
-            }
+            },
+            {
+                id: 5,
+                name_ko: '네뷸라',
+                category: 'nebula',
+                level: 0,
+                cost: '1775 VP',
+            },
         ]
     },
     {
@@ -1552,6 +1580,13 @@ export const skin = [
                 category: 'glitchpop',
                 level: 0,
                 cost: '4350 VP',
+            },
+            {
+                id: 11,
+                name_ko: '네뷸라',
+                category: 'nebula',
+                level: 0,
+                cost: '3550 VP',
             },
         ]
     },

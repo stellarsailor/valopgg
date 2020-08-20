@@ -8,6 +8,7 @@ export const battlepass =
                 tier: 1,
                 reward: '킹덤 버키',
                 isWeapon: 'bucky',
+                isSkin: 'kingdom',
             },
             { 
                 tier: 2,
@@ -28,6 +29,7 @@ export const battlepass =
                 tier: 5,
                 reward: '킹덤 스펙터',
                 isWeapon: 'spectre',
+                isSkin: 'kingdom',
             },
             { 
                 tier: 6,
@@ -53,6 +55,7 @@ export const battlepass =
                 tier: 10,
                 reward: '쿠튀르 불독',
                 isWeapon: 'bulldog',
+                isSkin: 'couture',
             },
             { 
                 tier: 11,
@@ -78,11 +81,13 @@ export const battlepass =
                 tier: 15,
                 reward: '쿠튀르 스팅어',
                 isWeapon: 'stinger',
+                isSkin: 'couture',
             },
             { 
                 tier: 16,
                 reward: '쿠튀르 프렌지',
                 isWeapon: 'frenzy',
+                isSkin: 'couture',
             },
             { 
                 tier: 17,
@@ -103,6 +108,7 @@ export const battlepass =
                 tier: 20,
                 reward: '쿠튀르 마샬',
                 isWeapon: 'marshal',
+                isSkin: 'couture',
             },
             { 
                 tier: 21,
@@ -128,6 +134,7 @@ export const battlepass =
                 tier: 25,
                 reward: '킹덤 팬텀',
                 isWeapon: 'phantom',
+                isSkin: 'kingdom',
             },
             { 
                 tier: 26,
@@ -153,6 +160,7 @@ export const battlepass =
                 tier: 30,
                 reward: 'DOT EXE 오딘',
                 isWeapon: 'odin',
+                isSkin: 'dotexe'
             },
             { 
                 tier: 31,
@@ -178,6 +186,7 @@ export const battlepass =
                 tier: 35,
                 reward: 'DOT EXE 고스트',
                 isWeapon: 'ghost',
+                isSkin: 'dotexe',
             },
             { 
                 tier: 36,
@@ -203,6 +212,7 @@ export const battlepass =
                 tier: 40,
                 reward: 'DOT EXE 저지',
                 isWeapon: 'judge',
+                isSkin: 'dotexe',
             },
             { 
                 tier: 41,
@@ -228,6 +238,7 @@ export const battlepass =
                 tier: 45,
                 reward: 'DOT EXE 밴달',
                 isWeapon: 'vandal',
+                isSkin: 'dotexe',
             },
             { 
                 tier: 46,
@@ -253,6 +264,7 @@ export const battlepass =
                 tier: 50,
                 reward: '킹덤 근접 무기',
                 isWeapon: 'knife',
+                isSkin: 'kingdom',
             },
         ]
     },
@@ -264,6 +276,7 @@ export const battlepass =
                 tier: 1,
                 reward: '하이브마인드 아레스',
                 isWeapon: 'ares',
+                isSkin: 'hivemind',
             },
             { 
                 tier: 2,
@@ -284,6 +297,7 @@ export const battlepass =
                 tier: 5,
                 reward: '하이브마인드 스펙터',
                 isWeapon: 'spectre',
+                isSkin: 'hivemind',
             },
             { 
                 tier: 6,
@@ -309,6 +323,7 @@ export const battlepass =
                 tier: 10,
                 reward: '폴리폭스 저지',
                 isWeapon: 'judge',
+                isSkin: 'polyfox',
             },
             { 
                 tier: 11,
@@ -334,11 +349,13 @@ export const battlepass =
                 tier: 15,
                 reward: '폴리폭스 불독',
                 isWeapon: 'bulldog',
+                isSkin: 'polyfox',
             },
             { 
                 tier: 16,
                 reward: '폴리폭스 셰리프',
                 isWeapon: 'sheriff',
+                isSkin: 'polyfox',
             },
             { 
                 tier: 17,
@@ -359,6 +376,7 @@ export const battlepass =
                 tier: 20,
                 reward: '폴리폭스 가디언',
                 isWeapon: 'guardian',
+                isSkin: 'polyfox',
             },
             { 
                 tier: 21,
@@ -384,6 +402,7 @@ export const battlepass =
                 tier: 25,
                 reward: '하이브마인드 밴달',
                 isWeapon: 'vandal',
+                isSkin: 'hivemind',
             },
             { 
                 tier: 26,
@@ -409,6 +428,7 @@ export const battlepass =
                 tier: 30,
                 reward: '적색경보 버키',
                 isWeapon: 'bucky',
+                isSkin: 'redalert',
             },
             { 
                 tier: 31,
@@ -434,6 +454,7 @@ export const battlepass =
                 tier: 35,
                 reward: '적색경보 스팅어',
                 isWeapon: 'stinger',
+                isSkin: 'redalert',
             },
             { 
                 tier: 36,
@@ -459,6 +480,7 @@ export const battlepass =
                 tier: 40,
                 reward: '적색경보 클래식',
                 isWeapon: 'classic',
+                isSkin: 'redalert',
             },
             { 
                 tier: 41,
@@ -484,6 +506,7 @@ export const battlepass =
                 tier: 45,
                 reward: '적색경보 오퍼레이터',
                 isWeapon: 'operator',
+                isSkin: 'redalert',
             },
             { 
                 tier: 46,
@@ -509,6 +532,7 @@ export const battlepass =
                 tier: 50,
                 reward: '하이브마인드 검',
                 isWeapon: 'knife',
+                isSkin: 'hivemind',
             },
         ]
     }
