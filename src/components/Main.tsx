@@ -172,7 +172,7 @@ export default function Main(props) {
                                 <Row style={{width: '100%', height: '100%', border: '1px solid black'}}>
                                     <Col span={24}>
                                         <div style={{position: 'absolute', zIndex: 6, bottom: '1rem', left: '1rem', fontSize: '1.4rem', fontWeight: 'bold'}}>
-                                            반응 속도 측정 {`${isMobile ? '(모바일)' : '(데스크톱)'}`}
+                                            반응 속도 측정 <span style={{fontSize: '1rem'}}>{`${isMobile ? '(모바일)' : '(데스크톱)'}`}</span>
                                         </div>
                                         <div style={{background: 'linear-gradient(rgba(0,0,0,0) 0%, rgba(0,0,0,0) 30% ,rgba(0,0,0,0.8) 100%)', zIndex: 5, position: 'absolute', width: '100%', height: '100%'}} />
                                         <img src={require('../images/main01.png')} style={{ width: '100%', height: '100%', zIndex: -1}} />  
@@ -195,7 +195,7 @@ export default function Main(props) {
                                 <Col span={24} style={{border: '1px solid black'}}>
                                     <Link to="/battlepass" onClick={() => window.scrollTo(0,0)}>
                                         <div style={{position: 'absolute', zIndex: 6, bottom: '1rem', left: '1rem', fontSize: '1.4rem', fontWeight: 'bold'}}>
-                                            배틀패스 계산기 ({battlepass[battlepass.length - 1].title})
+                                            배틀패스 계산기 <span style={{fontSize: '1rem'}}>({battlepass[battlepass.length - 1].title})</span>
                                         </div>
                                         <div style={{background: 'linear-gradient(rgba(0,0,0,0) 0%, rgba(0,0,0,0) 30% ,rgba(0,0,0,1) 100%)', zIndex: 5, position: 'absolute', width: '100%', height: '100%'}} />
                                         <img src={require('../images/main02.png')} style={{ width: '100%', zIndex: -1}} />  

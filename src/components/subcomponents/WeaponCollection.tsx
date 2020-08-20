@@ -26,7 +26,7 @@ export default function WeaponCollection () {
     useEffect(() => {
         Axios.get(`${apiServer}/weapon/rotation`)
         .then(res => {
-            const data = res.data;
+            const data = res.data[0];
             setRotation(data)
             setAsyncLoading(false)
         })
