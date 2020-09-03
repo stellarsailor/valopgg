@@ -79,16 +79,16 @@ export const weapon: Array<weaponType> = [
         cost: 200,
         damage: [
             {
-                distance: "0-9",
-                damageSpec: [36, 12, 10],
+                distance: "0-7",
+                damageSpec: [24, 12, 10],
             },
             {
-                distance: "9-15",
-                damageSpec: [24, 8, 6],
+                distance: "7-15",
+                damageSpec: [16, 8, 6],
             },
             {
                 distance: "15-50",
-                damageSpec: [9, 3, 2],
+                damageSpec: [6, 3, 2],
             },
         ],
         primaryMode: "반자동",
@@ -251,7 +251,7 @@ export const weapon: Array<weaponType> = [
         category_ko: "산탄총",
         name: "Judge",
         name_ko: "저지",
-        cost: 1500,
+        cost: 1600,
         damage: [
             {
                 distance: "0-10",
@@ -324,11 +324,11 @@ export const weapon: Array<weaponType> = [
         damage: [
             {
                 distance: "0-50",
-                damageSpec: [156, 39, 33],
+                damageSpec: [156, 40, 33],
             },
         ],
         primaryMode: "자동",
-        primaryRate: "초당 9.25발",
+        primaryRate: "초당 9.75발",
         altMode: "1.25배율, 탄퍼짐 감소",
         altRate: "초당 8.32발",
         capacity: 25,

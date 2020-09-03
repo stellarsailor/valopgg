@@ -18,7 +18,7 @@ type subTabType = {
 
 }
 
-export const patchNotePhrase = '피닉스, 브리치 섬광 효과 변경 1.06 패치노트 바로가기'
+export const patchNotePhrase = '요원 밸런스, 샷건/밴달 패치 1.07 패치노트'
 
 export const guide: Array<groupType> = [
     {
@@ -69,7 +69,12 @@ export const guide: Array<groupType> = [
                 id: 8,
                 tabName: 'v1.06',
                 markdown: patchMD[8],
-            }
+            },
+            {
+                id: 9,
+                tabName: 'v1.07',
+                markdown: patchMD[9],
+            },
         ]
     },
     {
