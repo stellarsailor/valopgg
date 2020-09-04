@@ -97,6 +97,34 @@ export const skin = [
                 level: 0,
                 cost: '배틀패스 액트2 티어40',
             },
+            {
+                id: 12,
+                name_ko: '스플라인 1',
+                category: 'spline',
+                level: 1,
+                cost: '미정',
+            },
+            {
+                id: 13,
+                name_ko: '스플라인 2',
+                category: 'spline',
+                level: 2,
+                cost: '미정',
+            },
+            {
+                id: 14,
+                name_ko: '스플라인 3',
+                category: 'spline',
+                level: 3,
+                cost: '미정',
+            },
+            {
+                id: 15,
+                name_ko: '스플라인 4',
+                category: 'spline',
+                level: 4,
+                cost: '미정',
+            },
         ]
     },
     {
@@ -615,6 +643,34 @@ export const skin = [
                 level: 0,
                 cost: '배틀패스 액트2 티어5',
             },
+            {
+                id: 13,
+                name_ko: '스플라인 1',
+                category: 'spline',
+                level: 1,
+                cost: '미정',
+            },
+            {
+                id: 14,
+                name_ko: '스플라인 2',
+                category: 'spline',
+                level: 2,
+                cost: '미정',
+            },
+            {
+                id: 15,
+                name_ko: '스플라인 3',
+                category: 'spline',
+                level: 3,
+                cost: '미정',
+            },
+            {
+                id: 16,
+                name_ko: '스플라인 4',
+                category: 'spline',
+                level: 4,
+                cost: '미정',
+            },
         ]
     },
     {
@@ -1070,6 +1126,34 @@ export const skin = [
                 level: 0,
                 cost: '1775 VP',
             },
+            {
+                id: 10,
+                name_ko: '스플라인 1',
+                category: 'spline',
+                level: 1,
+                cost: '미정',
+            },
+            {
+                id: 11,
+                name_ko: '스플라인 2',
+                category: 'spline',
+                level: 2,
+                cost: '미정',
+            },
+            {
+                id: 12,
+                name_ko: '스플라인 3',
+                category: 'spline',
+                level: 3,
+                cost: '미정',
+            },
+            {
+                id: 13,
+                name_ko: '스플라인 4',
+                category: 'spline',
+                level: 4,
+                cost: '미정',
+            },
         ]
     },
     {
@@ -1385,6 +1469,34 @@ export const skin = [
                 level: 0,
                 cost: '배틀패스 액트2 티어45',
             },
+            {
+                id: 14,
+                name_ko: '스플라인 1',
+                category: 'spline',
+                level: 1,
+                cost: '미정',
+            },
+            {
+                id: 15,
+                name_ko: '스플라인 2',
+                category: 'spline',
+                level: 2,
+                cost: '미정',
+            },
+            {
+                id: 16,
+                name_ko: '스플라인 3',
+                category: 'spline',
+                level: 3,
+                cost: '미정',
+            },
+            {
+                id: 17,
+                name_ko: '스플라인 4',
+                category: 'spline',
+                level: 4,
+                cost: '미정',
+            },
         ]
     },
     {
@@ -1587,6 +1699,13 @@ export const skin = [
                 category: 'nebula',
                 level: 0,
                 cost: '3550 VP',
+            },
+            {
+                id: 12,
+                name_ko: '스플라인',
+                category: 'spline',
+                level: 0,
+                cost: '미정',
             },
         ]
     },

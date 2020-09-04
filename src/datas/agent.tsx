@@ -43,7 +43,7 @@ export const agent: Array<agentType> = [
             {
                 id: 1,
                 name: '섬광 폭발',
-                count: 2,
+                count: 3,
                 cost: '200 크레드',
                 desc: '실명탄을 장착합니다. 발사하면 벽을 통과하고 빠르게 효과가 발생하는 폭발을 일으켜 섬광을 본 모든 플레이어를 실명시킵니다.',
             },
