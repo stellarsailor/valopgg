@@ -32,7 +32,7 @@ export default function Adsense(props) {
 
     return (
         <div style={{display: 'flex', justifyContent: 'center'}}>
-            <div style={{width: adsWidth, height: adsHeight, backgroundColor: 'rgb(24, 35, 56)'}}>
+            <div style={{width: adsWidth, height: adsHeight, backgroundColor: 'white'}}>
                 <AdSense.Google
                 client='ca-pub-1635386604461382'
                 slot={adsSlot}
