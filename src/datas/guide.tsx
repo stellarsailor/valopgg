@@ -18,7 +18,7 @@ type subTabType = {
 
 }
 
-export const patchNotePhrase = '요원 밸런스, 샷건/밴달 패치 1.07 패치노트'
+export const patchNotePhrase = '레이즈, 가디언 변경 1.08 패치노트'
 
 export const guide: Array<groupType> = [
     {
@@ -74,6 +74,11 @@ export const guide: Array<groupType> = [
                 id: 9,
                 tabName: 'v1.07',
                 markdown: patchMD[9],
+            },
+            {
+                id: 10,
+                tabName: 'v1.08',
+                markdown: patchMD[10],
             },
         ]
     },
