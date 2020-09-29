@@ -1,6 +1,5 @@
 import { guideMD } from './markdown/guideMD'
 import { patchMD } from './markdown/patchMD'
-import { etcMD } from './markdown/etcMD'
 
 type groupType = {
     id: number;
@@ -18,7 +17,7 @@ type subTabType = {
 
 }
 
-export const patchNotePhrase = '레이즈, 가디언 변경 1.08 패치노트'
+export const patchNotePhrase = '오퍼레이터 너프! 1.09 패치노트'
 
 export const guide: Array<groupType> = [
     {
@@ -79,6 +78,11 @@ export const guide: Array<groupType> = [
                 id: 10,
                 tabName: 'v1.08',
                 markdown: patchMD[10],
+            },
+            {
+                id: 11,
+                tabName: 'v1.09',
+                markdown: patchMD[11],
             },
         ]
     },
