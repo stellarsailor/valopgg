@@ -3,7 +3,7 @@ import { Row, Col, Table, BackTop, Input, Select, Rate, Checkbox, Button, messag
 import styled from 'styled-components'
 import { AudioOutlined, AudioMutedOutlined, CloseOutlined, UserOutlined, DeleteOutlined } from '@ant-design/icons';
 import axios from 'axios'
-import { apiServer } from '../../serverUrl';
+import { apiServer, staticServer } from '../../serverUrl';
 import { agent } from '../../datas/agent'
 
 const { Option } = Select;
@@ -165,7 +165,7 @@ export default function PartyEdit(props){
                         onChange={checked => handlePreferredAgent(v.name.toLowerCase(), checked)}
                         style={{margin: '3px 3px'}}
                         >
-                            <img src={require(`../../images/agents/${v.name.toLowerCase()}-headshot.png`)} style={{width: '2rem', borderRadius: '0rem', border: `0px solid ${v.signature_color}`}} alt="Valorant agent select button" />
+                            <img src={(`${staticServer}/agents/${v.name.toLowerCase()}-headshot.png`)} style={{width: '2rem', borderRadius: '0rem', border: `0px solid ${v.signature_color}`}} alt="Valorant agent select button" />
                         </CheckableTag>
                     )}
                 </div>

@@ -60,7 +60,7 @@ export default function AgentDetail(props) {
                     { agent.slice(0).sort(dynamicSort('name')).map((v, index) => (
                         <Tooltip title={v.name_ko} key={index}>
                             <Link to ={`/agent/${v.name.toLowerCase()}`} style={{margin: '0 0.7rem'}} onClick={() => agentScroll()}>
-                                <img src={require(`../images/agents/${v.name.toLowerCase()}-headshot.png`)} style={agentSelection === v.id ? {width: '4rem', borderRadius: '4rem', border: `3px solid ${v.signature_color}`} : {width: '4rem', borderRadius: '4rem', border: '3px solid #202b43'}} alt="Valorant agent select button" />
+                                <img src={(`${staticServer}/agents/${v.name.toLowerCase()}-headshot.png`)} style={agentSelection === v.id ? {width: '4rem', borderRadius: '4rem', border: `3px solid ${v.signature_color}`} : {width: '4rem', borderRadius: '4rem', border: '3px solid #202b43'}} alt="Valorant agent select button" />
                             </Link>
                         </Tooltip>
                     ))}
@@ -100,7 +100,7 @@ export default function AgentDetail(props) {
                                 <div>{agent[agentSelection].skill[abilitySelection].desc}</div>
                             </div>
                             <div style={{backgroundColor: '#202b43', marginBottom: '1rem', padding: '1rem', display: 'flex', flexDirection: 'row'}}>
-                                <img src={require(`../images/agents/${agentName}-headshot.png`)} style={{width: '3rem', height: '3rem', borderRadius: '3rem', border: `3px solid ${agent[agentSelection].signature_color}`}} alt='agent headshot' />
+                                <img src={(`${staticServer}/agents/${agentName}-headshot.png`)} style={{width: '3rem', height: '3rem', borderRadius: '3rem', border: `3px solid ${agent[agentSelection].signature_color}`}} alt='agent headshot' />
                                 <div style={{margin: '0 1rem'}}>
                                     <div style={{color: '#00ffae', fontWeight: 'bold'}}>아군 {agent[agentSelection].skill[3].name} 대사 : <span style={{color: 'white'}}>"{agent[agentSelection].ally_ult}"</span></div>
                                     <div style={{color: '#ff324c', fontWeight: 'bold'}}>적군 {agent[agentSelection].skill[3].name} 대사 : <span style={{color: 'white'}}>"{agent[agentSelection].enemy_ult}"</span></div>

@@ -4,6 +4,7 @@ import { AudioOutlined, UserOutlined, AudioMutedOutlined, EllipsisOutlined, Clos
 import { agent } from '../../datas/agent'
 import PartyWrite from './PartyWrite';
 import PartyEdit from './PartyEdit';
+import { staticServer } from '../../serverUrl';
 
 export default function PartyRenderer (props){
 
@@ -92,7 +93,7 @@ export default function PartyRenderer (props){
                         {
                             selectedAgent[0] === '' ? <span>전체</span>
                             :
-                            selectedAgent.map(v => <img key={Math.random()} src={require(`../../images/agents/${v}-headshot.png`)} style={{width: '2rem', borderRadius: '2rem', border: `2px solid ${agent.filter(original => original.name.toLowerCase() === v)[0].signature_color}`, margin: 5}} />)
+                            selectedAgent.map(v => <img key={Math.random()} src={(`${staticServer}/agents/${v}-headshot.png`)} style={{width: '2rem', borderRadius: '2rem', border: `2px solid ${agent.filter(original => original.name.toLowerCase() === v)[0].signature_color}`, margin: 5}} />)
                         }
                     </div>
 

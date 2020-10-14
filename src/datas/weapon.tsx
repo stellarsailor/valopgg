@@ -1,4 +1,5 @@
 type weaponType = {
+    id: number;
     category: string;
     category_ko: string;
     name: string;
@@ -22,6 +23,7 @@ type damageType = {
 
 export const weapon: Array<weaponType> = [
     {
+        id: 17,
         category: "Knife",
         category_ko: "나이프",
         name: "Knife",
@@ -47,6 +49,7 @@ export const weapon: Array<weaponType> = [
         penetration: "없음"
     },
     {
+        id: 0,
         category: "Sidearm",
         category_ko: "보조무기",
         name: "Classic",
@@ -72,6 +75,7 @@ export const weapon: Array<weaponType> = [
         penetration: "낮음"
     },
     {
+        id: 1,
         category: "Sidearm",
         category_ko: "보조무기",
         name: "Shorty",
@@ -99,6 +103,7 @@ export const weapon: Array<weaponType> = [
         penetration: "낮음"
     },
     {
+        id: 2,
         category: "Sidearm",
         category_ko: "보조무기",
         name: "Frenzy",
@@ -122,6 +127,7 @@ export const weapon: Array<weaponType> = [
         penetration: "낮음"
     },
     {
+        id: 3,
         category: "Sidearm",
         category_ko: "보조무기",
         name: "Ghost",
@@ -145,6 +151,7 @@ export const weapon: Array<weaponType> = [
         penetration: "보통"
     },
     {
+        id: 4,
         category: "Sidearm",
         category_ko: "보조무기",
         name: "Sheriff",
@@ -168,6 +175,7 @@ export const weapon: Array<weaponType> = [
         penetration: "높음"
     },
     {
+        id: 5,
         category: "SMG",
         category_ko: "기관단총",
         name: "Stinger",
@@ -193,6 +201,7 @@ export const weapon: Array<weaponType> = [
         penetration: "낮음"
     },
     {
+        id: 6,
         category: "SMG",
         category_ko: "기관단총",
         name: "Spectre",
@@ -218,6 +227,7 @@ export const weapon: Array<weaponType> = [
         penetration: "보통"
     },
     {
+        id: 7,
         category: "Shotgun",
         category_ko: "산탄총",
         name: "Bucky",
@@ -247,6 +257,7 @@ export const weapon: Array<weaponType> = [
         penetration: "낮음"
     },
     {
+        id: 8,
         category: "Shotgun",
         category_ko: "산탄총",
         name: "Judge",
@@ -274,6 +285,7 @@ export const weapon: Array<weaponType> = [
         penetration: "보통"
     },
     {
+        id: 9,
         category: "Rifle",
         category_ko: "소총",
         name: "Bulldog",
@@ -295,6 +307,7 @@ export const weapon: Array<weaponType> = [
         penetration: "보통"
     },
     {
+        id: 10,
         category: "Rifle",
         category_ko: "소총",
         name: "Guardian",
@@ -316,6 +329,7 @@ export const weapon: Array<weaponType> = [
         penetration: "높음"
     },
     {
+        id: 11,
         category: "Rifle",
         category_ko: "소총",
         name: "Vandal",
@@ -337,6 +351,7 @@ export const weapon: Array<weaponType> = [
         penetration: "보통"
     },
     {
+        id: 12,
         category: "Rifle",
         category_ko: "소총",
         name: "Phantom",
@@ -366,6 +381,7 @@ export const weapon: Array<weaponType> = [
         penetration: "보통"
     },
     {
+        id: 13,
         category: "Sniper",
         category_ko: "저격총",
         name: "Marshal",
@@ -387,6 +403,7 @@ export const weapon: Array<weaponType> = [
         penetration: "보통"
     },
     {
+        id: 14,
         category: "Sniper",
         category_ko: "저격총",
         name: "Operator",
@@ -408,6 +425,7 @@ export const weapon: Array<weaponType> = [
         penetration: "높음"
     },
     {
+        id: 15,
         category: "Heavy",
         category_ko: "기관총",
         name: "Ares",
@@ -433,6 +451,7 @@ export const weapon: Array<weaponType> = [
         penetration: "높음"
     },
     {
+        id: 16,
         category: "Heavy",
         category_ko: "기관총",
         name: "Odin",

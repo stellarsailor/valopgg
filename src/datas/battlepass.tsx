@@ -535,6 +535,274 @@ export const battlepass =
                 isSkin: 'hivemind',
             },
         ]
+    },
+    {
+        title: "이그니션 : 액트 3",
+        deadline: '~ 1/12',
+        contents: [
+            {
+                tier: 1,
+                reward: '몰락 마샬',
+                isWeapon: 'marshal',
+                isSkin: 'ruin',
+            },
+            { 
+                tier: 2,
+                reward: '바인드에서 총기 장식',
+                isWeapon: false,
+            },
+            { 
+                tier: 3,
+                reward: '10 레디어나이트 포인트',
+                isWeapon: false,
+            },
+            { 
+                tier: 4,
+                reward: '몰락 카드',
+                isWeapon: false,
+            },
+            { 
+                tier: 5,
+                reward: '세레니티 고스트',
+                isWeapon: 'ghost',
+                isSkin: 'serenity',
+            },
+            { 
+                tier: 6,
+                reward: '엄지 척 스프레이',
+                isWeapon: false,
+            },
+            { 
+                tier: 7,
+                reward: '호박등 총기 장식',
+                isWeapon: false,
+            },
+            { 
+                tier: 8,
+                reward: '10 레디어나이트 포인트',
+                isWeapon: false,
+            },
+            { 
+                tier: 9,
+                reward: '발로-란트 카드',
+                isWeapon: false,
+            },
+            { 
+                tier: 10,
+                reward: '서지 버키',
+                isWeapon: 'bucky',
+                isSkin: 'surge',
+            },
+            { 
+                tier: 11,
+                reward: '고스트 도면 카드',
+                isWeapon: false,
+            },
+            { 
+                tier: 12,
+                reward: '광란의 문어 스프레이',
+                isWeapon: false,
+            },
+            { 
+                tier: 13,
+                reward: '10 레디어나이트 포인트',
+                isWeapon: false,
+            },
+            { 
+                tier: 14,
+                reward: '다람쥐 전술 총기장식',
+                isWeapon: false,
+            },
+            { 
+                tier: 15,
+                reward: '세레니티 저지',
+                isWeapon: 'judge',
+                isSkin: 'serenity',
+            },
+            { 
+                tier: 16,
+                reward: '서지 클래식',
+                isWeapon: 'classic',
+                isSkin: 'surge',
+            },
+            { 
+                tier: 17,
+                reward: 'VS // 레이즈 + 킬조이 카드',
+                isWeapon: false,
+            },
+            { 
+                tier: 18,
+                reward: '몰락 스프레이',
+                isWeapon: false,
+            },
+            { 
+                tier: 19,
+                reward: '10 레디어나이트 포인트',
+                isWeapon: false,
+            },
+            { 
+                tier: 20,
+                reward: '몰락 쇼티',
+                isWeapon: 'shorty',
+                isSkin: 'ruin',
+            },
+            { 
+                tier: 21,
+                reward: '여기 아래 서세요 스프레이',
+                isWeapon: false,
+            },
+            { 
+                tier: 22,
+                reward: '10 레디어나이트 포인트',
+                isWeapon: false,
+            },
+            { 
+                tier: 23,
+                reward: '불량 감자 총기 장식',
+                isWeapon: false,
+            },
+            { 
+                tier: 24,
+                reward: '8비트 발로란트 스프레이',
+                isWeapon: false,
+            },
+            { 
+                tier: 25,
+                reward: '세레니티 팬텀',
+                isWeapon: 'phantom',
+                isSkin: 'serenity',
+            },
+            { 
+                tier: 26,
+                reward: 'OP 아님 스프레이',
+                isWeapon: false,
+            },
+            { 
+                tier: 27,
+                reward: '10 레디어나이트 포인트',
+                isWeapon: false,
+            },
+            { 
+                tier: 28,
+                reward: '눈꽃송이 스프레이',
+                isWeapon: false,
+            },
+            { 
+                tier: 29,
+                reward: '스카이 ID 카드',
+                isWeapon: false,
+            },
+            { 
+                tier: 30,
+                reward: '몰락 가디언',
+                isWeapon: 'guardian',
+                isSkin: 'ruin',
+            },
+            { 
+                tier: 31,
+                reward: '고대 비밀 카드',
+                isWeapon: false,
+            },
+            { 
+                tier: 32,
+                reward: '10 레디어나이트 포인트',
+                isWeapon: false,
+            },
+            { 
+                tier: 33,
+                reward: '젤라토 큐티 총기 장식',
+                isWeapon: false,
+            },
+            { 
+                tier: 34,
+                reward: '마이크 드롭 스프레이',
+                isWeapon: false,
+            },
+            { 
+                tier: 35,
+                reward: '서지 스팅어',
+                isWeapon: 'stinger',
+                isSkin: 'surge',
+            },
+            { 
+                tier: 36,
+                reward: '즐겜 스프레이',
+                isWeapon: false,
+            },
+            { 
+                tier: 37,
+                reward: '쪼꼬미 쓰레기통 총기 장식',
+                isWeapon: false,
+            },
+            { 
+                tier: 38,
+                reward: '은밀한 가문 카드',
+                isWeapon: false,
+            },
+            { 
+                tier: 39,
+                reward: '10 레디어나이트 포인트',
+                isWeapon: false,
+            },
+            { 
+                tier: 40,
+                reward: '세레니티 스펙터',
+                isWeapon: 'spectre',
+                isSkin: 'serenity',
+            },
+            { 
+                tier: 41,
+                reward: '10 레디어나이트 포인트',
+                isWeapon: false,
+            },
+            { 
+                tier: 42,
+                reward: 'VS // 밴달 + 팬텀 카드',
+                isWeapon: false,
+            },
+            { 
+                tier: 43,
+                reward: '케이크나 먹어 스프레이',
+                isWeapon: false,
+            },
+            { 
+                tier: 44,
+                reward: '몰락 감시자 총기 장식',
+                isWeapon: false,
+            },
+            { 
+                tier: 45,
+                reward: '몰락 밴달',
+                isWeapon: 'vandal',
+                isSkin: 'ruin',
+            },
+            { 
+                tier: 46,
+                reward: '내 전략을 따라 스프레이',
+                isWeapon: false,
+            },
+            { 
+                tier: 47,
+                reward: '디스코테크 총기 장식',
+                isWeapon: false,
+            },
+            { 
+                tier: 48,
+                reward: '죽음의 상징 카드',
+                isWeapon: false,
+            },
+            { 
+                tier: 49,
+                reward: '10 레디어나이트 포인트',
+                isWeapon: false,
+            },
+            { 
+                tier: 50,
+                reward: '몰락 단검',
+                isWeapon: 'knife',
+                isSkin: 'ruin',
+            },
+        ]
     }
 ]
 // 4000

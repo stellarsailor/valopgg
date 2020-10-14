@@ -2,7 +2,7 @@ import React, { useState, useEffect } from 'react'
 import MetaTags from 'react-meta-tags';
 import styled from 'styled-components'
 import { Link } from "react-router-dom";
-import { Row, Col, Divider, BackTop } from 'antd';
+import { Row, Col, Divider, BackTop, Spin } from 'antd';
 import { AppstoreOutlined, PlusOutlined, MinusOutlined } from '@ant-design/icons';
 import { Element , scroller } from 'react-scroll'
 import { TransformWrapper, TransformComponent } from "react-zoom-pan-pinch";
@@ -13,11 +13,21 @@ import Adfit from './subcomponents/Adfit';
 import SideAds from './subcomponents/SideAds';
 
 import { weapon } from '../datas/weapon'
-import { skin } from '../datas/weaponSkin'
-import { staticServer } from '../serverUrl'
+import { apiServer, staticServer } from '../serverUrl'
 import { dynamicSort } from '../logics/dynamicSort';
 import { isMobile } from 'react-device-detect';
 import Adsense from './subcomponents/Adsense';
+import Axios from 'axios';
+
+type skinType = {
+    id: number;
+    weaponId: number;
+    name_ko: string;
+    category: string;
+    level: number;
+    cost: string;
+    grade: number;
+}
 
 const WeaponCategory = styled.div`
     background-color: #273552;
@@ -60,10 +70,13 @@ const SpecRight = styled((props: any) => <Col span={16} {...props} />)`
 `
 
 export default function WeaponDetail(props) {
-    // window.scrollTo(0, 0);
 
     const weaponName = props.match.params.name;
     let initialWeaponSkin = '';
+
+    const [ loading, setLoading ] = useState(false)
+    const [ skins, setSkins ] = useState<Array<skinType>>([])
+    const [ selectedSkinElement, setSelectedSkinElement ] = useState<skinType | null>(null)
 
     const qs: any = queryString.parse(props.location.search)
 
@@ -74,30 +87,34 @@ export default function WeaponDetail(props) {
     }
     
     const selectedWeapon = weapon.filter(v => v.name.toLowerCase() === weaponName)[0]
-    const selectedWeaponSkins = skin.filter(v => v.name === selectedWeapon.name)[0].skins
-    console.log(selectedWeaponSkins.filter(v => v.category === initialWeaponSkin)[0])
-    
-    const [ selectedSkinElement, setSelectedSkinElement ] = useState(selectedWeaponSkins.filter(v => v.category === initialWeaponSkin)[0])
-    
+
     useEffect(() => {
-        weaponScroll()
+        setLoading(true)
+        Axios.get(`${apiServer}/weapon/skins/${selectedWeapon.id}`)
+        .then(res => {
+            setLoading(false)
+            // console.log(res.data)
+            setSkins(res.data)
+            setSelectedSkinElement(res.data.filter(v => v.category === initialWeaponSkin)[0])
+
+            weaponScroll()
+        })
     },[weaponName])
 
     const weaponScroll = () => {
-        if(window.innerWidth < 576){
-            scroller.scrollTo('scroll-to-element', {
+        // if(window.innerWidth < 576){
+            scroller.scrollTo('scroll-to-element-pc', {
                 duration: 800,
                 delay: 0,
                 smooth: 'easeInOutQuart'
             })
-        } else {
-
-        }
+        // } 
     }
 
     return (
         <Row justify="center" style={{backgroundColor: 'rgba(19, 28, 46, 0.95)', minHeight: 800}} >
             <SideAds thicc={true} />
+            <Element name="scroll-to-element-pc"></Element>
             <Col xs={24} sm={22} md={20} lg={20} xl={15}>
                 <MetaTags>
                     <title>{selectedWeapon.name_ko} - 무기 정보 및 스킨</title>
@@ -125,68 +142,71 @@ export default function WeaponDetail(props) {
                         {weapon.filter((v) => v.category === selectedWeapon.category).map((v, index) => <WeaponRender key={index} name={v.name} name_kr={v.name_ko} cost={v.cost} resize={selectedWeapon.category === 'Sidearm' ? true : false } selectedWeapon={selectedWeapon.name} />)}
                     </Col>
                 }
-                    <Col xs={24} sm={16} md={16} lg={20} xl={20}>
+                <Col xs={24} sm={16} md={16} lg={20} xl={20}>
+                    {
+                        loading && <div style={{width: '100%', height: 400, display: 'flex', justifyContent: 'center', alignItems: 'center'}}><Spin /></div>
+                    }
+                    {
+                        !loading && selectedSkinElement &&
                         <Row style={{margin: 10, backgroundColor: 'rgb(24, 35, 56)'}} justify="center">
                             <Col xs={24} sm={24} md={18} lg={18} xl={16} style={{ padding: '1rem'}}>
-                                <Element name="scroll-to-element">
-                                    <TitleText>{selectedWeapon.name_ko}</TitleText>
-                                    <TransformWrapper>
-                                    {({ zoomIn, zoomOut, resetTransform, ...rest }) => (
-                                        <div style={{border: '1px solid gray', backgroundColor: '#273552', }}>
-                                            <div style={{padding: 10, position: 'absolute', right: '1rem', zIndex: 5}}>
-                                                <PlusOutlined style={{backgroundColor: 'rgb(32, 43, 67)', color: 'white', fontSize: '1.4rem', padding: 5}} onClick={zoomIn} />
-                                                <MinusOutlined style={{backgroundColor: 'rgb(32, 43, 67)', color: 'white', fontSize: '1.4rem', padding: 5}} onClick={zoomOut} />
+                                <TitleText>{selectedWeapon.name_ko}</TitleText>
+                                <TransformWrapper>
+                                {({ zoomIn, zoomOut, resetTransform, ...rest }) => (
+                                    <div style={{border: '1px solid gray', backgroundColor: '#273552', }}>
+                                        <div style={{padding: 10, position: 'absolute', right: '1rem', zIndex: 5}}>
+                                            <PlusOutlined style={{backgroundColor: 'rgb(32, 43, 67)', color: 'white', fontSize: '1.4rem', padding: 5}} onClick={zoomIn} />
+                                            <MinusOutlined style={{backgroundColor: 'rgb(32, 43, 67)', color: 'white', fontSize: '1.4rem', padding: 5}} onClick={zoomOut} />
+                                        </div>
+                                        <TransformComponent>
+                                            <div style={{display: 'flex', minHeight: 300, justifyContent: 'center', alignItems: 'center', padding: '1rem', }}>
+                                                <img 
+                                                src={(`${staticServer}/weaponskins/${selectedSkinElement.category}-${selectedWeapon.name.toLowerCase()}${selectedSkinElement.level === 0 ? '' : `-${selectedSkinElement.level}`}.png`)} 
+                                                style={{width: '90%'}} alt="발로란트 무기 스킨" />
                                             </div>
-                                            <TransformComponent>
-                                                <div style={{display: 'flex', minHeight: 300, justifyContent: 'center', alignItems: 'center', padding: '1rem', }}>
-                                                    <img 
-                                                    src={(`${staticServer}/weaponskins/${selectedSkinElement.category}-${selectedWeapon.name.toLowerCase()}${selectedSkinElement.level === 0 ? '' : `-${selectedSkinElement.level}`}.png`)} 
-                                                    style={{width: '90%'}} alt="발로란트 무기 스킨" />
-                                                </div>
-                                            </TransformComponent>
-                                        </div>
-                                    )}
-                                </TransformWrapper>
-                                    { isMobile ? <Adsense type="mobilewide" /> : null }
-                                    {selectedSkinElement.level !== 0 ? 
-                                        <div style={{textAlign: 'center', marginTop: 10}}>
-                                            {selectedWeaponSkins.filter(v => v.category === selectedSkinElement.category).map(bundle => 
-                                                <a key={bundle.level} 
-                                                style={{fontSize: '1rem', fontWeight: 'bold', margin: '10px', color: 'lightgray'}} 
-                                                onClick={() => {
-                                                    setSelectedSkinElement(selectedWeaponSkins.filter(f => f.id === bundle.id)[0])
-                                                    weaponScroll()
-                                                }}>
-                                                    레벨{bundle.level}
-                                                </a>
-                                            )}
-                                        </div>
-                                    : null}
-                                    <SkinText>{selectedSkinElement.name_ko} 
-                                        <span style={{fontSize: '1rem', color: 'lightgray', marginLeft: 10}}>{selectedSkinElement.cost} {parseInt(selectedSkinElement.cost) > 0 ? ` (= 약 ${parseInt(selectedSkinElement.cost) * 11}원)` : null}
-                                        </span>
-                                    </SkinText>
-                                    <Col span={24} >
-                                        <ScrollContainer style={{overflowX: 'scroll', flexWrap: 'nowrap', display:'flex'}}>
-                                            {
-                                                skin.filter(v => v.name.toLowerCase() === weaponName)[0].skins.filter(v => v.level === 0 || v.level === 1).map(v => (
-                                                    <span style={{flex: '0 0 auto', padding: 5, width: '40%'}} key={v.id}>
-                                                        <a style={{backgroundColor: '#273552', height: '100%',display: 'flex', justifyContent: 'center', alignItems: 'center', padding: '1rem', border: `1px solid ${v.category === selectedSkinElement.category ? '#00ffae' : 'gray'}`}}>
-                                                            <img 
-                                                            src={(`${staticServer}/weaponskins/${v.category}-${weaponName.toLowerCase()}${v.level === 0 ? '' : `-${v.level}`}.png`)} 
-                                                            style={{width: '100%'}} 
-                                                            onClick={() => { 
-                                                                setSelectedSkinElement(selectedWeaponSkins.filter(f => f.id === v.id)[0])
-                                                                weaponScroll()
-                                                            }}
-                                                            />
-                                                        </a>
-                                                    </span>
-                                                ))
-                                            }
-                                        </ScrollContainer>
-                                    </Col>
-                                </Element>
+                                        </TransformComponent>
+                                    </div>
+                                )}
+                            </TransformWrapper>
+                                { isMobile ? <Adsense type="mobilewide" /> : null }
+                                {selectedSkinElement.level !== 0 ? 
+                                    <div style={{textAlign: 'center', marginTop: 10}}>
+                                        {skins.filter(v => v.category === selectedSkinElement.category).map(bundle => 
+                                            <a key={bundle.level} 
+                                            style={{fontSize: '1rem', fontWeight: 'bold', margin: '10px', color: 'lightgray'}} 
+                                            onClick={() => {
+                                                setSelectedSkinElement(skins.filter(f => f.id === bundle.id)[0])
+                                                weaponScroll()
+                                            }}>
+                                                레벨{bundle.level}
+                                            </a>
+                                        )}
+                                    </div>
+                                : null}
+                                <SkinText>{selectedSkinElement.name_ko} 
+                                    <span style={{fontSize: '1rem', color: 'lightgray', marginLeft: 10}}>{selectedSkinElement.cost} {parseInt(selectedSkinElement.cost) > 0 ? ` (= 약 ${parseInt(selectedSkinElement.cost) * 11}원)` : null}
+                                    </span>
+                                </SkinText>
+                                <Col span={24} >
+                                    <ScrollContainer style={{overflowX: 'scroll', flexWrap: 'nowrap', display:'flex'}}>
+                                        {
+                                            skins.length !== 0 && skins.filter(v => v.level === 0 || v.level === 1).map(v => (
+                                                <span style={{flex: '0 0 auto', padding: 5, width: '40%'}} key={v.id}>
+                                                    <a style={{backgroundColor: '#273552', height: '100%',display: 'flex', justifyContent: 'center', alignItems: 'center', padding: '1rem', border: `1px solid ${v.category === selectedSkinElement.category ? '#00ffae' : 'gray'}`}}>
+                                                        <img 
+                                                        src={(`${staticServer}/weaponskins/${v.category}-${weaponName.toLowerCase()}${v.level === 0 ? '' : `-${v.level}`}.png`)} 
+                                                        style={{width: '100%'}} 
+                                                        onClick={() => { 
+                                                            setSelectedSkinElement(skins.filter(f => f.id === v.id)[0])
+                                                            weaponScroll()
+                                                        }}
+                                                        />
+                                                    </a>
+                                                </span>
+                                            ))
+                                        }
+                                    </ScrollContainer>
+                                </Col>
                             </Col>
                             <Col xs={24} sm={24} md={16} lg={16} xl={8} style={{backgroundColor: 'rgb(24, 35, 56)', padding: '1rem'}}>
                                 <Row>
@@ -301,6 +321,7 @@ export default function WeaponDetail(props) {
                                 </Row>
                             </Col>
                         </Row>
+                    }
                     </Col>
                 </Row>
                 {/* { window.innerWidth < 576 ? <Adfit adUnit="DAN-u7xd8qtoidkl" adWidth="320" adHeight="100" /> : <Adfit adUnit="DAN-sl14jpq0o8kl" adWidth="728" adHeight="90" /> } */}

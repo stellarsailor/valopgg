@@ -7,6 +7,7 @@ import { Link } from 'react-router-dom'
 import { dynamicSort } from '../logics/dynamicSort'
 // import SkillCount from './subcomponents/SkillCount';
 import { agent } from '../datas/agent'
+import { staticServer } from '../serverUrl';
 // import { strat } from '../datas/strat'
 
 export default function Agent(props) {
@@ -31,7 +32,7 @@ export default function Agent(props) {
                                 <Link to={`/agent/${v.name.toLowerCase()}`}>
                                     <div style={{width: '100%', height: '100%', backgroundColor: v.signature_color, position: 'absolute', zIndex: 3, opacity: 0.1}} />
                                     <div style={{fontSize: '2rem', fontWeight: 'bold', position: 'absolute', right: '5%', bottom: '5%', zIndex: 10}}>{v.name_ko}</div>
-                                    <img src={require(`../images/agents/${v.name.toLowerCase()}.png`)} style={{width: '100%', height: 'auto', zIndex: 5, position: 'relative'}} alt="agent official" />
+                                    <img src={(`${staticServer}/agents/${v.name.toLowerCase()}.png`)} style={{width: '100%', height: 'auto', zIndex: 5, position: 'relative'}} alt="agent official" />
                                     <div style={{fontSize: '4rem', fontWeight: 'bold', position: 'absolute', left: '5%', top: '-5%', zIndex: 0, opacity: 0.4, color: v.signature_color, textShadow: '3px 3px 4px #000000'}}>{v.name}</div>
                                 </Link>
                             </div>

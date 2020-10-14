@@ -3,7 +3,6 @@ import MetaTags from 'react-meta-tags';
 import styled from 'styled-components'
 import { Row, Col, Carousel, BackTop, Spin } from 'antd';
 import { weapon } from '../datas/weapon'
-import { skinCollection } from '../datas/weaponSkin'
 import WeaponRender from './subcomponents/WeaponRender';
 import Adfit from './subcomponents/Adfit';
 import { staticServer, apiServer } from '../serverUrl'
