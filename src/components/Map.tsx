@@ -10,6 +10,7 @@ const Images = [
     `${staticServer}/map/haven-illust.jpeg`,
     `${staticServer}/map/split-illust.jpeg`,
     `${staticServer}/map/ascent-illust.jpeg`,
+    `${staticServer}/map/icebox-illust.jpeg`,
 ];
 
 const BottomText = styled.div`
@@ -23,7 +24,7 @@ const BottomText = styled.div`
 
 export default function Map() {
 
-    const arr = ["Bind", "Haven", "Split", "Ascent"]
+    const arr = ["Bind", "Haven", "Split", "Ascent", "Icebox"]
 
     return(
         <Row justify="center" style={{backgroundColor: 'rgba(19, 28, 46, 0.95)', minHeight: 800}} >

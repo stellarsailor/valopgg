@@ -15,6 +15,7 @@ const Images = [
     `${staticServer}/map/haven-illust.jpeg`,
     `${staticServer}/map/split-illust.jpeg`,
     `${staticServer}/map/ascent-illust.jpeg`,
+    `${staticServer}/map/icebox-illust.jpeg`,
 ];
 
 const BottomText = styled.div`
@@ -33,7 +34,7 @@ export default function MapDetail(props) {
         window.scrollTo(0, 0)
     },[])
 
-    const mapArr = ["Bind", "Haven", "Split", "Ascent"]
+    const mapArr = ["Bind", "Haven", "Split", "Ascent", "Icebox"]
 
     const mapName = props.match.params.name;
     const [ side, setSide ] = useState("attacker")
