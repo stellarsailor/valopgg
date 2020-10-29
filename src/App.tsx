@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import { BrowserRouter as Router, Switch, Route, Link } from "react-router-dom";
 import styled from 'styled-components'
 import { Layout, Row, Col, Alert } from 'antd';
@@ -33,6 +33,8 @@ import Statistics from './components/Statistics';
 import Party from './components/Party';
 import { isMobile } from 'react-device-detect';
 import Battlepass from './components/Battlepass';
+import Axios from 'axios';
+import { apiServer } from './serverUrl';
 const { Content, Footer } = Layout;
 
 const HeaderContainer = styled.div`
@@ -65,6 +67,16 @@ export default function App (props) {
         backgroundRepeat: 'no-repeat',
         backgroundAttachment: 'fixed',
     };
+
+    const [ patchNoteData, setPatchNoteData ] = useState({
+        url: '',
+        title: '...',
+    })
+
+    useEffect(() => {
+        Axios.get(`${apiServer}/patchnote`)
+        .then(res => setPatchNoteData(res.data[0]))
+    },[])
 
     return (
         <Router>
@@ -101,7 +113,9 @@ export default function App (props) {
                                             {/* <SearchInput /> */}
                                         </Col>
                                     </Row>
-                                <Link to={`/guide/0/${guide[0].tabs.length - 1}`} style={{position: 'absolute', bottom: -40, color: 'white', fontSize: '0.8rem', backgroundColor: 'rgb(32, 43, 67)', padding: '3px 10px', borderRadius: 5}}>{patchNotePhrase}</Link>
+                                <a href={patchNoteData.url} target="_blank" style={{position: 'absolute', bottom: -40, color: 'white', fontSize: '0.8rem', backgroundColor: 'rgb(32, 43, 67)', padding: '3px 10px', borderRadius: 5}}>
+                                    {patchNoteData.title}
+                                </a>
                                 </Col>
                             </Row>
                         </Col>
@@ -110,7 +124,7 @@ export default function App (props) {
                 <Row justify="center" style={{height: 50, backgroundColor: '#161616'}}>
                     <Col xs={24} sm={0} md={0} lg={0} xl={0} >
                         <div style={{display: 'flex', justifyContent: 'space-between', alignItems: 'center', height: '100%', fontSize: '1.2em', overflowX: 'scroll', overflowY: 'hidden', whiteSpace: 'nowrap'}}>
-                            <Link to={`/guide/0/${guide[0].tabs.length - 1}`} style={mobileMenuTab}>가이드</Link>
+                            <Link to={`/guide/0/0`} style={mobileMenuTab}>가이드</Link>
                             <Link to="/agent" style={mobileMenuTab}>요원</Link>
                             <Link to="/agentrecom" style={mobileMenuTab}>맞는 요원 찾기</Link>
                             {/* <Link to="/tier" style={mobileMenuTab}>티어</Link> */}
@@ -131,7 +145,7 @@ export default function App (props) {
                     </Col>
                     <Col xs={0} sm={22} md={20} lg={20} xl={15} >
                         <div style={{display: 'flex', justifyContent: 'space-between', alignItems: 'center', height: '100%', fontSize: '1.2em'}}>
-                            <MenuTabHover><Link to={`/guide/0/${guide[0].tabs.length - 1}`}>가이드</Link></MenuTabHover>
+                            <MenuTabHover><Link to={`/guide/0/0`}>가이드</Link></MenuTabHover>
                             <MenuTabHover><Link to="/agent">요원</Link></MenuTabHover>
                             <MenuTabHover><Link to="/agentrecom">맞는 요원 찾기</Link></MenuTabHover>
                             {/* <MenuTabHover><Link to="/tier">티어</Link></MenuTabHover> */}

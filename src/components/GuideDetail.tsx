@@ -35,13 +35,14 @@ export default function GuideDetail(props) {
     //         setMarkdown(guide[2].tabs[keyValueFromZero - guide[0].tabs.length - guide[1].tabs.length].markdown)
     //     }
     // },[])
-    if(groupId === '0'){
-        selectedArticle = data[0].id
-    } else if(groupId === '1'){
-        selectedArticle = guide[0].tabs.length + data[0].id
-    } else if(groupId === '2') {
-        selectedArticle = guide[0].tabs.length + guide[1].tabs.length + data[0].id
-    }
+    
+    // if(groupId === '0'){
+    //     selectedArticle = data[0].id
+    // } else if(groupId === '1'){
+    //     selectedArticle = guide[0].tabs.length + data[0].id
+    // } else if(groupId === '2') {
+    //     selectedArticle = guide[0].tabs.length + guide[1].tabs.length + data[0].id
+    // }
 
     return(
         <Row justify="center" style={{backgroundColor: 'rgba(19, 28, 46, 0.95)', minHeight: 800}} >
@@ -55,12 +56,24 @@ export default function GuideDetail(props) {
                         <Menu
                             // onClick={(e) => onHandleMarkdown(e.key)}
                             style={{ width: '80%' }}
-                            defaultSelectedKeys={[selectedArticle + 1 + '']}
-                            defaultOpenKeys={['sub1', 'sub2', 'sub3']}
+                            defaultSelectedKeys={[selectedArticle + '']}
+                            defaultOpenKeys={['sub']}
                             mode="inline"
                             theme="dark"
                         >
-                            <SubMenu key="sub1" title="패치노트">
+                            <SubMenu key="sub" title="가이드">
+                                {
+                                    guide[0].tabs.slice(0).map((v) => (
+                                        <Menu.Item key={v.id}>
+                                            <Link to={`/guide/${0}/${v.id}`} >
+                                                {v.tabName}
+                                            </Link>
+                                        </Menu.Item>
+                                    ))
+                                }
+                                
+                            </SubMenu>
+                            {/* <SubMenu key="sub1" title="패치노트">
                                 {
                                     guide[0].tabs.slice(0).reverse().map((v) => (
                                         <Menu.Item key={v.id + 1}>
@@ -71,8 +84,8 @@ export default function GuideDetail(props) {
                                     ))
                                 }
                                 
-                            </SubMenu>
-                            <SubMenu key="sub2" title="가이드">
+                            </SubMenu> */}
+                            {/* <SubMenu key="sub2" title="가이드">
                                 {
                                     guide[1].tabs.map((v) => (
                                         <Menu.Item key={v.id + guide[0].tabs.length + 1}>
@@ -82,7 +95,7 @@ export default function GuideDetail(props) {
                                         </Menu.Item>
                                     ))
                                 }
-                            </SubMenu>
+                            </SubMenu> */}
                             {/* <SubMenu key="sub3" title="기타">
                                 {
                                     guide[2].tabs.map((v) => (
