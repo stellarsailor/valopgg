@@ -194,7 +194,7 @@ export default function App (props) {
                             <Route path="/contact" component={Contact} />
                             <Route path="/prove" component={Contact} />
                             <Route path="/privacy" component={Privacy} />
-                            <Route exact path="/" component={Main} />
+                            <Route exact path="/" component={() => <Main patchNoteData={patchNoteData} />} />
                         </Switch>
                     </div>
                 </Content>

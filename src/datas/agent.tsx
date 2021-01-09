@@ -553,7 +553,7 @@ export const agent: Array<agentType> = [
             },
             {
                 id: 2,
-                name: '인도하는 빛',
+                name: '유도등',
                 count: 3,
                 cost: '100 크레드',
                 desc: '매 장신구를 장착합니다. 발사하면 매가 전방으로 날아갑니다. 발사 버튼을 누르고 있으면 매를 십자선 방향으로 유도할 수 있습니다. 매가 비행 중에 스킬을 다시 사용하면 매가 섬광을 내뿜으며 시야 안에 있는 사거리 내 적을 실명시킵니다.',
@@ -568,6 +568,6 @@ export const agent: Array<agentType> = [
         ],
         inline_guide: agentMD[12],
         ally_ult: '모두 색출하자!',
-        enemy_ult: '',
+        enemy_ult: '더 잘 숨었어야지!',
     },
 ]

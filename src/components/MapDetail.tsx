@@ -5,7 +5,7 @@ import { Link } from "react-router-dom";
 import { Row, Col, Radio, Checkbox } from 'antd';
 import { PlusOutlined, MinusOutlined } from '@ant-design/icons';
 import { TransformWrapper, TransformComponent } from "react-zoom-pan-pinch";
-import Adfit from './subcomponents/Adfit';
+// import Adfit from './subcomponents/Adfit';
 import capitalizeFirstLetter from '../logics/capitalizeFirstLetter';
 import { staticServer } from '../serverUrl'
 import SideAds from './subcomponents/SideAds';

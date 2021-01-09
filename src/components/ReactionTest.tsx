@@ -2,7 +2,7 @@ import React, { useState, useRef, useEffect, useCallback } from 'react'
 import { Row, Col, BackTop, Typography, Spin, Button } from 'antd';
 import { BarChartOutlined, DesktopOutlined, MobileOutlined, CrownFilled } from '@ant-design/icons';
 import MetaTags from 'react-meta-tags';
-import Adfit from './subcomponents/Adfit';
+// import Adfit from './subcomponents/Adfit';
 import { isMobile } from 'react-device-detect';
 import axios from 'axios';
 import { apiServer, staticServer } from '../serverUrl';

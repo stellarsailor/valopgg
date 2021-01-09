@@ -8,7 +8,6 @@ import { Element , scroller } from 'react-scroll'
 import { apiServer } from '../serverUrl';
 import PartyRenderer from './subcomponents/PartyRenderer';
 import PartyWrite from './subcomponents/PartyWrite';
-import Adfit from './subcomponents/Adfit';
 import SideAds from './subcomponents/SideAds';
 import Adsense from './subcomponents/Adsense';
 const { Paragraph } = Typography

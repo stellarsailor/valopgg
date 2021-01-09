@@ -3,7 +3,6 @@ import MetaTags from 'react-meta-tags';
 import styled from 'styled-components'
 import axios from 'axios'
 import { Row, Col, Table, BackTop } from 'antd';
-import Adfit from './subcomponents/Adfit';
 import { apiServer, staticServer } from '../serverUrl'
 import { agent } from '../datas/agent'
 import { dynamicSort } from '../logics/dynamicSort';

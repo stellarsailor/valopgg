@@ -9,7 +9,7 @@ import capitalizeFirstLetter from '../logics/capitalizeFirstLetter'
 import { staticServer } from '../serverUrl'
 
 import { question } from '../datas/question'
-import Adfit from './subcomponents/Adfit';
+// import Adfit from './subcomponents/Adfit';
 import Adsense from './subcomponents/Adsense';
 import { isMobile } from 'react-device-detect';
 import SideAds from './subcomponents/SideAds';

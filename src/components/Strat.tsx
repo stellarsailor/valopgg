@@ -14,7 +14,6 @@ import { strat } from '../datas/strat'
 import { agent } from '../datas/agent'
 import { dynamicSort } from '../logics/dynamicSort'
 import mainLogo from '../images/mainLogo.png'
-import Adfit from './subcomponents/Adfit';
 import numberOfStrats from '../logics/numberOfStrats';
 
 const StratPane = styled.a`

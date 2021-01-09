@@ -5,7 +5,7 @@ import { Row, Col, BackTop } from 'antd';
 import { dic } from '../datas/dic'
 import { dynamicSort } from '../logics/dynamicSort'
 import DicWordRender from './subcomponents/DicWordRender';
-import Adfit from './subcomponents/Adfit';
+// import Adfit from './subcomponents/Adfit';
 import SideAds from './subcomponents/SideAds';
 
 export default function Dic() {

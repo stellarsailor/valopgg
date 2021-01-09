@@ -9,7 +9,7 @@ import { TransformWrapper, TransformComponent } from "react-zoom-pan-pinch";
 import ScrollContainer from 'react-indiana-drag-scroll'
 import WeaponRender from './subcomponents/WeaponRender';
 import queryString from 'query-string'
-import Adfit from './subcomponents/Adfit';
+// import Adfit from './subcomponents/Adfit';
 import SideAds from './subcomponents/SideAds';
 
 import { weapon } from '../datas/weapon'

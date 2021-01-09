@@ -3,7 +3,7 @@ import { isMobile } from 'react-device-detect'
 import MetaTags from 'react-meta-tags';
 import { Row, Col, Select, Input, Typography, Radio, Button } from 'antd';
 import styled from 'styled-components'
-import Adfit from './subcomponents/Adfit';
+// import Adfit from './subcomponents/Adfit';
 import CalculatorSens from './subcomponents/CalculatorSens';
 import { Link } from 'react-router-dom';
 import CalculatorBattlepass from './subcomponents/CalculatorBattlepass';
@@ -34,7 +34,7 @@ export default function Battlepass() {
                 </div>
                 <Paragraph style={{color: 'white', fontSize: '1rem', textAlign: 'right'}} copyable={{ text: `https://valog.gg/battlepass` }}>링크 복사</Paragraph>
                 {/* <Adsense type="pcwide" /> */}
-                {window.innerWidth < 576 ? <Adfit adUnit="DAN-qhq3i0n8v392" adWidth="320" adHeight="100" /> : <Adfit adUnit="DAN-skk0fg3no8c7" adWidth="728" adHeight="90" /> }
+                {/* {window.innerWidth < 576 ? <Adfit adUnit="DAN-qhq3i0n8v392" adWidth="320" adHeight="100" /> : <Adfit adUnit="DAN-skk0fg3no8c7" adWidth="728" adHeight="90" /> } */}
                 <CalculatorBattlepass />
             </Col>
             {/* <div style={{display: 'flex', justifyContent: 'center', margin: '2rem'}}>

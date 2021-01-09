@@ -4,7 +4,6 @@ import styled from 'styled-components'
 import { Row, Col, Carousel, BackTop, Spin } from 'antd';
 import { weapon } from '../datas/weapon'
 import WeaponRender from './subcomponents/WeaponRender';
-import Adfit from './subcomponents/Adfit';
 import { staticServer, apiServer } from '../serverUrl'
 import Axios from 'axios';
 import WeaponCollection from './subcomponents/WeaponCollection';

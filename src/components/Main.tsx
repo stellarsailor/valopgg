@@ -8,7 +8,7 @@ import Jumbotron from '../images/official-background.jpg'
 import mainImage from '../images/official-main-image.png'
 import AdSense from 'react-adsense';
 import { TwitterTimelineEmbed } from 'react-twitter-embed';
-import Adfit from './subcomponents/Adfit';
+// import Adfit from './subcomponents/Adfit';
 import { patchNotePhrase, guide } from '../datas/guide'
 import TextArea from 'antd/lib/input/TextArea';
 import axios from 'axios';
@@ -140,7 +140,7 @@ export default function Main(props) {
                 </a>
             }
             <Col xs={24} sm={24} md={0} lg={0} xl={0} style={{backgroundColor: 'lightgray' }}>
-                <Alert type="warning" message={<Link to={`/guide/0/${guide[0].tabs.length - 1}`} style={{color: 'black'}}>{patchNotePhrase}</Link>} showIcon={false} banner closable />
+                <Alert type="warning" message={<a href={props.patchNoteData.url} target="_blank" style={{color: 'black'}}>{props.patchNoteData.title}</a>} showIcon={false} banner closable />
                 {/* <div style={{display: 'flex', width: '100%', height: 200, backgroundImage: `url(${mainImage})`, backgroundSize: 'cover', backgroundPosition: 'left', justifyContent: 'center', alignItems: 'center', flexDirection: 'column'}}>
                         <Search 
                         placeholder="발로란트 정보의 모든 것, 발로그" 

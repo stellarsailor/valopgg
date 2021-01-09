@@ -12,7 +12,6 @@ import SkillCount from './subcomponents/SkillCount';
 import { agent } from '../datas/agent'
 import { strat } from '../datas/strat'
 import AdSense from 'react-adsense';
-import Adfit from './subcomponents/Adfit';
 import numberOfStrats from '../logics/numberOfStrats';
 import { dynamicSort } from '../logics/dynamicSort';
 import SideAds from './subcomponents/SideAds';
@@ -121,7 +120,7 @@ export default function AgentDetail(props) {
                                     <ArrowRightOutlined style={{fontSize: '1.2rem', fontWeight: 'bold'}} />
                                 </div>
                             </Link> */}
-                            <Adfit adUnit="DAN-qhq3i0n8v392" adWidth="320" adHeight="100" />
+                            {/* <Adfit adUnit="DAN-qhq3i0n8v392" adWidth="320" adHeight="100" /> */}
                             {/* { isMobile ? <Adsense type="mobilewide" /> : <Adsense type="pcwide" />} */}
                         </Col>
                     <div style={{backgroundColor: '#202b43', padding: '1rem', margin: '1rem'}}>

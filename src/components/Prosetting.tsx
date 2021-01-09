@@ -7,7 +7,7 @@ import { Link } from 'react-router-dom'
 import { prosetting } from '../datas/prosetting'
 import { dynamicSort } from '../logics/dynamicSort'
 import axios from 'axios'
-import Adfit from './subcomponents/Adfit';
+// import Adfit from './subcomponents/Adfit';
 import { apiServer } from '../serverUrl';
 import SideAds from './subcomponents/SideAds';
 
