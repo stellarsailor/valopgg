@@ -803,6 +803,274 @@ export const battlepass =
                 isSkin: 'ruin',
             },
         ]
+    },
+    {
+        title: "포메이션 : 액트 1",
+        deadline: '~ 3/2',
+        contents: [
+            {
+                tier: 1,
+                reward: '인피니티 불독',
+                isWeapon: 'bulldog',
+                isSkin: 'infinity',
+            },
+            { 
+                tier: 2,
+                reward: '허풍 총기 장식',
+                isWeapon: false,
+            },
+            { 
+                tier: 3,
+                reward: '10 레디어나이트 포인트',
+                isWeapon: false,
+            },
+            { 
+                tier: 4,
+                reward: '인피티니 카드',
+                isWeapon: false,
+            },
+            { 
+                tier: 5,
+                reward: '에어로졸 버키',
+                isWeapon: 'bucky',
+                isSkin: 'aerosol',
+            },
+            { 
+                tier: 6,
+                reward: 'EZ 스프레이',
+                isWeapon: false,
+            },
+            { 
+                tier: 7,
+                reward: '탐정 강아지 스프레이',
+                isWeapon: false,
+            },
+            { 
+                tier: 8,
+                reward: '10 레디어나이트 포인트',
+                isWeapon: false,
+            },
+            { 
+                tier: 9,
+                reward: '새싹 카드',
+                isWeapon: false,
+            },
+            { 
+                tier: 10,
+                reward: '아웃포스트 고스트',
+                isWeapon: 'ghost',
+                isSkin: 'outpost',
+            },
+            { 
+                tier: 11,
+                reward: '쇼티 도면 카드',
+                isWeapon: false,
+            },
+            { 
+                tier: 12,
+                reward: '쇼티 금지 스프레이',
+                isWeapon: false,
+            },
+            { 
+                tier: 13,
+                reward: '10 레디어나이트 포인트',
+                isWeapon: false,
+            },
+            { 
+                tier: 14,
+                reward: '소금통 총기장식',
+                isWeapon: false,
+            },
+            { 
+                tier: 15,
+                reward: '에어로졸 쇼티',
+                isWeapon: 'shorty',
+                isSkin: 'aerosol',
+            },
+            { 
+                tier: 16,
+                reward: '인피니티 스펙터',
+                isWeapon: 'spectre',
+                isSkin: 'infinity',
+            },
+            { 
+                tier: 17,
+                reward: '요루 ID 카드',
+                isWeapon: false,
+            },
+            { 
+                tier: 18,
+                reward: '문제가 생겼닭 스프레이',
+                isWeapon: false,
+            },
+            { 
+                tier: 19,
+                reward: '10 레디어나이트 포인트',
+                isWeapon: false,
+            },
+            { 
+                tier: 20,
+                reward: '아웃포스트 저지',
+                isWeapon: 'judge',
+                isSkin: 'outpost',
+            },
+            { 
+                tier: 21,
+                reward: '얼굴 스프레이',
+                isWeapon: false,
+            },
+            { 
+                tier: 22,
+                reward: '10 레디어나이트 포인트',
+                isWeapon: false,
+            },
+            { 
+                tier: 23,
+                reward: '전투 게 총기 장식',
+                isWeapon: false,
+            },
+            { 
+                tier: 24,
+                reward: '블루베리 스프레이',
+                isWeapon: false,
+            },
+            { 
+                tier: 25,
+                reward: '에어로졸 오퍼레이터',
+                isWeapon: 'operator',
+                isSkin: 'aerosol',
+            },
+            { 
+                tier: 26,
+                reward: '손가락 하트 스프레이',
+                isWeapon: false,
+            },
+            { 
+                tier: 27,
+                reward: '10 레디어나이트 포인트',
+                isWeapon: false,
+            },
+            { 
+                tier: 28,
+                reward: '다 함께 춤을 스프레이',
+                isWeapon: false,
+            },
+            { 
+                tier: 29,
+                reward: '아레스 도면 카드',
+                isWeapon: false,
+            },
+            { 
+                tier: 30,
+                reward: '아웃포스트 아레스',
+                isWeapon: 'ares',
+                isSkin: 'outpost',
+            },
+            { 
+                tier: 31,
+                reward: 'VS//오멘+세이지 카드',
+                isWeapon: false,
+            },
+            { 
+                tier: 32,
+                reward: '10 레디어나이트 포인트',
+                isWeapon: false,
+            },
+            { 
+                tier: 33,
+                reward: '고대 유산 총기 장식',
+                isWeapon: false,
+            },
+            { 
+                tier: 34,
+                reward: '아아, 불쌍한 로봇! 스프레이',
+                isWeapon: false,
+            },
+            { 
+                tier: 35,
+                reward: '인피니티 가디언',
+                isWeapon: 'guardian',
+                isSkin: 'infinity',
+            },
+            { 
+                tier: 36,
+                reward: '뭐였더라? 스프레이',
+                isWeapon: false,
+            },
+            { 
+                tier: 37,
+                reward: '툰드라 장악 총기 장식',
+                isWeapon: false,
+            },
+            { 
+                tier: 38,
+                reward: '세계를 잇는 다리 카드',
+                isWeapon: false,
+            },
+            { 
+                tier: 39,
+                reward: '10 레디어나이트 포인트',
+                isWeapon: false,
+            },
+            { 
+                tier: 40,
+                reward: '에어로졸 오딘',
+                isWeapon: 'odin',
+                isSkin: 'aerosol',
+            },
+            { 
+                tier: 41,
+                reward: '10 레디어나이트 포인트',
+                isWeapon: false,
+            },
+            { 
+                tier: 42,
+                reward: '즐거운 휴식 카드',
+                isWeapon: false,
+            },
+            { 
+                tier: 43,
+                reward: '재미있네! 스프레이',
+                isWeapon: false,
+            },
+            { 
+                tier: 44,
+                reward: '피해량 140 스프레이',
+                isWeapon: false,
+            },
+            { 
+                tier: 45,
+                reward: '인피니티 팬텀',
+                isWeapon: 'phantom',
+                isSkin: 'infinity',
+            },
+            { 
+                tier: 46,
+                reward: '무기 선택 스프레이',
+                isWeapon: false,
+            },
+            { 
+                tier: 47,
+                reward: '치명적 정밀함 총기 장식',
+                isWeapon: false,
+            },
+            { 
+                tier: 48,
+                reward: '기업 인수 카드',
+                isWeapon: false,
+            },
+            { 
+                tier: 49,
+                reward: '10 레디어나이트 포인트',
+                isWeapon: false,
+            },
+            { 
+                tier: 50,
+                reward: '아웃포스트 근접 무기',
+                isWeapon: 'knife',
+                isSkin: 'outpost',
+            },
+        ]
     }
 ]
 // 4000
