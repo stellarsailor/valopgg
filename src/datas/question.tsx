@@ -1,7 +1,7 @@
 type questionType = {
     id: number;
     question: string;
-    action: Array<"brimstone" | "breach" | "cypher" | "jett" | "omen" | "phoenix" | "raze" | "sage" | "sova" | "viper" | "reyna">
+    action: Array<"brimstone" | "breach" | "cypher" | "jett" | "omen" | "phoenix" | "raze" | "sage" | "sova" | "viper" | "reyna" | "killjoy" | "skye" | "yoru">
     point: Array<number>;
 }
 
@@ -15,14 +15,14 @@ export const question = [
     {
         id: 1,
         question: "RPG 게임을 할때 주로 여자 캐릭터로 플레이하곤 했다.",
-        action: ["viper", "sage", "jett", "raze", "reyna"], 
-        point: [2,2,2,1,1],
+        action: ["viper", "sage", "jett", "raze", "reyna", "killjoy"], 
+        point: [2,2,2,1,1,1],
     },
     {
         id: 2,
         question: "돌진하거나 은신을 쓰는 암살자 스타일의 캐릭터들을 좋아한다.",
-        action: ['jett', 'reyna', 'phoenix', 'omen'],
-        point: [2,2,1,1],
+        action: ['jett', 'yoru', 'reyna', 'phoenix', 'omen'],
+        point: [2,2,2,1,1],
     },
     {
         id: 3,
@@ -39,8 +39,8 @@ export const question = [
     {
         id: 5,
         question: "타 게임에서 폭탄을 던지거나 폭탄을 발판삼아 방방 튀어다니던 캐릭터를 즐겨 하곤 했다.",
-        action: ["raze", "breach"],
-        point: [4,2],
+        action: ["raze", 'killjoy', "breach"],
+        point: [4,3,2],
     },
     {
         id: 6,
@@ -51,8 +51,8 @@ export const question = [
     {
         id: 7,
         question: "밝고 트여있는 공간보다 어둡더라도 나만의 공간이 있는 것이 좋다.",
-        action: ["viper", "omen"],
-        point: [3,1],
+        action: ["viper", 'yoru', "omen"],
+        point: [3,20,1],
     },
     {
         id: 8,
@@ -87,7 +87,7 @@ export const question = [
     {
         id: 13,
         question: "쎈 누님/언니 스타일이 매력적이라고 생각한다.",
-        action: ['reyna'],
-        point: [3]
+        action: ['reyna', 'skye'],
+        point: [3, 2]
     }
 ]

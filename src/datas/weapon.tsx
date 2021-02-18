@@ -108,7 +108,7 @@ export const weapon: Array<weaponType> = [
         category_ko: "보조무기",
         name: "Frenzy",
         name_ko: "프렌지",
-        cost: 400,
+        cost: 500,
         damage: [
             {
                 distance: "0-20",
@@ -180,7 +180,7 @@ export const weapon: Array<weaponType> = [
         category_ko: "기관단총",
         name: "Stinger",
         name_ko: "스팅어",
-        cost: 1000,
+        cost: 1100,
         damage: [
             {
                 distance: "0-20",
@@ -192,7 +192,7 @@ export const weapon: Array<weaponType> = [
             },
         ],
         primaryMode: "자동",
-        primaryRate: "초당 18발",
+        primaryRate: "초당 16발",
         altMode: "1.15배율 4점사, 탄퍼짐 감소",
         altRate: "초당 4발",
         capacity: 20,
@@ -386,7 +386,7 @@ export const weapon: Array<weaponType> = [
         category_ko: "저격총",
         name: "Marshal",
         name_ko: "마샬",
-        cost: 1100,
+        cost: 1000,
         damage: [
             {
                 distance: "0-50",
@@ -395,7 +395,7 @@ export const weapon: Array<weaponType> = [
         ],
         primaryMode: "반자동",
         primaryRate: "초당 1.5발",
-        altMode: "2.5배율, 탄퍼짐 감소",
+        altMode: "3.5배율, 탄퍼짐 감소",
         altRate: "초당 1.2발",
         capacity: 5,
         equipTime: 1.25,

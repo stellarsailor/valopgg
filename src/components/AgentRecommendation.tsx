@@ -62,6 +62,9 @@ export default function AgentRecommendation() {
             "sova": 0,
             "viper": 0,
             "reyna": 0,
+            "killjoy": 0,
+            "skye": 0,
+            "yoru": 0,
         };
         Object.assign(temp, point)
         agentName.map((v, index) => { 
