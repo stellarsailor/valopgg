@@ -1,5 +1,4 @@
 import { guideMD } from './markdown/guideMD'
-import { patchMD } from './markdown/patchMD'
 
 type groupType = {
     id: number;
