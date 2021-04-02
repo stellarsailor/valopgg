@@ -236,15 +236,15 @@ export const weapon: Array<weaponType> = [
         damage: [
             {
                 distance: "0-8",
-                damageSpec: [44, 22, 19],
+                damageSpec: [44, 20, 19],
             },
             {
                 distance: "8-12",
-                damageSpec: [34, 17, 14],
+                damageSpec: [34, 12, 14],
             },
             {
                 distance: "12-50",
-                damageSpec: [18, 9, 8],
+                damageSpec: [18, 9, 7],
             },
         ],
         primaryMode: "반자동",
