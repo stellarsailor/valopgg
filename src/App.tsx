@@ -7,32 +7,29 @@ import './App.css';
 import Banner from './images/banner.jpg'
 import OfficialBackground from './images/official-silhouette-background.jpg'
 
-import Player from './components/Player'
 import Agent from './components/Agent';
-import AgentDetail from './components/AgentDetail'
+import AgentDetail from './components/Agent/AgentDetail'
 import Weapon from './components/Weapon';
 import Map from './components/Map';
-import Strat from './components/Strat';
+import Strat from './components/Addition/Strat';
 import Dic from './components/Dic';
-import Contact from './components/Contact';
+import Contact from './components/Information/Contact';
+import Party from './components/Party';
 import Prosetting from './components/Prosetting';
-import ProsettingDetail from './components/ProsettingDetail';
+import ProsettingDetail from './components/Prosetting/ProsettingDetail';
 import Main from './components/Main';
 import AgentRecommendation from './components/AgentRecommendation';
-import MapDetail from './components/MapDetail';
-import WeaponDetail from './components/WeaponDetail';
+import MapDetail from './components/Map/MapDetail';
+import WeaponDetail from './components/Weapon/WeaponDetail';
 import Calculator from './components/Calculator';
-import Privacy from './components/Privacy';
-import GuideDetail from './components/GuideDetail';
-import ReactionTest from './components/ReactionTest';
+import Privacy from './components/Information/Privacy';
+import GuideDetail from './components/Guide/GuideDetail';
+import ReactionTest from './components/Reaction';
 
-import { patchNotePhrase, guide } from './datas/guide'
+import { patchNotePhrase, guide } from './data/guide'
 
-import SearchInput from './components/subcomponents/SearchInput'
-import Statistics from './components/Statistics';
-import Party from './components/Party';
 import { isMobile } from 'react-device-detect';
-import Battlepass from './components/Battlepass';
+import Battlepass from './components/Battlepass/Battlepass';
 import Axios from 'axios';
 import { apiServer } from './serverUrl';
 const { Content, Footer } = Layout;
