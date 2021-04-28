@@ -33,7 +33,7 @@ export default function CalculatorBattlepass() {
 
   useEffect(() => {
     if (startTier !== 0 && goalTier !== 0) {
-      if (startTier == 50 && goalTier == 50) {
+      if (startTier === 50 && goalTier === 50) {
         setSumExp(53000)
       } else {
         let sumTemp = 0

@@ -29,6 +29,7 @@ import Battlepass from "./components/Battlepass/Battlepass"
 
 import Banner from "./images/banner.jpg"
 import OfficialBackground from "./images/official-silhouette-background.jpg"
+import Adsense from "./components/Ads/Adsense"
 
 const { Content, Footer } = Layout
 
@@ -324,6 +325,11 @@ export default function App(props) {
             </Col>
           </Row>
         </Footer>
+        {isMobile && 
+          <AdsContainer>
+            <Adsense type="mobilewide" />
+          </AdsContainer>
+        }
       </Layout>
     </Router>
   )
@@ -344,4 +350,16 @@ const MenuTabHover = styled.div`
 const MenuDivider = styled.span`
   margin: ${(props) => (props.isMobile ? "0px 10px" : "0")};
   font-weight: bold;
+`
+
+const AdsContainer = styled.div`
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  height: 60px;
+  /* background-color: rgba(0, 0, 0, 0.2); */
+  z-index: 100;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 `
