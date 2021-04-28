@@ -1339,6 +1339,274 @@ export const battlepass = [
       },
     ],
   },
+  {
+    title: "포메이션 : 액트 3",
+    deadline: "~ 6/21",
+    contents: [
+      {
+        tier: 1,
+        reward: "송스틸 가디언",
+        isWeapon: "guardian",
+        isSkin: "songsteel",
+      },
+      {
+        tier: 2,
+        reward: "송스틸 총기 장식",
+        isWeapon: false,
+      },
+      {
+        tier: 3,
+        reward: "10 레디어나이트 포인트",
+        isWeapon: false,
+      },
+      {
+        tier: 4,
+        reward: "송스틸 카드",
+        isWeapon: false,
+      },
+      {
+        tier: 5,
+        reward: "심해 불독",
+        isWeapon: "bulldog",
+        isSkin: "depths",
+      },
+      {
+        tier: 6,
+        reward: "송스틸 스프레이",
+        isWeapon: false,
+      },
+      {
+        tier: 7,
+        reward: "승인! 스프레이",
+        isWeapon: false,
+      },
+      {
+        tier: 8,
+        reward: "10 레디어나이트 포인트",
+        isWeapon: false,
+      },
+      {
+        tier: 9,
+        reward: "헤이븐 도면 카드",
+        isWeapon: false,
+      },
+      {
+        tier: 10,
+        reward: "라이트웨이브 셰리프",
+        isWeapon: "sheriff",
+        isSkin: "lightwave",
+      },
+      {
+        tier: 11,
+        reward: "칼싸움 카드",
+        isWeapon: false,
+      },
+      {
+        tier: 12,
+        reward: "저축왕 스프레이",
+        isWeapon: false,
+      },
+      {
+        tier: 13,
+        reward: "10 레디어나이트 포인트",
+        isWeapon: false,
+      },
+      {
+        tier: 14,
+        reward: "행운의 주사위 총기장식",
+        isWeapon: false,
+      },
+      {
+        tier: 15,
+        reward: "송스틸 클래식",
+        isWeapon: "classic",
+        isSkin: "songsteel",
+      },
+      {
+        tier: 16,
+        reward: "라이트웨이브 버키",
+        isWeapon: "bucky",
+        isSkin: "lightwave",
+      },
+      {
+        tier: 17,
+        reward: "스팅어 도면 카드",
+        isWeapon: false,
+      },
+      {
+        tier: 18,
+        reward: "사라진 흔적 스프레이",
+        isWeapon: false,
+      },
+      {
+        tier: 19,
+        reward: "10 레디어나이트 포인트",
+        isWeapon: false,
+      },
+      {
+        tier: 20,
+        reward: "심해 스팅어",
+        isWeapon: "stinger",
+        isSkin: "depths",
+      },
+      {
+        tier: 21,
+        reward: "조금만 기다려,맨스 스프레이",
+        isWeapon: false,
+      },
+      {
+        tier: 22,
+        reward: "10 레디어나이트 포인트",
+        isWeapon: false,
+      },
+      {
+        tier: 23,
+        reward: "버블티 총기 장식",
+        isWeapon: false,
+      },
+      {
+        tier: 24,
+        reward: "300 스프레이",
+        isWeapon: false,
+      },
+      {
+        tier: 25,
+        reward: "라이트웨이브 팬텀",
+        isWeapon: "phantom",
+        isSkin: "lightwave",
+      },
+      {
+        tier: 26,
+        reward: "물러가라! 스프레이",
+        isWeapon: false,
+      },
+      {
+        tier: 27,
+        reward: "10 레디어나이트 포인트",
+        isWeapon: false,
+      },
+      {
+        tier: 28,
+        reward: "테오의 대탈출 스프레이",
+        isWeapon: false,
+      },
+      {
+        tier: 29,
+        reward: "VS//레이나+바이퍼 카드",
+        isWeapon: false,
+      },
+      {
+        tier: 30,
+        reward: "심해 고스트",
+        isWeapon: "ghost",
+        isSkin: "depths",
+      },
+      {
+        tier: 31,
+        reward: "기념사진 파트1 카드",
+        isWeapon: false,
+      },
+      {
+        tier: 32,
+        reward: "10 레디어나이트 포인트",
+        isWeapon: false,
+      },
+      {
+        tier: 33,
+        reward: "백팩 총기 장식",
+        isWeapon: false,
+      },
+      {
+        tier: 34,
+        reward: "오딘 금지 스프레이",
+        isWeapon: false,
+      },
+      {
+        tier: 35,
+        reward: "라이트웨이브 오딘",
+        isWeapon: "odin",
+        isSkin: "lightwave",
+      },
+      {
+        tier: 36,
+        reward: "이것도 나쁘지 않아 스프레이",
+        isWeapon: false,
+      },
+      {
+        tier: 37,
+        reward: "펭귄 댄 총기 장식",
+        isWeapon: false,
+      },
+      {
+        tier: 38,
+        reward: "등 카드",
+        isWeapon: false,
+      },
+      {
+        tier: 39,
+        reward: "10 레디어나이트 포인트",
+        isWeapon: false,
+      },
+      {
+        tier: 40,
+        reward: "송스틸 마샬",
+        isWeapon: "marshal",
+        isSkin: "songsteel",
+      },
+      {
+        tier: 41,
+        reward: "10 레디어나이트 포인트",
+        isWeapon: false,
+      },
+      {
+        tier: 42,
+        reward: "심해 카드",
+        isWeapon: false,
+      },
+      {
+        tier: 43,
+        reward: "달리지 말고 걸어 스프레이",
+        isWeapon: false,
+      },
+      {
+        tier: 44,
+        reward: "춤추는 댄 스프레이",
+        isWeapon: false,
+      },
+      {
+        tier: 45,
+        reward: "심해 밴달",
+        isWeapon: "vandal",
+        isSkin: "depths",
+      },
+      {
+        tier: 46,
+        reward: "토끼뜀 스프레이",
+        isWeapon: false,
+      },
+      {
+        tier: 47,
+        reward: "드러난 고대 미스터리 총기 장식",
+        isWeapon: false,
+      },
+      {
+        tier: 48,
+        reward: "리부트 카드",
+        isWeapon: false,
+      },
+      {
+        tier: 49,
+        reward: "10 레디어나이트 포인트",
+        isWeapon: false,
+      },
+      {
+        tier: 50,
+        reward: "송스틸",
+        isWeapon: "knife",
+        isSkin: "songsteel",
+      },
+    ],
+  },
 ]
 // 4000
 // 5000
