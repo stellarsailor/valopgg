@@ -11,10 +11,11 @@ const Images = [
   `${staticServer}/map/split-illust.jpeg`,
   `${staticServer}/map/ascent-illust.jpeg`,
   `${staticServer}/map/icebox-illust.jpeg`,
+  `${staticServer}/map/breeze-illust.jpeg`,
 ]
 
 export default function Map() {
-  const arr = ["Bind", "Haven", "Split", "Ascent", "Icebox"]
+  const arr = ["Bind", "Haven", "Split", "Ascent", "Icebox", "Breeze"]
 
   return (
     <Row

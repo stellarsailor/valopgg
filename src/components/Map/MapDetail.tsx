@@ -15,6 +15,7 @@ const Images = [
   `${staticServer}/map/split-illust.jpeg`,
   `${staticServer}/map/ascent-illust.jpeg`,
   `${staticServer}/map/icebox-illust.jpeg`,
+  `${staticServer}/map/breeze-illust.jpeg`,
 ]
 
 export default function MapDetail(props) {
@@ -22,7 +23,7 @@ export default function MapDetail(props) {
     window.scrollTo(0, 0)
   }, [])
 
-  const mapArr = ["Bind", "Haven", "Split", "Ascent", "Icebox"]
+  const mapArr = ["Bind", "Haven", "Split", "Ascent", "Icebox", "Breeze"]
 
   const mapName = props.match.params.name
   const [side, setSide] = useState("attacker")
