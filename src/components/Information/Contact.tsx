@@ -34,11 +34,6 @@ export default function Contact() {
           <div style={{ display: "flex", justifyContent: "center" }}>
             문의 및 건의사항 : valop.gg@gmail.com
           </div>
-          <div
-            style={{ display: "flex", justifyContent: "center", color: "gray" }}
-          >
-            소유권 관련 : brittea.alice@gmail.com
-          </div>
           <div style={{ margin: "2rem 0" }}>
             컴퓨터 공학과 대학생 1인 디자인/개발로 현재 지속적인 지출로만
             운영되고 있는 사이트 입니다. 개인적으로 발로란트를 너무 재밌게

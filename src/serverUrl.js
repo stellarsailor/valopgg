@@ -1,3 +1,3 @@
-export const staticServer = "https://d3s0uoqa61ipmr.cloudfront.net"
+export const staticServer = 'https://d2ijxvzb8ym54t.cloudfront.net'
 
-export const apiServer = "https://api.valog.gg"
+export const apiServer = 'https://valog-api.herokuapp.com'
