@@ -80,7 +80,7 @@ export const weapon: Array<weaponType> = [
     category_ko: "보조무기",
     name: "Shorty",
     name_ko: "쇼티",
-    cost: 200,
+    cost: 150,
     damage: [
       {
         distance: "0-7",
@@ -108,7 +108,7 @@ export const weapon: Array<weaponType> = [
     category_ko: "보조무기",
     name: "Frenzy",
     name_ko: "프렌지",
-    cost: 500,
+    cost: 450,
     damage: [
       {
         distance: "0-20",
@@ -180,7 +180,7 @@ export const weapon: Array<weaponType> = [
     category_ko: "기관단총",
     name: "Stinger",
     name_ko: "스팅어",
-    cost: 1100,
+    cost: 950,
     damage: [
       {
         distance: "0-20",
@@ -232,7 +232,7 @@ export const weapon: Array<weaponType> = [
     category_ko: "산탄총",
     name: "Bucky",
     name_ko: "버키",
-    cost: 900,
+    cost: 850,
     damage: [
       {
         distance: "0-8",
@@ -262,19 +262,19 @@ export const weapon: Array<weaponType> = [
     category_ko: "산탄총",
     name: "Judge",
     name_ko: "저지",
-    cost: 1600,
+    cost: 1850,
     damage: [
       {
         distance: "0-10",
-        damageSpec: [34, 17, 14],
+        damageSpec: [34, 14, 14],
       },
       {
         distance: "10-15",
-        damageSpec: [26, 13, 11],
+        damageSpec: [26, 10, 11],
       },
       {
         distance: "15-50",
-        damageSpec: [20, 10, 9],
+        damageSpec: [20, 7, 9],
       },
     ],
     primaryMode: "반자동",
@@ -290,7 +290,7 @@ export const weapon: Array<weaponType> = [
     category_ko: "소총",
     name: "Bulldog",
     name_ko: "불독",
-    cost: 2100,
+    cost: 2050,
     damage: [
       {
         distance: "0-50",
@@ -298,7 +298,7 @@ export const weapon: Array<weaponType> = [
       },
     ],
     primaryMode: "자동",
-    primaryRate: "초당 9.15발",
+    primaryRate: "초당 9.5발",
     altMode: "1.25배율 3점사",
     altRate: "초당 3발",
     capacity: 24,
@@ -386,7 +386,7 @@ export const weapon: Array<weaponType> = [
     category_ko: "저격총",
     name: "Marshal",
     name_ko: "마샬",
-    cost: 1000,
+    cost: 950,
     damage: [
       {
         distance: "0-50",
@@ -408,7 +408,7 @@ export const weapon: Array<weaponType> = [
     category_ko: "저격총",
     name: "Operator",
     name_ko: "오퍼레이터",
-    cost: 5000,
+    cost: 4700,
     damage: [
       {
         distance: "0-50",
@@ -430,7 +430,7 @@ export const weapon: Array<weaponType> = [
     category_ko: "기관총",
     name: "Ares",
     name_ko: "아레스",
-    cost: 1600,
+    cost: 1550,
     damage: [
       {
         distance: "0-30",
