@@ -1607,6 +1607,274 @@ export const battlepass = [
       },
     ],
   },
+  {
+    title: "리플렉션 : 액트 1",
+    deadline: "~ 8/22",
+    contents: [
+      {
+        tier: 1,
+        reward: "K/TAC 셰리프",
+        isWeapon: "sheriff",
+        isSkin: "ktac",
+      },
+      {
+        tier: 2,
+        reward: "K/TAC 총기 장식",
+        isWeapon: false,
+      },
+      {
+        tier: 3,
+        reward: "10 레디어나이트 포인트",
+        isWeapon: false,
+      },
+      {
+        tier: 4,
+        reward: "짜릿함을 느껴봐 카드",
+        isWeapon: false,
+      },
+      {
+        tier: 5,
+        reward: "퍼즐 아레스",
+        isWeapon: "ares",
+        isSkin: "jigsaw",
+      },
+      {
+        tier: 6,
+        reward: "펌프액션 스프레이",
+        isWeapon: false,
+      },
+      {
+        tier: 7,
+        reward: "균열 스프레이",
+        isWeapon: false,
+      },
+      {
+        tier: 8,
+        reward: "10 레디어나이트 포인트",
+        isWeapon: false,
+      },
+      {
+        tier: 9,
+        reward: "오퍼레이터 조각상 도면 카드",
+        isWeapon: false,
+      },
+      {
+        tier: 10,
+        reward: "모나크 쇼티",
+        isWeapon: "shorty",
+        isSkin: "monarch",
+      },
+      {
+        tier: 11,
+        reward: "저축 카드",
+        isWeapon: false,
+      },
+      {
+        tier: 12,
+        reward: "갑부 스프레이",
+        isWeapon: false,
+      },
+      {
+        tier: 13,
+        reward: "10 레디어나이트 포인트",
+        isWeapon: false,
+      },
+      {
+        tier: 14,
+        reward: "전진 총기장식",
+        isWeapon: false,
+      },
+      {
+        tier: 15,
+        reward: "퍼즐 저지",
+        isWeapon: "judge",
+        isSkin: "jigsaw",
+      },
+      {
+        tier: 16,
+        reward: "모나크 버키",
+        isWeapon: "bucky",
+        isSkin: "monarch",
+      },
+      {
+        tier: 17,
+        reward: "강탈 카드",
+        isWeapon: false,
+      },
+      {
+        tier: 18,
+        reward: "미안한 소바 스프레이",
+        isWeapon: false,
+      },
+      {
+        tier: 19,
+        reward: "10 레디어나이트 포인트",
+        isWeapon: false,
+      },
+      {
+        tier: 20,
+        reward: "K/TAC 불독",
+        isWeapon: "bulldog",
+        isSkin: "ktac",
+      },
+      {
+        tier: 21,
+        reward: "킬조이를 선택할게! 스프레이",
+        isWeapon: false,
+      },
+      {
+        tier: 22,
+        reward: "10 레디어나이트 포인트",
+        isWeapon: false,
+      },
+      {
+        tier: 23,
+        reward: "고무 오리 총기 장식",
+        isWeapon: false,
+      },
+      {
+        tier: 24,
+        reward: "만년 심해 스프레이",
+        isWeapon: false,
+      },
+      {
+        tier: 25,
+        reward: "K/TAC 밴달",
+        isWeapon: "vandal",
+        isSkin: "ktac",
+      },
+      {
+        tier: 26,
+        reward: "펜 금지 스프레이",
+        isWeapon: false,
+      },
+      {
+        tier: 27,
+        reward: "10 레디어나이트 포인트",
+        isWeapon: false,
+      },
+      {
+        tier: 28,
+        reward: "놀란 펭귄 스프레이",
+        isWeapon: false,
+      },
+      {
+        tier: 29,
+        reward: "케이/오 ID 카드",
+        isWeapon: false,
+      },
+      {
+        tier: 30,
+        reward: "모나크 프렌지",
+        isWeapon: "frenzy",
+        isSkin: "monarch",
+      },
+      {
+        tier: 31,
+        reward: "최후의 최고 카드",
+        isWeapon: false,
+      },
+      {
+        tier: 32,
+        reward: "10 레디어나이트 포인트",
+        isWeapon: false,
+      },
+      {
+        tier: 33,
+        reward: "봉지 어항 총기 장식",
+        isWeapon: false,
+      },
+      {
+        tier: 34,
+        reward: "가디언 금지 스프레이",
+        isWeapon: false,
+      },
+      {
+        tier: 35,
+        reward: "퍼즐 가디언",
+        isWeapon: "guardian",
+        isSkin: "jigsaw",
+      },
+      {
+        tier: 36,
+        reward: "모래성 스프레이",
+        isWeapon: false,
+      },
+      {
+        tier: 37,
+        reward: "섬의 꿈 총기 장식",
+        isWeapon: false,
+      },
+      {
+        tier: 38,
+        reward: "로티 보티 카드",
+        isWeapon: false,
+      },
+      {
+        tier: 39,
+        reward: "10 레디어나이트 포인트",
+        isWeapon: false,
+      },
+      {
+        tier: 40,
+        reward: "모나크 마샬",
+        isWeapon: "marshal",
+        isSkin: "monarch",
+      },
+      {
+        tier: 41,
+        reward: "10 레디어나이트 포인트",
+        isWeapon: false,
+      },
+      {
+        tier: 42,
+        reward: "훈련장 카드",
+        isWeapon: false,
+      },
+      {
+        tier: 43,
+        reward: "죽느냐 사느냐 스프레이",
+        isWeapon: false,
+      },
+      {
+        tier: 44,
+        reward: "너무 무거워 스프레이",
+        isWeapon: false,
+      },
+      {
+        tier: 45,
+        reward: "K/TAC 오퍼레이터",
+        isWeapon: "operator",
+        isSkin: "ktac",
+      },
+      {
+        tier: 46,
+        reward: "시간의 모래 스프레이",
+        isWeapon: false,
+      },
+      {
+        tier: 47,
+        reward: "연어 초밥 총기 장식",
+        isWeapon: false,
+      },
+      {
+        tier: 48,
+        reward: "잿더미 속에서 카드",
+        isWeapon: false,
+      },
+      {
+        tier: 49,
+        reward: "10 레디어나이트 포인트",
+        isWeapon: false,
+      },
+      {
+        tier: 50,
+        reward: "K/TAC 검",
+        isWeapon: "knife",
+        isSkin: "ktac",
+      },
+    ],
+  },
 ]
 // 4000
 // 5000
