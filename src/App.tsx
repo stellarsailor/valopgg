@@ -45,6 +45,7 @@ export default function App(props) {
     backgroundImage: `url(${OfficialBackground})`,
     backgroundRepeat: "no-repeat",
     backgroundAttachment: "fixed",
+    backgroundSize: "cover",
   }
 
   const [patchNoteData, setPatchNoteData] = useState({
